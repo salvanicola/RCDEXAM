@@ -1,0 +1,96 @@
+% pacakges
+\usepackage{pdflscape}
+\usepackage{geometry}
+\usepackage{hyperref} %  link
+\usepackage{graphicx} %immagini
+\usepackage{titlesec} %per creazione di una section personalizzata
+\usepackage{float} %per il posizionamento delle figure
+
+\usepackage[shortlabels]{enumitem} % per elenchi personalizzati
+\usepackage{titlesec} %per creazione di una section personalizzata
+
+% package per la lingua / caratteri
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{fancyhdr} % per header e footer
+\usepackage{lastpage} % per avere l'indice dell'ultima pagina
+
+\usepackage{tabularx} % tabelle
+\usepackage[table]{xcolor} % definizione colore di sfondo per tabelle
+\usepackage{longtable} % permette di estendere le tabelle su più pagine
+
+\usepackage{chngcntr} % per numerazione immagini e tabelle
+
+\usepackage[official]{eurosym} %per poter utilizzare il simbolo dell'euro
+
+\usepackage[titletoc]{appendix} % per poter usare le appendici
+\usepackage[official]{eurosym} %per poter utilizzare il simbolo dell'euro
+\usepackage{float} %posizionamento delle immagini UC
+
+%Per la creazione dei grafici
+\usepackage{pgfplots}
+\usetikzlibrary{
+	pgfplots.dateplot,
+}
+\pgfplotsset{width=15cm,compat=1.11}
+\usepackage{tikz}
+
+% configurazione
+% link
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+}
+
+% intestazione e piè di pagina
+\pagestyle{fancy}
+% intestazione
+\setlength{\headheight}{25pt}
+\lhead{ \includegraphics[scale=0.3]{./res/img/cropped_logo.png} }
+\rhead{ \docTitle{} }
+% piè di pagina \\
+\renewcommand{\footrulewidth}{0.4pt} % per avere una linea nel footer
+\cfoot{}
+\rfoot{Pagina \thepage{} di \pageref{LastPage}}
+
+% tabelle
+\def\arraystretch{1.5} % padding
+% comandi e colori tabelle
+\definecolor{lightRowColor}{HTML}{fafafa}
+\definecolor{darkRowColor}{HTML}{ffcccb}
+
+\newcommand{\coloredTableHead}{\rowcolor[HTML]{b61827}}
+\newcommand{\lightTableRow}{\rowcolor{lightRowColor}}
+\newcommand{\darkTableRow}{\rowcolor{darkRowColor}}
+
+% per numerazione immagini e tabelle
+% --> la numerazione dipende dalla subsection in cui ci si trova
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+
+% definizione del comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}

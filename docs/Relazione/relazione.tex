@@ -1,0 +1,22 @@
+\documentclass[a4paper]{article}
+
+\input{../Latex/common_commands.tex}
+\input{./config/commands.tex}
+\input{../Latex/configs.tex}
+
+\begin{document}
+	 % numerazione delle tabelle dipendente dalla section ( e non dalla subsection)
+	 \counterwithin{table}{section}
+	 
+	 % copertina
+	 \input{../Latex/copertina.tex}
+	 
+	 % indice
+	 \renewcommand*\contentsname{Summary}
+	 \tableofcontents
+	 \pagebreak
+	 
+	 % informazioni generali
+	 \input{./res/sections/content.tex}
+	 
+\end{document}
