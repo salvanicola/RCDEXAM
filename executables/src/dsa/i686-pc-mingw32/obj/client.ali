@@ -5,28 +5,37 @@ A -march=x86-64
 P SS ZX
 
 RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
 RV NO_IO
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U client%b		client.adb		ddbfe57b OO RA PK
+U client%b		client.adb		5dc370db OO PF RA PK
 W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W factory%s		factory.adb		factory.ali
 W newacceptors%s	newacceptors.adb	newacceptors.ali
 W newworkers%s		newworkers.adb		newworkers.ali
 Z system.partition_interface%s  s-parint.adb	s-parint.ali
-W workercity%s		workercity.adb		workercity.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 U client%s		client.ads		41cf2c9d EE NE OO PK
 
 D ada.ads		20200228061810 76789da1 ada%s
 D a-charac.ads		20200228061810 2d3ec45b ada.characters%s
 D a-chlat1.ads		20200228061810 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20200228061810 61e5e089 ada.containers%s
+D a-conhel.ads		20200228061810 20298884 ada.containers.helpers%s
+D a-convec.ads		20200228061810 7e2b0fdf ada.containers.vectors%s
 D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
 D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20200228061810 7c7305e9 ada.iterator_interfaces%s
 D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
 D a-string.ads		20200228061810 90ac6797 ada.strings%s
 D a-strmap.ads		20200228061810 e8bb714a ada.strings.maps%s
@@ -41,15 +50,15 @@ D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D client.ads		20210830155914 41cf2c9d client%s
-D client.adb		20210907162206 941a02f9 client%b
-D common.ads		20210907154142 2b9eff90 common%s
+D client.adb		20210907170530 20c34bbd client%b
+D common.ads		20210907164716 697612b1 common%s
 D factory.ads		20210907144726 7fcea854 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
 D newacceptors.ads	20210907161156 a144c495 newacceptors%s
-D newworkers.ads	20210906134448 e564c051 newworkers%s
+D newworkers.ads	20210907165920 4cb1ae57 newworkers%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -140,6 +149,7 @@ D s-exctab.ads		20200228061810 54135002 system.exception_table%s
 D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
 D s-finmas.ads		20200228061810 7811a767 system.finalization_masters%s
 D s-finroo.ads		20200228061810 4ff27390 system.finalization_root%s
+D s-memory.ads		20200228061810 597d6634 system.memory%s
 D s-multip.ads		20200228061810 38ac9f73 system.multiprocessors%s
 D s-osinte.ads		20200228061810 97504df8 system.os_interface%s
 D s-parame.ads		20200228061810 4752c4cb system.parameters%s
@@ -152,6 +162,7 @@ D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
 D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
 D s-stausa.ads		20200228061810 017a0a05 system.stack_usage%s
 D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+D s-stalib.adb		20200228061810 f2fe2716 system.standard_library%b
 D s-stoele.ads		20200228061810 2dc34a04 system.storage_elements%s
 D s-stopoo.ads		20200313060448 e9fa2dd8 system.storage_pools%s
 D s-stposu.ads		20200317060516 e251976f system.storage_pools.subpools%s
@@ -164,64 +175,74 @@ D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
 D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
-D workercity.ads	20210907152832 9d70b2e2 workercity%s
 G a e
-G c b b b [b client 8 1 none]
+G c b b b [b client 7 1 none]
 G c Z s b [start client 2 14 none]
-G r s newworker [b client 8 1 none] [newworkerIP newworkers 14 9 none]
-G r s newacceptor [b client 8 1 none] [newacceptorIP newacceptors 14 9 none]
-G r c none [start client 2 14 none] [insert_w workercity 6 14 none]
-G r c none [start client 2 14 none] [insert_a workercity 7 14 none]
-G r c none [start client 2 14 none] [assign newworkers 7 14 none]
+G r s newworker [b client 7 1 none] [newworkerIP newworkers 37 9 none]
+G r l newworker [b client 7 1 none] [newworkerDI newworkers 37 9 none]
+G r k newworker [b client 7 1 none] [newworkerDF newworkers 37 9 none]
+G r s newacceptor [b client 7 1 none] [newacceptorIP newacceptors 14 9 none]
+G r c none [start client 2 14 none] [insert_w newworkers 32 14 none]
+G r c none [start client 2 14 none] [insert_a newworkers 34 14 none]
+G r c none [start client 2 14 none] [assign newworkers 26 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 21|2r6 2r23
-X 17 a-textio.ads
-57K13*Text_IO 727e16 21|2w10 2r27
-264U14*New_Line 21|17s7
-508U14*Put_Line 21|16s7
-X 20 client.ads
-1K9*Client 3l5 3e11 21|8b14 24l5 24t11
-2U14*Start 21|14b14 23l8 23t13
-X 21 client.adb
-9r4 W1{29|5R9} 18m16 18r16 22m14 22r14
-10r4 W2{29|5R9} 19m16 19r16
-11r4 A1{28|5R9} 20m16 20r16
-12r4 A2{28|5R9} 21m16 21r16
-X 23 factory.ads
-2K9*Factory 21|5w6 5r19 23|8e12
-5U14*Notify 21|22r32
-X 24 interfac.ads
+16K9*Ada 20e8 25|2r6 2r23
+X 10 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[6|111]>
+X 21 a-textio.ads
+57K13*Text_IO 727e16 25|2w10 2r27
+264U14*New_Line 25|16s7
+508U14*Put_Line 25|15s7
+X 24 client.ads
+1K9*Client 3l5 3e11 25|7b14 23l5 23t11
+2U14*Start 25|13b14 22l8 22t13
+X 25 client.adb
+8r4 W1{33|18R9} 17m16 17r16 18m16 18r16 20m17 20r17
+9r4 W2{33|18R9} 17m20 17r20
+10r4 A1{32|5R9} 18m20 18r20
+11r4 A2{32|5R9}
+X 27 factory.ads
+2K9*Factory 25|4w6 4r19 27|8e12
+5U14*Notify 25|20r35
+X 28 interfac.ads
 74M9*Unsigned_32
-121V13*Shift_Left{74M9} 107|37i18
-X 28 newacceptors.ads
-2K9*NewAcceptors 21|6w6 6r24 28|18e17
-5R9*NewAcceptor<22|12R9> 21|11r17 12r17 28|17e14
-X 29 newworkers.ads
-2K9*NewWorkers 21|4w6 4r22 29|17e15
-5R9*NewWorker<22|9R9> 21|9r17 10r17 29|16e14
-7U14*Assign 21|22s7
-X 32 polyorb-any.ads
+121V13*Shift_Left{74M9} 111|37i18
+X 32 newacceptors.ads
+2K9*NewAcceptors 25|5w6 5r24 32|18e17
+5R9*NewAcceptor<26|12R9> 25|10r17 11r17 32|17e14
+X 33 newworkers.ads
+4K9*NewWorkers 25|3w6 3r22 33|45e15
+18R9*NewWorker<26|9R9> 25|8r17 9r17 33|44e14
+26U14*Assign 25|20s10
+32U14*Insert_W 25|17s7
+34U14*Insert_A 25|18s7
+X 36 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 100|41i19
-X 38 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 104|41i19
+X 42 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 106|54i21
-X 54 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 110|54i21
+X 58 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9)
-98V13 Link(47P9[40|358]) 106|54i21[40|358]
-X 89 polyorb-task_info.ads
+98V13 Link(47P9[44|358]) 110|54i21[44|358]
+X 93 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 106|54i21
-X 100 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 110|54i21
+X 104 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[109|43])
-151V13 Link(134P9[48|99]) 106|54i21[48|99]
-X 130 s-stausa.ads
+134P9 Node_Access(133R9[59|317])
+151V13 Link(134P9[52|99]) 110|54i21[52|99]
+X 115 system.ads
+67M9*Address
+X 124 s-memory.ads
+53V13*Alloc{115|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{115|67M9} 105i<c,__gnat_realloc>22
+X 135 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 144 workercity.ads
-2K9*WorkerCity 21|3w6 3r22 144|10e15
-6U14*Insert_W 21|18s7 19s7
-7U14*Insert_A 21|20s7 21s7
+X 137 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
 

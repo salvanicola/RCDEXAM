@@ -18,9 +18,6 @@ pragma Elaborate_All
 with start_client;
 pragma Elaborate_All
   (start_client);
-with workercity;
-pragma Elaborate_All
-  (workercity);
 with storage;
 pragma Elaborate_All
   (storage);
@@ -30,10 +27,6 @@ pragma Elaborate_All
 package body Partition is
 begin
    System.Partition_Interface.Activate_Rpc_Receivers;
-   System.Partition_Interface.Check
-     ("workercity",
-      workercity'Version,
-      TRUE);
    System.Partition_Interface.Check
      ("storage",
       storage'Version,

@@ -9,13 +9,13 @@ RV NO_IO
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U factory%b		factory.adb		eded6d76 NE OO PK
+U factory%b		factory.adb		1d646b0e NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 
-U factory%s		factory.ads		545057c4 EE NE OO RC PK
+U factory%s		factory.ads		16b8bae5 EE NE OO RC PK
 W common%s		common.ads		common.ali
 
 D ada.ads		20200228061810 76789da1 ada%s
@@ -37,9 +37,9 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210907154142 2b9eff90 common%s
+D common.ads		20210907164716 697612b1 common%s
 D factory.ads		20210907144726 7fcea854 factory%s
-D factory.adb		20210907144726 3cd7104f factory%b
+D factory.adb		20210907170530 cc5e1637 factory%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
@@ -168,11 +168,11 @@ X 17 a-textio.ads
 57K13*Text_IO 727e16 22|1w10 1r27
 508U14*Put_Line 22|6s7
 X 20 common.ads
-2K9*Common 37e11 21|1w6 1r18
+2K9*Common 38e11 21|1w6 1r18
 X 21 factory.ads
 2K9*Factory 8l5 8e12 22|2b14 9l5 9t12
 5U14*Notify 5>22 6r25 22|4b14 7l8 7t14
-5i22 Q{integer} 22|4b22 6r70
+5i22 Q{integer} 22|4b22 6r71
 X 23 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 104|37i18

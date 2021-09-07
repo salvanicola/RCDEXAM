@@ -90,12 +90,8 @@ package body Polyorb.Partition_Elaboration is
          Value   => "worker_partition");
       Set_Conf
         (Section => "dsa",
-         Key     => "newnewworkers'partition",
-         Value   => "worker2_partition");
-      Set_Conf
-        (Section => "dsa",
-         Key     => "workercity'partition",
-         Value   => "workercity_partition");
+         Key     => "newacceptors'partition",
+         Value   => "acceptor_partition");
       Set_Conf
         (Section => "dsa",
          Key     => "storage'partition",

@@ -24,7 +24,7 @@ package body ada_main is
    E048 : Short_Integer; pragma Import (Ada, E048, "system__dwarf_lines_E");
    E022 : Short_Integer; pragma Import (Ada, E022, "system__soft_links__initialize_E");
    E040 : Short_Integer; pragma Import (Ada, E040, "system__traceback__symbolic_E");
-   E715 : Short_Integer; pragma Import (Ada, E715, "ada__numerics_E");
+   E709 : Short_Integer; pragma Import (Ada, E709, "ada__numerics_E");
    E100 : Short_Integer; pragma Import (Ada, E100, "ada__tags_E");
    E108 : Short_Integer; pragma Import (Ada, E108, "ada__streams_E");
    E130 : Short_Integer; pragma Import (Ada, E130, "gnat_E");
@@ -33,7 +33,7 @@ package body ada_main is
    E115 : Short_Integer; pragma Import (Ada, E115, "system__finalization_root_E");
    E113 : Short_Integer; pragma Import (Ada, E113, "ada__finalization_E");
    E112 : Short_Integer; pragma Import (Ada, E112, "system__file_io_E");
-   E704 : Short_Integer; pragma Import (Ada, E704, "ada__streams__stream_io_E");
+   E692 : Short_Integer; pragma Import (Ada, E692, "ada__streams__stream_io_E");
    E161 : Short_Integer; pragma Import (Ada, E161, "system__storage_pools_E");
    E157 : Short_Integer; pragma Import (Ada, E157, "system__finalization_masters_E");
    E185 : Short_Integer; pragma Import (Ada, E185, "system__storage_pools__subpools_E");
@@ -87,7 +87,7 @@ package body ada_main is
    E342 : Short_Integer; pragma Import (Ada, E342, "polyorb__any__exceptionlist_E");
    E225 : Short_Integer; pragma Import (Ada, E225, "polyorb__any__initialization_E");
    E272 : Short_Integer; pragma Import (Ada, E272, "polyorb__any__nvlist_E");
-   E709 : Short_Integer; pragma Import (Ada, E709, "polyorb__dsa_p__streams_E");
+   E697 : Short_Integer; pragma Import (Ada, E697, "polyorb__dsa_p__streams_E");
    E375 : Short_Integer; pragma Import (Ada, E375, "polyorb__exceptions_E");
    E373 : Short_Integer; pragma Import (Ada, E373, "polyorb__dsa_p__exceptions_E");
    E565 : Short_Integer; pragma Import (Ada, E565, "polyorb__log__exceptions_E");
@@ -132,7 +132,7 @@ package body ada_main is
    E257 : Short_Integer; pragma Import (Ada, E257, "polyorb__orb__iface_E");
    E276 : Short_Integer; pragma Import (Ada, E276, "polyorb__servants__iface_E");
    E362 : Short_Integer; pragma Import (Ada, E362, "polyorb__transport__handlers_E");
-   E732 : Short_Integer; pragma Import (Ada, E732, "polyorb__binding_data__neighbour_E");
+   E731 : Short_Integer; pragma Import (Ada, E731, "polyorb__binding_data__neighbour_E");
    E527 : Short_Integer; pragma Import (Ada, E527, "polyorb__binding_data_qos_E");
    E379 : Short_Integer; pragma Import (Ada, E379, "polyorb__dsa_p__name_service_E");
    E531 : Short_Integer; pragma Import (Ada, E531, "polyorb__filters__slicers_E");
@@ -230,20 +230,19 @@ package body ada_main is
    E553 : Short_Integer; pragma Import (Ada, E553, "polyorb__utils__tcp_access_points_E");
    E481 : Short_Integer; pragma Import (Ada, E481, "polyorb__setup__access_points__iiop_E");
    E120 : Short_Integer; pragma Import (Ada, E120, "system__partition_interface_E");
+   E699 : Short_Integer; pragma Import (Ada, E699, "polyorb__dsa_p__partitions_E");
+   E695 : Short_Integer; pragma Import (Ada, E695, "polyorb__dsa_p__storages_E");
+   E725 : Short_Integer; pragma Import (Ada, E725, "polyorb__dsa_p__storages__dsm_E");
+   E723 : Short_Integer; pragma Import (Ada, E723, "polyorb__dsa_p__storages__config_E");
+   E727 : Short_Integer; pragma Import (Ada, E727, "polyorb__termination_manager_E");
+   E729 : Short_Integer; pragma Import (Ada, E729, "polyorb__termination_manager__bootstrap_E");
+   E721 : Short_Integer; pragma Import (Ada, E721, "system__dsa_services_E");
+   E688 : Short_Integer; pragma Import (Ada, E688, "storage_E");
+   E686 : Short_Integer; pragma Import (Ada, E686, "common_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "factory_E");
-   E687 : Short_Integer; pragma Import (Ada, E687, "polyorb__dsa_p__partitions_E");
-   E707 : Short_Integer; pragma Import (Ada, E707, "polyorb__dsa_p__storages_E");
-   E726 : Short_Integer; pragma Import (Ada, E726, "polyorb__dsa_p__storages__dsm_E");
-   E724 : Short_Integer; pragma Import (Ada, E724, "polyorb__dsa_p__storages__config_E");
-   E728 : Short_Integer; pragma Import (Ada, E728, "polyorb__termination_manager_E");
-   E730 : Short_Integer; pragma Import (Ada, E730, "polyorb__termination_manager__bootstrap_E");
-   E722 : Short_Integer; pragma Import (Ada, E722, "system__dsa_services_E");
-   E712 : Short_Integer; pragma Import (Ada, E712, "storage_E");
-   E710 : Short_Integer; pragma Import (Ada, E710, "common_E");
-   E714 : Short_Integer; pragma Import (Ada, E714, "newworkers_E");
-   E692 : Short_Integer; pragma Import (Ada, E692, "newnewworkers_E");
-   E720 : Short_Integer; pragma Import (Ada, E720, "workercity_E");
-   E690 : Short_Integer; pragma Import (Ada, E690, "client_E");
+   E704 : Short_Integer; pragma Import (Ada, E704, "newacceptors_E");
+   E708 : Short_Integer; pragma Import (Ada, E708, "newworkers_E");
+   E702 : Short_Integer; pragma Import (Ada, E702, "client_E");
    E002 : Short_Integer; pragma Import (Ada, E002, "partition_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
@@ -255,1143 +254,1150 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E692 := E692 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "newnewworkers__finalize_spec");
+         pragma Import (Ada, F1, "client__finalize_body");
       begin
+         E702 := E702 - 1;
          F1;
       end;
-      E714 := E714 - 1;
+      E708 := E708 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "newworkers__finalize_spec");
       begin
          F2;
       end;
+      E704 := E704 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "common__finalize_spec");
+         pragma Import (Ada, F3, "newacceptors__finalize_spec");
       begin
-         E710 := E710 - 1;
          F3;
       end;
-      E712 := E712 - 1;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "storage__finalize_spec");
+         pragma Import (Ada, F4, "common__finalize_spec");
       begin
+         E686 := E686 - 1;
          F4;
       end;
-      E728 := E728 - 1;
-      E730 := E730 - 1;
+      E688 := E688 - 1;
       declare
          procedure F5;
-         pragma Import (Ada, F5, "polyorb__termination_manager__bootstrap__finalize_spec");
+         pragma Import (Ada, F5, "storage__finalize_spec");
       begin
          F5;
       end;
+      E727 := E727 - 1;
+      E729 := E729 - 1;
       declare
          procedure F6;
-         pragma Import (Ada, F6, "polyorb__termination_manager__finalize_spec");
+         pragma Import (Ada, F6, "polyorb__termination_manager__bootstrap__finalize_spec");
       begin
          F6;
       end;
       declare
          procedure F7;
-         pragma Import (Ada, F7, "polyorb__dsa_p__storages__dsm__finalize_body");
+         pragma Import (Ada, F7, "polyorb__termination_manager__finalize_spec");
       begin
-         E726 := E726 - 1;
          F7;
       end;
       declare
          procedure F8;
-         pragma Import (Ada, F8, "polyorb__dsa_p__storages__dsm__finalize_spec");
+         pragma Import (Ada, F8, "polyorb__dsa_p__storages__dsm__finalize_body");
       begin
+         E725 := E725 - 1;
          F8;
       end;
-      E707 := E707 - 1;
       declare
          procedure F9;
-         pragma Import (Ada, F9, "polyorb__dsa_p__storages__finalize_spec");
+         pragma Import (Ada, F9, "polyorb__dsa_p__storages__dsm__finalize_spec");
       begin
          F9;
       end;
+      E695 := E695 - 1;
       declare
          procedure F10;
-         pragma Import (Ada, F10, "system__partition_interface__finalize_body");
+         pragma Import (Ada, F10, "polyorb__dsa_p__storages__finalize_spec");
       begin
-         E120 := E120 - 1;
          F10;
       end;
       declare
          procedure F11;
-         pragma Import (Ada, F11, "system__partition_interface__finalize_spec");
+         pragma Import (Ada, F11, "system__partition_interface__finalize_body");
       begin
+         E120 := E120 - 1;
          F11;
+      end;
+      declare
+         procedure F12;
+         pragma Import (Ada, F12, "system__partition_interface__finalize_spec");
+      begin
+         F12;
       end;
       E502 := E502 - 1;
       E529 := E529 - 1;
       declare
-         procedure F12;
-         pragma Import (Ada, F12, "polyorb__giop_p__transport_mechanisms__iiop__finalize_spec");
-      begin
-         F12;
-      end;
-      declare
          procedure F13;
-         pragma Import (Ada, F13, "polyorb__binding_data__giop__iiop__finalize_spec");
+         pragma Import (Ada, F13, "polyorb__giop_p__transport_mechanisms__iiop__finalize_spec");
       begin
          F13;
       end;
-      E539 := E539 - 1;
       declare
          procedure F14;
-         pragma Import (Ada, F14, "polyorb__transport__connected__sockets__finalize_spec");
+         pragma Import (Ada, F14, "polyorb__binding_data__giop__iiop__finalize_spec");
       begin
          F14;
       end;
-      E533 := E533 - 1;
+      E539 := E539 - 1;
       declare
          procedure F15;
-         pragma Import (Ada, F15, "polyorb__giop_p__tagged_components__alternate_iiop_address__finalize_spec");
+         pragma Import (Ada, F15, "polyorb__transport__connected__sockets__finalize_spec");
       begin
          F15;
       end;
+      E533 := E533 - 1;
       declare
          procedure F16;
-         pragma Import (Ada, F16, "polyorb__utils__sockets__finalize_body");
+         pragma Import (Ada, F16, "polyorb__giop_p__tagged_components__alternate_iiop_address__finalize_spec");
       begin
-         E521 := E521 - 1;
          F16;
       end;
       declare
          procedure F17;
-         pragma Import (Ada, F17, "polyorb__parameters__file__finalize_body");
+         pragma Import (Ada, F17, "polyorb__utils__sockets__finalize_body");
+      begin
+         E521 := E521 - 1;
+         F17;
+      end;
+      declare
+         procedure F18;
+         pragma Import (Ada, F18, "polyorb__parameters__file__finalize_body");
       begin
          E598 := E598 - 1;
-         F17;
+         F18;
       end;
       E535 := E535 - 1;
       declare
-         procedure F18;
-         pragma Import (Ada, F18, "polyorb__protocols__giop__iiop__finalize_spec");
-      begin
-         F18;
-      end;
-      E619 := E619 - 1;
-      declare
          procedure F19;
-         pragma Import (Ada, F19, "polyorb__protocols__giop__giop_1_2__finalize_spec");
+         pragma Import (Ada, F19, "polyorb__protocols__giop__iiop__finalize_spec");
       begin
          F19;
       end;
-      E610 := E610 - 1;
+      E619 := E619 - 1;
       declare
          procedure F20;
-         pragma Import (Ada, F20, "polyorb__protocols__giop__giop_1_1__finalize_spec");
+         pragma Import (Ada, F20, "polyorb__protocols__giop__giop_1_2__finalize_spec");
       begin
          F20;
       end;
-      E604 := E604 - 1;
+      E610 := E610 - 1;
       declare
          procedure F21;
-         pragma Import (Ada, F21, "polyorb__protocols__giop__giop_1_0__finalize_spec");
+         pragma Import (Ada, F21, "polyorb__protocols__giop__giop_1_1__finalize_spec");
       begin
          F21;
       end;
-      E492 := E492 - 1;
+      E604 := E604 - 1;
       declare
          procedure F22;
-         pragma Import (Ada, F22, "polyorb__protocols__giop__finalize_spec");
+         pragma Import (Ada, F22, "polyorb__protocols__giop__giop_1_0__finalize_spec");
       begin
          F22;
       end;
-      E628 := E628 - 1;
+      E492 := E492 - 1;
       declare
          procedure F23;
-         pragma Import (Ada, F23, "polyorb__representations__cdr__giop_1_2__finalize_spec");
+         pragma Import (Ada, F23, "polyorb__protocols__giop__finalize_spec");
       begin
          F23;
       end;
-      E612 := E612 - 1;
+      E628 := E628 - 1;
       declare
          procedure F24;
-         pragma Import (Ada, F24, "polyorb__representations__cdr__giop_1_1__finalize_spec");
+         pragma Import (Ada, F24, "polyorb__representations__cdr__giop_1_2__finalize_spec");
       begin
          F24;
       end;
-      E608 := E608 - 1;
+      E612 := E612 - 1;
       declare
          procedure F25;
-         pragma Import (Ada, F25, "polyorb__representations__cdr__giop_1_0__finalize_spec");
+         pragma Import (Ada, F25, "polyorb__representations__cdr__giop_1_1__finalize_spec");
       begin
          F25;
       end;
-      E452 := E452 - 1;
+      E608 := E608 - 1;
       declare
          procedure F26;
-         pragma Import (Ada, F26, "polyorb__qos__term_manager_info__finalize_spec");
+         pragma Import (Ada, F26, "polyorb__representations__cdr__giop_1_0__finalize_spec");
       begin
          F26;
       end;
-      E490 := E490 - 1;
+      E452 := E452 - 1;
       declare
          procedure F27;
-         pragma Import (Ada, F27, "polyorb__giop_p__transport_mechanisms__finalize_spec");
+         pragma Import (Ada, F27, "polyorb__qos__term_manager_info__finalize_spec");
       begin
          F27;
       end;
-      E621 := E621 - 1;
+      E490 := E490 - 1;
       declare
          procedure F28;
-         pragma Import (Ada, F28, "polyorb__giop_p__tagged_components__code_sets__finalize_spec");
+         pragma Import (Ada, F28, "polyorb__giop_p__transport_mechanisms__finalize_spec");
       begin
          F28;
       end;
-      E486 := E486 - 1;
+      E621 := E621 - 1;
       declare
          procedure F29;
-         pragma Import (Ada, F29, "polyorb__giop_p__tagged_components__finalize_spec");
+         pragma Import (Ada, F29, "polyorb__giop_p__tagged_components__code_sets__finalize_spec");
       begin
          F29;
       end;
-      E488 := E488 - 1;
+      E486 := E486 - 1;
       declare
          procedure F30;
-         pragma Import (Ada, F30, "polyorb__qos__tagged_components__finalize_spec");
+         pragma Import (Ada, F30, "polyorb__giop_p__tagged_components__finalize_spec");
       begin
          F30;
       end;
-      E435 := E435 - 1;
+      E488 := E488 - 1;
       declare
          procedure F31;
-         pragma Import (Ada, F31, "polyorb__qos__exception_informations__finalize_spec");
+         pragma Import (Ada, F31, "polyorb__qos__tagged_components__finalize_spec");
       begin
          F31;
       end;
-      E630 := E630 - 1;
+      E435 := E435 - 1;
       declare
          procedure F32;
-         pragma Import (Ada, F32, "polyorb__qos__code_sets__finalize_spec");
+         pragma Import (Ada, F32, "polyorb__qos__exception_informations__finalize_spec");
       begin
          F32;
       end;
-      E437 := E437 - 1;
+      E630 := E630 - 1;
       declare
          procedure F33;
-         pragma Import (Ada, F33, "polyorb__qos__service_contexts__finalize_spec");
+         pragma Import (Ada, F33, "polyorb__qos__code_sets__finalize_spec");
       begin
          F33;
       end;
-      E663 := E663 - 1;
+      E437 := E437 - 1;
       declare
          procedure F34;
-         pragma Import (Ada, F34, "polyorb__poa__basic_poa__finalize_spec");
+         pragma Import (Ada, F34, "polyorb__qos__service_contexts__finalize_spec");
       begin
          F34;
       end;
-      E616 := E616 - 1;
+      E663 := E663 - 1;
       declare
          procedure F35;
-         pragma Import (Ada, F35, "polyorb__giop_p__code_sets__converters__finalize_spec");
+         pragma Import (Ada, F35, "polyorb__poa__basic_poa__finalize_spec");
       begin
          F35;
       end;
-      E439 := E439 - 1;
+      E616 := E616 - 1;
       declare
          procedure F36;
-         pragma Import (Ada, F36, "polyorb__references__ior__finalize_body");
+         pragma Import (Ada, F36, "polyorb__giop_p__code_sets__converters__finalize_spec");
       begin
-         E445 := E445 - 1;
          F36;
       end;
+      E439 := E439 - 1;
       declare
          procedure F37;
-         pragma Import (Ada, F37, "polyorb__representations__cdr__finalize_spec");
+         pragma Import (Ada, F37, "polyorb__references__ior__finalize_body");
       begin
+         E445 := E445 - 1;
          F37;
       end;
-      E537 := E537 - 1;
       declare
          procedure F38;
-         pragma Import (Ada, F38, "polyorb__transport__connected__finalize_spec");
+         pragma Import (Ada, F38, "polyorb__representations__cdr__finalize_spec");
       begin
          F38;
       end;
+      E537 := E537 - 1;
       declare
          procedure F39;
-         pragma Import (Ada, F39, "polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_body");
+         pragma Import (Ada, F39, "polyorb__transport__connected__finalize_spec");
       begin
-         E645 := E645 - 1;
          F39;
       end;
       declare
          procedure F40;
-         pragma Import (Ada, F40, "polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_spec");
+         pragma Import (Ada, F40, "polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_body");
       begin
+         E645 := E645 - 1;
          F40;
       end;
-      E647 := E647 - 1;
       declare
          procedure F41;
-         pragma Import (Ada, F41, "polyorb__tasking__threads__annotations__finalize_spec");
+         pragma Import (Ada, F41, "polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_spec");
       begin
          F41;
       end;
+      E647 := E647 - 1;
       declare
          procedure F42;
-         pragma Import (Ada, F42, "polyorb__tasking__profiles__full_tasking_atc__abortables__finalize_body");
+         pragma Import (Ada, F42, "polyorb__tasking__threads__annotations__finalize_spec");
       begin
-         E652 := E652 - 1;
          F42;
       end;
       declare
          procedure F43;
-         pragma Import (Ada, F43, "polyorb__tasking__profiles__full_tasking__threads__finalize_body");
+         pragma Import (Ada, F43, "polyorb__tasking__profiles__full_tasking_atc__abortables__finalize_body");
       begin
-         E641 := E641 - 1;
+         E652 := E652 - 1;
          F43;
       end;
       declare
          procedure F44;
-         pragma Import (Ada, F44, "polyorb__tasking__profiles__full_tasking__threads__finalize_spec");
+         pragma Import (Ada, F44, "polyorb__tasking__profiles__full_tasking__threads__finalize_body");
       begin
+         E641 := E641 - 1;
          F44;
       end;
-      E639 := E639 - 1;
       declare
          procedure F45;
-         pragma Import (Ada, F45, "polyorb__tasking__profiles__full_tasking__mutexes__finalize_spec");
+         pragma Import (Ada, F45, "polyorb__tasking__profiles__full_tasking__threads__finalize_spec");
       begin
          F45;
       end;
-      E637 := E637 - 1;
+      E639 := E639 - 1;
       declare
          procedure F46;
-         pragma Import (Ada, F46, "polyorb__tasking__profiles__full_tasking__condition_variables__finalize_spec");
+         pragma Import (Ada, F46, "polyorb__tasking__profiles__full_tasking__mutexes__finalize_spec");
       begin
          F46;
       end;
-      E476 := E476 - 1;
+      E637 := E637 - 1;
       declare
          procedure F47;
-         pragma Import (Ada, F47, "polyorb__dsa_p__name_service__cos_naming__finalize_spec");
+         pragma Import (Ada, F47, "polyorb__tasking__profiles__full_tasking__condition_variables__finalize_spec");
       begin
          F47;
       end;
+      E476 := E476 - 1;
       declare
          procedure F48;
-         pragma Import (Ada, F48, "polyorb__services__naming__namingcontext__client__finalize_body");
+         pragma Import (Ada, F48, "polyorb__dsa_p__name_service__cos_naming__finalize_spec");
+      begin
+         F48;
+      end;
+      declare
+         procedure F49;
+         pragma Import (Ada, F49, "polyorb__services__naming__namingcontext__client__finalize_body");
       begin
          E468 := E468 - 1;
-         F48;
+         F49;
       end;
       E470 := E470 - 1;
       declare
-         procedure F49;
-         pragma Import (Ada, F49, "polyorb__services__naming__namingcontext__helper__finalize_spec");
-      begin
-         F49;
-      end;
-      E466 := E466 - 1;
-      declare
          procedure F50;
-         pragma Import (Ada, F50, "polyorb__services__naming__namingcontext__finalize_spec");
+         pragma Import (Ada, F50, "polyorb__services__naming__namingcontext__helper__finalize_spec");
       begin
          F50;
       end;
-      E464 := E464 - 1;
+      E466 := E466 - 1;
       declare
          procedure F51;
-         pragma Import (Ada, F51, "polyorb__services__naming__helper__finalize_spec");
+         pragma Import (Ada, F51, "polyorb__services__naming__namingcontext__finalize_spec");
       begin
          F51;
       end;
-      E623 := E623 - 1;
+      E464 := E464 - 1;
       declare
          procedure F52;
-         pragma Import (Ada, F52, "polyorb__obj_adapters__group_object_adapter__finalize_spec");
+         pragma Import (Ada, F52, "polyorb__services__naming__helper__finalize_spec");
       begin
          F52;
       end;
-      E625 := E625 - 1;
+      E623 := E623 - 1;
       declare
          procedure F53;
-         pragma Import (Ada, F53, "polyorb__servants__group_servants__finalize_spec");
+         pragma Import (Ada, F53, "polyorb__obj_adapters__group_object_adapter__finalize_spec");
       begin
          F53;
       end;
+      E625 := E625 - 1;
       declare
          procedure F54;
-         pragma Import (Ada, F54, "polyorb__references__corbaloc__finalize_body");
+         pragma Import (Ada, F54, "polyorb__servants__group_servants__finalize_spec");
+      begin
+         F54;
+      end;
+      declare
+         procedure F55;
+         pragma Import (Ada, F55, "polyorb__references__corbaloc__finalize_body");
       begin
          E551 := E551 - 1;
-         F54;
+         F55;
       end;
       E665 := E665 - 1;
       declare
-         procedure F55;
-         pragma Import (Ada, F55, "polyorb__poa_config__root_poa__finalize_spec");
-      begin
-         F55;
-      end;
-      E679 := E679 - 1;
-      declare
          procedure F56;
-         pragma Import (Ada, F56, "polyorb__poa_policies__request_processing_policy__active_object_map_only__finalize_spec");
+         pragma Import (Ada, F56, "polyorb__poa_config__root_poa__finalize_spec");
       begin
          F56;
       end;
-      E673 := E673 - 1;
+      E679 := E679 - 1;
       declare
          procedure F57;
-         pragma Import (Ada, F57, "polyorb__poa_policies__implicit_activation_policy__activation__finalize_spec");
+         pragma Import (Ada, F57, "polyorb__poa_policies__request_processing_policy__active_object_map_only__finalize_spec");
       begin
          F57;
       end;
-      E675 := E675 - 1;
+      E673 := E673 - 1;
       declare
          procedure F58;
-         pragma Import (Ada, F58, "polyorb__poa_policies__servant_retention_policy__retain__finalize_spec");
+         pragma Import (Ada, F58, "polyorb__poa_policies__implicit_activation_policy__activation__finalize_spec");
       begin
          F58;
       end;
-      E671 := E671 - 1;
+      E675 := E675 - 1;
       declare
          procedure F59;
-         pragma Import (Ada, F59, "polyorb__poa_policies__id_uniqueness_policy__unique__finalize_spec");
+         pragma Import (Ada, F59, "polyorb__poa_policies__servant_retention_policy__retain__finalize_spec");
       begin
          F59;
       end;
-      E413 := E413 - 1;
+      E671 := E671 - 1;
       declare
          procedure F60;
-         pragma Import (Ada, F60, "polyorb__poa_config__racws__finalize_spec");
+         pragma Import (Ada, F60, "polyorb__poa_policies__id_uniqueness_policy__unique__finalize_spec");
       begin
          F60;
       end;
-      E415 := E415 - 1;
+      E413 := E413 - 1;
       declare
          procedure F61;
-         pragma Import (Ada, F61, "polyorb__poa_config__proxies__finalize_spec");
+         pragma Import (Ada, F61, "polyorb__poa_config__racws__finalize_spec");
       begin
          F61;
       end;
-      E429 := E429 - 1;
+      E415 := E415 - 1;
       declare
          procedure F62;
-         pragma Import (Ada, F62, "polyorb__poa_policies__servant_retention_policy__non_retain__finalize_spec");
+         pragma Import (Ada, F62, "polyorb__poa_config__proxies__finalize_spec");
       begin
          F62;
       end;
-      E431 := E431 - 1;
+      E429 := E429 - 1;
       declare
          procedure F63;
-         pragma Import (Ada, F63, "polyorb__poa_policies__request_processing_policy__use_servant_manager__finalize_spec");
+         pragma Import (Ada, F63, "polyorb__poa_policies__servant_retention_policy__non_retain__finalize_spec");
       begin
          F63;
       end;
-      E427 := E427 - 1;
+      E431 := E431 - 1;
       declare
          procedure F64;
-         pragma Import (Ada, F64, "polyorb__poa_policies__request_processing_policy__use_default_servant__finalize_spec");
+         pragma Import (Ada, F64, "polyorb__poa_policies__request_processing_policy__use_servant_manager__finalize_spec");
       begin
          F64;
       end;
-      E677 := E677 - 1;
+      E427 := E427 - 1;
       declare
          procedure F65;
-         pragma Import (Ada, F65, "polyorb__poa_policies__lifespan_policy__transient__finalize_spec");
+         pragma Import (Ada, F65, "polyorb__poa_policies__request_processing_policy__use_default_servant__finalize_spec");
       begin
          F65;
       end;
-      E421 := E421 - 1;
+      E677 := E677 - 1;
       declare
          procedure F66;
-         pragma Import (Ada, F66, "polyorb__poa_policies__id_uniqueness_policy__multiple__finalize_spec");
+         pragma Import (Ada, F66, "polyorb__poa_policies__lifespan_policy__transient__finalize_spec");
       begin
          F66;
       end;
-      E417 := E417 - 1;
+      E421 := E421 - 1;
       declare
          procedure F67;
-         pragma Import (Ada, F67, "polyorb__poa_policies__id_assignment_policy__user__finalize_spec");
+         pragma Import (Ada, F67, "polyorb__poa_policies__id_uniqueness_policy__multiple__finalize_spec");
       begin
          F67;
       end;
-      E667 := E667 - 1;
+      E417 := E417 - 1;
       declare
          procedure F68;
-         pragma Import (Ada, F68, "polyorb__poa_policies__id_assignment_policy__system__finalize_spec");
+         pragma Import (Ada, F68, "polyorb__poa_policies__id_assignment_policy__user__finalize_spec");
       begin
          F68;
       end;
-      E391 := E391 - 1;
+      E667 := E667 - 1;
       declare
          procedure F69;
-         pragma Import (Ada, F69, "polyorb__poa__finalize_spec");
+         pragma Import (Ada, F69, "polyorb__poa_policies__id_assignment_policy__system__finalize_spec");
       begin
          F69;
       end;
+      E391 := E391 - 1;
       declare
          procedure F70;
-         pragma Import (Ada, F70, "polyorb__poa_policies__servant_retention_policy__finalize_spec");
+         pragma Import (Ada, F70, "polyorb__poa__finalize_spec");
       begin
-         E409 := E409 - 1;
          F70;
       end;
       declare
          procedure F71;
-         pragma Import (Ada, F71, "polyorb__poa_policies__request_processing_policy__finalize_spec");
+         pragma Import (Ada, F71, "polyorb__poa_policies__servant_retention_policy__finalize_spec");
+      begin
+         E409 := E409 - 1;
+         F71;
+      end;
+      declare
+         procedure F72;
+         pragma Import (Ada, F72, "polyorb__poa_policies__request_processing_policy__finalize_spec");
       begin
          E408 := E408 - 1;
-         F71;
+         F72;
       end;
       E425 := E425 - 1;
       declare
-         procedure F72;
-         pragma Import (Ada, F72, "polyorb__poa_policies__lifespan_policy__persistent__finalize_spec");
+         procedure F73;
+         pragma Import (Ada, F73, "polyorb__poa_policies__lifespan_policy__persistent__finalize_spec");
       begin
-         F72;
+         F73;
       end;
       declare
-         procedure F73;
-         pragma Import (Ada, F73, "polyorb__poa_policies__lifespan_policy__finalize_spec");
+         procedure F74;
+         pragma Import (Ada, F74, "polyorb__poa_policies__lifespan_policy__finalize_spec");
       begin
          E407 := E407 - 1;
-         F73;
+         F74;
       end;
       E423 := E423 - 1;
       declare
-         procedure F74;
-         pragma Import (Ada, F74, "polyorb__poa_policies__implicit_activation_policy__no_activation__finalize_spec");
-      begin
-         F74;
-      end;
-      declare
          procedure F75;
-         pragma Import (Ada, F75, "polyorb__poa_policies__implicit_activation_policy__finalize_spec");
+         pragma Import (Ada, F75, "polyorb__poa_policies__implicit_activation_policy__no_activation__finalize_spec");
       begin
-         E406 := E406 - 1;
          F75;
       end;
       declare
          procedure F76;
-         pragma Import (Ada, F76, "polyorb__poa_policies__id_uniqueness_policy__finalize_spec");
+         pragma Import (Ada, F76, "polyorb__poa_policies__implicit_activation_policy__finalize_spec");
       begin
-         E405 := E405 - 1;
+         E406 := E406 - 1;
          F76;
       end;
       declare
          procedure F77;
-         pragma Import (Ada, F77, "polyorb__poa_policies__id_assignment_policy__finalize_spec");
+         pragma Import (Ada, F77, "polyorb__poa_policies__id_uniqueness_policy__finalize_spec");
+      begin
+         E405 := E405 - 1;
+         F77;
+      end;
+      declare
+         procedure F78;
+         pragma Import (Ada, F78, "polyorb__poa_policies__id_assignment_policy__finalize_spec");
       begin
          E404 := E404 - 1;
-         F77;
+         F78;
       end;
       E401 := E401 - 1;
       declare
-         procedure F78;
-         pragma Import (Ada, F78, "polyorb__poa_manager__basic_manager__finalize_spec");
+         procedure F79;
+         pragma Import (Ada, F79, "polyorb__poa_manager__basic_manager__finalize_spec");
       begin
-         F78;
+         F79;
       end;
       declare
-         procedure F79;
-         pragma Import (Ada, F79, "polyorb__poa_manager__finalize_spec");
+         procedure F80;
+         pragma Import (Ada, F80, "polyorb__poa_manager__finalize_spec");
       begin
          E397 := E397 - 1;
-         F79;
+         F80;
       end;
       E419 := E419 - 1;
       declare
-         procedure F80;
-         pragma Import (Ada, F80, "polyorb__object_maps__user__finalize_spec");
-      begin
-         F80;
-      end;
-      E669 := E669 - 1;
-      declare
          procedure F81;
-         pragma Import (Ada, F81, "polyorb__object_maps__system__finalize_spec");
+         pragma Import (Ada, F81, "polyorb__object_maps__user__finalize_spec");
       begin
          F81;
       end;
-      E403 := E403 - 1;
+      E669 := E669 - 1;
       declare
          procedure F82;
-         pragma Import (Ada, F82, "polyorb__object_maps__finalize_spec");
+         pragma Import (Ada, F82, "polyorb__object_maps__system__finalize_spec");
       begin
          F82;
       end;
-      E399 := E399 - 1;
+      E403 := E403 - 1;
       declare
          procedure F83;
-         pragma Import (Ada, F83, "polyorb__poa_types__finalize_spec");
+         pragma Import (Ada, F83, "polyorb__object_maps__finalize_spec");
       begin
          F83;
       end;
-      E433 := E433 - 1;
+      E399 := E399 - 1;
       declare
          procedure F84;
-         pragma Import (Ada, F84, "polyorb__poa_policies__thread_policy__orb_ctrl__finalize_spec");
+         pragma Import (Ada, F84, "polyorb__poa_types__finalize_spec");
       begin
          F84;
       end;
-      E411 := E411 - 1;
+      E433 := E433 - 1;
       declare
          procedure F85;
-         pragma Import (Ada, F85, "polyorb__poa_policies__thread_policy__finalize_spec");
+         pragma Import (Ada, F85, "polyorb__poa_policies__thread_policy__orb_ctrl__finalize_spec");
       begin
          F85;
       end;
-      E658 := E658 - 1;
+      E411 := E411 - 1;
       declare
          procedure F86;
-         pragma Import (Ada, F86, "polyorb__orb_controller__workers__finalize_spec");
+         pragma Import (Ada, F86, "polyorb__poa_policies__thread_policy__finalize_spec");
       begin
          F86;
       end;
-      E478 := E478 - 1;
+      E658 := E658 - 1;
       declare
          procedure F87;
-         pragma Import (Ada, F87, "polyorb__orb__thread_pool__finalize_spec");
+         pragma Import (Ada, F87, "polyorb__orb_controller__workers__finalize_spec");
       begin
          F87;
       end;
+      E478 := E478 - 1;
       declare
          procedure F88;
-         pragma Import (Ada, F88, "polyorb__obj_adapter_qos__finalize_body");
+         pragma Import (Ada, F88, "polyorb__orb__thread_pool__finalize_spec");
+      begin
+         F88;
+      end;
+      declare
+         procedure F89;
+         pragma Import (Ada, F89, "polyorb__obj_adapter_qos__finalize_body");
       begin
          E393 := E393 - 1;
-         F88;
+         F89;
       end;
       E531 := E531 - 1;
       declare
-         procedure F89;
-         pragma Import (Ada, F89, "polyorb__filters__slicers__finalize_spec");
-      begin
-         F89;
-      end;
-      E379 := E379 - 1;
-      declare
          procedure F90;
-         pragma Import (Ada, F90, "polyorb__dsa_p__name_service__finalize_spec");
+         pragma Import (Ada, F90, "polyorb__filters__slicers__finalize_spec");
       begin
          F90;
       end;
+      E379 := E379 - 1;
       declare
          procedure F91;
-         pragma Import (Ada, F91, "polyorb__binding_data_qos__finalize_body");
+         pragma Import (Ada, F91, "polyorb__dsa_p__name_service__finalize_spec");
       begin
-         E527 := E527 - 1;
          F91;
       end;
-      E732 := E732 - 1;
       declare
          procedure F92;
-         pragma Import (Ada, F92, "polyorb__binding_data__neighbour__finalize_spec");
+         pragma Import (Ada, F92, "polyorb__binding_data_qos__finalize_body");
       begin
+         E527 := E527 - 1;
          F92;
       end;
+      E731 := E731 - 1;
       declare
          procedure F93;
-         pragma Import (Ada, F93, "polyorb__orb__finalize_body");
+         pragma Import (Ada, F93, "polyorb__binding_data__neighbour__finalize_spec");
+      begin
+         F93;
+      end;
+      declare
+         procedure F94;
+         pragma Import (Ada, F94, "polyorb__orb__finalize_body");
       begin
          E223 := E223 - 1;
-         F93;
+         F94;
       end;
       E362 := E362 - 1;
       declare
-         procedure F94;
-         pragma Import (Ada, F94, "polyorb__transport__handlers__finalize_spec");
+         procedure F95;
+         pragma Import (Ada, F95, "polyorb__transport__handlers__finalize_spec");
       begin
-         F94;
+         F95;
       end;
       E256 := E256 - 1;
       declare
-         procedure F95;
-         pragma Import (Ada, F95, "polyorb__requests__finalize_body");
+         procedure F96;
+         pragma Import (Ada, F96, "polyorb__requests__finalize_body");
       begin
          E259 := E259 - 1;
-         F95;
+         F96;
       end;
       E221 := E221 - 1;
       declare
-         procedure F96;
-         pragma Import (Ada, F96, "polyorb__servants__finalize_body");
+         procedure F97;
+         pragma Import (Ada, F97, "polyorb__servants__finalize_body");
       begin
          E275 := E275 - 1;
-         F96;
+         F97;
       end;
       E269 := E269 - 1;
       declare
-         procedure F97;
-         pragma Import (Ada, F97, "polyorb__servants__iface__finalize_spec");
+         procedure F98;
+         pragma Import (Ada, F98, "polyorb__servants__iface__finalize_spec");
       begin
          E276 := E276 - 1;
-         F97;
-      end;
-      declare
-         procedure F98;
-         pragma Import (Ada, F98, "polyorb__orb_controller__finalize_body");
-      begin
-         E366 := E366 - 1;
          F98;
       end;
       declare
          procedure F99;
-         pragma Import (Ada, F99, "polyorb__orb__iface__finalize_spec");
+         pragma Import (Ada, F99, "polyorb__orb_controller__finalize_body");
+      begin
+         E366 := E366 - 1;
+         F99;
+      end;
+      declare
+         procedure F100;
+         pragma Import (Ada, F100, "polyorb__orb__iface__finalize_spec");
       begin
          E257 := E257 - 1;
-         F99;
+         F100;
       end;
       E238 := E238 - 1;
       declare
-         procedure F100;
-         pragma Import (Ada, F100, "polyorb__orb__finalize_spec");
-      begin
-         F100;
-      end;
-      E358 := E358 - 1;
-      declare
          procedure F101;
-         pragma Import (Ada, F101, "polyorb__obj_adapters__finalize_spec");
+         pragma Import (Ada, F101, "polyorb__orb__finalize_spec");
       begin
          F101;
       end;
+      E358 := E358 - 1;
       declare
          procedure F102;
-         pragma Import (Ada, F102, "polyorb__servants__finalize_spec");
+         pragma Import (Ada, F102, "polyorb__obj_adapters__finalize_spec");
       begin
          F102;
       end;
       declare
          procedure F103;
-         pragma Import (Ada, F103, "polyorb__request_qos__finalize_body");
+         pragma Import (Ada, F103, "polyorb__servants__finalize_spec");
       begin
-         E337 := E337 - 1;
          F103;
       end;
       declare
          procedure F104;
-         pragma Import (Ada, F104, "polyorb__protocols__iface__finalize_spec");
+         pragma Import (Ada, F104, "polyorb__request_qos__finalize_body");
       begin
-         E273 := E273 - 1;
+         E337 := E337 - 1;
          F104;
       end;
       declare
          procedure F105;
-         pragma Import (Ada, F105, "polyorb__protocols__finalize_spec");
+         pragma Import (Ada, F105, "polyorb__protocols__iface__finalize_spec");
       begin
+         E273 := E273 - 1;
          F105;
       end;
       declare
          procedure F106;
-         pragma Import (Ada, F106, "polyorb__requests__finalize_spec");
+         pragma Import (Ada, F106, "polyorb__protocols__finalize_spec");
       begin
          F106;
       end;
       declare
          procedure F107;
-         pragma Import (Ada, F107, "polyorb__orb_controller__finalize_spec");
+         pragma Import (Ada, F107, "polyorb__requests__finalize_spec");
       begin
          F107;
       end;
-      E368 := E368 - 1;
       declare
          procedure F108;
-         pragma Import (Ada, F108, "polyorb__request_scheduler__finalize_spec");
+         pragma Import (Ada, F108, "polyorb__orb_controller__finalize_spec");
       begin
          F108;
       end;
+      E368 := E368 - 1;
       declare
          procedure F109;
-         pragma Import (Ada, F109, "polyorb__if_descriptors__finalize_spec");
+         pragma Import (Ada, F109, "polyorb__request_scheduler__finalize_spec");
       begin
-         E270 := E270 - 1;
          F109;
       end;
       declare
          procedure F110;
-         pragma Import (Ada, F110, "polyorb__errors__helper__finalize_body");
+         pragma Import (Ada, F110, "polyorb__if_descriptors__finalize_spec");
       begin
-         E261 := E261 - 1;
+         E270 := E270 - 1;
          F110;
       end;
       declare
          procedure F111;
-         pragma Import (Ada, F111, "polyorb__any__objref__finalize_body");
+         pragma Import (Ada, F111, "polyorb__errors__helper__finalize_body");
+      begin
+         E261 := E261 - 1;
+         F111;
+      end;
+      declare
+         procedure F112;
+         pragma Import (Ada, F112, "polyorb__any__objref__finalize_body");
       begin
          E263 := E263 - 1;
-         F111;
+         F112;
       end;
       E265 := E265 - 1;
       declare
-         procedure F112;
-         pragma Import (Ada, F112, "polyorb__references__finalize_spec");
+         procedure F113;
+         pragma Import (Ada, F113, "polyorb__references__finalize_spec");
       begin
-         F112;
+         F113;
       end;
       E242 := E242 - 1;
       E244 := E244 - 1;
       declare
-         procedure F113;
-         pragma Import (Ada, F113, "polyorb__filters__iface__finalize_spec");
-      begin
-         F113;
-      end;
-      declare
          procedure F114;
-         pragma Import (Ada, F114, "polyorb__binding_object_qos__finalize_body");
+         pragma Import (Ada, F114, "polyorb__filters__iface__finalize_spec");
       begin
-         E231 := E231 - 1;
          F114;
       end;
       declare
          procedure F115;
-         pragma Import (Ada, F115, "polyorb__binding_objects__finalize_spec");
+         pragma Import (Ada, F115, "polyorb__binding_object_qos__finalize_body");
       begin
+         E231 := E231 - 1;
          F115;
       end;
-      E227 := E227 - 1;
       declare
          procedure F116;
-         pragma Import (Ada, F116, "polyorb__binding_data__local__finalize_spec");
+         pragma Import (Ada, F116, "polyorb__binding_objects__finalize_spec");
       begin
          F116;
       end;
+      E227 := E227 - 1;
       declare
          procedure F117;
-         pragma Import (Ada, F117, "polyorb__binding_data__finalize_spec");
+         pragma Import (Ada, F117, "polyorb__binding_data__local__finalize_spec");
       begin
          F117;
       end;
       declare
          procedure F118;
-         pragma Import (Ada, F118, "polyorb__transport__finalize_spec");
+         pragma Import (Ada, F118, "polyorb__binding_data__finalize_spec");
       begin
          F118;
       end;
       declare
          procedure F119;
-         pragma Import (Ada, F119, "polyorb__filters__finalize_spec");
+         pragma Import (Ada, F119, "polyorb__transport__finalize_spec");
       begin
          F119;
       end;
-      E278 := E278 - 1;
       declare
          procedure F120;
-         pragma Import (Ada, F120, "polyorb__tasking__abortables__finalize_spec");
+         pragma Import (Ada, F120, "polyorb__filters__finalize_spec");
       begin
          F120;
       end;
-      E545 := E545 - 1;
+      E278 := E278 - 1;
       declare
          procedure F121;
-         pragma Import (Ada, F121, "polyorb__asynch_ev__sockets__finalize_spec");
+         pragma Import (Ada, F121, "polyorb__tasking__abortables__finalize_spec");
       begin
          F121;
       end;
+      E545 := E545 - 1;
       declare
          procedure F122;
-         pragma Import (Ada, F122, "polyorb__services__naming__finalize_spec");
+         pragma Import (Ada, F122, "polyorb__asynch_ev__sockets__finalize_spec");
+      begin
+         F122;
+      end;
+      declare
+         procedure F123;
+         pragma Import (Ada, F123, "polyorb__services__naming__finalize_spec");
       begin
          E462 := E462 - 1;
-         F122;
+         F123;
       end;
       E498 := E498 - 1;
       declare
-         procedure F123;
-         pragma Import (Ada, F123, "polyorb__qos__static_buffers__finalize_spec");
+         procedure F124;
+         pragma Import (Ada, F124, "polyorb__qos__static_buffers__finalize_spec");
       begin
-         F123;
+         F124;
       end;
       declare
-         procedure F124;
-         pragma Import (Ada, F124, "polyorb__qos__addressing_modes__finalize_spec");
+         procedure F125;
+         pragma Import (Ada, F125, "polyorb__qos__addressing_modes__finalize_spec");
       begin
          E626 := E626 - 1;
-         F124;
+         F125;
       end;
       E395 := E395 - 1;
       declare
-         procedure F125;
-         pragma Import (Ada, F125, "polyorb__poa_config__finalize_spec");
-      begin
-         F125;
-      end;
-      declare
          procedure F126;
-         pragma Import (Ada, F126, "polyorb__poa_policies__finalize_spec");
+         pragma Import (Ada, F126, "polyorb__poa_config__finalize_spec");
       begin
-         E396 := E396 - 1;
          F126;
       end;
       declare
          procedure F127;
-         pragma Import (Ada, F127, "polyorb__parameters__environment__finalize_body");
+         pragma Import (Ada, F127, "polyorb__poa_policies__finalize_spec");
       begin
-         E596 := E596 - 1;
+         E396 := E396 - 1;
          F127;
       end;
       declare
          procedure F128;
-         pragma Import (Ada, F128, "polyorb__parameters__command_line__finalize_body");
+         pragma Import (Ada, F128, "polyorb__parameters__environment__finalize_body");
       begin
-         E594 := E594 - 1;
+         E596 := E596 - 1;
          F128;
       end;
       declare
          procedure F129;
-         pragma Import (Ada, F129, "polyorb__exceptions__finalize_body");
+         pragma Import (Ada, F129, "polyorb__parameters__command_line__finalize_body");
       begin
-         E375 := E375 - 1;
+         E594 := E594 - 1;
          F129;
       end;
-      E709 := E709 - 1;
       declare
          procedure F130;
-         pragma Import (Ada, F130, "polyorb__dsa_p__streams__finalize_spec");
+         pragma Import (Ada, F130, "polyorb__exceptions__finalize_body");
       begin
+         E375 := E375 - 1;
          F130;
       end;
-      E272 := E272 - 1;
+      E697 := E697 - 1;
       declare
          procedure F131;
-         pragma Import (Ada, F131, "polyorb__any__nvlist__finalize_spec");
+         pragma Import (Ada, F131, "polyorb__dsa_p__streams__finalize_spec");
       begin
          F131;
       end;
-      E342 := E342 - 1;
+      E272 := E272 - 1;
       declare
          procedure F132;
-         pragma Import (Ada, F132, "polyorb__any__exceptionlist__finalize_spec");
+         pragma Import (Ada, F132, "polyorb__any__nvlist__finalize_spec");
       begin
          F132;
       end;
-      E350 := E350 - 1;
+      E342 := E342 - 1;
       declare
          procedure F133;
-         pragma Import (Ada, F133, "polyorb__tasking__condition_variables__finalize_spec");
+         pragma Import (Ada, F133, "polyorb__any__exceptionlist__finalize_spec");
       begin
          F133;
       end;
-      E236 := E236 - 1;
+      E350 := E350 - 1;
       declare
          procedure F134;
-         pragma Import (Ada, F134, "polyorb__tasking__mutexes__finalize_spec");
+         pragma Import (Ada, F134, "polyorb__tasking__condition_variables__finalize_spec");
       begin
          F134;
       end;
-      E340 := E340 - 1;
+      E236 := E236 - 1;
       declare
          procedure F135;
-         pragma Import (Ada, F135, "polyorb__representations__finalize_spec");
+         pragma Import (Ada, F135, "polyorb__tasking__mutexes__finalize_spec");
       begin
          F135;
       end;
-      E240 := E240 - 1;
+      E340 := E340 - 1;
       declare
          procedure F136;
-         pragma Import (Ada, F136, "polyorb__errors__finalize_spec");
+         pragma Import (Ada, F136, "polyorb__representations__finalize_spec");
       begin
          F136;
       end;
+      E240 := E240 - 1;
       declare
          procedure F137;
-         pragma Import (Ada, F137, "polyorb__any__finalize_body");
+         pragma Import (Ada, F137, "polyorb__errors__finalize_spec");
       begin
-         E144 := E144 - 1;
          F137;
       end;
       declare
          procedure F138;
-         pragma Import (Ada, F138, "polyorb__any__finalize_spec");
+         pragma Import (Ada, F138, "polyorb__any__finalize_body");
       begin
+         E144 := E144 - 1;
          F138;
       end;
-      E210 := E210 - 1;
       declare
          procedure F139;
-         pragma Import (Ada, F139, "polyorb__smart_pointers__finalize_spec");
+         pragma Import (Ada, F139, "polyorb__any__finalize_spec");
       begin
          F139;
       end;
-      E212 := E212 - 1;
+      E210 := E210 - 1;
       declare
          procedure F140;
-         pragma Import (Ada, F140, "polyorb__parameters__finalize_spec");
+         pragma Import (Ada, F140, "polyorb__smart_pointers__finalize_spec");
       begin
          F140;
       end;
-      E252 := E252 - 1;
+      E212 := E212 - 1;
       declare
          procedure F141;
-         pragma Import (Ada, F141, "polyorb__components__finalize_spec");
+         pragma Import (Ada, F141, "polyorb__parameters__finalize_spec");
       begin
          F141;
       end;
-      E384 := E384 - 1;
+      E252 := E252 - 1;
       declare
          procedure F142;
-         pragma Import (Ada, F142, "polyorb__utils__hfunctions__hyper__finalize_spec");
+         pragma Import (Ada, F142, "polyorb__components__finalize_spec");
       begin
          F142;
       end;
-      E346 := E346 - 1;
+      E384 := E384 - 1;
       declare
          procedure F143;
-         pragma Import (Ada, F143, "polyorb__asynch_ev__finalize_spec");
+         pragma Import (Ada, F143, "polyorb__utils__hfunctions__hyper__finalize_spec");
       begin
          F143;
       end;
-      E348 := E348 - 1;
+      E346 := E346 - 1;
       declare
          procedure F144;
-         pragma Import (Ada, F144, "polyorb__jobs__finalize_spec");
+         pragma Import (Ada, F144, "polyorb__asynch_ev__finalize_spec");
       begin
          F144;
       end;
-      E233 := E233 - 1;
+      E348 := E348 - 1;
       declare
          procedure F145;
-         pragma Import (Ada, F145, "polyorb__annotations__finalize_spec");
+         pragma Import (Ada, F145, "polyorb__jobs__finalize_spec");
       begin
          F145;
       end;
-      E267 := E267 - 1;
+      E233 := E233 - 1;
       declare
          procedure F146;
-         pragma Import (Ada, F146, "polyorb__qos__finalize_spec");
+         pragma Import (Ada, F146, "polyorb__annotations__finalize_spec");
       begin
          F146;
       end;
-      E215 := E215 - 1;
+      E267 := E267 - 1;
       declare
          procedure F147;
-         pragma Import (Ada, F147, "polyorb__types__finalize_spec");
+         pragma Import (Ada, F147, "polyorb__qos__finalize_spec");
       begin
          F147;
       end;
-      E280 := E280 - 1;
+      E215 := E215 - 1;
       declare
          procedure F148;
-         pragma Import (Ada, F148, "polyorb__tasking__threads__finalize_spec");
+         pragma Import (Ada, F148, "polyorb__types__finalize_spec");
       begin
          F148;
       end;
-      E325 := E325 - 1;
+      E280 := E280 - 1;
       declare
          procedure F149;
-         pragma Import (Ada, F149, "system__tasking__protected_objects__entries__finalize_spec");
+         pragma Import (Ada, F149, "polyorb__tasking__threads__finalize_spec");
       begin
          F149;
       end;
-      E377 := E377 - 1;
+      E325 := E325 - 1;
       declare
          procedure F150;
-         pragma Import (Ada, F150, "system__rpc__finalize_spec");
+         pragma Import (Ada, F150, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F150;
       end;
-      E575 := E575 - 1;
+      E377 := E377 - 1;
       declare
          procedure F151;
-         pragma Import (Ada, F151, "ada__directories__finalize_spec");
+         pragma Import (Ada, F151, "system__rpc__finalize_spec");
       begin
          F151;
       end;
-      E525 := E525 - 1;
+      E575 := E575 - 1;
       declare
          procedure F152;
-         pragma Import (Ada, F152, "system__regexp__finalize_spec");
+         pragma Import (Ada, F152, "ada__directories__finalize_spec");
       begin
          F152;
       end;
+      E525 := E525 - 1;
       declare
          procedure F153;
-         pragma Import (Ada, F153, "gnat__sockets__finalize_body");
+         pragma Import (Ada, F153, "system__regexp__finalize_spec");
       begin
-         E507 := E507 - 1;
          F153;
       end;
       declare
          procedure F154;
-         pragma Import (Ada, F154, "gnat__sockets__finalize_spec");
+         pragma Import (Ada, F154, "gnat__sockets__finalize_body");
       begin
+         E507 := E507 - 1;
          F154;
       end;
-      E516 := E516 - 1;
       declare
          procedure F155;
-         pragma Import (Ada, F155, "system__pool_size__finalize_spec");
+         pragma Import (Ada, F155, "gnat__sockets__finalize_spec");
       begin
          F155;
       end;
-      E163 := E163 - 1;
+      E516 := E516 - 1;
       declare
          procedure F156;
-         pragma Import (Ada, F156, "system__pool_global__finalize_spec");
+         pragma Import (Ada, F156, "system__pool_size__finalize_spec");
       begin
          F156;
       end;
-      E106 := E106 - 1;
+      E163 := E163 - 1;
       declare
          procedure F157;
-         pragma Import (Ada, F157, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F157, "system__pool_global__finalize_spec");
       begin
          F157;
       end;
-      E219 := E219 - 1;
+      E106 := E106 - 1;
       declare
          procedure F158;
-         pragma Import (Ada, F158, "ada__strings__wide_unbounded__finalize_spec");
+         pragma Import (Ada, F158, "ada__text_io__finalize_spec");
       begin
          F158;
       end;
-      E204 := E204 - 1;
+      E219 := E219 - 1;
       declare
          procedure F159;
-         pragma Import (Ada, F159, "ada__strings__wide_maps__finalize_spec");
+         pragma Import (Ada, F159, "ada__strings__wide_unbounded__finalize_spec");
       begin
          F159;
       end;
-      E217 := E217 - 1;
+      E204 := E204 - 1;
       declare
          procedure F160;
-         pragma Import (Ada, F160, "ada__strings__unbounded__finalize_spec");
+         pragma Import (Ada, F160, "ada__strings__wide_maps__finalize_spec");
       begin
          F160;
       end;
-      E185 := E185 - 1;
+      E217 := E217 - 1;
       declare
          procedure F161;
-         pragma Import (Ada, F161, "system__storage_pools__subpools__finalize_spec");
+         pragma Import (Ada, F161, "ada__strings__unbounded__finalize_spec");
       begin
          F161;
       end;
-      E157 := E157 - 1;
+      E185 := E185 - 1;
       declare
          procedure F162;
-         pragma Import (Ada, F162, "system__finalization_masters__finalize_spec");
+         pragma Import (Ada, F162, "system__storage_pools__subpools__finalize_spec");
       begin
          F162;
       end;
-      E704 := E704 - 1;
+      E157 := E157 - 1;
       declare
          procedure F163;
-         pragma Import (Ada, F163, "ada__streams__stream_io__finalize_spec");
+         pragma Import (Ada, F163, "system__finalization_masters__finalize_spec");
       begin
          F163;
       end;
+      E692 := E692 - 1;
       declare
          procedure F164;
-         pragma Import (Ada, F164, "system__file_io__finalize_body");
+         pragma Import (Ada, F164, "ada__streams__stream_io__finalize_spec");
+      begin
+         F164;
+      end;
+      declare
+         procedure F165;
+         pragma Import (Ada, F165, "system__file_io__finalize_body");
       begin
          E112 := E112 - 1;
-         F164;
+         F165;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -1503,7 +1509,7 @@ package body ada_main is
            True, True, False, True, True, True, True, False, 
            False, False, False, False, False, True, True, True, 
            True, True, True, False),
-         Count => (0, 0, 0, 4, 2, 2, 2, 1, 4, 0),
+         Count => (0, 0, 0, 4, 2, 2, 2, 1, 3, 0),
          Unknown => (False, False, False, False, False, False, True, True, True, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
@@ -1555,7 +1561,7 @@ package body ada_main is
       E040 := E040 + 1;
       E009 := E009 + 1;
       Ada.Numerics'Elab_Spec;
-      E715 := E715 + 1;
+      E709 := E709 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
       E100 := E100 + 1;
@@ -1574,7 +1580,7 @@ package body ada_main is
       System.File_Io'Elab_Body;
       E112 := E112 + 1;
       Ada.Streams.Stream_Io'Elab_Spec;
-      E704 := E704 + 1;
+      E692 := E692 + 1;
       System.Storage_Pools'Elab_Spec;
       E161 := E161 + 1;
       System.Finalization_Masters'Elab_Spec;
@@ -1688,7 +1694,7 @@ package body ada_main is
       Polyorb.Any.Nvlist'Elab_Spec;
       E272 := E272 + 1;
       Polyorb.Dsa_P.Streams'Elab_Spec;
-      E709 := E709 + 1;
+      E697 := E697 + 1;
       Polyorb.Exceptions'Elab_Body;
       E375 := E375 + 1;
       E373 := E373 + 1;
@@ -1780,7 +1786,7 @@ package body ada_main is
       Polyorb.Orb'Elab_Body;
       E223 := E223 + 1;
       Polyorb.Binding_Data.Neighbour'Elab_Spec;
-      E732 := E732 + 1;
+      E731 := E731 + 1;
       Polyorb.Binding_Data_Qos'Elab_Body;
       E527 := E527 + 1;
       Polyorb.Dsa_P.Name_Service'Elab_Spec;
@@ -2002,38 +2008,36 @@ package body ada_main is
       System.Partition_Interface'Elab_Spec;
       System.Partition_Interface'Elab_Body;
       E120 := E120 + 1;
-      Factory'Elab_Body;
-      E006 := E006 + 1;
       Polyorb.Dsa_P.Partitions'Elab_Body;
-      E687 := E687 + 1;
+      E699 := E699 + 1;
       POLYORB.DSA_P.STORAGES'ELAB_SPEC;
       POLYORB.DSA_P.STORAGES'ELAB_BODY;
-      E707 := E707 + 1;
+      E695 := E695 + 1;
       Polyorb.Dsa_P.Storages.Dsm'Elab_Spec;
       Polyorb.Dsa_P.Storages.Dsm'Elab_Body;
-      E726 := E726 + 1;
-      E724 := E724 + 1;
+      E725 := E725 + 1;
+      E723 := E723 + 1;
       Polyorb.Termination_Manager'Elab_Spec;
       Polyorb.Termination_Manager.Bootstrap'Elab_Spec;
-      E730 := E730 + 1;
+      E729 := E729 + 1;
       Polyorb.Termination_Manager'Elab_Body;
-      E728 := E728 + 1;
+      E727 := E727 + 1;
       System.Dsa_Services'Elab_Body;
-      E722 := E722 + 1;
+      E721 := E721 + 1;
       Storage'Elab_Spec;
-      E712 := E712 + 1;
+      E688 := E688 + 1;
       Common'Elab_Spec;
-      E710 := E710 + 1;
+      E686 := E686 + 1;
+      Factory'Elab_Body;
+      E006 := E006 + 1;
+      Newacceptors'Elab_Spec;
+      Newacceptors'Elab_Body;
+      E704 := E704 + 1;
       Newworkers'Elab_Spec;
       Newworkers'Elab_Body;
-      E714 := E714 + 1;
-      Newnewworkers'Elab_Spec;
-      Newnewworkers'Elab_Body;
-      E692 := E692 + 1;
-      Workercity'Elab_Spec;
-      E720 := E720 + 1;
+      E708 := E708 + 1;
       Client'Elab_Body;
-      E690 := E690 + 1;
+      E702 := E702 + 1;
       Partition'Elab_Body;
       E002 := E002 + 1;
    end adainit;
@@ -2068,14 +2072,13 @@ package body ada_main is
 
 --  BEGIN Object file/option list
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\polyorb-partition_elaboration.o
-   --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\factory.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\polyorb-dsa_p-partitions.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\polyorb-dsa_p-storages-config.o
    --   E:/Cartella globale/Uni/Laurea Magistrale/SCD/Progetto/Testing/src/dsa/i686-pc-mingw32/stubs\storage.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\common.o
+   --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\factory.o
+   --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\newacceptors.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\newworkers.o
-   --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\newnewworkers.o
-   --   E:/Cartella globale/Uni/Laurea Magistrale/SCD/Progetto/Testing/src/dsa/i686-pc-mingw32/stubs\workercity.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\client.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\start_factory.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\partition.o

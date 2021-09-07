@@ -25,11 +25,12 @@ package Common is
       Q : in Integer;
       N : in Notify) is abstract;
 
-   procedure Validate
+   function Validate
      (W : Any_Acceptor;
       V : in Integer;
       ID : in Integer;
-      N : in Notify) is abstract;
+      N : in Notify) return Boolean
+      is abstract;
 
 private
    type Worker is abstract tagged limited null record;

@@ -12,7 +12,7 @@ RV NO_NESTED_FINALIZATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U polyorb.partition_elaboration%b  polyorb-partition_elaboration.adb  b86ef312 NE OO PK
+U polyorb.partition_elaboration%b  polyorb-partition_elaboration.adb  8c5dbe9a NE OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W polyorb%s		polyorb.ads		polyorb.ali
 W polyorb.dsa_p%s	polyorb-dsa_p.ads	polyorb-dsa_p.ali
@@ -116,7 +116,7 @@ D polyorb-orb_controller.ads  20210826161802 0f6dfd86 polyorb.orb_controller%s
 D polyorb-orb_controller-workers.ads  20210826161802 26e9246d polyorb.orb_controller.workers%s
 D polyorb-parameters.ads  20210826161802 3f4f0596 polyorb.parameters%s
 D polyorb-partition_elaboration.ads  20210826161802 7133e830 polyorb.partition_elaboration%s
-D polyorb-partition_elaboration.adb  20210907141018 f891b124 polyorb.partition_elaboration%b
+D polyorb-partition_elaboration.adb  20210907170240 cca2fcac polyorb.partition_elaboration%b
 D polyorb-poa.ads	20210826161802 47e2ca89 polyorb.poa%s
 D polyorb-poa_manager.ads  20210826161802 0fd9b3c7 polyorb.poa_manager%s
 D polyorb-poa_policies.ads  20210826161802 7bd2b626 polyorb.poa_policies%s
@@ -210,8 +210,8 @@ X 18 interfac.ads
 X 21 polyorb.ads
 35K9*PolyORB 37e12 52|37r6 40r6 43r6 46r6 49r6 52r6 55r6 58r6 61r6 64r6 67r6
 . 70r6 73r6 76r6 79r6 82r9 100r5 53|4r6 7r6 10r6 11r6 12r6 13r6 14r6 15r6
-. 16r6 19r6 20r6 21r6 22r6 23r6 24r6 25r6 26r6 27r6 28r6 29r6 30r14 103r7
-. 104r13 106r5
+. 16r6 19r6 20r6 21r6 22r6 23r6 24r6 25r6 26r6 27r6 28r6 29r6 30r14 99r7
+. 100r13 102r5
 X 23 polyorb-any.ads
 179h12*Union_TC_Map
 251V28*"="=253:32{boolean} 100|41i19
@@ -219,16 +219,16 @@ X 28 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
 56V13*Link(52P9) 106|54i21
 X 32 polyorb-dsa_p.ads
-35K17*DSA_P 37e18 52|40r14 53|29r14 103r15 104r21
+35K17*DSA_P 37e18 52|40r14 53|29r14 99r15 100r21
 X 33 polyorb-dsa_p-exceptions.ads
 38K23*Exceptions 55e29 52|40w20 41r37
 X 34 polyorb-dsa_p-name_service.ads
-38K23*Name_Service 108e31 53|29r20 103m21 104r27
+38K23*Name_Service 108e31 53|29r20 99m21 100r27
 48P9*Name_Server_Access(40R9)
-49p4*Name_Ctx{48P9} 53|103m34
+49p4*Name_Ctx{48P9} 53|99m34
 X 35 polyorb-dsa_p-name_service-cos_naming.ads
-41K36*COS_Naming 71e42 53|29w33 104r40
-43R9*COS_Name_Server<34|40R9> 43e60 53|104r51
+41K36*COS_Naming 71e42 53|29w33 100r40
+43R9*COS_Name_Server<34|40R9> 43e60 53|100r51
 X 37 polyorb-exceptions.ads
 58K17*Exceptions 133e23 52|37w14 38r31
 X 39 polyorb-initialization.ads
@@ -238,7 +238,7 @@ X 41 polyorb-log.ads
 X 46 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9[30|358])
-98V13 Link(47P9[30|358]) 106|54i21[30|358]
+98V13 Link(47P9) 106|54i21
 X 47 polyorb-orb.ads
 59K17*ORB 342e16 52|52w14 53r31 53|11r14
 X 48 polyorb-orb-thread_pool.ads
@@ -250,16 +250,16 @@ X 50 polyorb-orb_controller-workers.ads
 X 51 polyorb-parameters.ads
 39K17*Parameters 140e23 52|49w14 50r31 53|13w14 14r14
 X 52 polyorb-partition_elaboration.ads
-82K17*Partition_Elaboration 21|35k9 52|100l13 100e34 53|30b22 106l13 106t34
-85U14*Configure 86^7 53|39b14 105l8 105t17
+82K17*Partition_Elaboration 21|35k9 52|100l13 100e34 53|30b22 102l13 102t34
+85U14*Configure 86^7 53|39b14 101l8 101t17
 86p7 Set_Conf 53|40b7 43r7 47r7 51r7 55r7 59r7 63r7 67r7 71r7 75r7 79r7 83r7
-. 87r7 91r7 95r7 99r7
+. 87r7 91r7 95r7
 86a36 Section{string} 53|44r10 48r10 52r10 56r10 60r10 64r10 68r10 72r10
-. 76r10 80r10 84r10 88r10 92r10 96r10 100r10
+. 76r10 80r10 84r10 88r10 92r10 96r10
 86a45 Key{string} 53|45r10 49r10 53r10 57r10 61r10 65r10 69r10 73r10 77r10
-. 81r10 85r10 89r10 93r10 97r10 101r10
+. 81r10 85r10 89r10 93r10 97r10
 86a50 Value{string} 53|46r10 50r10 54r10 58r10 62r10 66r10 70r10 74r10 78r10
-. 82r10 86r10 90r10 94r10 98r10 102r10
+. 82r10 86r10 90r10 94r10 98r10
 89U14*Full_Launch 53|31b14 34l8 34t19
 92U14*Run_Additional_Tasks 53|35b14 38l8 38t28
 X 53 polyorb-partition_elaboration.adb

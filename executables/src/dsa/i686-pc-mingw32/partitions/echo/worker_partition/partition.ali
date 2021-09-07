@@ -8,7 +8,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U partition%b		partition.adb		158c89a8 OO PK
+U partition%b		partition.adb		bc59e7ae OO PK
 W newworkers%s		newworkers.adb		newworkers.ali  EA
 W polyorb%s		polyorb.ads		polyorb.ali
 W polyorb.initialization%s  polyorb-initialization.adb  polyorb-initialization.ali  EA
@@ -27,8 +27,12 @@ E storageS
 D ada.ads		20200228061810 76789da1 ada%s
 D a-charac.ads		20200228061810 2d3ec45b ada.characters%s
 D a-chlat1.ads		20200228061810 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20200228061810 61e5e089 ada.containers%s
+D a-conhel.ads		20200228061810 20298884 ada.containers.helpers%s
+D a-convec.ads		20200228061810 7e2b0fdf ada.containers.vectors%s
 D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
+D a-iteint.ads		20200228061810 7c7305e9 ada.iterator_interfaces%s
 D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
 D a-string.ads		20200228061810 90ac6797 ada.strings%s
 D a-strmap.ads		20200228061810 e8bb714a ada.strings.maps%s
@@ -41,13 +45,14 @@ D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
 D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210903143158 218bb855 common%s
+D common.ads		20210907164716 697612b1 common%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
-D newworkers.ads	20210906134448 e564c051 newworkers%s
-D partition.ads		20210907141018 1d743dc2 partition%s
-D partition.adb		20210907141018 82d69355 partition%b
+D newacceptors.ads	20210907161156 a144c495 newacceptors%s
+D newworkers.ads	20210907165920 4cb1ae57 newworkers%s
+D partition.ads		20210907170240 1d743dc2 partition%s
+D partition.adb		20210907170240 82d69355 partition%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -164,53 +169,56 @@ D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a e
 G c b b b [b partition 24 1 none]
 G r c none [b partition 24 1 none] [run polyorb__orb 184 14 none]
-X 19 interfac.ads
+X 9 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[6|111]>
+X 23 interfac.ads
 74M9*Unsigned_32
-121V13*Shift_Left{74M9} 102|37i18
-X 22 newworkers.ads
-2K9*NewWorkers 17e15 24|18w6 20r4
-X 23 partition.ads
-3K9*Partition 5l5 5e14 24|24b14 34l5 34t14
-X 25 polyorb.ads
-35K9*PolyORB 24|3r6 6r6 9r6 31r4 32r7 25|37e12
-X 27 polyorb-any.ads
+121V13*Shift_Left{74M9} 107|37i18
+X 27 newworkers.ads
+4K9*NewWorkers 45e15 29|18w6 20r4
+X 28 partition.ads
+3K9*Partition 5l5 5e14 29|24b14 34l5 34t14
+X 30 polyorb.ads
+35K9*PolyORB 29|3r6 6r6 9r6 31r4 32r7 30|37e12
+X 32 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 95|41i19
-X 33 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 100|41i19
+X 38 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 101|54i21
-X 42 polyorb-initialization.ads
-38K17*Initialization 24|6w14 8r12 42|112e27
-X 49 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 106|54i21
+X 47 polyorb-initialization.ads
+38K17*Initialization 29|6w14 8r12 47|112e27
+X 54 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
-47P9*Chunk_Access(46R9[35|358])
-98V13 Link(47P9[35|358]) 101|54i21[35|358]
-X 50 polyorb-orb.ads
-59K17*ORB 24|3w14 5r12 31r12 50|342e16
+47P9*Chunk_Access(46R9[40|358])
+98V13 Link(47P9[40|358]) 106|54i21[40|358]
+X 55 polyorb-orb.ads
+59K17*ORB 29|3w14 5r12 31r12 55|342e16
 96P9*ORB_Access(92R9)
-184U14*Run 24|31s16
-187b7 May_Exit{boolean} 24|33r7
-X 80 polyorb-setup.ads
-38K17*Setup 24|9w14 11r12 32r15 80|46e18
-43p4*The_ORB{50|96P9} 24|32r21
-X 84 polyorb-task_info.ads
+184U14*Run 29|31s16
+187b7 May_Exit{boolean} 29|33r7
+X 85 polyorb-setup.ads
+38K17*Setup 29|9w14 11r12 32r15 85|46e18
+43p4*The_ORB{55|96P9} 29|32r21
+X 89 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 101|54i21
-X 95 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 106|54i21
+X 100 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[50|317])
-151V13 Link(134P9[28|75]) 101|54i21[28|75]
-X 105 storage.ads
-1K9*Storage 24|21w6 23r4 29r7 105|20e12
-X 106 system.ads
-37K9*System 24|12r6 15r6 26r4 27r4 106|200e11
-X 109 s-dsaser.ads
-39K16*DSA_Services 24|15w13 17r11 109|51e24
-X 117 s-parint.ads
-70K16*Partition_Interface 24|12w13 14r11 26r11 27r11 117|738e31
-187U14*Check 24|27s31
-250U14*Activate_RPC_Receivers 24|26s31
-X 124 s-stausa.ads
+134P9 Node_Access(133R9[48|99])
+151V13 Link(134P9[33|75]) 106|54i21[33|75]
+X 110 storage.ads
+1K9*Storage 29|21w6 23r4 29r7 110|20e12
+X 111 system.ads
+37K9*System 29|12r6 15r6 26r4 27r4 111|200e11
+X 114 s-dsaser.ads
+39K16*DSA_Services 29|15w13 17r11 114|51e24
+X 122 s-parint.ads
+70K16*Partition_Interface 29|12w13 14r11 26r11 27r11 122|738e31
+187U14*Check 29|27s31
+250U14*Activate_RPC_Receivers 29|26s31
+X 129 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
 

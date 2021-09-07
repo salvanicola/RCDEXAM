@@ -5,49 +5,97 @@ A -march=x86-64
 P SS ZX
 
 RN
+RV NO_DISPATCH
 RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
+RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U newworkers%b		newworkers.adb		9eba6eb1 OO PK
+U newworkers%b		newworkers.adb		53d7b3d6 OO RA PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
+Z ada.streams%s		a-stream.adb		a-stream.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.hash%s	a-strhas.adb		a-strhas.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W newacceptors%s	newacceptors.adb	newacceptors.ali
 W system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.concat_6%s	s-conca6.adb		s-conca6.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.partition_interface%s  s-parint.adb	s-parint.ali
 Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
-W workercity%s		workercity.adb		workercity.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.shared_storage%s  s-shasto.adb		s-shasto.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U newworkers%s		newworkers.ads		35d3d5e9 EE OO PF RT PK
+U newworkers%s		newworkers.ads		01819d84 EE OO PF RT PK
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+Z ada.containers.generic_array_sort%s
+Z ada.containers.helpers%s  a-conhel.adb	a-conhel.ali
+W ada.containers.vectors%s
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.finalization%s	a-finali.ads		a-finali.ali
+Z ada.iterator_interfaces%s
+Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.unchecked_deallocation%s
 W common%s		common.ads		common.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W newacceptors%s	newacceptors.adb	newacceptors.ali
 W storage%s		storage.adb		storage.ali
 Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.partition_interface%s  s-parint.adb	s-parint.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
 
 D ada.ads		20200228061810 76789da1 ada%s
 D a-charac.ads		20200228061810 2d3ec45b ada.characters%s
 D a-chlat1.ads		20200228061810 66457d31 ada.characters.latin_1%s
 D a-contai.ads		20200228061810 61e5e089 ada.containers%s
+D a-cgarso.ads		20200228061810 9129bfa8 ada.containers.generic_array_sort%s
+D a-conhel.ads		20200228061810 20298884 ada.containers.helpers%s
+D a-conhel.adb		20200228061810 e8b6ff51 ada.containers.helpers%b
+D a-convec.ads		20200228061810 7e2b0fdf ada.containers.vectors%s
+D a-convec.adb		20200415050450 0b31d694 ada.containers.vectors%b
 D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
 D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20200228061810 7c7305e9 ada.iterator_interfaces%s
 D a-numeri.ads		20200228061810 bb51c45a ada.numerics%s
 D a-nudira.ads		20200228061810 5984dff3 ada.numerics.discrete_random%s
 D a-nudira.adb		20200228061810 0bfd6ec4 ada.numerics.discrete_random%b
+D a-reatim.ads		20200228061810 0240fc73 ada.real_time%s
 D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
 D a-string.ads		20200228061810 90ac6797 ada.strings%s
 D a-strhas.ads		20200228061810 c71c2a52 ada.strings.hash%s
@@ -62,13 +110,14 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210907154142 2b9eff90 common%s
+D common.ads		20210907164716 697612b1 common%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D newworkers.ads	20210906134448 e564c051 newworkers%s
-D newworkers.adb	20210907162156 b08741ff newworkers%b
+D newacceptors.ads	20210907161156 a144c495 newacceptors%s
+D newworkers.ads	20210907165920 4cb1ae57 newworkers%s
+D newworkers.adb	20210907170200 e80b84e9 newworkers%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -153,6 +202,10 @@ D storage.ads		20210906151936 fb29ea28 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
+D s-atocou.adb		20200228061810 b65612c0 system.atomic_counters%b
+D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20200228061810 0b705ca5 system.concat_3%s
+D s-conca6.ads		20200228061810 d2c72db2 system.concat_6%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
 D s-dsatyp.ads		20210826161802 23c1e58e system.dsa_types%s
 D s-exctab.ads		20200228061810 54135002 system.exception_table%s
@@ -161,6 +214,7 @@ D s-finmas.ads		20200228061810 7811a767 system.finalization_masters%s
 D s-finroo.ads		20200228061810 4ff27390 system.finalization_root%s
 D s-imgint.ads		20200228061810 02dbe0c2 system.img_int%s
 D s-imguns.ads		20200228061810 9ff43cf7 system.img_uns%s
+D s-memory.ads		20200228061810 597d6634 system.memory%s
 D s-multip.ads		20200228061810 38ac9f73 system.multiprocessors%s
 D s-osinte.ads		20200228061810 97504df8 system.os_interface%s
 D s-parame.ads		20200228061810 4752c4cb system.parameters%s
@@ -176,6 +230,7 @@ D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
 D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
 D s-stausa.ads		20200228061810 017a0a05 system.stack_usage%s
 D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+D s-stalib.adb		20200228061810 f2fe2716 system.standard_library%b
 D s-stoele.ads		20200228061810 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20200228061810 ed88f8fb system.storage_elements%b
 D s-stopoo.ads		20200313060448 e9fa2dd8 system.storage_pools%s
@@ -183,18 +238,278 @@ D s-stposu.ads		20200317060516 e251976f system.storage_pools.subpools%s
 D s-stratt.ads		20200424050626 9a2744e9 system.stream_attributes%s
 D s-tasinf.ads		20200228061810 601f6b72 system.task_info%s
 D s-taspri.ads		20200228061810 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20200228061810 6eefbe12 system.task_primitives.operations%s
 D s-taskin.ads		20200228061810 88fba9ad system.tasking%s
 D s-taprob.ads		20200228061810 acd6094d system.tasking.protected_objects%s
+D s-tassta.ads		20200228061810 cca55c94 system.tasking.stages%s
 D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
 D s-valuns.ads		20200228061810 35067db9 system.val_uns%s
 D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
-D workercity.ads	20210907152832 9d70b2e2 workercity%s
 G a e
-G c Z s b [assign newworkers 7 14 none]
-G c Z s s [newworkerDF newworkers 14 9 none]
-G c Z s s [newworkerIP newworkers 14 9 none]
+G c Z s s [has_element newworkers__worker_vectors 107 13 7_4]
+G c Z s s [Oeq newworkers__worker_vectors 117 24 7_4]
+G c Z s s [to_vector newworkers__worker_vectors 126 13 7_4]
+G c Z s s [to_vector newworkers__worker_vectors 129 13 7_4]
+G c Z s s [Oconcat newworkers__worker_vectors 135 13 7_4]
+G c Z s s [Oconcat newworkers__worker_vectors 139 13 7_4]
+G c Z s s [Oconcat newworkers__worker_vectors 143 13 7_4]
+G c Z s s [Oconcat newworkers__worker_vectors 147 13 7_4]
+G c Z s s [capacity newworkers__worker_vectors 151 13 7_4]
+G c Z s s [reserve_capacity newworkers__worker_vectors 154 14 7_4]
+G c Z s s [length newworkers__worker_vectors 165 13 7_4]
+G c Z s s [set_length newworkers__worker_vectors 168 14 7_4]
+G c Z s s [is_empty newworkers__worker_vectors 177 13 7_4]
+G c Z s s [clear newworkers__worker_vectors 180 14 7_4]
+G c Z s s [to_cursor newworkers__worker_vectors 184 13 7_4]
+G c Z s s [to_index newworkers__worker_vectors 191 13 7_4]
+G c Z s s [element newworkers__worker_vectors 196 13 7_4]
+G c Z s s [element newworkers__worker_vectors 203 13 7_4]
+G c Z s s [replace_element newworkers__worker_vectors 207 14 7_4]
+G c Z s s [replace_element newworkers__worker_vectors 218 14 7_4]
+G c Z s s [query_element newworkers__worker_vectors 229 14 7_4]
+G c Z s s [query_element newworkers__worker_vectors 240 14 7_4]
+G c Z s s [update_element newworkers__worker_vectors 249 14 7_4]
+G c Z s s [update_element newworkers__worker_vectors 266 14 7_4]
+G c Z s s [constant_reference newworkers__worker_vectors 293 13 7_4]
+G c Z s s [reference newworkers__worker_vectors 298 13 7_4]
+G c Z s s [constant_reference newworkers__worker_vectors 303 13 7_4]
+G c Z s s [reference newworkers__worker_vectors 308 13 7_4]
+G c Z s s [assign newworkers__worker_vectors 313 14 7_4]
+G c Z s s [copy newworkers__worker_vectors 315 13 7_4]
+G c Z s s [move newworkers__worker_vectors 317 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 323 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 341 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 352 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 363 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 370 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 377 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 386 14 7_4]
+G c Z s s [insert newworkers__worker_vectors 403 14 7_4]
+G c Z s s [prepend newworkers__worker_vectors 414 14 7_4]
+G c Z s s [prepend newworkers__worker_vectors 419 14 7_4]
+G c Z s s [append newworkers__worker_vectors 426 14 7_4]
+G c Z s s [append newworkers__worker_vectors 431 14 7_4]
+G c Z s s [insert_space newworkers__worker_vectors 438 14 7_4]
+G c Z s s [insert_space newworkers__worker_vectors 455 14 7_4]
+G c Z s s [delete newworkers__worker_vectors 466 14 7_4]
+G c Z s s [delete newworkers__worker_vectors 476 14 7_4]
+G c Z s s [delete_first newworkers__worker_vectors 485 14 7_4]
+G c Z s s [delete_last newworkers__worker_vectors 490 14 7_4]
+G c Z s s [reverse_elements newworkers__worker_vectors 498 14 7_4]
+G c Z s s [swap newworkers__worker_vectors 501 14 7_4]
+G c Z s s [swap newworkers__worker_vectors 506 14 7_4]
+G c Z s s [first_index newworkers__worker_vectors 512 13 7_4]
+G c Z s s [first newworkers__worker_vectors 515 13 7_4]
+G c Z s s [first_element newworkers__worker_vectors 519 13 7_4]
+G c Z s s [last_index newworkers__worker_vectors 522 13 7_4]
+G c Z s s [last newworkers__worker_vectors 526 13 7_4]
+G c Z s s [last_element newworkers__worker_vectors 530 13 7_4]
+G c Z s s [next newworkers__worker_vectors 533 13 7_4]
+G c Z s s [next newworkers__worker_vectors 539 14 7_4]
+G c Z s s [previous newworkers__worker_vectors 542 13 7_4]
+G c Z s s [previous newworkers__worker_vectors 548 14 7_4]
+G c Z s s [find_index newworkers__worker_vectors 551 13 7_4]
+G c Z s s [find newworkers__worker_vectors 561 13 7_4]
+G c Z s s [reverse_find_index newworkers__worker_vectors 575 13 7_4]
+G c Z s s [reverse_find newworkers__worker_vectors 587 13 7_4]
+G c Z s s [contains newworkers__worker_vectors 601 13 7_4]
+G c Z s s [iterate newworkers__worker_vectors 606 14 7_4]
+G c Z s s [reverse_iterate newworkers__worker_vectors 614 14 7_4]
+G c Z s s [iterate newworkers__worker_vectors 621 13 7_4]
+G c Z s s [iterate newworkers__worker_vectors 624 13 7_4]
+G c Z s s [adjust newworkers__worker_vectors__implementation 90 28 678_4_7_4]
+G c Z s s [finalize newworkers__worker_vectors__implementation 93 28 678_4_7_4]
+G c Z s s [zero_counts newworkers__worker_vectors__implementation 96 17 678_4_7_4]
+G c Z s s [busy newworkers__worker_vectors__implementation 100 17 678_4_7_4]
+G c Z s s [unbusy newworkers__worker_vectors__implementation 104 17 678_4_7_4]
+G c Z s s [lock newworkers__worker_vectors__implementation 108 17 678_4_7_4]
+G c Z s s [unlock newworkers__worker_vectors__implementation 112 17 678_4_7_4]
+G c Z s s [tc_check newworkers__worker_vectors__implementation 116 17 678_4_7_4]
+G c Z s s [te_check newworkers__worker_vectors__implementation 120 17 678_4_7_4]
+G c Z s s [initialize newworkers__worker_vectors__implementation 139 28 678_4_7_4]
+G c Z s s [finalize newworkers__worker_vectors__implementation 140 28 678_4_7_4]
+G c Z s s [initialize newworkers__worker_vectors__implementation 145 28 678_4_7_4]
+G c Z s s [finalize newworkers__worker_vectors__implementation 146 28 678_4_7_4]
+G c Z s s [reference_control_typeDA newworkers__worker_vectors__implementation 84 12 678_4_7_4]
+G c Z s s [reference_control_typeDF newworkers__worker_vectors__implementation 84 12 678_4_7_4]
+G c Z s s [reference_control_typeIP newworkers__worker_vectors__implementation 84 12 678_4_7_4]
+G c Z s s [with_busyDF newworkers__worker_vectors__implementation 136 12 678_4_7_4]
+G c Z s s [with_busyIP newworkers__worker_vectors__implementation 136 12 678_4_7_4]
+G c Z s s [with_lockDF newworkers__worker_vectors__implementation 142 12 678_4_7_4]
+G c Z s s [with_lockIP newworkers__worker_vectors__implementation 142 12 678_4_7_4]
+G c Z s s [adjust newworkers__worker_vectors 699 25 7_4]
+G c Z s s [finalize newworkers__worker_vectors 700 25 7_4]
+G c Z s s [write newworkers__worker_vectors 702 14 7_4]
+G c Z s s [read newworkers__worker_vectors 708 14 7_4]
+G c Z s s [read newworkers__worker_vectors 722 14 7_4]
+G c Z s s [write newworkers__worker_vectors 728 14 7_4]
+G c Z s s [write newworkers__worker_vectors 747 14 7_4]
+G c Z s s [read newworkers__worker_vectors 753 14 7_4]
+G c Z s s [write newworkers__worker_vectors 769 14 7_4]
+G c Z s s [read newworkers__worker_vectors 775 14 7_4]
+G c Z s s [pseudo_reference newworkers__worker_vectors 786 13 7_4]
+G c Z s s [get_element_access newworkers__worker_vectors 795 13 7_4]
+G c Z s s [cursorIP newworkers__worker_vectors 717 9 7_4]
+G c Z s s [vectorDA newworkers__worker_vectors 693 9 7_4]
+G c Z s s [vectorDF newworkers__worker_vectors 693 9 7_4]
+G c Z s s [vectorIP newworkers__worker_vectors 693 9 7_4]
+G c Z s s [constant_reference_typeDI newworkers__worker_vectors 737 9 7_4]
+G c Z s s [constant_reference_typeDA newworkers__worker_vectors 737 9 7_4]
+G c Z s s [constant_reference_typeDF newworkers__worker_vectors 737 9 7_4]
+G c Z s s [constant_reference_typeIP newworkers__worker_vectors 737 9 7_4]
+G c Z s s [reference_typeDI newworkers__worker_vectors 759 9 7_4]
+G c Z s s [reference_typeDA newworkers__worker_vectors 759 9 7_4]
+G c Z s s [reference_typeDF newworkers__worker_vectors 759 9 7_4]
+G c Z s s [reference_typeIP newworkers__worker_vectors 759 9 7_4]
+G c Z s s [finalize newworkers__worker_vectors 811 25 7_4]
+G c Z s s [first newworkers__worker_vectors 813 24 7_4]
+G c Z s s [last newworkers__worker_vectors 814 24 7_4]
+G c Z s s [next newworkers__worker_vectors 816 24 7_4]
+G c Z s s [previous newworkers__worker_vectors 820 24 7_4]
+G c Z s s [elements_arrayIP newworkers__worker_vectors 681 9 7_4]
+G c Z s s [elements_typeIP newworkers__worker_vectors 684 9 7_4]
+G c Z s s [iteratorDF newworkers__worker_vectors 803 9 7_4]
+G c Z s s [iteratorIP newworkers__worker_vectors 803 9 7_4]
+G c Z s s [free newworkers__worker_vectors 41 14 7_4]
+G c Z s s [append_slow_path newworkers__worker_vectors 44 14 7_4]
+G c Z s s [has_element newworkers__acceptor_vectors 107 13 11_4]
+G c Z s s [Oeq newworkers__acceptor_vectors 117 24 11_4]
+G c Z s s [to_vector newworkers__acceptor_vectors 126 13 11_4]
+G c Z s s [to_vector newworkers__acceptor_vectors 129 13 11_4]
+G c Z s s [Oconcat newworkers__acceptor_vectors 135 13 11_4]
+G c Z s s [Oconcat newworkers__acceptor_vectors 139 13 11_4]
+G c Z s s [Oconcat newworkers__acceptor_vectors 143 13 11_4]
+G c Z s s [Oconcat newworkers__acceptor_vectors 147 13 11_4]
+G c Z s s [capacity newworkers__acceptor_vectors 151 13 11_4]
+G c Z s s [reserve_capacity newworkers__acceptor_vectors 154 14 11_4]
+G c Z s s [length newworkers__acceptor_vectors 165 13 11_4]
+G c Z s s [set_length newworkers__acceptor_vectors 168 14 11_4]
+G c Z s s [is_empty newworkers__acceptor_vectors 177 13 11_4]
+G c Z s s [clear newworkers__acceptor_vectors 180 14 11_4]
+G c Z s s [to_cursor newworkers__acceptor_vectors 184 13 11_4]
+G c Z s s [to_index newworkers__acceptor_vectors 191 13 11_4]
+G c Z s s [element newworkers__acceptor_vectors 196 13 11_4]
+G c Z s s [element newworkers__acceptor_vectors 203 13 11_4]
+G c Z s s [replace_element newworkers__acceptor_vectors 207 14 11_4]
+G c Z s s [replace_element newworkers__acceptor_vectors 218 14 11_4]
+G c Z s s [query_element newworkers__acceptor_vectors 229 14 11_4]
+G c Z s s [query_element newworkers__acceptor_vectors 240 14 11_4]
+G c Z s s [update_element newworkers__acceptor_vectors 249 14 11_4]
+G c Z s s [update_element newworkers__acceptor_vectors 266 14 11_4]
+G c Z s s [constant_reference newworkers__acceptor_vectors 293 13 11_4]
+G c Z s s [reference newworkers__acceptor_vectors 298 13 11_4]
+G c Z s s [constant_reference newworkers__acceptor_vectors 303 13 11_4]
+G c Z s s [reference newworkers__acceptor_vectors 308 13 11_4]
+G c Z s s [assign newworkers__acceptor_vectors 313 14 11_4]
+G c Z s s [copy newworkers__acceptor_vectors 315 13 11_4]
+G c Z s s [move newworkers__acceptor_vectors 317 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 323 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 341 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 352 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 363 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 370 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 377 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 386 14 11_4]
+G c Z s s [insert newworkers__acceptor_vectors 403 14 11_4]
+G c Z s s [prepend newworkers__acceptor_vectors 414 14 11_4]
+G c Z s s [prepend newworkers__acceptor_vectors 419 14 11_4]
+G c Z s s [append newworkers__acceptor_vectors 426 14 11_4]
+G c Z s s [append newworkers__acceptor_vectors 431 14 11_4]
+G c Z s s [insert_space newworkers__acceptor_vectors 438 14 11_4]
+G c Z s s [insert_space newworkers__acceptor_vectors 455 14 11_4]
+G c Z s s [delete newworkers__acceptor_vectors 466 14 11_4]
+G c Z s s [delete newworkers__acceptor_vectors 476 14 11_4]
+G c Z s s [delete_first newworkers__acceptor_vectors 485 14 11_4]
+G c Z s s [delete_last newworkers__acceptor_vectors 490 14 11_4]
+G c Z s s [reverse_elements newworkers__acceptor_vectors 498 14 11_4]
+G c Z s s [swap newworkers__acceptor_vectors 501 14 11_4]
+G c Z s s [swap newworkers__acceptor_vectors 506 14 11_4]
+G c Z s s [first_index newworkers__acceptor_vectors 512 13 11_4]
+G c Z s s [first newworkers__acceptor_vectors 515 13 11_4]
+G c Z s s [first_element newworkers__acceptor_vectors 519 13 11_4]
+G c Z s s [last_index newworkers__acceptor_vectors 522 13 11_4]
+G c Z s s [last newworkers__acceptor_vectors 526 13 11_4]
+G c Z s s [last_element newworkers__acceptor_vectors 530 13 11_4]
+G c Z s s [next newworkers__acceptor_vectors 533 13 11_4]
+G c Z s s [next newworkers__acceptor_vectors 539 14 11_4]
+G c Z s s [previous newworkers__acceptor_vectors 542 13 11_4]
+G c Z s s [previous newworkers__acceptor_vectors 548 14 11_4]
+G c Z s s [find_index newworkers__acceptor_vectors 551 13 11_4]
+G c Z s s [find newworkers__acceptor_vectors 561 13 11_4]
+G c Z s s [reverse_find_index newworkers__acceptor_vectors 575 13 11_4]
+G c Z s s [reverse_find newworkers__acceptor_vectors 587 13 11_4]
+G c Z s s [contains newworkers__acceptor_vectors 601 13 11_4]
+G c Z s s [iterate newworkers__acceptor_vectors 606 14 11_4]
+G c Z s s [reverse_iterate newworkers__acceptor_vectors 614 14 11_4]
+G c Z s s [iterate newworkers__acceptor_vectors 621 13 11_4]
+G c Z s s [iterate newworkers__acceptor_vectors 624 13 11_4]
+G c Z s s [adjust newworkers__acceptor_vectors__implementation 90 28 678_4_11_4]
+G c Z s s [finalize newworkers__acceptor_vectors__implementation 93 28 678_4_11_4]
+G c Z s s [zero_counts newworkers__acceptor_vectors__implementation 96 17 678_4_11_4]
+G c Z s s [busy newworkers__acceptor_vectors__implementation 100 17 678_4_11_4]
+G c Z s s [unbusy newworkers__acceptor_vectors__implementation 104 17 678_4_11_4]
+G c Z s s [lock newworkers__acceptor_vectors__implementation 108 17 678_4_11_4]
+G c Z s s [unlock newworkers__acceptor_vectors__implementation 112 17 678_4_11_4]
+G c Z s s [tc_check newworkers__acceptor_vectors__implementation 116 17 678_4_11_4]
+G c Z s s [te_check newworkers__acceptor_vectors__implementation 120 17 678_4_11_4]
+G c Z s s [initialize newworkers__acceptor_vectors__implementation 139 28 678_4_11_4]
+G c Z s s [finalize newworkers__acceptor_vectors__implementation 140 28 678_4_11_4]
+G c Z s s [initialize newworkers__acceptor_vectors__implementation 145 28 678_4_11_4]
+G c Z s s [finalize newworkers__acceptor_vectors__implementation 146 28 678_4_11_4]
+G c Z s s [reference_control_typeDA newworkers__acceptor_vectors__implementation 84 12 678_4_11_4]
+G c Z s s [reference_control_typeDF newworkers__acceptor_vectors__implementation 84 12 678_4_11_4]
+G c Z s s [reference_control_typeIP newworkers__acceptor_vectors__implementation 84 12 678_4_11_4]
+G c Z s s [with_busyDF newworkers__acceptor_vectors__implementation 136 12 678_4_11_4]
+G c Z s s [with_busyIP newworkers__acceptor_vectors__implementation 136 12 678_4_11_4]
+G c Z s s [with_lockDF newworkers__acceptor_vectors__implementation 142 12 678_4_11_4]
+G c Z s s [with_lockIP newworkers__acceptor_vectors__implementation 142 12 678_4_11_4]
+G c Z s s [adjust newworkers__acceptor_vectors 699 25 11_4]
+G c Z s s [finalize newworkers__acceptor_vectors 700 25 11_4]
+G c Z s s [write newworkers__acceptor_vectors 702 14 11_4]
+G c Z s s [read newworkers__acceptor_vectors 708 14 11_4]
+G c Z s s [read newworkers__acceptor_vectors 722 14 11_4]
+G c Z s s [write newworkers__acceptor_vectors 728 14 11_4]
+G c Z s s [write newworkers__acceptor_vectors 747 14 11_4]
+G c Z s s [read newworkers__acceptor_vectors 753 14 11_4]
+G c Z s s [write newworkers__acceptor_vectors 769 14 11_4]
+G c Z s s [read newworkers__acceptor_vectors 775 14 11_4]
+G c Z s s [pseudo_reference newworkers__acceptor_vectors 786 13 11_4]
+G c Z s s [get_element_access newworkers__acceptor_vectors 795 13 11_4]
+G c Z s s [cursorIP newworkers__acceptor_vectors 717 9 11_4]
+G c Z s s [vectorDA newworkers__acceptor_vectors 693 9 11_4]
+G c Z s s [vectorDF newworkers__acceptor_vectors 693 9 11_4]
+G c Z s s [vectorIP newworkers__acceptor_vectors 693 9 11_4]
+G c Z s s [constant_reference_typeDI newworkers__acceptor_vectors 737 9 11_4]
+G c Z s s [constant_reference_typeDA newworkers__acceptor_vectors 737 9 11_4]
+G c Z s s [constant_reference_typeDF newworkers__acceptor_vectors 737 9 11_4]
+G c Z s s [constant_reference_typeIP newworkers__acceptor_vectors 737 9 11_4]
+G c Z s s [reference_typeDI newworkers__acceptor_vectors 759 9 11_4]
+G c Z s s [reference_typeDA newworkers__acceptor_vectors 759 9 11_4]
+G c Z s s [reference_typeDF newworkers__acceptor_vectors 759 9 11_4]
+G c Z s s [reference_typeIP newworkers__acceptor_vectors 759 9 11_4]
+G c Z s s [finalize newworkers__acceptor_vectors 811 25 11_4]
+G c Z s s [first newworkers__acceptor_vectors 813 24 11_4]
+G c Z s s [last newworkers__acceptor_vectors 814 24 11_4]
+G c Z s s [next newworkers__acceptor_vectors 816 24 11_4]
+G c Z s s [previous newworkers__acceptor_vectors 820 24 11_4]
+G c Z s s [elements_arrayIP newworkers__acceptor_vectors 681 9 11_4]
+G c Z s s [elements_typeIP newworkers__acceptor_vectors 684 9 11_4]
+G c Z s s [iteratorDF newworkers__acceptor_vectors 803 9 11_4]
+G c Z s s [iteratorIP newworkers__acceptor_vectors 803 9 11_4]
+G c Z s s [free newworkers__acceptor_vectors 41 14 11_4]
+G c Z s s [append_slow_path newworkers__acceptor_vectors 44 14 11_4]
+G c Z s b [assign newworkers 26 14 none]
+G c Z s b [insert_w newworkers 32 14 none]
+G c Z s b [insert_a newworkers 34 14 none]
+G c Z s s [newworkerDF newworkers 37 9 none]
+G c Z s s [newworkerDI newworkers 37 9 none]
+G c Z s s [newworkerIP newworkers 37 9 none]
+G c Z s s [S1357sDF newworkers 20 9 none]
+G c Z s s [S1357sIP newworkers 20 9 none]
+G c Z s s [S1369sDF newworkers 23 9 none]
+G c Z s s [S1369sIP newworkers 23 9 none]
 G c Z b b [random newworkers__rand_int 52 13 11_4]
 G c Z b b [random newworkers__rand_int 54 13 11_4]
 G c Z b b [reset newworkers__rand_int 60 14 11_4]
@@ -203,78 +518,142 @@ G c Z b b [save newworkers__rand_int 67 14 11_4]
 G c Z b b [reset newworkers__rand_int 68 14 11_4]
 G c Z b b [image newworkers__rand_int 72 13 11_4]
 G c Z b b [value newworkers__rand_int 73 13 11_4]
-G r s worker [newworkerIP newworkers 14 9 none] [workerIP common 35 9 none]
+G c Z b b [get_w newworkers 34 13 none]
+G c Z b b [get_a newworkers 45 13 none]
+G r c none [assign newworkers 26 14 none] [validate newacceptors 7 13 none]
+G r p none [assign newworkers 26 14 none] [insert storage__queue 10 17 none]
+G r p none [assign newworkers 26 14 none] [get storage__queue 14 16 none]
+G r s worker [newworkerIP newworkers 37 9 none] [workerIP common 36 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 31|2r6 2r23 3r6 3r34 4r6 5r6 11r28 21r20
+16K9*Ada 20e8 38|2r6 7r34 11r36 39|2r6 2r23 3r6 3r34 4r6 5r6 11r28 61r20
 X 2 a-charac.ads
-16K13*Characters 18e19 31|3r10 3r38
+16K13*Characters 18e19 39|3r10 3r38
 X 3 a-chlat1.ads
-18K24*Latin_1 296e27 31|3w21 3r49
+18K24*Latin_1 296e27 39|3w21 3r49
+35e4*LF{character} 39|64r109
+38e4*CR{character} 39|64r104
 X 4 a-contai.ads
+16K13*Containers 28e19 38|2r10 7r38 11r40
 19M9*Hash_Type
-X 8 a-numeri.ads
-16K13*Numerics 32e17 31|5r10 11r32
-X 9 a-nudira.ads
-44k22*Discrete_Random 81e33 31|5w19 11r41
-50R9*Generator<129|63R9> 31|13r10[11]
-52V13 Random{31|10I9} 31|20s14[11]
-61U14 Reset<129|100p14> 31|19s7[11]
-X 10 a-nudira.adb
-53V16 Random[129|83]{31|10I9} 130|393b13[31|11]
-65V16 Random[129|83]{31|10I9} 130|393b13[31|11]
-X 12 a-string.ads
-16K13*Strings 35e16 31|4r10 21r24
-X 13 a-strhas.ads
-20V22*Hash{4|19M9} 31|4w18 21s32
-X 22 a-textio.ads
-57K13*Text_IO 727e16 31|2w10 2r27
-X 25 common.ads
-2K9*Common 37e11 30|1w6 1r27 11r11 31|16r74
-9H9*Worker 35e54 30|5r26 14r26
-X 26 interfac.ads
+22I9*Count_Type<integer>
+X 8 a-convec.ads
+61I9 Index_Type 38|8r7 12r7
+62+9 Element_Type 38|9r7 13r7
+73k24*Vectors 824e27 38|2w21 7r49 11r51
+78I12*Extended_Index{integer} 38|42r30[7] 43r32[11]
+88R9*Vector<11|43R9> 38|40r37[7] 41r40[11]
+165V13*Length{4|22I9} 39|21s81[38|7] 30s82[38|11]
+431U14*Append 39|18s23[38|7] 27s24[38|11]
+X 13 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[8|111]>
+X 14 a-numeri.ads
+16K13*Numerics 32e17 39|5r10 11r32
+X 15 a-nudira.ads
+44k22*Discrete_Random 81e33 39|5w19 11r41
+50R9*Generator<142|63R9> 39|13r10[11]
+52V13 Random{39|10I9} 39|60s14[11]
+61U14 Reset<142|100p14> 39|59s7[11]
+X 16 a-nudira.adb
+53V16 Random[142|83]{39|10I9} 143|393b13[39|11]
+65V16 Random[142|83]{39|10I9} 143|393b13[39|11]
+X 19 a-string.ads
+16K13*Strings 35e16 39|4r10 61r24
+X 20 a-strhas.ads
+20V22*Hash{4|19M9} 39|4w18 61s32
+X 29 a-textio.ads
+57K13*Text_IO 727e16 39|2w10 2r27
+264U14*New_Line 39|20s7 22s7 29s7 31s7
+465U14*Put 39|19s7 21s7 28s7 30s7 64s10
+508U14*Put_Line 39|66s10 67s10 68s10 69s10 70s10 71s10 72s10
+X 32 common.ads
+2K9*Common 38e11 38|1w6 1r27 30r11 39|56r74
+9H9*Worker 36e54 38|18r26 37r26
+15P9*Any_Worker(9R9) 38|9r23 32r53 39|16r53
+19P9*Any_Acceptor(12R9) 38|13r23 34r52 39|25r52
+X 33 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
-121V13*Shift_Left{74M9} 109|37i18
-X 30 newworkers.ads
-2K9*NewWorkers 14E9 17l5 17e15 31|7b14 24l5 24t15
-5R9*NewWorker<25|9R9> 7p14 8r18 14c9 16e14 31|16r33
-7U14*Assign 8^7 9>7 10>7 11>7 31|16b14 23l8 23t14
-8p7 W(5R9) 31|16b22
-9i7 Q{integer} 31|16b44 21r51
-10i7 R{integer} 31|16b57
-11r7 N 31|16b70 22r7
-15a7 Name{string}
-X 31 newworkers.adb
+121V13*Shift_Left{74M9} 117|37i18
+X 37 newacceptors.ads
+2K9*NewAcceptors 18e17 38|3w6 3r24 39|6w6 6r24 63r11
+5R9*NewAcceptor<32|12R9> 17e14 38|24r17
+7V13*Validate{boolean} 39|63R24
+X 38 newworkers.ads
+4K9*NewWorkers 37E9 45l5 45e15 39|7b14 75l5 75t15
+7K12*Worker_Vectors[8|73] 15r8 40r22 42r15
+11K12*Acceptor_Vectors[8|73] 16r8 41r23 43r15
+18R9*NewWorker<32|9R9> 21r17 26p14 27r18 32p14 32r35 34p14 34r35 37c9 44e14
+. 39|16r35 25r35 34r31 45r31 56r33
+20P9*Acc_Worker(18R9) 39|34r62 39r20
+23P9*Acc_Acceptor(37|5R9) 39|45r62 50r20
+26U14*Assign 27^7 28>7 29>7 30>7 39|56b14 74l8 74t14
+27p7 W(18R9) 39|56b22 63r39 65r32
+28i7 Q{integer} 39|56b44 61r51 63r50
+29i7 R{integer} 39|56b57 63r53 64r99 65r26
+30r7 N 39|56b70 62r7 63r56
+32U14*Insert_W 32=24 32>46 39|16b14 23l8 23t16
+32r24 Me{18R9} 39|16b24 18m7 18r7 21r65
+32p46 W{32|15P9} 39|16b46 18r30
+34U14*Insert_A 34=24 34>46 39|25b14 32l8 32t16
+34r24 Me{18R9} 39|25b24 27m7 27r7 30r65
+34p46 A{32|19P9} 39|25b46 27r31
+38a7 Name{string} 39|65m34
+39i7 count{integer}
+40r7 Working_List{8|88R9[7]} 39|18m10 21r68 37r19
+41r7 Acceptor_List{8|88R9[11]} 39|27m10 30r68 48r19
+42i7 Idx_W{8|78I12[7]}
+43i7 Idx_A{8|78I12[11]}
+X 39 newworkers.adb
 10I9 randRange<integer> 11r57 14r10
-11K12 Rand_Int[9|44] 12r8
-13r4 gen{9|50R9[11]} 19r13 20r21
-14i4 err{10I9} 20m7 21r67
-17i7 T{integer} 21m7 22r9
-X 34 polyorb-any.ads
+11K12 Rand_Int[15|44] 12r8
+13r4 gen{15|50R9[11]} 59r13 60r21
+14i4 err{10I9} 60m7 61r67
+34V13 Get_W{38|20P9} 34b13 34=20 34>42 43l8 43t13
+34r20 Me{38|18R9} 37r16
+34i42 C{integer} 38r29
+35i7 count{integer} 38r13
+37p11 E{32|15P9} 39r31
+45V13 Get_A{38|23P9} 45b13 45=20 45>42 54l8 54t13 63s33
+45r20 Me{38|18R9} 48r16
+45i42 C{integer} 49r29
+46i7 count{integer} 49r13
+48p11 E{32|19P9} 50r33
+57i7 T{integer} 61m7 62r9 64r61 65r23
+X 42 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 102|41i19
-X 40 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 110|41i19
+X 48 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 108|54i21
-X 56 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 116|54i21
+X 64 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
-47P9*Chunk_Access(46R9)
-98V13 Link(47P9[42|358]) 108|54i21[42|358]
-X 91 polyorb-task_info.ads
+47P9*Chunk_Access(46R9[50|358])
+98V13 Link(47P9[50|358]) 116|54i21[50|358]
+X 99 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 108|54i21
-X 102 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 116|54i21
+X 110 polyorb-utils-chained_lists.ads
 133R9 Node
 134P9 Node_Access(133R9)
-151V13 Link(134P9[50|99]) 108|54i21[50|99]
-X 112 storage.ads
-1K9*Storage 30|1w14 1r35 112|20e12
-X 129 s-rannum.ads
-75V13*Random{26|74M9} 130|221i21
-76V13*Random{26|77M9} 130|221i21
-X 137 s-stausa.ads
+151V13 Link(134P9[58|99]) 116|54i21[58|99]
+X 120 storage.ads
+1K9*Storage 38|1w14 1r35 120|20e12
+9w14*Queue 39|65r10 67r42 68r42 69r42 70r42 71r42 72r42
+10U17 Insert 39|65s16
+14V16 Get{integer} 39|67s48 68s48 69s48 70s48 71s48 72s48
+X 121 system.ads
+67M9*Address
+X 136 s-memory.ads
+53V13*Alloc{121|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{121|67M9} 105i<c,__gnat_realloc>22
+X 142 s-rannum.ads
+75V13*Random{33|74M9} 143|221i21
+76V13*Random{33|77M9} 143|221i21
+X 150 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 153 workercity.ads
-2K9*WorkerCity 31|6w6 6r22 153|10e15
+X 152 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
 

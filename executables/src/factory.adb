@@ -3,7 +3,7 @@ package body Factory is
 
    procedure Notify (Q : Integer) is
    begin
-      Put_Line("Lavoro completato, il risultato è: " & Integer'Image(Q));
+      Put_Line("Lavoro completato, il risultato e': " & Integer'Image(Q));
    end Notify;
 
 end Factory;

@@ -24,19 +24,12 @@ pragma Elaborate_All
 with polyorb.dsa_p.partitions;
 pragma Elaborate_All
   (polyorb.dsa_p.partitions);
-with workercity;
-pragma Elaborate_All
-  (workercity);
 with storage;
 pragma Elaborate_All
   (storage);
 package body Partition is
 begin
    System.Partition_Interface.Activate_Rpc_Receivers;
-   System.Partition_Interface.Check
-     ("workercity",
-      workercity'Version,
-      TRUE);
    System.Partition_Interface.Check
      ("storage",
       storage'Version,

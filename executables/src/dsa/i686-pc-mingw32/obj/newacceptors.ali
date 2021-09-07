@@ -12,7 +12,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U newacceptors%b	newacceptors.adb	ca24a0bb OO PK
+U newacceptors%b	newacceptors.adb	0172a817 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
@@ -20,7 +20,7 @@ W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.hash%s	a-strhas.adb		a-strhas.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U newacceptors%s	newacceptors.ads	71f3d12d EE OO PF RT PK
+U newacceptors%s	newacceptors.ads	331b3c0c EE OO PF RT PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W common%s		common.ads		common.ali
 W storage%s		storage.adb		storage.ali
@@ -48,13 +48,13 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210907154142 2b9eff90 common%s
+D common.ads		20210907164716 697612b1 common%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
 D newacceptors.ads	20210907161156 a144c495 newacceptors%s
-D newacceptors.adb	20210907161156 64cde620 newacceptors%b
+D newacceptors.adb	20210907164644 af9bee8c newacceptors%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -174,7 +174,7 @@ G a e
 G c Z s b [validate newacceptors 7 13 none]
 G c Z s s [newacceptorDF newacceptors 14 9 none]
 G c Z s s [newacceptorIP newacceptors 14 9 none]
-G r s acceptor [newacceptorIP newacceptors 14 9 none] [acceptorIP common 36 9 none]
+G r s acceptor [newacceptorIP newacceptors 14 9 none] [acceptorIP common 37 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 28|2r6 2r23 3r6 3r34 4r6
 X 2 a-charac.ads
@@ -189,16 +189,17 @@ X 10 a-strhas.ads
 20V22*Hash{4|19M9} 28|4w18
 X 19 a-textio.ads
 57K13*Text_IO 727e16 28|2w10 2r27
+508U14*Put_Line 28|11s10 14s10
 X 22 common.ads
-2K9*Common 37e11 27|1w6 1r27 11r14 28|7r79
-12H9*Acceptor 36e56 27|5r28 14r28
+2K9*Common 38e11 27|1w6 1r27 11r14 28|7r79
+12H9*Acceptor 37e56 27|5r28 14r28
 X 23 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 106|37i18
 X 27 newacceptors.ads
-2K9*NewAcceptors 14E9 18l5 18e17 28|5b14 17l5 17t17
+2K9*NewAcceptors 14E9 18l5 18e17 28|5b14 19l5 19t17
 5R9*NewAcceptor<22|12R9> 7p13 8r18 14c9 17e14 28|7r34
-7V13*Validate{boolean} 8^7 9>7 10>7 11>7 28|7b13 15l8 15t16
+7V13*Validate{boolean} 8^7 9>7 10>7 11>7 28|7b13 17l8 17t16
 8p7 A(5R9) 28|7b23 10r10
 9i7 V{integer} 28|7b47
 10i7 ID{integer} 28|7b60 10r21

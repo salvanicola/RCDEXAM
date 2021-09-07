@@ -975,7 +975,7 @@ package ada_main is
    pragma Export (C, u00468, "polyorb__termination_activityB");
    u00469 : constant Version_32 := 16#82cc89bd#;
    pragma Export (C, u00469, "polyorb__termination_activityS");
-   u00470 : constant Version_32 := 16#272e7308#;
+   u00470 : constant Version_32 := 16#9c43fa6b#;
    pragma Export (C, u00470, "polyorb__partition_elaborationB");
    u00471 : constant Version_32 := 16#8351b4ee#;
    pragma Export (C, u00471, "polyorb__partition_elaborationS");

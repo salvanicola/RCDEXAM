@@ -17,9 +17,10 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U factory%s		factory.ads		69c806f0 EE OO RC PK
+U factory%s		factory.ads		16b8bae5 EE OO RC PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
+W common%s		common.ads		common.ali
 Z interfaces%s		interfac.ads		interfac.ali
 Z system.partition_interface%s  s-parint.adb	s-parint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -54,7 +55,8 @@ D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
 D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D factory.ads		20210905154112 69c806f0 factory%s
+D common.ads		20210907164716 697612b1 common%s
+D factory.ads		20210907144726 7fcea854 factory%s
 D gnat.ads		20200228061810 b5988c27 gnat%s
 D g-htable.ads		20200228061810 4b643b8d gnat.htable%s
 D g-regpat.ads		20200228061810 b85d88ef gnat.regpat%s
@@ -150,6 +152,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
+D storage.ads		20210906151936 fb29ea28 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -173,6 +176,7 @@ D s-pooglo.ads		20200228061810 ede33ef8 system.pool_global%s
 D s-regpat.ads		20200228061810 825a9b7f system.regpat%s
 D s-rpc.ads		20200228061810 601dde9c system.rpc%s
 D s-secsta.ads		20200327060540 9b3ab94b system.secondary_stack%s
+D s-shasto.ads		20210826161802 0c5bce1a system.shared_storage%s
 D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
 D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
 D s-stausa.ads		20200228061810 017a0a05 system.stack_usage%s
@@ -187,6 +191,7 @@ D s-ststop.ads		20200424050626 5fbf1b38 system.strings.stream_ops%s
 D s-tasinf.ads		20200228061810 601f6b72 system.task_info%s
 D s-taspri.ads		20200228061810 6c1d93d4 system.task_primitives%s
 D s-taskin.ads		20200228061810 88fba9ad system.tasking%s
+D s-taprob.ads		20200228061810 acd6094d system.tasking.protected_objects%s
 D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
 D s-vercon.ads		20200228061810 b312eb8d system.version_control%s
@@ -195,43 +200,45 @@ G a Z
 X 11 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[7|70]>
-X 25 factory.ads
-1K9*Factory 6l5 6e12
-4U14*Notify 4>22 5r25
-4i22 Q{integer}
-X 29 interfac.ads
+X 25 common.ads
+2K9*Common 38e11 26|1w6 1r18
+X 26 factory.ads
+2K9*Factory 8l5 8e12
+5U14*Notify 5>22 6r25
+5i22 Q{integer}
+X 30 interfac.ads
 74M9*Unsigned_32
-121V13*Shift_Left{74M9} 118|37i18
-X 34 polyorb-any.ads
+121V13*Shift_Left{74M9} 119|37i18
+X 35 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 111|41i19
-X 40 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 112|41i19
+X 41 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 117|54i21
-X 58 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 118|54i21
+X 59 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9)
-98V13 Link(47P9) 117|54i21
-X 100 polyorb-task_info.ads
+98V13 Link(47P9[43|358]) 118|54i21[43|358]
+X 101 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 117|54i21
-X 111 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 118|54i21
+X 112 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[59|250])
-151V13 Link(134P9[36|74]) 117|54i21[36|74]
-X 121 system.ads
+134P9 Node_Access(133R9[60|317])
+151V13 Link(134P9[82|153]) 118|54i21[82|153]
+X 123 system.ads
 67M9*Address
-X 134 s-memory.ads
-53V13*Alloc{121|67M9} 103i<c,__gnat_malloc>22
+X 136 s-memory.ads
+53V13*Alloc{123|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{121|67M9} 105i<c,__gnat_realloc>22
-X 138 s-parint.ads
+76V13*Realloc{123|67M9} 105i<c,__gnat_realloc>22
+X 140 s-parint.ads
 707P9 Private_Info_Access(207R9)
-X 139 s-parint.adb
-329V13 Link(138|707P9) 117|54i21
-X 146 s-stausa.ads
+X 141 s-parint.adb
+329V13 Link(140|707P9) 118|54i21
+X 149 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 148 s-stalib.adb
+X 151 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 

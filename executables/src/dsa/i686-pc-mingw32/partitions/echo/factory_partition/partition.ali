@@ -8,7 +8,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U partition%b		partition.adb		c63b06e6 OO PK
+U partition%b		partition.adb		22cfa9af OO PK
 W factory%s		factory.adb		factory.ali  EA
 W polyorb%s		polyorb.ads		polyorb.ali
 W polyorb.dsa_p%s	polyorb-dsa_p.ads	polyorb-dsa_p.ali
@@ -23,11 +23,9 @@ W system.dsa_services%s	s-dsaser.adb		s-dsaser.ali  EA
 W system.partition_interface%s  s-parint.adb	s-parint.ali  EA
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 Z system.version_control%s  s-vercon.adb	s-vercon.ali
-W workercity%s		workercity.adb		workercity.ali  EA
 
 U partition%s		partition.ads		1d743dc2 EB EE NE OO PK
 
-E workercityS
 E storageS
 D ada.ads		20200228061810 76789da1 ada%s
 D a-calend.ads		20200228061810 474d9720 ada.calendar%s
@@ -49,13 +47,13 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D client.ads		20210830155914 41cf2c9d client%s
-D common.ads		20210903143158 218bb855 common%s
-D factory.ads		20210905154112 69c806f0 factory%s
+D common.ads		20210907164716 697612b1 common%s
+D factory.ads		20210907144726 7fcea854 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
-D partition.ads		20210907140956 1d743dc2 partition%s
-D partition.adb		20210907140956 4bbd2311 partition%b
+D partition.ads		20210907170548 1d743dc2 partition%s
+D partition.adb		20210907170548 6a22b1d0 partition%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -171,17 +169,16 @@ D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
 D s-vercon.ads		20200228061810 b312eb8d system.version_control%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
-D workercity.ads	20210905153150 d36d932c workercity%s
 G a e
-G c b b b [b partition 33 1 none]
-G r c none [b partition 33 1 none] [start_factory standard 3 11 none]
+G c b b b [b partition 30 1 none]
+G r c none [b partition 30 1 none] [start_factory standard 3 11 none]
 X 22 factory.ads
-1K9*Factory 6e12 27|18w6 20r4
+2K9*Factory 8e12 27|18w6 20r4
 X 23 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 106|37i18
 X 26 partition.ads
-3K9*Partition 5l5 5e14 27|33b14 45l5 45t14
+3K9*Partition 5l5 5e14 27|30b14 38l5 38t14
 X 28 polyorb.ads
 35K9*PolyORB 27|3r6 6r6 9r6 24r6 28|37e12
 X 30 polyorb-any.ads
@@ -199,7 +196,7 @@ X 46 polyorb-initialization.ads
 X 53 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9)
-98V13 Link(47P9[38|358]) 105|54i21[38|358]
+98V13 Link(47P9) 105|54i21
 X 54 polyorb-orb.ads
 59K17*ORB 27|3w14 5r12 54|342e16
 X 84 polyorb-setup.ads
@@ -209,23 +206,21 @@ X 88 polyorb-task_info.ads
 264V13 Link(71P9) 105|54i21
 X 99 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[54|250])
-151V13 Link(134P9[31|75]) 105|54i21[31|75]
+134P9 Node_Access(133R9[69|119])
+151V13 Link(134P9[32|74]) 105|54i21[32|74]
 X 109 start_factory.adb
-3U11*start_Factory 27|21w6 23r4 44s4
+3U11*start_Factory 27|21w6 23r4 37s4
 X 110 storage.ads
-1K9*Storage 27|30w6 32r4 42r7 110|20e12
+1K9*Storage 27|27w6 29r4 35r7 110|20e12
 X 111 system.ads
-37K9*System 27|12r6 15r6 35r4 36r4 40r4 111|200e11
+37K9*System 27|12r6 15r6 32r4 33r4 111|200e11
 X 114 s-dsaser.ads
 39K16*DSA_Services 27|15w13 17r11 114|51e24
 X 122 s-parint.ads
-70K16*Partition_Interface 27|12w13 14r11 35r11 36r11 40r11 122|738e31
-187U14*Check 27|36s31 40s31
-250U14*Activate_RPC_Receivers 27|35s31
+70K16*Partition_Interface 27|12w13 14r11 32r11 33r11 122|738e31
+187U14*Check 27|33s31
+250U14*Activate_RPC_Receivers 27|32s31
 X 129 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 143 workercity.ads
-2K9*WorkerCity 27|27w6 29r4 38r7 143|8e15
 

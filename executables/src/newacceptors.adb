@@ -8,8 +8,10 @@ package body NewAcceptors is
    is
    begin
       if A.Max_ID < ID then
+         Put_Line("Richiesta accettata! :D");
          return True;
       else
+         Put_Line("Richiesta rifiutata! :(");
          return False;
       end if;
    end Validate;
