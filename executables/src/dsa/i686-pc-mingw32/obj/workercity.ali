@@ -29,7 +29,7 @@ RV NO_IMPLICIT_ALIASING
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U workercity%b		workercity.adb		a610c585 OO PF PK
+U workercity%b		workercity.adb		512d5735 OO PF PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.containers.generic_array_sort%s
@@ -45,7 +45,7 @@ Z ada.unchecked_deallocation%s
 W factory%s		factory.adb		factory.ali
 Z interfaces%s		interfac.ads		interfac.ali
 Z system%s		system.ads		system.ali
-Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
@@ -57,8 +57,9 @@ Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
 Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U workercity%s		workercity.ads		f2e62b79 EE NE OO RC PK
+U workercity%s		workercity.ads		b6ee4d72 EE NE OO RC PK
 W common%s		common.ads		common.ali
 
 D ada.ads		20200228061810 76789da1 ada%s
@@ -74,6 +75,7 @@ D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
 D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
 D a-iteint.ads		20200228061810 7c7305e9 ada.iterator_interfaces%s
+D a-reatim.ads		20200228061810 0240fc73 ada.real_time%s
 D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
 D a-string.ads		20200228061810 90ac6797 ada.strings%s
 D a-strmap.ads		20200228061810 e8bb714a ada.strings.maps%s
@@ -87,8 +89,8 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210903143158 218bb855 common%s
-D factory.ads		20210905154112 69c806f0 factory%s
+D common.ads		20210907154142 2b9eff90 common%s
+D factory.ads		20210907144726 7fcea854 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
@@ -178,7 +180,7 @@ D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
 D s-atocou.adb		20200228061810 b65612c0 system.atomic_counters%b
-D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20200228061810 0b705ca5 system.concat_3%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
 D s-dsatyp.ads		20210826161802 23c1e58e system.dsa_types%s
 D s-exctab.ads		20200228061810 54135002 system.exception_table%s
@@ -207,215 +209,358 @@ D s-stposu.ads		20200317060516 e251976f system.storage_pools.subpools%s
 D s-stratt.ads		20200424050626 9a2744e9 system.stream_attributes%s
 D s-tasinf.ads		20200228061810 601f6b72 system.task_info%s
 D s-taspri.ads		20200228061810 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20200228061810 6eefbe12 system.task_primitives.operations%s
 D s-taskin.ads		20200228061810 88fba9ad system.tasking%s
 D s-taprob.ads		20200228061810 acd6094d system.tasking.protected_objects%s
+D s-tassta.ads		20200228061810 cca55c94 system.tasking.stages%s
 D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
 D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
-D workercity.ads	20210905153150 d36d932c workercity%s
-D workercity.adb	20210905153150 cc6a8aeb workercity%b
+D workercity.ads	20210907152832 9d70b2e2 workercity%s
+D workercity.adb	20210907162142 634c9731 workercity%b
 G a e
-G c Z s b [insert workercity 5 14 none]
-G c Z s b [working workercity 6 14 none]
-G c Z s b [remove workercity 7 14 none]
-G c Z b b [has_element workercity__worker_vectors 107 13 6_4]
-G c Z b b [Oeq workercity__worker_vectors 117 24 6_4]
-G c Z b b [to_vector workercity__worker_vectors 126 13 6_4]
-G c Z b b [to_vector workercity__worker_vectors 129 13 6_4]
-G c Z b b [Oconcat workercity__worker_vectors 135 13 6_4]
-G c Z b b [Oconcat workercity__worker_vectors 139 13 6_4]
-G c Z b b [Oconcat workercity__worker_vectors 143 13 6_4]
-G c Z b b [Oconcat workercity__worker_vectors 147 13 6_4]
-G c Z b b [capacity workercity__worker_vectors 151 13 6_4]
-G c Z b b [reserve_capacity workercity__worker_vectors 154 14 6_4]
-G c Z b b [length workercity__worker_vectors 165 13 6_4]
-G c Z b b [set_length workercity__worker_vectors 168 14 6_4]
-G c Z b b [is_empty workercity__worker_vectors 177 13 6_4]
-G c Z b b [clear workercity__worker_vectors 180 14 6_4]
-G c Z b b [to_cursor workercity__worker_vectors 184 13 6_4]
-G c Z b b [to_index workercity__worker_vectors 191 13 6_4]
-G c Z b b [element workercity__worker_vectors 196 13 6_4]
-G c Z b b [element workercity__worker_vectors 203 13 6_4]
-G c Z b b [replace_element workercity__worker_vectors 207 14 6_4]
-G c Z b b [replace_element workercity__worker_vectors 218 14 6_4]
-G c Z b b [query_element workercity__worker_vectors 229 14 6_4]
-G c Z b b [query_element workercity__worker_vectors 240 14 6_4]
-G c Z b b [update_element workercity__worker_vectors 249 14 6_4]
-G c Z b b [update_element workercity__worker_vectors 266 14 6_4]
-G c Z b b [constant_reference workercity__worker_vectors 293 13 6_4]
-G c Z b b [reference workercity__worker_vectors 298 13 6_4]
-G c Z b b [constant_reference workercity__worker_vectors 303 13 6_4]
-G c Z b b [reference workercity__worker_vectors 308 13 6_4]
-G c Z b b [assign workercity__worker_vectors 313 14 6_4]
-G c Z b b [copy workercity__worker_vectors 315 13 6_4]
-G c Z b b [move workercity__worker_vectors 317 14 6_4]
-G c Z b b [insert workercity__worker_vectors 323 14 6_4]
-G c Z b b [insert workercity__worker_vectors 341 14 6_4]
-G c Z b b [insert workercity__worker_vectors 352 14 6_4]
-G c Z b b [insert workercity__worker_vectors 363 14 6_4]
-G c Z b b [insert workercity__worker_vectors 370 14 6_4]
-G c Z b b [insert workercity__worker_vectors 377 14 6_4]
-G c Z b b [insert workercity__worker_vectors 386 14 6_4]
-G c Z b b [insert workercity__worker_vectors 403 14 6_4]
-G c Z b b [prepend workercity__worker_vectors 414 14 6_4]
-G c Z b b [prepend workercity__worker_vectors 419 14 6_4]
-G c Z b b [append workercity__worker_vectors 426 14 6_4]
-G c Z b b [append workercity__worker_vectors 431 14 6_4]
-G c Z b b [insert_space workercity__worker_vectors 438 14 6_4]
-G c Z b b [insert_space workercity__worker_vectors 455 14 6_4]
-G c Z b b [delete workercity__worker_vectors 466 14 6_4]
-G c Z b b [delete workercity__worker_vectors 476 14 6_4]
-G c Z b b [delete_first workercity__worker_vectors 485 14 6_4]
-G c Z b b [delete_last workercity__worker_vectors 490 14 6_4]
-G c Z b b [reverse_elements workercity__worker_vectors 498 14 6_4]
-G c Z b b [swap workercity__worker_vectors 501 14 6_4]
-G c Z b b [swap workercity__worker_vectors 506 14 6_4]
-G c Z b b [first_index workercity__worker_vectors 512 13 6_4]
-G c Z b b [first workercity__worker_vectors 515 13 6_4]
-G c Z b b [first_element workercity__worker_vectors 519 13 6_4]
-G c Z b b [last_index workercity__worker_vectors 522 13 6_4]
-G c Z b b [last workercity__worker_vectors 526 13 6_4]
-G c Z b b [last_element workercity__worker_vectors 530 13 6_4]
-G c Z b b [next workercity__worker_vectors 533 13 6_4]
-G c Z b b [next workercity__worker_vectors 539 14 6_4]
-G c Z b b [previous workercity__worker_vectors 542 13 6_4]
-G c Z b b [previous workercity__worker_vectors 548 14 6_4]
-G c Z b b [find_index workercity__worker_vectors 551 13 6_4]
-G c Z b b [find workercity__worker_vectors 561 13 6_4]
-G c Z b b [reverse_find_index workercity__worker_vectors 575 13 6_4]
-G c Z b b [reverse_find workercity__worker_vectors 587 13 6_4]
-G c Z b b [contains workercity__worker_vectors 601 13 6_4]
-G c Z b b [iterate workercity__worker_vectors 606 14 6_4]
-G c Z b b [reverse_iterate workercity__worker_vectors 614 14 6_4]
-G c Z b b [iterate workercity__worker_vectors 621 13 6_4]
-G c Z b b [iterate workercity__worker_vectors 624 13 6_4]
-G c Z b b [adjust workercity__worker_vectors__implementation 90 28 678_4_6_4]
-G c Z b b [finalize workercity__worker_vectors__implementation 93 28 678_4_6_4]
-G c Z b b [zero_counts workercity__worker_vectors__implementation 96 17 678_4_6_4]
-G c Z b b [busy workercity__worker_vectors__implementation 100 17 678_4_6_4]
-G c Z b b [unbusy workercity__worker_vectors__implementation 104 17 678_4_6_4]
-G c Z b b [lock workercity__worker_vectors__implementation 108 17 678_4_6_4]
-G c Z b b [unlock workercity__worker_vectors__implementation 112 17 678_4_6_4]
-G c Z b b [tc_check workercity__worker_vectors__implementation 116 17 678_4_6_4]
-G c Z b b [te_check workercity__worker_vectors__implementation 120 17 678_4_6_4]
-G c Z b b [initialize workercity__worker_vectors__implementation 139 28 678_4_6_4]
-G c Z b b [finalize workercity__worker_vectors__implementation 140 28 678_4_6_4]
-G c Z b b [initialize workercity__worker_vectors__implementation 145 28 678_4_6_4]
-G c Z b b [finalize workercity__worker_vectors__implementation 146 28 678_4_6_4]
-G c Z b b [reference_control_typeDA workercity__worker_vectors__implementation 84 12 678_4_6_4]
-G c Z b b [reference_control_typeDF workercity__worker_vectors__implementation 84 12 678_4_6_4]
-G c Z b b [reference_control_typeIP workercity__worker_vectors__implementation 84 12 678_4_6_4]
-G c Z b b [with_busyDF workercity__worker_vectors__implementation 136 12 678_4_6_4]
-G c Z b b [with_busyIP workercity__worker_vectors__implementation 136 12 678_4_6_4]
-G c Z b b [with_lockDF workercity__worker_vectors__implementation 142 12 678_4_6_4]
-G c Z b b [with_lockIP workercity__worker_vectors__implementation 142 12 678_4_6_4]
-G c Z b b [adjust workercity__worker_vectors 699 25 6_4]
-G c Z b b [finalize workercity__worker_vectors 700 25 6_4]
-G c Z b b [write workercity__worker_vectors 702 14 6_4]
-G c Z b b [read workercity__worker_vectors 708 14 6_4]
-G c Z b b [read workercity__worker_vectors 722 14 6_4]
-G c Z b b [write workercity__worker_vectors 728 14 6_4]
-G c Z b b [write workercity__worker_vectors 747 14 6_4]
-G c Z b b [read workercity__worker_vectors 753 14 6_4]
-G c Z b b [write workercity__worker_vectors 769 14 6_4]
-G c Z b b [read workercity__worker_vectors 775 14 6_4]
-G c Z b b [pseudo_reference workercity__worker_vectors 786 13 6_4]
-G c Z b b [get_element_access workercity__worker_vectors 795 13 6_4]
-G c Z b b [cursorIP workercity__worker_vectors 717 9 6_4]
-G c Z b b [vectorDA workercity__worker_vectors 693 9 6_4]
-G c Z b b [vectorDF workercity__worker_vectors 693 9 6_4]
-G c Z b b [vectorIP workercity__worker_vectors 693 9 6_4]
-G c Z b b [constant_reference_typeDI workercity__worker_vectors 737 9 6_4]
-G c Z b b [constant_reference_typeDA workercity__worker_vectors 737 9 6_4]
-G c Z b b [constant_reference_typeDF workercity__worker_vectors 737 9 6_4]
-G c Z b b [constant_reference_typeIP workercity__worker_vectors 737 9 6_4]
-G c Z b b [reference_typeDI workercity__worker_vectors 759 9 6_4]
-G c Z b b [reference_typeDA workercity__worker_vectors 759 9 6_4]
-G c Z b b [reference_typeDF workercity__worker_vectors 759 9 6_4]
-G c Z b b [reference_typeIP workercity__worker_vectors 759 9 6_4]
-G c Z b b [finalize workercity__worker_vectors 811 25 6_4]
-G c Z b b [first workercity__worker_vectors 813 24 6_4]
-G c Z b b [last workercity__worker_vectors 814 24 6_4]
-G c Z b b [next workercity__worker_vectors 816 24 6_4]
-G c Z b b [previous workercity__worker_vectors 820 24 6_4]
-G c Z b b [elements_arrayIP workercity__worker_vectors 681 9 6_4]
-G c Z b b [elements_typeIP workercity__worker_vectors 684 9 6_4]
-G c Z b b [iteratorDF workercity__worker_vectors 803 9 6_4]
-G c Z b b [iteratorIP workercity__worker_vectors 803 9 6_4]
-G c Z b b [free workercity__worker_vectors 41 14 6_4]
-G c Z b b [append_slow_path workercity__worker_vectors 44 14 6_4]
+G c Z s b [work_test workercity 5 13 none]
+G c Z s b [insert_w workercity 6 14 none]
+G c Z s b [insert_a workercity 7 14 none]
+G c Z s b [remove_w workercity 8 14 none]
+G c Z s b [remove_a workercity 9 14 none]
+G c Z b b [has_element workercity__worker_vectors 107 13 7_4]
+G c Z b b [Oeq workercity__worker_vectors 117 24 7_4]
+G c Z b b [to_vector workercity__worker_vectors 126 13 7_4]
+G c Z b b [to_vector workercity__worker_vectors 129 13 7_4]
+G c Z b b [Oconcat workercity__worker_vectors 135 13 7_4]
+G c Z b b [Oconcat workercity__worker_vectors 139 13 7_4]
+G c Z b b [Oconcat workercity__worker_vectors 143 13 7_4]
+G c Z b b [Oconcat workercity__worker_vectors 147 13 7_4]
+G c Z b b [capacity workercity__worker_vectors 151 13 7_4]
+G c Z b b [reserve_capacity workercity__worker_vectors 154 14 7_4]
+G c Z b b [length workercity__worker_vectors 165 13 7_4]
+G c Z b b [set_length workercity__worker_vectors 168 14 7_4]
+G c Z b b [is_empty workercity__worker_vectors 177 13 7_4]
+G c Z b b [clear workercity__worker_vectors 180 14 7_4]
+G c Z b b [to_cursor workercity__worker_vectors 184 13 7_4]
+G c Z b b [to_index workercity__worker_vectors 191 13 7_4]
+G c Z b b [element workercity__worker_vectors 196 13 7_4]
+G c Z b b [element workercity__worker_vectors 203 13 7_4]
+G c Z b b [replace_element workercity__worker_vectors 207 14 7_4]
+G c Z b b [replace_element workercity__worker_vectors 218 14 7_4]
+G c Z b b [query_element workercity__worker_vectors 229 14 7_4]
+G c Z b b [query_element workercity__worker_vectors 240 14 7_4]
+G c Z b b [update_element workercity__worker_vectors 249 14 7_4]
+G c Z b b [update_element workercity__worker_vectors 266 14 7_4]
+G c Z b b [constant_reference workercity__worker_vectors 293 13 7_4]
+G c Z b b [reference workercity__worker_vectors 298 13 7_4]
+G c Z b b [constant_reference workercity__worker_vectors 303 13 7_4]
+G c Z b b [reference workercity__worker_vectors 308 13 7_4]
+G c Z b b [assign workercity__worker_vectors 313 14 7_4]
+G c Z b b [copy workercity__worker_vectors 315 13 7_4]
+G c Z b b [move workercity__worker_vectors 317 14 7_4]
+G c Z b b [insert workercity__worker_vectors 323 14 7_4]
+G c Z b b [insert workercity__worker_vectors 341 14 7_4]
+G c Z b b [insert workercity__worker_vectors 352 14 7_4]
+G c Z b b [insert workercity__worker_vectors 363 14 7_4]
+G c Z b b [insert workercity__worker_vectors 370 14 7_4]
+G c Z b b [insert workercity__worker_vectors 377 14 7_4]
+G c Z b b [insert workercity__worker_vectors 386 14 7_4]
+G c Z b b [insert workercity__worker_vectors 403 14 7_4]
+G c Z b b [prepend workercity__worker_vectors 414 14 7_4]
+G c Z b b [prepend workercity__worker_vectors 419 14 7_4]
+G c Z b b [append workercity__worker_vectors 426 14 7_4]
+G c Z b b [append workercity__worker_vectors 431 14 7_4]
+G c Z b b [insert_space workercity__worker_vectors 438 14 7_4]
+G c Z b b [insert_space workercity__worker_vectors 455 14 7_4]
+G c Z b b [delete workercity__worker_vectors 466 14 7_4]
+G c Z b b [delete workercity__worker_vectors 476 14 7_4]
+G c Z b b [delete_first workercity__worker_vectors 485 14 7_4]
+G c Z b b [delete_last workercity__worker_vectors 490 14 7_4]
+G c Z b b [reverse_elements workercity__worker_vectors 498 14 7_4]
+G c Z b b [swap workercity__worker_vectors 501 14 7_4]
+G c Z b b [swap workercity__worker_vectors 506 14 7_4]
+G c Z b b [first_index workercity__worker_vectors 512 13 7_4]
+G c Z b b [first workercity__worker_vectors 515 13 7_4]
+G c Z b b [first_element workercity__worker_vectors 519 13 7_4]
+G c Z b b [last_index workercity__worker_vectors 522 13 7_4]
+G c Z b b [last workercity__worker_vectors 526 13 7_4]
+G c Z b b [last_element workercity__worker_vectors 530 13 7_4]
+G c Z b b [next workercity__worker_vectors 533 13 7_4]
+G c Z b b [next workercity__worker_vectors 539 14 7_4]
+G c Z b b [previous workercity__worker_vectors 542 13 7_4]
+G c Z b b [previous workercity__worker_vectors 548 14 7_4]
+G c Z b b [find_index workercity__worker_vectors 551 13 7_4]
+G c Z b b [find workercity__worker_vectors 561 13 7_4]
+G c Z b b [reverse_find_index workercity__worker_vectors 575 13 7_4]
+G c Z b b [reverse_find workercity__worker_vectors 587 13 7_4]
+G c Z b b [contains workercity__worker_vectors 601 13 7_4]
+G c Z b b [iterate workercity__worker_vectors 606 14 7_4]
+G c Z b b [reverse_iterate workercity__worker_vectors 614 14 7_4]
+G c Z b b [iterate workercity__worker_vectors 621 13 7_4]
+G c Z b b [iterate workercity__worker_vectors 624 13 7_4]
+G c Z b b [adjust workercity__worker_vectors__implementation 90 28 678_4_7_4]
+G c Z b b [finalize workercity__worker_vectors__implementation 93 28 678_4_7_4]
+G c Z b b [zero_counts workercity__worker_vectors__implementation 96 17 678_4_7_4]
+G c Z b b [busy workercity__worker_vectors__implementation 100 17 678_4_7_4]
+G c Z b b [unbusy workercity__worker_vectors__implementation 104 17 678_4_7_4]
+G c Z b b [lock workercity__worker_vectors__implementation 108 17 678_4_7_4]
+G c Z b b [unlock workercity__worker_vectors__implementation 112 17 678_4_7_4]
+G c Z b b [tc_check workercity__worker_vectors__implementation 116 17 678_4_7_4]
+G c Z b b [te_check workercity__worker_vectors__implementation 120 17 678_4_7_4]
+G c Z b b [initialize workercity__worker_vectors__implementation 139 28 678_4_7_4]
+G c Z b b [finalize workercity__worker_vectors__implementation 140 28 678_4_7_4]
+G c Z b b [initialize workercity__worker_vectors__implementation 145 28 678_4_7_4]
+G c Z b b [finalize workercity__worker_vectors__implementation 146 28 678_4_7_4]
+G c Z b b [reference_control_typeDA workercity__worker_vectors__implementation 84 12 678_4_7_4]
+G c Z b b [reference_control_typeDF workercity__worker_vectors__implementation 84 12 678_4_7_4]
+G c Z b b [reference_control_typeIP workercity__worker_vectors__implementation 84 12 678_4_7_4]
+G c Z b b [with_busyDF workercity__worker_vectors__implementation 136 12 678_4_7_4]
+G c Z b b [with_busyIP workercity__worker_vectors__implementation 136 12 678_4_7_4]
+G c Z b b [with_lockDF workercity__worker_vectors__implementation 142 12 678_4_7_4]
+G c Z b b [with_lockIP workercity__worker_vectors__implementation 142 12 678_4_7_4]
+G c Z b b [adjust workercity__worker_vectors 699 25 7_4]
+G c Z b b [finalize workercity__worker_vectors 700 25 7_4]
+G c Z b b [write workercity__worker_vectors 702 14 7_4]
+G c Z b b [read workercity__worker_vectors 708 14 7_4]
+G c Z b b [read workercity__worker_vectors 722 14 7_4]
+G c Z b b [write workercity__worker_vectors 728 14 7_4]
+G c Z b b [write workercity__worker_vectors 747 14 7_4]
+G c Z b b [read workercity__worker_vectors 753 14 7_4]
+G c Z b b [write workercity__worker_vectors 769 14 7_4]
+G c Z b b [read workercity__worker_vectors 775 14 7_4]
+G c Z b b [pseudo_reference workercity__worker_vectors 786 13 7_4]
+G c Z b b [get_element_access workercity__worker_vectors 795 13 7_4]
+G c Z b b [cursorIP workercity__worker_vectors 717 9 7_4]
+G c Z b b [vectorDA workercity__worker_vectors 693 9 7_4]
+G c Z b b [vectorDF workercity__worker_vectors 693 9 7_4]
+G c Z b b [vectorIP workercity__worker_vectors 693 9 7_4]
+G c Z b b [constant_reference_typeDI workercity__worker_vectors 737 9 7_4]
+G c Z b b [constant_reference_typeDA workercity__worker_vectors 737 9 7_4]
+G c Z b b [constant_reference_typeDF workercity__worker_vectors 737 9 7_4]
+G c Z b b [constant_reference_typeIP workercity__worker_vectors 737 9 7_4]
+G c Z b b [reference_typeDI workercity__worker_vectors 759 9 7_4]
+G c Z b b [reference_typeDA workercity__worker_vectors 759 9 7_4]
+G c Z b b [reference_typeDF workercity__worker_vectors 759 9 7_4]
+G c Z b b [reference_typeIP workercity__worker_vectors 759 9 7_4]
+G c Z b b [finalize workercity__worker_vectors 811 25 7_4]
+G c Z b b [first workercity__worker_vectors 813 24 7_4]
+G c Z b b [last workercity__worker_vectors 814 24 7_4]
+G c Z b b [next workercity__worker_vectors 816 24 7_4]
+G c Z b b [previous workercity__worker_vectors 820 24 7_4]
+G c Z b b [elements_arrayIP workercity__worker_vectors 681 9 7_4]
+G c Z b b [elements_typeIP workercity__worker_vectors 684 9 7_4]
+G c Z b b [iteratorDF workercity__worker_vectors 803 9 7_4]
+G c Z b b [iteratorIP workercity__worker_vectors 803 9 7_4]
+G c Z b b [free workercity__worker_vectors 41 14 7_4]
+G c Z b b [append_slow_path workercity__worker_vectors 44 14 7_4]
+G c Z b b [has_element workercity__acceptor_vectors 107 13 11_4]
+G c Z b b [Oeq workercity__acceptor_vectors 117 24 11_4]
+G c Z b b [to_vector workercity__acceptor_vectors 126 13 11_4]
+G c Z b b [to_vector workercity__acceptor_vectors 129 13 11_4]
+G c Z b b [Oconcat workercity__acceptor_vectors 135 13 11_4]
+G c Z b b [Oconcat workercity__acceptor_vectors 139 13 11_4]
+G c Z b b [Oconcat workercity__acceptor_vectors 143 13 11_4]
+G c Z b b [Oconcat workercity__acceptor_vectors 147 13 11_4]
+G c Z b b [capacity workercity__acceptor_vectors 151 13 11_4]
+G c Z b b [reserve_capacity workercity__acceptor_vectors 154 14 11_4]
+G c Z b b [length workercity__acceptor_vectors 165 13 11_4]
+G c Z b b [set_length workercity__acceptor_vectors 168 14 11_4]
+G c Z b b [is_empty workercity__acceptor_vectors 177 13 11_4]
+G c Z b b [clear workercity__acceptor_vectors 180 14 11_4]
+G c Z b b [to_cursor workercity__acceptor_vectors 184 13 11_4]
+G c Z b b [to_index workercity__acceptor_vectors 191 13 11_4]
+G c Z b b [element workercity__acceptor_vectors 196 13 11_4]
+G c Z b b [element workercity__acceptor_vectors 203 13 11_4]
+G c Z b b [replace_element workercity__acceptor_vectors 207 14 11_4]
+G c Z b b [replace_element workercity__acceptor_vectors 218 14 11_4]
+G c Z b b [query_element workercity__acceptor_vectors 229 14 11_4]
+G c Z b b [query_element workercity__acceptor_vectors 240 14 11_4]
+G c Z b b [update_element workercity__acceptor_vectors 249 14 11_4]
+G c Z b b [update_element workercity__acceptor_vectors 266 14 11_4]
+G c Z b b [constant_reference workercity__acceptor_vectors 293 13 11_4]
+G c Z b b [reference workercity__acceptor_vectors 298 13 11_4]
+G c Z b b [constant_reference workercity__acceptor_vectors 303 13 11_4]
+G c Z b b [reference workercity__acceptor_vectors 308 13 11_4]
+G c Z b b [assign workercity__acceptor_vectors 313 14 11_4]
+G c Z b b [copy workercity__acceptor_vectors 315 13 11_4]
+G c Z b b [move workercity__acceptor_vectors 317 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 323 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 341 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 352 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 363 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 370 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 377 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 386 14 11_4]
+G c Z b b [insert workercity__acceptor_vectors 403 14 11_4]
+G c Z b b [prepend workercity__acceptor_vectors 414 14 11_4]
+G c Z b b [prepend workercity__acceptor_vectors 419 14 11_4]
+G c Z b b [append workercity__acceptor_vectors 426 14 11_4]
+G c Z b b [append workercity__acceptor_vectors 431 14 11_4]
+G c Z b b [insert_space workercity__acceptor_vectors 438 14 11_4]
+G c Z b b [insert_space workercity__acceptor_vectors 455 14 11_4]
+G c Z b b [delete workercity__acceptor_vectors 466 14 11_4]
+G c Z b b [delete workercity__acceptor_vectors 476 14 11_4]
+G c Z b b [delete_first workercity__acceptor_vectors 485 14 11_4]
+G c Z b b [delete_last workercity__acceptor_vectors 490 14 11_4]
+G c Z b b [reverse_elements workercity__acceptor_vectors 498 14 11_4]
+G c Z b b [swap workercity__acceptor_vectors 501 14 11_4]
+G c Z b b [swap workercity__acceptor_vectors 506 14 11_4]
+G c Z b b [first_index workercity__acceptor_vectors 512 13 11_4]
+G c Z b b [first workercity__acceptor_vectors 515 13 11_4]
+G c Z b b [first_element workercity__acceptor_vectors 519 13 11_4]
+G c Z b b [last_index workercity__acceptor_vectors 522 13 11_4]
+G c Z b b [last workercity__acceptor_vectors 526 13 11_4]
+G c Z b b [last_element workercity__acceptor_vectors 530 13 11_4]
+G c Z b b [next workercity__acceptor_vectors 533 13 11_4]
+G c Z b b [next workercity__acceptor_vectors 539 14 11_4]
+G c Z b b [previous workercity__acceptor_vectors 542 13 11_4]
+G c Z b b [previous workercity__acceptor_vectors 548 14 11_4]
+G c Z b b [find_index workercity__acceptor_vectors 551 13 11_4]
+G c Z b b [find workercity__acceptor_vectors 561 13 11_4]
+G c Z b b [reverse_find_index workercity__acceptor_vectors 575 13 11_4]
+G c Z b b [reverse_find workercity__acceptor_vectors 587 13 11_4]
+G c Z b b [contains workercity__acceptor_vectors 601 13 11_4]
+G c Z b b [iterate workercity__acceptor_vectors 606 14 11_4]
+G c Z b b [reverse_iterate workercity__acceptor_vectors 614 14 11_4]
+G c Z b b [iterate workercity__acceptor_vectors 621 13 11_4]
+G c Z b b [iterate workercity__acceptor_vectors 624 13 11_4]
+G c Z b b [adjust workercity__acceptor_vectors__implementation 90 28 678_4_11_4]
+G c Z b b [finalize workercity__acceptor_vectors__implementation 93 28 678_4_11_4]
+G c Z b b [zero_counts workercity__acceptor_vectors__implementation 96 17 678_4_11_4]
+G c Z b b [busy workercity__acceptor_vectors__implementation 100 17 678_4_11_4]
+G c Z b b [unbusy workercity__acceptor_vectors__implementation 104 17 678_4_11_4]
+G c Z b b [lock workercity__acceptor_vectors__implementation 108 17 678_4_11_4]
+G c Z b b [unlock workercity__acceptor_vectors__implementation 112 17 678_4_11_4]
+G c Z b b [tc_check workercity__acceptor_vectors__implementation 116 17 678_4_11_4]
+G c Z b b [te_check workercity__acceptor_vectors__implementation 120 17 678_4_11_4]
+G c Z b b [initialize workercity__acceptor_vectors__implementation 139 28 678_4_11_4]
+G c Z b b [finalize workercity__acceptor_vectors__implementation 140 28 678_4_11_4]
+G c Z b b [initialize workercity__acceptor_vectors__implementation 145 28 678_4_11_4]
+G c Z b b [finalize workercity__acceptor_vectors__implementation 146 28 678_4_11_4]
+G c Z b b [reference_control_typeDA workercity__acceptor_vectors__implementation 84 12 678_4_11_4]
+G c Z b b [reference_control_typeDF workercity__acceptor_vectors__implementation 84 12 678_4_11_4]
+G c Z b b [reference_control_typeIP workercity__acceptor_vectors__implementation 84 12 678_4_11_4]
+G c Z b b [with_busyDF workercity__acceptor_vectors__implementation 136 12 678_4_11_4]
+G c Z b b [with_busyIP workercity__acceptor_vectors__implementation 136 12 678_4_11_4]
+G c Z b b [with_lockDF workercity__acceptor_vectors__implementation 142 12 678_4_11_4]
+G c Z b b [with_lockIP workercity__acceptor_vectors__implementation 142 12 678_4_11_4]
+G c Z b b [adjust workercity__acceptor_vectors 699 25 11_4]
+G c Z b b [finalize workercity__acceptor_vectors 700 25 11_4]
+G c Z b b [write workercity__acceptor_vectors 702 14 11_4]
+G c Z b b [read workercity__acceptor_vectors 708 14 11_4]
+G c Z b b [read workercity__acceptor_vectors 722 14 11_4]
+G c Z b b [write workercity__acceptor_vectors 728 14 11_4]
+G c Z b b [write workercity__acceptor_vectors 747 14 11_4]
+G c Z b b [read workercity__acceptor_vectors 753 14 11_4]
+G c Z b b [write workercity__acceptor_vectors 769 14 11_4]
+G c Z b b [read workercity__acceptor_vectors 775 14 11_4]
+G c Z b b [pseudo_reference workercity__acceptor_vectors 786 13 11_4]
+G c Z b b [get_element_access workercity__acceptor_vectors 795 13 11_4]
+G c Z b b [cursorIP workercity__acceptor_vectors 717 9 11_4]
+G c Z b b [vectorDA workercity__acceptor_vectors 693 9 11_4]
+G c Z b b [vectorDF workercity__acceptor_vectors 693 9 11_4]
+G c Z b b [vectorIP workercity__acceptor_vectors 693 9 11_4]
+G c Z b b [constant_reference_typeDI workercity__acceptor_vectors 737 9 11_4]
+G c Z b b [constant_reference_typeDA workercity__acceptor_vectors 737 9 11_4]
+G c Z b b [constant_reference_typeDF workercity__acceptor_vectors 737 9 11_4]
+G c Z b b [constant_reference_typeIP workercity__acceptor_vectors 737 9 11_4]
+G c Z b b [reference_typeDI workercity__acceptor_vectors 759 9 11_4]
+G c Z b b [reference_typeDA workercity__acceptor_vectors 759 9 11_4]
+G c Z b b [reference_typeDF workercity__acceptor_vectors 759 9 11_4]
+G c Z b b [reference_typeIP workercity__acceptor_vectors 759 9 11_4]
+G c Z b b [finalize workercity__acceptor_vectors 811 25 11_4]
+G c Z b b [first workercity__acceptor_vectors 813 24 11_4]
+G c Z b b [last workercity__acceptor_vectors 814 24 11_4]
+G c Z b b [next workercity__acceptor_vectors 816 24 11_4]
+G c Z b b [previous workercity__acceptor_vectors 820 24 11_4]
+G c Z b b [elements_arrayIP workercity__acceptor_vectors 681 9 11_4]
+G c Z b b [elements_typeIP workercity__acceptor_vectors 684 9 11_4]
+G c Z b b [iteratorDF workercity__acceptor_vectors 803 9 11_4]
+G c Z b b [iteratorIP workercity__acceptor_vectors 803 9 11_4]
+G c Z b b [free workercity__acceptor_vectors 41 14 11_4]
+G c Z b b [append_slow_path workercity__acceptor_vectors 44 14 11_4]
+G c Z b b [acc_test workercity 35 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 154|2r6 3r6 3r23 6r34
+16K9*Ada 20e8 157|2r6 3r6 3r23 7r34 11r36
 X 4 a-contai.ads
-16K13*Containers 28e19 154|2r10 6r38
+16K13*Containers 28e19 157|2r10 7r38 11r40
 22I9*Count_Type<integer>
 X 8 a-convec.ads
-61I9 Index_Type 154|7r7
-62+9 Element_Type 154|8r7
-73k24*Vectors 824e27 154|2w21 6r49
-78I12*Extended_Index{integer} 154|14r10[6]
-85i4*No_Index{78I12[154|6]} 154|31r17[6] 47r17[6]
-88R9*Vector<11|43R9> 154|12r19[6] 13r16[6]
-165V13*Length{4|22I9} 154|21s84[6] 23s87[6] 37s84[6] 39s87[6] 53s84[6] 55s87[6]
-431U14*Append 154|18s17[6] 34s20[6] 50s17[6]
-466U14*Delete 154|32s20[6] 48s23[6]
-551V13*Find_Index{78I12[154|6]} 154|29s24[6] 45s27[6]
+61I9 Index_Type 157|8r7 12r7
+62+9 Element_Type 157|9r7 13r7
+73k24*Vectors 824e27 157|2w21 7r49 11r51
+78I12*Extended_Index{integer} 157|21r27[7] 22r29[11]
+85i4*No_Index{78I12[157|7]} 157|68r34[7] 81r36[11]
+88R9*Vector<11|43R9> 157|19r34[7] 20r37[11]
+165V13*Length{4|22I9} 157|51s78[7] 60s78[7] 73s78[7] 86s78[7]
+431U14*Append 157|48s20[7] 57s21[11]
+466U14*Delete 157|69s23[7] 82s24[11]
+551V13*Find_Index{78I12[157|7]} 157|66s29[7] 79s30[11]
 X 13 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[8|111]>
-X 24 a-textio.ads
-57K13*Text_IO 727e16 154|3w10 3r27
-264U14*New_Line 154|20s7 22s7 24s7 36s7 38s7 40s7 52s7 54s7 56s7
-465U14*Put 154|19s7 21s7 23s7 35s7 37s7 39s7 51s7 53s7 55s7
-X 27 common.ads
-2K9*Common 23e11 153|1w6 1r18
-12P9*Any_Worker(9R9) 153|5r30 6r29 7r29 154|8r23 16r29 27r29 43r29
-X 28 factory.ads
-1K9*Factory 6e12 154|4w6
-X 29 interfac.ads
+X 25 a-textio.ads
+57K13*Text_IO 727e16 157|3w10 3r27
+264U14*New_Line 157|50s7 52s7 59s7 61s7 72s7 74s7 85s7 87s7
+465U14*Put 157|49s7 51s7 58s7 60s7 71s7 73s7 84s7 86s7
+X 28 common.ads
+2K9*Common 37e11 156|1w6 1r18
+15P9*Any_Worker(9R9) 156|5r44 6r32 8r32 157|9r23 24r44 46r31 64r31
+19P9*Any_Acceptor(12R9) 156|7r32 9r32 157|13r23 35r43 55r30 77r31
+X 29 factory.ads
+2K9*Factory 8e12 157|4w6
+X 30 interfac.ads
 74M9*Unsigned_32
-121V13*Shift_Left{74M9} 110|37i18
-X 35 polyorb-any.ads
+121V13*Shift_Left{74M9} 111|37i18
+X 36 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 103|41i19
-X 41 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 104|41i19
+X 42 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 109|54i21
-X 57 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 110|54i21
+X 58 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
-47P9*Chunk_Access(46R9[43|358])
-98V13 Link(47P9[43|358]) 109|54i21[43|358]
-X 92 polyorb-task_info.ads
+47P9*Chunk_Access(46R9[44|358])
+98V13 Link(47P9[44|358]) 110|54i21[44|358]
+X 93 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 109|54i21
-X 103 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 110|54i21
+X 104 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[34|78])
-151V13 Link(134P9[51|99]) 109|54i21[51|99]
-X 114 system.ads
+134P9 Node_Access(133R9[113|43])
+151V13 Link(134P9[52|99]) 110|54i21[52|99]
+X 115 system.ads
 67M9*Address
-X 126 s-memory.ads
-53V13*Alloc{114|67M9} 103i<c,__gnat_malloc>22
+X 127 s-memory.ads
+53V13*Alloc{115|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{114|67M9} 105i<c,__gnat_realloc>22
-X 137 s-stausa.ads
+76V13*Realloc{115|67M9} 105i<c,__gnat_realloc>22
+X 138 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 139 s-stalib.adb
+X 140 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
-X 153 workercity.ads
-2K9*WorkerCity 8l5 8e15 154|5b14 58l5 58t15
-5U14*Insert 5>22 154|16b14 25l8 25t14
-5p22 W{27|12P9} 154|16b22 18r24
-6U14*Working 6>23 154|27b14 41l8 41t15
-6p23 W{27|12P9} 154|27b23 29r36 34r27
-7U14*Remove 7>22 154|43b14 57l8 57t14
-7p22 W{27|12P9} 154|43b22 45r39 50r24
-X 154 workercity.adb
-6K12 Worker_Vectors[8|73] 10r8
-12r4 Working_List{8|88R9[6]} 21r71 34m7 34r7 37r71 45r14 48m10 48r10 53r71
-13r4 Free_List{8|88R9[6]} 18m7 18r7 23r77 29r14 32m10 32r10 39r77 50m7 50r7
-. 55r77
-14i4 Idx{8|78I12[6]} 29m7 31r10 32r28 45m7 47r10 48r31
+X 156 workercity.ads
+2K9*WorkerCity 10l5 10e15 157|6b14 89l5 89t15
+5V13*Work_Test{28|15P9} 5>24 157|24b13 33l8 33t17
+5i24 C{integer} 157|24b24 28r29
+6U14*Insert_W 6>24 157|46b14 53l8 53t16
+6p24 W{28|15P9} 157|46b24 48r27
+7U14*Insert_A 7>24 157|55b14 62l8 62t16
+7p24 A{28|19P9} 157|55b24 57r28
+8U14*Remove_W 8>24 157|64b14 75l8 75t16
+8p24 W{28|15P9} 157|64b24 66r41
+9U14*Remove_A 9>24 157|77b14 88l8 88t16
+9p24 A{28|19P9} 157|77b24 79r42
+X 157 workercity.adb
+7K12 Worker_Vectors[8|73] 15r8 19r19 21r12 68r19
+11K12 Acceptor_Vectors[8|73] 16r8 20r20 22r12 81r19
+18i4 count{integer} 26m7 28r13 37m7 39r13
+19r4 Working_List{8|88R9[7]} 27r16 48m7 48r7 51r65 60r65 66r16 69m10 69r10
+. 73r65 86r65
+20r4 Acceptor_List{8|88R9[11]} 38r16 57m7 57r7 79r16 82m10 82r10
+21i4 Idx_W{8|78I12[7]} 66m7 68r10 69r31
+22i4 Idx_A{8|78I12[11]} 79m7 81r10 82r32
+27p11 E{28|15P9} 29r20
+35V13 Acc_Test{28|19P9} 35b13 35>23 44l8 44t16
+35i23 C{integer} 39r29
+38p11 E{28|19P9} 40r20
 

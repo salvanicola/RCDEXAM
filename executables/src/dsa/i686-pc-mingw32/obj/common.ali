@@ -20,7 +20,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U common%s		common.ads		daa2527d EE OO PF RT PK
+U common%s		common.ads		d0b715b8 EE OO PF RT PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -52,7 +52,7 @@ D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
 D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210903143158 218bb855 common%s
+D common.ads		20210907154142 2b9eff90 common%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
@@ -175,20 +175,31 @@ G c Z s s [notifyRDF common__S2s 5 4 none]
 G c Z s s [notifyRIP common__S2s 5 4 none]
 G c Z s s [S4sDF common__S2s 5 4 none]
 G c Z s s [S4sIP common__S2s 5 4 none]
-G c Z s s [workerDF common 22 9 none]
-G c Z s s [workerIP common 22 9 none]
-G c Z s s [S287sDF common 12 9 none]
-G c Z s s [S287sIP common 12 9 none]
+G c Z s s [workerDF common 35 9 none]
+G c Z s s [workerIP common 35 9 none]
+G c Z s s [acceptorDF common 36 9 none]
+G c Z s s [acceptorIP common 36 9 none]
+G c Z s s [S287sDF common 15 9 none]
+G c Z s s [S287sIP common 15 9 none]
+G c Z s s [S299sDF common 19 9 none]
+G c Z s s [S299sIP common 19 9 none]
 X 18 common.ads
-2K9*Common 22E9 23l5 23e11
+2K9*Common 35E9 37l5 37e11
 5P9*Notify 6>25
 6i25 Q{integer}
-9H9*Worker 13r18 22c9 22e54
-12P9*Any_Worker(9R9) 14r25 17r11
-16x14*Assign 17>7 18>7 19>7
-17p7 W{12P9}
-18i7 Q{integer}
-19r7 N
+9H9*Worker 16r18 35c9 35e54
+12H9*Acceptor 20r18 36c9 36e56
+15P9*Any_Worker(9R9) 17r25 24r11
+19P9*Any_Acceptor(12R9) 21r25 29r11
+23x14*Assign 24>7 25>7 26>7
+24p7 W{15P9}
+25i7 Q{integer}
+26r7 N
+28x14*Validate 29>7 30>7 31>7 32>7
+29p7 W{19P9}
+30i7 V{integer}
+31i7 ID{integer}
+32r7 N
 X 19 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 99|37i18
@@ -201,13 +212,13 @@ X 30 polyorb-binding_objects.ads
 X 46 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9[32|358])
-98V13 Link(47P9) 98|54i21
+98V13 Link(47P9[32|358]) 98|54i21[32|358]
 X 81 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
 264V13 Link(71P9) 98|54i21
 X 92 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[26|74])
+134P9 Node_Access(133R9[23|78])
 151V13 Link(134P9[65|153]) 98|54i21[65|153]
 X 102 storage.ads
 1K9*Storage 18|1w6 1r19 102|20e12

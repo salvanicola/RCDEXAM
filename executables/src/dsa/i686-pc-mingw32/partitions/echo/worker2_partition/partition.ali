@@ -47,8 +47,8 @@ D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D newnewworkers.ads	20210905154834 00b56fa1 newnewworkers%s
 D newworkers.ads	20210906134448 e564c051 newworkers%s
-D partition.ads		20210906153554 1d743dc2 partition%s
-D partition.adb		20210906153554 fbf2083e partition%b
+D partition.ads		20210907141024 1d743dc2 partition%s
+D partition.adb		20210907141024 fbf2083e partition%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s

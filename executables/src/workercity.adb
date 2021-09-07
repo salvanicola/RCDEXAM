@@ -2,57 +2,88 @@ pragma Ada_2012;
 with Ada.Containers.Vectors;
 with Ada.Text_IO; use Ada.Text_IO;
 with Factory;
+
 package body WorkerCity is
    package Worker_Vectors is new Ada.Containers.Vectors
      (Index_Type   => Natural,
       Element_Type => Any_Worker);
 
+   package Acceptor_Vectors is new Ada.Containers.Vectors
+     (Index_Type   => Natural,
+      Element_Type => Any_Acceptor);
+
    use Worker_Vectors;
+   use Acceptor_Vectors;
 
-   Working_List : Vector;
-   Free_List : Vector;
-   Idx : Extended_Index;
+   count : Integer := 0;
+   Working_List : Worker_Vectors.Vector;
+   Acceptor_List : Acceptor_Vectors.Vector;
+   Idx_W : Worker_Vectors.Extended_Index;
+   Idx_A : Acceptor_Vectors.Extended_Index;
 
-   procedure Insert (W : in Any_Worker) is
+   function Work_Test (C : Integer) return Any_Worker is
    begin
-      Free_List.Append(W);
+      count := 0;
+      for E of Working_List loop
+         if count = Integer(C) then
+            return E;
+         end if;
+      end loop;
+      return null;
+   end Work_Test;
+
+   function Acc_Test (C : Integer) return Any_Acceptor is
+   begin
+      count := 0;
+      for E of Acceptor_List loop
+         if count = Integer(C) then
+            return E;
+         end if;
+      end loop;
+      return null;
+   end Acc_Test;
+
+   procedure Insert_W (W : in Any_Worker) is
+   begin
+      Working_List.Append(W);
       Put("Lavoratore inserito");
       New_Line(1);
-      Put("Attualmente stanno lavorando in: " & Integer'Image(Integer(Working_List.Length)));
+      Put("Attualmente sono presenti: " & Integer'Image(Integer(Working_List.Length)) & " lavoratori.");
       New_Line(1);
-      Put("Attualmente se la stanno chillando in: " & Integer'Image(Integer(Free_List.Length)));
-      New_Line(2);
-   end Insert;
+   end Insert_W;
 
-   procedure Working (W: in Any_Worker) is
+   procedure Insert_A (A: in Any_Acceptor) is
    begin
-      Idx := Free_List.Find_Index (W);
-
-      if Idx /= No_Index then
-         Free_List.Delete (Idx);
-      end if;
-      Working_List.Append(W);
-      Put("Lavoratore messo al lavoro");
+      Acceptor_List.Append(A);
+      Put("Acceptor inserito");
       New_Line(1);
-      Put("Attualmente stanno lavorando in: " & Integer'Image(Integer(Working_List.Length)));
+      Put("Attualmente sono presenti: " & Integer'Image(Integer(Working_List.Length)) & " acceptors.");
       New_Line(1);
-      Put("Attualmente se la stanno chillando in: " & Integer'Image(Integer(Free_List.Length)));
-      New_Line(2);
-   end Working;
+   end Insert_A;
 
-   procedure Remove (W : in Any_Worker) is
+   procedure Remove_W (W : in Any_Worker) is
    begin
-      Idx := Working_List.Find_Index (W);
+      Idx_W := Working_List.Find_Index (W);
 
-      if Idx /= No_Index then
-         Working_List.Delete (Idx);
+      if Idx_W /= Worker_Vectors.No_Index then
+         Working_List.Delete (Idx_W);
       end if;
-      Free_List.Append(W);
-      Put("Lavoratore messo in chill");
+      Put("Lavoratore rimosso.");
       New_Line(1);
-      Put("Attualmente stanno lavorando in: " & Integer'Image(Integer(Working_List.Length)));
+      Put("Attualmente sono presenti: " & Integer'Image(Integer(Working_List.Length)) & " lavoratori.");
       New_Line(1);
-      Put("Attualmente se la stanno chillando in: " & Integer'Image(Integer(Free_List.Length)));
-      New_Line(2);
-   end Remove;
+   end Remove_W;
+
+   procedure Remove_A (A : in Any_Acceptor) is
+   begin
+      Idx_A := Acceptor_List.Find_Index (A);
+
+      if Idx_A /= Acceptor_Vectors.No_Index then
+         Acceptor_List.Delete (Idx_A);
+      end if;
+      Put("Acceptor rimosso.");
+      New_Line(1);
+      Put("Attualmente sono presenti: " & Integer'Image(Integer(Working_List.Length)) & " acceptors.");
+      New_Line(1);
+   end Remove_A;
 end WorkerCity;

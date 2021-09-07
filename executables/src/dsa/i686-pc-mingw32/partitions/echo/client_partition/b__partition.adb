@@ -24,6 +24,7 @@ package body ada_main is
    E047 : Short_Integer; pragma Import (Ada, E047, "system__dwarf_lines_E");
    E021 : Short_Integer; pragma Import (Ada, E021, "system__soft_links__initialize_E");
    E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
+   E712 : Short_Integer; pragma Import (Ada, E712, "ada__numerics_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__tags_E");
    E110 : Short_Integer; pragma Import (Ada, E110, "ada__streams_E");
    E120 : Short_Integer; pragma Import (Ada, E120, "gnat_E");
@@ -53,6 +54,7 @@ package body ada_main is
    E499 : Short_Integer; pragma Import (Ada, E499, "gnat__sockets_E");
    E504 : Short_Integer; pragma Import (Ada, E504, "gnat__sockets__thin_common_E");
    E502 : Short_Integer; pragma Import (Ada, E502, "gnat__sockets__thin_E");
+   E716 : Short_Integer; pragma Import (Ada, E716, "system__random_seed_E");
    E517 : Short_Integer; pragma Import (Ada, E517, "system__regexp_E");
    E567 : Short_Integer; pragma Import (Ada, E567, "ada__directories_E");
    E369 : Short_Integer; pragma Import (Ada, E369, "system__rpc_E");
@@ -130,7 +132,7 @@ package body ada_main is
    E247 : Short_Integer; pragma Import (Ada, E247, "polyorb__orb__iface_E");
    E266 : Short_Integer; pragma Import (Ada, E266, "polyorb__servants__iface_E");
    E354 : Short_Integer; pragma Import (Ada, E354, "polyorb__transport__handlers_E");
-   E725 : Short_Integer; pragma Import (Ada, E725, "polyorb__binding_data__neighbour_E");
+   E730 : Short_Integer; pragma Import (Ada, E730, "polyorb__binding_data__neighbour_E");
    E519 : Short_Integer; pragma Import (Ada, E519, "polyorb__binding_data_qos_E");
    E371 : Short_Integer; pragma Import (Ada, E371, "polyorb__dsa_p__name_service_E");
    E523 : Short_Integer; pragma Import (Ada, E523, "polyorb__filters__slicers_E");
@@ -229,18 +231,18 @@ package body ada_main is
    E473 : Short_Integer; pragma Import (Ada, E473, "polyorb__setup__access_points__iiop_E");
    E105 : Short_Integer; pragma Import (Ada, E105, "system__partition_interface_E");
    E005 : Short_Integer; pragma Import (Ada, E005, "factory_E");
-   E715 : Short_Integer; pragma Import (Ada, E715, "polyorb__dsa_p__partitions_E");
+   E720 : Short_Integer; pragma Import (Ada, E720, "polyorb__dsa_p__partitions_E");
    E704 : Short_Integer; pragma Import (Ada, E704, "polyorb__dsa_p__storages_E");
-   E719 : Short_Integer; pragma Import (Ada, E719, "polyorb__dsa_p__storages__dsm_E");
-   E717 : Short_Integer; pragma Import (Ada, E717, "polyorb__dsa_p__storages__config_E");
-   E721 : Short_Integer; pragma Import (Ada, E721, "polyorb__termination_manager_E");
-   E723 : Short_Integer; pragma Import (Ada, E723, "polyorb__termination_manager__bootstrap_E");
-   E714 : Short_Integer; pragma Import (Ada, E714, "system__dsa_services_E");
+   E724 : Short_Integer; pragma Import (Ada, E724, "polyorb__dsa_p__storages__dsm_E");
+   E722 : Short_Integer; pragma Import (Ada, E722, "polyorb__dsa_p__storages__config_E");
+   E726 : Short_Integer; pragma Import (Ada, E726, "polyorb__termination_manager_E");
+   E728 : Short_Integer; pragma Import (Ada, E728, "polyorb__termination_manager__bootstrap_E");
+   E719 : Short_Integer; pragma Import (Ada, E719, "system__dsa_services_E");
    E709 : Short_Integer; pragma Import (Ada, E709, "storage_E");
    E707 : Short_Integer; pragma Import (Ada, E707, "common_E");
    E711 : Short_Integer; pragma Import (Ada, E711, "newworkers_E");
    E689 : Short_Integer; pragma Import (Ada, E689, "newnewworkers_E");
-   E712 : Short_Integer; pragma Import (Ada, E712, "workercity_E");
+   E717 : Short_Integer; pragma Import (Ada, E717, "workercity_E");
    E687 : Short_Integer; pragma Import (Ada, E687, "client_E");
    E002 : Short_Integer; pragma Import (Ada, E002, "partition_E");
 
@@ -281,8 +283,8 @@ package body ada_main is
       begin
          F4;
       end;
-      E721 := E721 - 1;
-      E723 := E723 - 1;
+      E726 := E726 - 1;
+      E728 := E728 - 1;
       declare
          procedure F5;
          pragma Import (Ada, F5, "polyorb__termination_manager__bootstrap__finalize_spec");
@@ -299,7 +301,7 @@ package body ada_main is
          procedure F7;
          pragma Import (Ada, F7, "polyorb__dsa_p__storages__dsm__finalize_body");
       begin
-         E719 := E719 - 1;
+         E724 := E724 - 1;
          F7;
       end;
       declare
@@ -886,7 +888,7 @@ package body ada_main is
          E519 := E519 - 1;
          F91;
       end;
-      E725 := E725 - 1;
+      E730 := E730 - 1;
       declare
          procedure F92;
          pragma Import (Ada, F92, "polyorb__binding_data__neighbour__finalize_spec");
@@ -1552,6 +1554,8 @@ package body ada_main is
       System.Traceback.Symbolic'Elab_Body;
       E039 := E039 + 1;
       E007 := E007 + 1;
+      Ada.Numerics'Elab_Spec;
+      E712 := E712 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
       E099 := E099 + 1;
@@ -1615,6 +1619,8 @@ package body ada_main is
       E502 := E502 + 1;
       Gnat.Sockets'Elab_Body;
       E499 := E499 + 1;
+      System.Random_Seed'Elab_Body;
+      E716 := E716 + 1;
       System.Regexp'Elab_Spec;
       E517 := E517 + 1;
       Ada.Directories'Elab_Spec;
@@ -1774,7 +1780,7 @@ package body ada_main is
       Polyorb.Orb'Elab_Body;
       E213 := E213 + 1;
       Polyorb.Binding_Data.Neighbour'Elab_Spec;
-      E725 := E725 + 1;
+      E730 := E730 + 1;
       Polyorb.Binding_Data_Qos'Elab_Body;
       E519 := E519 + 1;
       Polyorb.Dsa_P.Name_Service'Elab_Spec;
@@ -1999,21 +2005,21 @@ package body ada_main is
       Factory'Elab_Spec;
       E005 := E005 + 1;
       Polyorb.Dsa_P.Partitions'Elab_Spec;
-      E715 := E715 + 1;
+      E720 := E720 + 1;
       POLYORB.DSA_P.STORAGES'ELAB_SPEC;
       POLYORB.DSA_P.STORAGES'ELAB_BODY;
       E704 := E704 + 1;
       Polyorb.Dsa_P.Storages.Dsm'Elab_Spec;
       Polyorb.Dsa_P.Storages.Dsm'Elab_Body;
-      E719 := E719 + 1;
-      E717 := E717 + 1;
+      E724 := E724 + 1;
+      E722 := E722 + 1;
       Polyorb.Termination_Manager'Elab_Spec;
       Polyorb.Termination_Manager.Bootstrap'Elab_Spec;
-      E723 := E723 + 1;
+      E728 := E728 + 1;
       Polyorb.Termination_Manager'Elab_Body;
-      E721 := E721 + 1;
+      E726 := E726 + 1;
       System.Dsa_Services'Elab_Body;
-      E714 := E714 + 1;
+      E719 := E719 + 1;
       Storage'Elab_Spec;
       E709 := E709 + 1;
       Common'Elab_Spec;
@@ -2025,7 +2031,7 @@ package body ada_main is
       Newnewworkers'Elab_Body;
       E689 := E689 + 1;
       Workercity'Elab_Spec;
-      E712 := E712 + 1;
+      E717 := E717 + 1;
       Client'Elab_Body;
       E687 := E687 + 1;
       Partition'Elab_Body;

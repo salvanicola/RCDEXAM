@@ -2,23 +2,23 @@ pragma Ada_2012;
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Characters.Latin_1; use Ada.Characters.Latin_1;
 with Ada.Strings.Hash;
+with Ada.Numerics.Discrete_Random;
+with WorkerCity; use WorkerCity;
 package body NewWorkers is
+
+   -- A scopo di test viene inserito un generatore di numeri casuale che ritorna 0/1 e potrebbe quindi alterare il risultato.
+   type randRange is new Integer range 0..1;
+   package Rand_Int is new ada.numerics.discrete_random(randRange);
+   use Rand_Int;
+   gen : Generator;
+   err : randRange;
 
    procedure Assign (W : access NewWorker; Q : Integer; R : Integer; N : Common.Notify) is
       T: Integer;
    begin
-      T := Integer(Ada.Strings.Hash(Integer'Image(Q*3)));
+      reset(gen);
+      err := random(gen);
+      T := Integer(Ada.Strings.Hash(Integer'Image(Q * 3 + Integer(err))));
       N(T);
-      Put("Provo ad inserire il valore " & Integer'Image(T) & " nel registro " & Integer'Image(R) & CR & LF);
-      Queue.Insert(T, R, 0, W.Name);
-      Put_Line("Inserimento avvenuto, nei registri sono presenti i valori: ");
-      Put_Line("0 - " & Integer'Image(Queue.Get(0)));
-      Put_Line("1 - " & Integer'Image(Queue.Get(1)));
-      Put_Line("2 - " & Integer'Image(Queue.Get(2)));
-      Put_Line("3 - " & Integer'Image(Queue.Get(3)));
-      Put_Line("4 - " & Integer'Image(Queue.Get(4)));
-      Put_Line("5 - " & Integer'Image(Queue.Get(5)));
    end Assign;
-
-
 end NewWorkers;

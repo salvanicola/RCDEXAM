@@ -17,13 +17,13 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ada_main%b		b__partition.adb	f9587f52 OO PK IL
+U ada_main%b		b__partition.adb	bb3a3a77 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__partition.ads	37049195 EE NE OO PK IL
+U ada_main%s		b__partition.ads	5a402deb EE NE OO PK IL
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -31,8 +31,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20200228061810 76789da1 ada%s
 D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
-D b__partition.ads	20210906153552 d9cc6d2d ada_main%s
-D b__partition.adb	20210906153552 9c197518 ada_main%b
+D b__partition.ads	20210907141024 b488d153 ada_main%s
+D b__partition.adb	20210907141024 b33f8c43 ada_main%b
 D system.ads		20200228061810 32a08138 system%s
 D s-parame.ads		20200228061810 4752c4cb system.parameters%s
 D s-restri.ads		20200228061810 1b9d0672 system.restrictions%s
@@ -45,26 +45,26 @@ G a e
 G c Z s b [adainit ada_main 26 14 none]
 G c Z s b [adafinal ada_main 29 14 none]
 G c Z s b [main ada_main 32 13 none]
-G c Z b b [Tsec_default_sized_stacksBIP ada_main 243 4 none]
-G c Z b b [finalize_library ada_main 250 14 none]
+G c Z b b [Tsec_default_sized_stacksBIP ada_main 245 4 none]
+G c Z b b [finalize_library ada_main 252 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 5|8r6
 X 2 a-except.ads
 48K13*Exceptions 335e19 5|8w10
 X 4 b__partition.ads
-6K9*ada_main 2204l5 2204e13 5|10b14 2077l5 2077t13
-8i4*gnat_argc{integer} 12m22 12r22 5|2030r10 2031m10
-9m4*gnat_argv{6|67M9} 13m22 13r22 5|2032m10
-10m4*gnat_envp{6|67M9} 14m22 14r22 5|2034m7
-16i4*gnat_exit_status{integer} 17m22 17r22 5|2040r15
+6K9*ada_main 2219l5 2219e13 5|10b14 2083l5 2083t13
+8i4*gnat_argc{integer} 12m22 12r22 5|2036r10 2037m10
+9m4*gnat_argv{6|67M9} 13m22 13r22 5|2038m10
+10m4*gnat_envp{6|67M9} 14m22 14r22 5|2040m7
+16i4*gnat_exit_status{integer} 17m22 17r22 5|2046r15
 19a4*GNAT_Version{string} 21r22
-23a4*Ada_Main_Program_Name{string} 24r22 5|2026r52
-26U14*adainit 27i<c,adainit>22 5|1410b14 2013l8 2013t15 2037s7
-29U14*adafinal 30i<c,adafinal>22 5|1391b14 1405l8 1405t16 2038s7
-32V13*main{integer} 33>7 34>7 35>7 37i<c,main>22 5|2015b13 2041t7
-33i7 argc{integer} 5|2016b7 2031r23
-34m7 argv{6|67M9} 5|2017b7 2032r23
-35m7 envp{6|67M9} 5|2018b7 2034r20
+23a4*Ada_Main_Program_Name{string} 24r22 5|2032r52
+26U14*adainit 27i<c,adainit>22 5|1412b14 2019l8 2019t15 2043s7
+29U14*adafinal 30i<c,adafinal>22 5|1393b14 1407l8 1407t16 2044s7
+32V13*main{integer} 33>7 34>7 35>7 37i<c,main>22 5|2021b13 2047t7
+33i7 argc{integer} 5|2022b7 2037r23
+34m7 argv{6|67M9} 5|2023b7 2038r23
+35m7 envp{6|67M9} 5|2024b7 2040r20
 39M9*Version_32 40r22 42r22 44r22 46r22 48r22 50r22 52r22 54r22 56r22 58r22
 . 60r22 62r22 64r22 66r22 68r22 70r22 72r22 74r22 76r22 78r22 80r22 82r22
 . 84r22 86r22 88r22 90r22 92r22 94r22 96r22 98r22 100r22 102r22 104r22 106r22
@@ -135,7 +135,7 @@ X 4 b__partition.ads
 . 1422r22 1424r22 1426r22 1428r22 1430r22 1432r22 1434r22 1436r22 1438r22
 . 1440r22 1442r22 1444r22 1446r22 1448r22 1450r22 1452r22 1454r22 1456r22
 . 1458r22 1460r22 1462r22 1464r22 1466r22 1468r22 1470r22 1472r22 1474r22
-. 1476r22 1478r22
+. 1476r22 1478r22 1480r22 1482r22 1484r22 1486r22 1488r22
 40m4*u00001{39M9} 41r22
 42m4*u00002{39M9} 43r22
 44m4*u00003{39M9} 45r22
@@ -856,517 +856,524 @@ X 4 b__partition.ads
 1474m4*u00718{39M9} 1475r22
 1476m4*u00719{39M9} 1477r22
 1478m4*u00720{39M9} 1479r22
+1480m4*u00721{39M9} 1481r22
+1482m4*u00722{39M9} 1483r22
+1484m4*u00723{39M9} 1485r22
+1486m4*u00724{39M9} 1487r22
+1488m4*u00725{39M9} 1489r22
 X 5 b__partition.adb
-12i4 E069{short_integer} 12m46 12r46 1537m7 1537r15
-13i4 E019{short_integer} 13m46 13r46 1543m7 1543r15
-14i4 E015{short_integer} 14m46 14r46 1540m7 1540r15
-15i4 E013{short_integer} 15m46 15r46 1517m7 1517r15
-16i4 E038{short_integer} 16m46 16r46 1519m7 1519r15
-17i4 E065{short_integer} 17m46 17r46 1521m7 1521r15
-18i4 E010{short_integer} 18m46 18r46 1523m7 1523r15
-19i4 E051{short_integer} 19m46 19r46 1525m7 1525r15
-20i4 E055{short_integer} 20m46 20r46 1527m7 1527r15
-21i4 E075{short_integer} 21m46 21r46 1529m7 1529r15
-22i4 E023{short_integer} 22m46 22r46 1531m7 1531r15
-23i4 E077{short_integer} 23m46 23r46 1533m7 1533r15
-24i4 E047{short_integer} 24m46 24r46 1535m7 1535r15
-25i4 E096{short_integer} 25m46 25r46 1539m7 1539r15
-26i4 E037{short_integer} 26m46 26r46 1542m7 1542r15
-27i4 E104{short_integer} 27m46 27r46 1546m7 1546r15
-28i4 E110{short_integer} 28m46 28r46 1548m7 1548r15
-29i4 E140{short_integer} 29m46 29r46 1550m7 1550r15
-30i4 E296{short_integer} 30m46 30r46 1552m7 1552r15
-31i4 E118{short_integer} 31m46 31r46 1554m7 1554r15
-32i4 E117{short_integer} 32m46 32r46 1556m7 1556r15
-33i4 E115{short_integer} 33m46 33r46 1558m7 1558r15
-34i4 E114{short_integer} 34m46 34r46 1380m10 1380r18 1560m7 1560r15
-35i4 E695{short_integer} 35m46 35r46 1369m7 1369r15 1562m7 1562r15
-36i4 E171{short_integer} 36m46 36r46 1564m7 1564r15
-37i4 E167{short_integer} 37m46 37r46 1362m7 1362r15 1567m7 1567r15
-38i4 E195{short_integer} 38m46 38r46 1355m7 1355r15 1569m7 1569r15
-39i4 E227{short_integer} 39m46 39r46 1348m7 1348r15 1571m7 1571r15
-40i4 E214{short_integer} 40m46 40r46 1341m7 1341r15 1573m7 1573r15
-41i4 E229{short_integer} 41m46 41r46 1334m7 1334r15 1575m7 1575r15
-42i4 E309{short_integer} 42m46 42r46 1577m7 1577r15
-43i4 E145{short_integer} 43m46 43r46 1579m7 1579r15
-44i4 E551{short_integer} 44m46 44r46 1582m7 1582r15
-45i4 E549{short_integer} 45m46 45r46 1584m7 1584r15
-46i4 E587{short_integer} 46m46 46r46 1586m7 1586r15
-47i4 E343{short_integer} 47m46 47r46 1589m7 1589r15
-48i4 E108{short_integer} 48m46 48r46 1327m7 1327r15 1592m7 1592r15
-49i4 E575{short_integer} 49m46 49r46 1593m7 1593r15
-50i4 E691{short_integer} 50m46 50r46 1595m7 1595r15
-51i4 E173{short_integer} 51m46 51r46 1320m7 1320r15 1597m7 1597r15
-52i4 E524{short_integer} 52m46 52r46 1313m7 1313r15 1599m7 1599r15
-53i4 E515{short_integer} 53m46 53r46 1304m10 1304r18 1606m7 1606r15
-54i4 E520{short_integer} 54m46 54r46 1602m7 1602r15
-55i4 E518{short_integer} 55m46 55r46 1604m7 1604r15
-56i4 E533{short_integer} 56m46 56r46 1293m7 1293r15 1608m7 1608r15
-57i4 E583{short_integer} 57m46 57r46 1286m7 1286r15 1611m7 1611r15
-58i4 E385{short_integer} 58m46 58r46 1279m7 1279r15 1613m7 1613r15
-59i4 E321{short_integer} 59m46 59r46 1615m7 1615r15
-60i4 E331{short_integer} 60m46 60r46 1617m7 1617r15
-61i4 E333{short_integer} 61m46 61r46 1272m7 1272r15 1619m7 1619r15
-62i4 E329{short_integer} 62m46 62r46 1621m7 1621r15
-63i4 E317{short_integer} 63m46 63r46 1623m7 1623r15
-64i4 E662{short_integer} 64m46 64r46 1625m7 1625r15
-65i4 E462{short_integer} 65m46 65r46 1627m7 1627r15
-66i4 E290{short_integer} 66m46 66r46 1265m7 1265r15 1629m7 1629r15
-67i4 E225{short_integer} 67m46 67r46 1258m7 1258r15 1631m7 1631r15
-68i4 E277{short_integer} 68m46 68r46 1251m7 1251r15 1633m7 1633r15
-69i4 E161{short_integer} 69m46 69r46 1635m7 1635r15
-70i4 E390{short_integer} 70m46 70r46 1637m7 1637r15
-71i4 E243{short_integer} 71m46 71r46 1244m7 1244r15 1639m7 1639r15
-72i4 E356{short_integer} 72m46 72r46 1237m7 1237r15 1641m7 1641r15
-73i4 E354{short_integer} 73m46 73r46 1230m7 1230r15 1643m7 1643r15
-74i4 E392{short_integer} 74m46 74r46 1223m7 1223r15 1645m7 1645r15
-75i4 E158{short_integer} 75m46 75r46 1647m7 1647r15
-76i4 E262{short_integer} 76m46 76r46 1216m7 1216r15 1649m7 1649r15
-77i4 E222{short_integer} 77m46 77r46 1209m7 1209r15 1651m7 1651r15
-78i4 E220{short_integer} 78m46 78r46 1202m7 1202r15 1653m7 1653r15
-79i4 E154{short_integer} 79m46 79r46 1193m10 1193r18 1656m7 1656r15
-80i4 E250{short_integer} 80m46 80r46 1182m7 1182r15 1658m7 1658r15
-81i4 E348{short_integer} 81m46 81r46 1175m7 1175r15 1660m7 1660r15
-82i4 E246{short_integer} 82m46 82r46 1168m7 1168r15 1662m7 1662r15
-83i4 E358{short_integer} 83m46 83r46 1161m7 1161r15 1664m7 1664r15
-84i4 E568{short_integer} 84m46 84r46 1666m7 1666r15
-85i4 E350{short_integer} 85m46 85r46 1154m7 1154r15 1668m7 1668r15
-86i4 E235{short_integer} 86m46 86r46 1670m7 1670r15
-87i4 E282{short_integer} 87m46 87r46 1147m7 1147r15 1672m7 1672r15
-88i4 E700{short_integer} 88m46 88r46 1140m7 1140r15 1674m7 1674r15
-89i4 E383{short_integer} 89m46 89r46 1137m10 1137r18 1676m7 1676r15
-90i4 E381{short_integer} 90m46 90r46 1677m7 1677r15
-91i4 E573{short_integer} 91m46 91r46 1679m7 1679r15
-92i4 E577{short_integer} 92m46 92r46 1681m7 1681r15
-93i4 E579{short_integer} 93m46 93r46 1683m7 1683r15
-94i4 E602{short_integer} 94m46 94r46 1130m10 1130r18 1685m7 1685r15
-95i4 E604{short_integer} 95m46 95r46 1123m10 1123r18 1687m7 1687r15
-96i4 E362{short_integer} 96m46 96r46 1689m7 1689r15
-97i4 E565{short_integer} 97m46 97r46 1691m7 1691r15
-98i4 E404{short_integer} 98m46 98r46 1116m10 1116r18 1693m7 1693r15
-99i4 E403{short_integer} 99m46 99r46 1105m7 1105r15 1695m7 1695r15
-100i4 E634{short_integer} 100m46 100r46 1102m10 1102r18 1697m7 1697r15
-101i4 E506{short_integer} 101m46 101r46 1091m7 1091r15 1699m7 1699r15
-102i4 E464{short_integer} 102m46 102r46 1700m7 1700r15
-103i4 E468{short_integer} 103m46 103r46 1701m7 1701r15
-104i4 E470{short_integer} 104m46 104r46 1088m10 1088r18 1703m7 1703r15
-105i4 E368{short_integer} 105m46 105r46 1705m7 1705r15
-106i4 E527{short_integer} 106m46 106r46 1707m7 1707r15
-107i4 E553{short_integer} 107m46 107r46 1077m7 1077r15 1709m7 1709r15
-108i4 E288{short_integer} 108m46 108r46 1070m7 1070r15 1711m7 1711r15
-109i4 E271{short_integer} 109m46 109r46 1007m10 1007r18 1731m7 1731r15
-110i4 E252{short_integer} 110m46 110r46 1024m7 1024r15 1724m7 1724r15
-111i4 E266{short_integer} 111m46 111r46 899m7 899r15 1760m7 1760r15
-112i4 E231{short_integer} 112m46 112r46 907m7 907r15 1757m7 1757r15
-113i4 E237{short_integer} 113m46 113r46 1045m7 1045r15 1716m7 1716r15
-114i4 E248{short_integer} 114m46 114r46 937m7 937r15 1747m7 1747r15
-115i4 E241{short_integer} 115m46 115r46 1036m10 1036r18 1719m7 1719r15
-116i4 E372{short_integer} 116m46 116r46 1721m7 1721r15
-117i4 E254{short_integer} 117m46 117r46 1025m7 1025r15 1723m7 1723r15
-118i4 E275{short_integer} 118m46 118r46 1017m7 1017r15 1727m7 1727r15
-119i4 E273{short_integer} 119m46 119r46 1014m10 1014r18 1729m7 1729r15
-120i4 E280{short_integer} 120m46 120r46 1000m10 1000r18 1733m7 1733r15
-121i4 E376{short_integer} 121m46 121r46 989m7 989r15 1735m7 1735r15
-122i4 E374{short_integer} 122m46 122r46 927m10 927r18 1751m7 1751r15
-123i4 E269{short_integer} 123m46 123r46 904m10 904r18 1759m7 1759r15
-124i4 E279{short_integer} 124m46 124r46 915m7 915r15 1754m7 1754r15
-125i4 E283{short_integer} 125m46 125r46 968m10 968r18 1740m7 1740r15
-126i4 E345{short_integer} 126m46 126r46 961m10 961r18 1742m7 1742r15
-127i4 E285{short_integer} 127m46 127r46 912m10 912r18 1756m7 1756r15
-128i4 E366{short_integer} 128m46 128r46 944m7 944r15 1745m7 1745r15
-129i4 E233{short_integer} 129m46 129r46 889m10 889r18 1764m7 1764r15
-130i4 E267{short_integer} 130m46 130r46 934m10 934r18 1749m7 1749r15
-131i4 E286{short_integer} 131m46 131r46 920m10 920r18 1753m7 1753r15
-132i4 E370{short_integer} 132m46 132r46 892m7 892r15 1762m7 1762r15
-133i4 E718{short_integer} 133m46 133r46 878m7 878r15 1766m7 1766r15
-134i4 E535{short_integer} 134m46 134r46 875m10 875r18 1768m7 1768r15
-135i4 E387{short_integer} 135m46 135r46 864m7 864r15 1770m7 1770r15
-136i4 E539{short_integer} 136m46 136r46 857m7 857r15 1772m7 1772r15
-137i4 E502{short_integer} 137m46 137r46 1774m7 1774r15
-138i4 E401{short_integer} 138m46 138r46 854m10 854r18 1776m7 1776r15
-139i4 E486{short_integer} 139m46 139r46 843m7 843r15 1779m7 1779r15
-140i4 E666{short_integer} 140m46 140r46 836m7 836r15 1782m7 1782r15
-141i4 E419{short_integer} 141m46 141r46 829m7 829r15 1784m7 1784r15
-142i4 E441{short_integer} 142m46 142r46 822m7 822r15 1786m7 1786r15
-143i4 E407{short_integer} 143m46 143r46 815m7 815r15 1788m7 1788r15
-144i4 E411{short_integer} 144m46 144r46 808m7 808r15 1790m7 1790r15
-145i4 E677{short_integer} 145m46 145r46 801m7 801r15 1792m7 1792r15
-146i4 E427{short_integer} 146m46 146r46 794m7 794r15 1794m7 1794r15
-147i4 E405{short_integer} 147m46 147r46 791m10 791r18 1796m7 1796r15
-148i4 E409{short_integer} 148m46 148r46 780m7 780r15 1798m7 1798r15
-149i4 E412{short_integer} 149m46 149r46 777m10 777r18 1800m7 1800r15
-150i4 E413{short_integer} 150m46 150r46 770m10 770r18 1802m7 1802r15
-151i4 E414{short_integer} 151m46 151r46 763m10 763r18 1804m7 1804r15
-152i4 E431{short_integer} 152m46 152r46 752m7 752r15 1806m7 1806r15
-153i4 E415{short_integer} 153m46 153r46 749m10 749r18 1808m7 1808r15
-154i4 E433{short_integer} 154m46 154r46 738m7 738r15 1810m7 1810r15
-155i4 E416{short_integer} 155m46 155r46 735m10 735r18 1812m7 1812r15
-156i4 E417{short_integer} 156m46 156r46 728m10 728r18 1814m7 1814r15
-157i4 E399{short_integer} 157m46 157r46 717m7 717r15 1817m7 1817r15
-158i4 E675{short_integer} 158m46 158r46 710m7 710r15 1819m7 1819r15
-159i4 E425{short_integer} 159m46 159r46 703m7 703r15 1821m7 1821r15
-160i4 E429{short_integer} 160m46 160r46 696m7 696r15 1823m7 1823r15
-161i4 E685{short_integer} 161m46 161r46 689m7 689r15 1825m7 1825r15
-162i4 E435{short_integer} 162m46 162r46 682m7 682r15 1827m7 1827r15
-163i4 E439{short_integer} 163m46 163r46 675m7 675r15 1829m7 1829r15
-164i4 E437{short_integer} 164m46 164r46 668m7 668r15 1831m7 1831r15
-165i4 E423{short_integer} 165m46 165r46 661m7 661r15 1834m7 1834r15
-166i4 E421{short_integer} 166m46 166r46 654m7 654r15 1837m7 1837r15
-167i4 E679{short_integer} 167m46 167r46 647m7 647r15 1839m7 1839r15
-168i4 E683{short_integer} 168m46 168r46 640m7 640r15 1841m7 1841r15
-169i4 E681{short_integer} 169m46 169r46 633m7 633r15 1843m7 1843r15
-170i4 E687{short_integer} 170m46 170r46 626m7 626r15 1845m7 1845r15
-171i4 E673{short_integer} 171m46 171r46 619m7 619r15 1848m7 1848r15
-172i4 E559{short_integer} 172m46 172r46 616m10 616r18 1850m7 1850r15
-173i4 E598{short_integer} 173m46 173r46 1852m7 1852r15
-174i4 E633{short_integer} 174m46 174r46 605m7 605r15 1854m7 1854r15
-175i4 E631{short_integer} 175m46 175r46 598m7 598r15 1856m7 1856r15
-176i4 E472{short_integer} 176m46 176r46 591m7 591r15 1859m7 1859r15
-177i4 E474{short_integer} 177m46 177r46 584m7 584r15 1861m7 1861r15
-178i4 E478{short_integer} 178m46 178r46 577m7 577r15 1864m7 1864r15
-179i4 E476{short_integer} 179m46 179r46 574m10 574r18 1866m7 1866r15
-180i4 E484{short_integer} 180m46 180r46 563m7 563r15 1868m7 1868r15
-181i4 E645{short_integer} 181m46 181r46 556m7 556r15 1871m7 1871r15
-182i4 E647{short_integer} 182m46 182r46 549m7 549r15 1874m7 1874r15
-183i4 E649{short_integer} 183m46 183r46 540m10 540r18 1877m7 1877r15
-184i4 E657{short_integer} 184m46 184r46 1879m7 1879r15
-185i4 E660{short_integer} 185m46 185r46 533m10 533r18 1881m7 1881r15
-186i4 E655{short_integer} 186m46 186r46 522m7 522r15 1883m7 1883r15
-187i4 E653{short_integer} 187m46 187r46 513m10 513r18 1886m7 1886r15
-188i4 E480{short_integer} 188m46 188r46 1888m7 1888r15
-189i4 E545{short_integer} 189m46 189r46 502m7 502r15 1890m7 1890r15
-190i4 E453{short_integer} 190m46 190r46 493m10 493r18 1893m7 1893r15
-191i4 E447{short_integer} 191m46 191r46 488m7 488r15 1895m7 1895r15
-192i4 E622{short_integer} 192m46 192r46 1899m7 1899r15
-193i4 E624{short_integer} 193m46 193r46 481m7 481r15 1898m7 1898r15
-194i4 E671{short_integer} 194m46 194r46 474m7 474r15 1901m7 1901r15
-195i4 E445{short_integer} 195m46 195r46 467m7 467r15 1904m7 1904r15
-196i4 E614{short_integer} 196m46 196r46 1905m7 1905r15
-197i4 E638{short_integer} 197m46 197r46 460m7 460r15 1908m7 1908r15
-198i4 E443{short_integer} 198m46 198r46 453m7 453r15 1911m7 1911r15
-199i4 E496{short_integer} 199m46 199r46 446m7 446r15 1913m7 1913r15
-200i4 E494{short_integer} 200m46 200r46 439m7 439r15 1916m7 1916r15
-201i4 E629{short_integer} 201m46 201r46 432m7 432r15 1919m7 1919r15
-202i4 E498{short_integer} 202m46 202r46 425m7 425r15 1922m7 1922r15
-203i4 E460{short_integer} 203m46 203r46 418m7 418r15 1925m7 1925r15
-204i4 E616{short_integer} 204m46 204r46 411m7 411r15 1928m7 1928r15
-205i4 E620{short_integer} 205m46 205r46 404m7 404r15 1931m7 1931r15
-206i4 E636{short_integer} 206m46 206r46 397m7 397r15 1934m7 1934r15
-207i4 E508{short_integer} 207m46 207r46 1935m7 1935r15
-208i4 E500{short_integer} 208m46 208r46 390m7 390r15 1941m7 1941r15
-209i4 E491{short_integer} 209m46 209r46 1938m7 1938r15
-210i4 E504{short_integer} 210m46 210r46 1939m7 1939r15
-211i4 E612{short_integer} 211m46 211r46 383m7 383r15 1944m7 1944r15
-212i4 E618{short_integer} 212m46 212r46 376m7 376r15 1947m7 1947r15
-213i4 E627{short_integer} 213m46 213r46 369m7 369r15 1950m7 1950r15
-214i4 E543{short_integer} 214m46 214r46 362m7 362r15 1953m7 1953r15
-215i4 E610{short_integer} 215m46 215r46 1955m7 1955r15
-216i4 E689{short_integer} 216m46 216r46 1956m7 1956r15
-217i4 E669{short_integer} 217m46 217r46 1958m7 1958r15
-218i4 E608{short_integer} 218m46 218r46 1960m7 1960r15
-219i4 E606{short_integer} 219m46 219r46 359m10 359r18 1962m7 1962r15
-220i4 E529{short_integer} 220m46 220r46 352m10 352r18 1964m7 1964r15
-221i4 E512{short_integer} 221m46 221r46 1965m7 1965r15
-222i4 E541{short_integer} 222m46 222r46 341m7 341r15 1968m7 1968r15
-223i4 E557{short_integer} 223m46 223r46 1970m7 1970r15
-224i4 E555{short_integer} 224m46 224r46 1972m7 1972r15
-225i4 E547{short_integer} 225m46 225r46 334m7 334r15 1975m7 1975r15
-226i4 E510{short_integer} 226m46 226r46 320m7 320r15 1981m7 1981r15
-227i4 E537{short_integer} 227m46 227r46 321m7 321r15 1979m7 1979r15
-228i4 E561{short_integer} 228m46 228r46 1982m7 1982r15
-229i4 E489{short_integer} 229m46 229r46 1984m7 1984r15
-230i4 E130{short_integer} 230m46 230r46 311m10 311r18 1987m7 1987r15
-231i4 E706{short_integer} 231m46 231r46 1989m7 1989r15
-232i4 E698{short_integer} 232m46 232r46 300m7 300r15 1992m7 1992r15
-233i4 E712{short_integer} 233m46 233r46 291m10 291r18 1995m7 1995r15
-234i4 E710{short_integer} 234m46 234r46 1996m7 1996r15
-235i4 E714{short_integer} 235m46 235r46 273m7 273r15 2001m7 2001r15
-236i4 E716{short_integer} 236m46 236r46 274m7 274r15 1999m7 1999r15
-237i4 E705{short_integer} 237m46 237r46 2003m7 2003r15
-238i4 E703{short_integer} 238m46 238r46 266m7 266r15 2005m7 2005r15
-239i4 E701{short_integer} 239m46 239r46 263m10 263r18 2007m7 2007r15
-240i4 E006{short_integer} 240m46 240r46 252m7 252r15 2010m7 2010r15
-241i4 E002{short_integer} 241m46 241r46 2012m7 2012r15
-243a4 Sec_Default_Sized_Stacks(10|45R9) 1508m32 1508r32
-245a4 Local_Priority_Specific_Dispatching{string} 1496r9
-246a4 Local_Interrupt_States{string} 1499r27
-248b4 Is_Elaborated{boolean} 1399r14 1402m7 1455r10 1458m7
-250U14 finalize_library 250b14 1389l8 1389t24 1512r35
-254U20*F1 255b<ada,newworkers__finalize_spec>30 257s10
-260U20*F2 261b<ada,common__finalize_spec>30 264s10
-268U20*F3 269b<ada,storage__finalize_spec>30 271s10
-276U20*F4 277b<ada,polyorb__termination_manager__bootstrap__finalize_spec>30
-. 279s10
-282U20*F5 283b<ada,polyorb__termination_manager__finalize_spec>30 285s10
-288U20*F6 289b<ada,polyorb__dsa_p__storages__dsm__finalize_body>30 292s10
-295U20*F7 296b<ada,polyorb__dsa_p__storages__dsm__finalize_spec>30 298s10
-302U20*F8 303b<ada,polyorb__dsa_p__storages__finalize_spec>30 305s10
-308U20*F9 309b<ada,system__partition_interface__finalize_body>30 312s10
-315U20*F10 316b<ada,system__partition_interface__finalize_spec>30 318s10
-323U20*F11 324b<ada,polyorb__giop_p__transport_mechanisms__iiop__finalize_spec>30
-. 326s10
-329U20*F12 330b<ada,polyorb__binding_data__giop__iiop__finalize_spec>30 332s10
-336U20*F13 337b<ada,polyorb__transport__connected__sockets__finalize_spec>30
-. 339s10
-343U20*F14 344b<ada,polyorb__giop_p__tagged_components__alternate_iiop_address__finalize_spec>30
-. 346s10
-349U20*F15 350b<ada,polyorb__utils__sockets__finalize_body>30 353s10
-356U20*F16 357b<ada,polyorb__parameters__file__finalize_body>30 360s10
-364U20*F17 365b<ada,polyorb__protocols__giop__iiop__finalize_spec>30 367s10
-371U20*F18 372b<ada,polyorb__protocols__giop__giop_1_2__finalize_spec>30
-. 374s10
-378U20*F19 379b<ada,polyorb__protocols__giop__giop_1_1__finalize_spec>30
-. 381s10
-385U20*F20 386b<ada,polyorb__protocols__giop__giop_1_0__finalize_spec>30
-. 388s10
-392U20*F21 393b<ada,polyorb__protocols__giop__finalize_spec>30 395s10
-399U20*F22 400b<ada,polyorb__representations__cdr__giop_1_2__finalize_spec>30
-. 402s10
-406U20*F23 407b<ada,polyorb__representations__cdr__giop_1_1__finalize_spec>30
-. 409s10
-413U20*F24 414b<ada,polyorb__representations__cdr__giop_1_0__finalize_spec>30
-. 416s10
-420U20*F25 421b<ada,polyorb__qos__term_manager_info__finalize_spec>30 423s10
-427U20*F26 428b<ada,polyorb__giop_p__transport_mechanisms__finalize_spec>30
-. 430s10
-434U20*F27 435b<ada,polyorb__giop_p__tagged_components__code_sets__finalize_spec>30
-. 437s10
-441U20*F28 442b<ada,polyorb__giop_p__tagged_components__finalize_spec>30
-. 444s10
-448U20*F29 449b<ada,polyorb__qos__tagged_components__finalize_spec>30 451s10
-455U20*F30 456b<ada,polyorb__qos__exception_informations__finalize_spec>30
-. 458s10
-462U20*F31 463b<ada,polyorb__qos__code_sets__finalize_spec>30 465s10
-469U20*F32 470b<ada,polyorb__qos__service_contexts__finalize_spec>30 472s10
-476U20*F33 477b<ada,polyorb__poa__basic_poa__finalize_spec>30 479s10
-483U20*F34 484b<ada,polyorb__giop_p__code_sets__converters__finalize_spec>30
-. 486s10
-490U20*F35 491b<ada,polyorb__references__ior__finalize_body>30 494s10
-497U20*F36 498b<ada,polyorb__representations__cdr__finalize_spec>30 500s10
-504U20*F37 505b<ada,polyorb__transport__connected__finalize_spec>30 507s10
-510U20*F38 511b<ada,polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_body>30
-. 514s10
-517U20*F39 518b<ada,polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_spec>30
-. 520s10
-524U20*F40 525b<ada,polyorb__tasking__threads__annotations__finalize_spec>30
-. 527s10
-530U20*F41 531b<ada,polyorb__tasking__profiles__full_tasking_atc__abortables__finalize_body>30
-. 534s10
-537U20*F42 538b<ada,polyorb__tasking__profiles__full_tasking__threads__finalize_body>30
-. 541s10
-544U20*F43 545b<ada,polyorb__tasking__profiles__full_tasking__threads__finalize_spec>30
-. 547s10
-551U20*F44 552b<ada,polyorb__tasking__profiles__full_tasking__mutexes__finalize_spec>30
-. 554s10
-558U20*F45 559b<ada,polyorb__tasking__profiles__full_tasking__condition_variables__finalize_spec>30
-. 561s10
-565U20*F46 566b<ada,polyorb__dsa_p__name_service__cos_naming__finalize_spec>30
-. 568s10
-571U20*F47 572b<ada,polyorb__services__naming__namingcontext__client__finalize_body>30
-. 575s10
-579U20*F48 580b<ada,polyorb__services__naming__namingcontext__helper__finalize_spec>30
-. 582s10
-586U20*F49 587b<ada,polyorb__services__naming__namingcontext__finalize_spec>30
-. 589s10
-593U20*F50 594b<ada,polyorb__services__naming__helper__finalize_spec>30 596s10
-600U20*F51 601b<ada,polyorb__obj_adapters__group_object_adapter__finalize_spec>30
-. 603s10
-607U20*F52 608b<ada,polyorb__servants__group_servants__finalize_spec>30 610s10
-613U20*F53 614b<ada,polyorb__references__corbaloc__finalize_body>30 617s10
-621U20*F54 622b<ada,polyorb__poa_config__root_poa__finalize_spec>30 624s10
-628U20*F55 629b<ada,polyorb__poa_policies__request_processing_policy__active_object_map_only__finalize_spec>30
-. 631s10
-635U20*F56 636b<ada,polyorb__poa_policies__implicit_activation_policy__activation__finalize_spec>30
-. 638s10
-642U20*F57 643b<ada,polyorb__poa_policies__servant_retention_policy__retain__finalize_spec>30
-. 645s10
-649U20*F58 650b<ada,polyorb__poa_policies__id_uniqueness_policy__unique__finalize_spec>30
-. 652s10
-656U20*F59 657b<ada,polyorb__poa_config__racws__finalize_spec>30 659s10
-663U20*F60 664b<ada,polyorb__poa_config__proxies__finalize_spec>30 666s10
-670U20*F61 671b<ada,polyorb__poa_policies__servant_retention_policy__non_retain__finalize_spec>30
-. 673s10
-677U20*F62 678b<ada,polyorb__poa_policies__request_processing_policy__use_servant_manager__finalize_spec>30
-. 680s10
-684U20*F63 685b<ada,polyorb__poa_policies__request_processing_policy__use_default_servant__finalize_spec>30
-. 687s10
-691U20*F64 692b<ada,polyorb__poa_policies__lifespan_policy__transient__finalize_spec>30
-. 694s10
-698U20*F65 699b<ada,polyorb__poa_policies__id_uniqueness_policy__multiple__finalize_spec>30
-. 701s10
-705U20*F66 706b<ada,polyorb__poa_policies__id_assignment_policy__user__finalize_spec>30
-. 708s10
-712U20*F67 713b<ada,polyorb__poa_policies__id_assignment_policy__system__finalize_spec>30
-. 715s10
-719U20*F68 720b<ada,polyorb__poa__finalize_spec>30 722s10
-725U20*F69 726b<ada,polyorb__poa_policies__servant_retention_policy__finalize_spec>30
-. 729s10
-732U20*F70 733b<ada,polyorb__poa_policies__request_processing_policy__finalize_spec>30
-. 736s10
-740U20*F71 741b<ada,polyorb__poa_policies__lifespan_policy__persistent__finalize_spec>30
-. 743s10
-746U20*F72 747b<ada,polyorb__poa_policies__lifespan_policy__finalize_spec>30
-. 750s10
-754U20*F73 755b<ada,polyorb__poa_policies__implicit_activation_policy__no_activation__finalize_spec>30
-. 757s10
-760U20*F74 761b<ada,polyorb__poa_policies__implicit_activation_policy__finalize_spec>30
-. 764s10
-767U20*F75 768b<ada,polyorb__poa_policies__id_uniqueness_policy__finalize_spec>30
-. 771s10
-774U20*F76 775b<ada,polyorb__poa_policies__id_assignment_policy__finalize_spec>30
-. 778s10
-782U20*F77 783b<ada,polyorb__poa_manager__basic_manager__finalize_spec>30
-. 785s10
-788U20*F78 789b<ada,polyorb__poa_manager__finalize_spec>30 792s10
-796U20*F79 797b<ada,polyorb__object_maps__user__finalize_spec>30 799s10
-803U20*F80 804b<ada,polyorb__object_maps__system__finalize_spec>30 806s10
-810U20*F81 811b<ada,polyorb__object_maps__finalize_spec>30 813s10
-817U20*F82 818b<ada,polyorb__poa_types__finalize_spec>30 820s10
-824U20*F83 825b<ada,polyorb__poa_policies__thread_policy__orb_ctrl__finalize_spec>30
-. 827s10
-831U20*F84 832b<ada,polyorb__poa_policies__thread_policy__finalize_spec>30
-. 834s10
-838U20*F85 839b<ada,polyorb__orb_controller__workers__finalize_spec>30 841s10
-845U20*F86 846b<ada,polyorb__orb__thread_pool__finalize_spec>30 848s10
-851U20*F87 852b<ada,polyorb__obj_adapter_qos__finalize_body>30 855s10
-859U20*F88 860b<ada,polyorb__filters__slicers__finalize_spec>30 862s10
-866U20*F89 867b<ada,polyorb__dsa_p__name_service__finalize_spec>30 869s10
-872U20*F90 873b<ada,polyorb__binding_data_qos__finalize_body>30 876s10
-880U20*F91 881b<ada,polyorb__binding_data__neighbour__finalize_spec>30 883s10
-886U20*F92 887b<ada,polyorb__orb__finalize_body>30 890s10
-894U20*F93 895b<ada,polyorb__transport__handlers__finalize_spec>30 897s10
-901U20*F94 902b<ada,polyorb__requests__finalize_body>30 905s10
-909U20*F95 910b<ada,polyorb__servants__finalize_body>30 913s10
-917U20*F96 918b<ada,polyorb__servants__iface__finalize_spec>30 921s10
-924U20*F97 925b<ada,polyorb__orb_controller__finalize_body>30 928s10
-931U20*F98 932b<ada,polyorb__orb__iface__finalize_spec>30 935s10
-939U20*F99 940b<ada,polyorb__orb__finalize_spec>30 942s10
-946U20*F100 947b<ada,polyorb__obj_adapters__finalize_spec>30 949s10
-952U20*F101 953b<ada,polyorb__servants__finalize_spec>30 955s10
-958U20*F102 959b<ada,polyorb__request_qos__finalize_body>30 962s10
-965U20*F103 966b<ada,polyorb__protocols__iface__finalize_spec>30 969s10
-972U20*F104 973b<ada,polyorb__protocols__finalize_spec>30 975s10
-978U20*F105 979b<ada,polyorb__requests__finalize_spec>30 981s10
-984U20*F106 985b<ada,polyorb__orb_controller__finalize_spec>30 987s10
-991U20*F107 992b<ada,polyorb__request_scheduler__finalize_spec>30 994s10
-997U20*F108 998b<ada,polyorb__if_descriptors__finalize_spec>30 1001s10
-1004U20*F109 1005b<ada,polyorb__errors__helper__finalize_body>30 1008s10
-1011U20*F110 1012b<ada,polyorb__any__objref__finalize_body>30 1015s10
-1019U20*F111 1020b<ada,polyorb__references__finalize_spec>30 1022s10
-1027U20*F112 1028b<ada,polyorb__filters__iface__finalize_spec>30 1030s10
-1033U20*F113 1034b<ada,polyorb__binding_object_qos__finalize_body>30 1037s10
-1040U20*F114 1041b<ada,polyorb__binding_objects__finalize_spec>30 1043s10
-1047U20*F115 1048b<ada,polyorb__binding_data__local__finalize_spec>30 1050s10
-1053U20*F116 1054b<ada,polyorb__binding_data__finalize_spec>30 1056s10
-1059U20*F117 1060b<ada,polyorb__transport__finalize_spec>30 1062s10
-1065U20*F118 1066b<ada,polyorb__filters__finalize_spec>30 1068s10
-1072U20*F119 1073b<ada,polyorb__tasking__abortables__finalize_spec>30 1075s10
-1079U20*F120 1080b<ada,polyorb__asynch_ev__sockets__finalize_spec>30 1082s10
-1085U20*F121 1086b<ada,polyorb__services__naming__finalize_spec>30 1089s10
-1093U20*F122 1094b<ada,polyorb__qos__static_buffers__finalize_spec>30 1096s10
-1099U20*F123 1100b<ada,polyorb__qos__addressing_modes__finalize_spec>30 1103s10
-1107U20*F124 1108b<ada,polyorb__poa_config__finalize_spec>30 1110s10
-1113U20*F125 1114b<ada,polyorb__poa_policies__finalize_spec>30 1117s10
-1120U20*F126 1121b<ada,polyorb__parameters__environment__finalize_body>30
-. 1124s10
-1127U20*F127 1128b<ada,polyorb__parameters__command_line__finalize_body>30
-. 1131s10
-1134U20*F128 1135b<ada,polyorb__exceptions__finalize_body>30 1138s10
-1142U20*F129 1143b<ada,polyorb__dsa_p__streams__finalize_spec>30 1145s10
-1149U20*F130 1150b<ada,polyorb__any__nvlist__finalize_spec>30 1152s10
-1156U20*F131 1157b<ada,polyorb__any__exceptionlist__finalize_spec>30 1159s10
-1163U20*F132 1164b<ada,polyorb__tasking__condition_variables__finalize_spec>30
-. 1166s10
-1170U20*F133 1171b<ada,polyorb__tasking__mutexes__finalize_spec>30 1173s10
-1177U20*F134 1178b<ada,polyorb__representations__finalize_spec>30 1180s10
-1184U20*F135 1185b<ada,polyorb__errors__finalize_spec>30 1187s10
-1190U20*F136 1191b<ada,polyorb__any__finalize_body>30 1194s10
-1197U20*F137 1198b<ada,polyorb__any__finalize_spec>30 1200s10
-1204U20*F138 1205b<ada,polyorb__smart_pointers__finalize_spec>30 1207s10
-1211U20*F139 1212b<ada,polyorb__parameters__finalize_spec>30 1214s10
-1218U20*F140 1219b<ada,polyorb__components__finalize_spec>30 1221s10
-1225U20*F141 1226b<ada,polyorb__utils__hfunctions__hyper__finalize_spec>30
-. 1228s10
-1232U20*F142 1233b<ada,polyorb__asynch_ev__finalize_spec>30 1235s10
-1239U20*F143 1240b<ada,polyorb__jobs__finalize_spec>30 1242s10
-1246U20*F144 1247b<ada,polyorb__annotations__finalize_spec>30 1249s10
-1253U20*F145 1254b<ada,polyorb__qos__finalize_spec>30 1256s10
-1260U20*F146 1261b<ada,polyorb__types__finalize_spec>30 1263s10
-1267U20*F147 1268b<ada,polyorb__tasking__threads__finalize_spec>30 1270s10
-1274U20*F148 1275b<ada,system__tasking__protected_objects__entries__finalize_spec>30
-. 1277s10
-1281U20*F149 1282b<ada,system__rpc__finalize_spec>30 1284s10
-1288U20*F150 1289b<ada,ada__directories__finalize_spec>30 1291s10
-1295U20*F151 1296b<ada,system__regexp__finalize_spec>30 1298s10
-1301U20*F152 1302b<ada,gnat__sockets__finalize_body>30 1305s10
-1308U20*F153 1309b<ada,gnat__sockets__finalize_spec>30 1311s10
-1315U20*F154 1316b<ada,system__pool_size__finalize_spec>30 1318s10
-1322U20*F155 1323b<ada,system__pool_global__finalize_spec>30 1325s10
-1329U20*F156 1330b<ada,ada__text_io__finalize_spec>30 1332s10
-1336U20*F157 1337b<ada,ada__strings__wide_unbounded__finalize_spec>30 1339s10
-1343U20*F158 1344b<ada,ada__strings__wide_maps__finalize_spec>30 1346s10
-1350U20*F159 1351b<ada,ada__strings__unbounded__finalize_spec>30 1353s10
-1357U20*F160 1358b<ada,system__storage_pools__subpools__finalize_spec>30
-. 1360s10
-1364U20*F161 1365b<ada,system__finalization_masters__finalize_spec>30 1367s10
-1371U20*F162 1372b<ada,ada__streams__stream_io__finalize_spec>30 1374s10
-1377U20*F163 1378b<ada,system__file_io__finalize_body>30 1381s10
-1384U20*Reraise_Library_Exception_If_Any 1385b<ada,__gnat_reraise_library_exception_if_any>33
-. 1387s10
-1392U17*s_stalib_adafinal 1393b<ada,system__standard_library__adafinal>27
-. 1404s7
-1395U17*Runtime_Finalize 1396b<c,__gnat_runtime_finalize>25 1403s7
-1407P9 No_Param_Proc 1408r28 1447r34
-1411i7*Main_Priority{integer} 1412m25 1412r25 1459m7
-1413i7*Time_Slice_Value{integer} 1414m25 1414r25 1460m7
-1415e7*WC_Encoding{character} 1416m25 1416r25 1461m7
-1417e7*Locking_Policy{character} 1418m25 1418r25 1462m7
-1419e7*Queuing_Policy{character} 1420m25 1420r25 1463m7
-1421e7*Task_Dispatching_Policy{character} 1422m25 1422r25 1464m7
-1423m7*Priority_Specific_Dispatching{6|67M9} 1424m25 1424r25 1495m7
-1425i7*Num_Specific_Dispatching{integer} 1426m25 1426r25 1497m7
-1427i7*Main_CPU{integer} 1428m25 1428r25 1498m7
-1429m7*Interrupt_States{6|67M9} 1430m25 1430r25 1499m7
-1431i7*Num_Interrupt_States{integer} 1432m25 1432r25 1500m7
-1433i7*Unreserve_All_Interrupts{integer} 1434m25 1434r25 1501m7
-1435i7*Detect_Blocking{integer} 1436m25 1436r25 1502m7
-1437i7*Default_Stack_Size{integer} 1438m25 1438r25 1503m7
-1439i7*Default_Secondary_Stack_Size{7|58I9} 1440m25 1440r25 1506m7
-1441m7*Bind_Env_Addr{6|67M9} 1442m25 1442r25
-1444U17*Runtime_Initialize 1444>37 1445b<c,__gnat_runtime_initialize>25 1510s7
-1444i37 Install_Handler{integer}
-1447p7*Finalize_Library_Objects{1407P9} 1448m25 1448r25 1512m7
-1449i7*Binder_Sec_Stacks_Count{natural} 1450m27 1450r27 1507m7
-1451m7*Default_Sized_SS_Pool{6|67M9} 1452m27 1452r27 1508m7
-2021U17*Initialize 2021>29 2022b<c,__gnat_initialize>25 2036s7
-2021m29 Addr{6|67M9}
-2024U17*Finalize 2025b<c,__gnat_finalize>25 2039s7
-2026m7 Ensure_Reference{6|67M9} 2027r24
+12i4 E070{short_integer} 12m46 12r46 1539m7 1539r15
+13i4 E019{short_integer} 13m46 13r46 1545m7 1545r15
+14i4 E015{short_integer} 14m46 14r46 1542m7 1542r15
+15i4 E013{short_integer} 15m46 15r46 1519m7 1519r15
+16i4 E038{short_integer} 16m46 16r46 1521m7 1521r15
+17i4 E066{short_integer} 17m46 17r46 1523m7 1523r15
+18i4 E050{short_integer} 18m46 18r46 1525m7 1525r15
+19i4 E052{short_integer} 19m46 19r46 1527m7 1527r15
+20i4 E056{short_integer} 20m46 20r46 1529m7 1529r15
+21i4 E076{short_integer} 21m46 21r46 1531m7 1531r15
+22i4 E023{short_integer} 22m46 22r46 1533m7 1533r15
+23i4 E078{short_integer} 23m46 23r46 1535m7 1535r15
+24i4 E047{short_integer} 24m46 24r46 1537m7 1537r15
+25i4 E097{short_integer} 25m46 25r46 1541m7 1541r15
+26i4 E037{short_integer} 26m46 26r46 1544m7 1544r15
+27i4 E010{short_integer} 27m46 27r46 1547m7 1547r15
+28i4 E105{short_integer} 28m46 28r46 1550m7 1550r15
+29i4 E111{short_integer} 29m46 29r46 1552m7 1552r15
+30i4 E141{short_integer} 30m46 30r46 1554m7 1554r15
+31i4 E297{short_integer} 31m46 31r46 1556m7 1556r15
+32i4 E119{short_integer} 32m46 32r46 1558m7 1558r15
+33i4 E118{short_integer} 33m46 33r46 1560m7 1560r15
+34i4 E116{short_integer} 34m46 34r46 1562m7 1562r15
+35i4 E115{short_integer} 35m46 35r46 1382m10 1382r18 1564m7 1564r15
+36i4 E700{short_integer} 36m46 36r46 1371m7 1371r15 1566m7 1566r15
+37i4 E172{short_integer} 37m46 37r46 1568m7 1568r15
+38i4 E168{short_integer} 38m46 38r46 1364m7 1364r15 1571m7 1571r15
+39i4 E196{short_integer} 39m46 39r46 1357m7 1357r15 1573m7 1573r15
+40i4 E228{short_integer} 40m46 40r46 1350m7 1350r15 1575m7 1575r15
+41i4 E215{short_integer} 41m46 41r46 1343m7 1343r15 1577m7 1577r15
+42i4 E230{short_integer} 42m46 42r46 1336m7 1336r15 1579m7 1579r15
+43i4 E310{short_integer} 43m46 43r46 1581m7 1581r15
+44i4 E146{short_integer} 44m46 44r46 1583m7 1583r15
+45i4 E552{short_integer} 45m46 45r46 1586m7 1586r15
+46i4 E550{short_integer} 46m46 46r46 1588m7 1588r15
+47i4 E588{short_integer} 47m46 47r46 1590m7 1590r15
+48i4 E344{short_integer} 48m46 48r46 1593m7 1593r15
+49i4 E109{short_integer} 49m46 49r46 1329m7 1329r15 1596m7 1596r15
+50i4 E576{short_integer} 50m46 50r46 1597m7 1597r15
+51i4 E692{short_integer} 51m46 51r46 1599m7 1599r15
+52i4 E174{short_integer} 52m46 52r46 1322m7 1322r15 1601m7 1601r15
+53i4 E525{short_integer} 53m46 53r46 1315m7 1315r15 1603m7 1603r15
+54i4 E516{short_integer} 54m46 54r46 1306m10 1306r18 1610m7 1610r15
+55i4 E521{short_integer} 55m46 55r46 1606m7 1606r15
+56i4 E519{short_integer} 56m46 56r46 1608m7 1608r15
+57i4 E696{short_integer} 57m46 57r46 1612m7 1612r15
+58i4 E534{short_integer} 58m46 58r46 1295m7 1295r15 1614m7 1614r15
+59i4 E584{short_integer} 59m46 59r46 1288m7 1288r15 1617m7 1617r15
+60i4 E386{short_integer} 60m46 60r46 1281m7 1281r15 1619m7 1619r15
+61i4 E322{short_integer} 61m46 61r46 1621m7 1621r15
+62i4 E332{short_integer} 62m46 62r46 1623m7 1623r15
+63i4 E334{short_integer} 63m46 63r46 1274m7 1274r15 1625m7 1625r15
+64i4 E330{short_integer} 64m46 64r46 1627m7 1627r15
+65i4 E318{short_integer} 65m46 65r46 1629m7 1629r15
+66i4 E663{short_integer} 66m46 66r46 1631m7 1631r15
+67i4 E463{short_integer} 67m46 67r46 1633m7 1633r15
+68i4 E291{short_integer} 68m46 68r46 1267m7 1267r15 1635m7 1635r15
+69i4 E226{short_integer} 69m46 69r46 1260m7 1260r15 1637m7 1637r15
+70i4 E278{short_integer} 70m46 70r46 1253m7 1253r15 1639m7 1639r15
+71i4 E162{short_integer} 71m46 71r46 1641m7 1641r15
+72i4 E391{short_integer} 72m46 72r46 1643m7 1643r15
+73i4 E244{short_integer} 73m46 73r46 1246m7 1246r15 1645m7 1645r15
+74i4 E357{short_integer} 74m46 74r46 1239m7 1239r15 1647m7 1647r15
+75i4 E355{short_integer} 75m46 75r46 1232m7 1232r15 1649m7 1649r15
+76i4 E393{short_integer} 76m46 76r46 1225m7 1225r15 1651m7 1651r15
+77i4 E159{short_integer} 77m46 77r46 1653m7 1653r15
+78i4 E263{short_integer} 78m46 78r46 1218m7 1218r15 1655m7 1655r15
+79i4 E223{short_integer} 79m46 79r46 1211m7 1211r15 1657m7 1657r15
+80i4 E221{short_integer} 80m46 80r46 1204m7 1204r15 1659m7 1659r15
+81i4 E155{short_integer} 81m46 81r46 1195m10 1195r18 1662m7 1662r15
+82i4 E251{short_integer} 82m46 82r46 1184m7 1184r15 1664m7 1664r15
+83i4 E349{short_integer} 83m46 83r46 1177m7 1177r15 1666m7 1666r15
+84i4 E247{short_integer} 84m46 84r46 1170m7 1170r15 1668m7 1668r15
+85i4 E359{short_integer} 85m46 85r46 1163m7 1163r15 1670m7 1670r15
+86i4 E569{short_integer} 86m46 86r46 1672m7 1672r15
+87i4 E351{short_integer} 87m46 87r46 1156m7 1156r15 1674m7 1674r15
+88i4 E236{short_integer} 88m46 88r46 1676m7 1676r15
+89i4 E283{short_integer} 89m46 89r46 1149m7 1149r15 1678m7 1678r15
+90i4 E705{short_integer} 90m46 90r46 1142m7 1142r15 1680m7 1680r15
+91i4 E384{short_integer} 91m46 91r46 1139m10 1139r18 1682m7 1682r15
+92i4 E382{short_integer} 92m46 92r46 1683m7 1683r15
+93i4 E574{short_integer} 93m46 93r46 1685m7 1685r15
+94i4 E578{short_integer} 94m46 94r46 1687m7 1687r15
+95i4 E580{short_integer} 95m46 95r46 1689m7 1689r15
+96i4 E603{short_integer} 96m46 96r46 1132m10 1132r18 1691m7 1691r15
+97i4 E605{short_integer} 97m46 97r46 1125m10 1125r18 1693m7 1693r15
+98i4 E363{short_integer} 98m46 98r46 1695m7 1695r15
+99i4 E566{short_integer} 99m46 99r46 1697m7 1697r15
+100i4 E405{short_integer} 100m46 100r46 1118m10 1118r18 1699m7 1699r15
+101i4 E404{short_integer} 101m46 101r46 1107m7 1107r15 1701m7 1701r15
+102i4 E635{short_integer} 102m46 102r46 1104m10 1104r18 1703m7 1703r15
+103i4 E507{short_integer} 103m46 103r46 1093m7 1093r15 1705m7 1705r15
+104i4 E465{short_integer} 104m46 104r46 1706m7 1706r15
+105i4 E469{short_integer} 105m46 105r46 1707m7 1707r15
+106i4 E471{short_integer} 106m46 106r46 1090m10 1090r18 1709m7 1709r15
+107i4 E369{short_integer} 107m46 107r46 1711m7 1711r15
+108i4 E528{short_integer} 108m46 108r46 1713m7 1713r15
+109i4 E554{short_integer} 109m46 109r46 1079m7 1079r15 1715m7 1715r15
+110i4 E289{short_integer} 110m46 110r46 1072m7 1072r15 1717m7 1717r15
+111i4 E272{short_integer} 111m46 111r46 1009m10 1009r18 1737m7 1737r15
+112i4 E253{short_integer} 112m46 112r46 1026m7 1026r15 1730m7 1730r15
+113i4 E267{short_integer} 113m46 113r46 901m7 901r15 1766m7 1766r15
+114i4 E232{short_integer} 114m46 114r46 909m7 909r15 1763m7 1763r15
+115i4 E238{short_integer} 115m46 115r46 1047m7 1047r15 1722m7 1722r15
+116i4 E249{short_integer} 116m46 116r46 939m7 939r15 1753m7 1753r15
+117i4 E242{short_integer} 117m46 117r46 1038m10 1038r18 1725m7 1725r15
+118i4 E373{short_integer} 118m46 118r46 1727m7 1727r15
+119i4 E255{short_integer} 119m46 119r46 1027m7 1027r15 1729m7 1729r15
+120i4 E276{short_integer} 120m46 120r46 1019m7 1019r15 1733m7 1733r15
+121i4 E274{short_integer} 121m46 121r46 1016m10 1016r18 1735m7 1735r15
+122i4 E281{short_integer} 122m46 122r46 1002m10 1002r18 1739m7 1739r15
+123i4 E377{short_integer} 123m46 123r46 991m7 991r15 1741m7 1741r15
+124i4 E375{short_integer} 124m46 124r46 929m10 929r18 1757m7 1757r15
+125i4 E270{short_integer} 125m46 125r46 906m10 906r18 1765m7 1765r15
+126i4 E280{short_integer} 126m46 126r46 917m7 917r15 1760m7 1760r15
+127i4 E284{short_integer} 127m46 127r46 970m10 970r18 1746m7 1746r15
+128i4 E346{short_integer} 128m46 128r46 963m10 963r18 1748m7 1748r15
+129i4 E286{short_integer} 129m46 129r46 914m10 914r18 1762m7 1762r15
+130i4 E367{short_integer} 130m46 130r46 946m7 946r15 1751m7 1751r15
+131i4 E234{short_integer} 131m46 131r46 891m10 891r18 1770m7 1770r15
+132i4 E268{short_integer} 132m46 132r46 936m10 936r18 1755m7 1755r15
+133i4 E287{short_integer} 133m46 133r46 922m10 922r18 1759m7 1759r15
+134i4 E371{short_integer} 134m46 134r46 894m7 894r15 1768m7 1768r15
+135i4 E723{short_integer} 135m46 135r46 880m7 880r15 1772m7 1772r15
+136i4 E536{short_integer} 136m46 136r46 877m10 877r18 1774m7 1774r15
+137i4 E388{short_integer} 137m46 137r46 866m7 866r15 1776m7 1776r15
+138i4 E540{short_integer} 138m46 138r46 859m7 859r15 1778m7 1778r15
+139i4 E503{short_integer} 139m46 139r46 1780m7 1780r15
+140i4 E402{short_integer} 140m46 140r46 856m10 856r18 1782m7 1782r15
+141i4 E487{short_integer} 141m46 141r46 845m7 845r15 1785m7 1785r15
+142i4 E667{short_integer} 142m46 142r46 838m7 838r15 1788m7 1788r15
+143i4 E420{short_integer} 143m46 143r46 831m7 831r15 1790m7 1790r15
+144i4 E442{short_integer} 144m46 144r46 824m7 824r15 1792m7 1792r15
+145i4 E408{short_integer} 145m46 145r46 817m7 817r15 1794m7 1794r15
+146i4 E412{short_integer} 146m46 146r46 810m7 810r15 1796m7 1796r15
+147i4 E678{short_integer} 147m46 147r46 803m7 803r15 1798m7 1798r15
+148i4 E428{short_integer} 148m46 148r46 796m7 796r15 1800m7 1800r15
+149i4 E406{short_integer} 149m46 149r46 793m10 793r18 1802m7 1802r15
+150i4 E410{short_integer} 150m46 150r46 782m7 782r15 1804m7 1804r15
+151i4 E413{short_integer} 151m46 151r46 779m10 779r18 1806m7 1806r15
+152i4 E414{short_integer} 152m46 152r46 772m10 772r18 1808m7 1808r15
+153i4 E415{short_integer} 153m46 153r46 765m10 765r18 1810m7 1810r15
+154i4 E432{short_integer} 154m46 154r46 754m7 754r15 1812m7 1812r15
+155i4 E416{short_integer} 155m46 155r46 751m10 751r18 1814m7 1814r15
+156i4 E434{short_integer} 156m46 156r46 740m7 740r15 1816m7 1816r15
+157i4 E417{short_integer} 157m46 157r46 737m10 737r18 1818m7 1818r15
+158i4 E418{short_integer} 158m46 158r46 730m10 730r18 1820m7 1820r15
+159i4 E400{short_integer} 159m46 159r46 719m7 719r15 1823m7 1823r15
+160i4 E676{short_integer} 160m46 160r46 712m7 712r15 1825m7 1825r15
+161i4 E426{short_integer} 161m46 161r46 705m7 705r15 1827m7 1827r15
+162i4 E430{short_integer} 162m46 162r46 698m7 698r15 1829m7 1829r15
+163i4 E686{short_integer} 163m46 163r46 691m7 691r15 1831m7 1831r15
+164i4 E436{short_integer} 164m46 164r46 684m7 684r15 1833m7 1833r15
+165i4 E440{short_integer} 165m46 165r46 677m7 677r15 1835m7 1835r15
+166i4 E438{short_integer} 166m46 166r46 670m7 670r15 1837m7 1837r15
+167i4 E424{short_integer} 167m46 167r46 663m7 663r15 1840m7 1840r15
+168i4 E422{short_integer} 168m46 168r46 656m7 656r15 1843m7 1843r15
+169i4 E680{short_integer} 169m46 169r46 649m7 649r15 1845m7 1845r15
+170i4 E684{short_integer} 170m46 170r46 642m7 642r15 1847m7 1847r15
+171i4 E682{short_integer} 171m46 171r46 635m7 635r15 1849m7 1849r15
+172i4 E688{short_integer} 172m46 172r46 628m7 628r15 1851m7 1851r15
+173i4 E674{short_integer} 173m46 173r46 621m7 621r15 1854m7 1854r15
+174i4 E560{short_integer} 174m46 174r46 618m10 618r18 1856m7 1856r15
+175i4 E599{short_integer} 175m46 175r46 1858m7 1858r15
+176i4 E634{short_integer} 176m46 176r46 607m7 607r15 1860m7 1860r15
+177i4 E632{short_integer} 177m46 177r46 600m7 600r15 1862m7 1862r15
+178i4 E473{short_integer} 178m46 178r46 593m7 593r15 1865m7 1865r15
+179i4 E475{short_integer} 179m46 179r46 586m7 586r15 1867m7 1867r15
+180i4 E479{short_integer} 180m46 180r46 579m7 579r15 1870m7 1870r15
+181i4 E477{short_integer} 181m46 181r46 576m10 576r18 1872m7 1872r15
+182i4 E485{short_integer} 182m46 182r46 565m7 565r15 1874m7 1874r15
+183i4 E646{short_integer} 183m46 183r46 558m7 558r15 1877m7 1877r15
+184i4 E648{short_integer} 184m46 184r46 551m7 551r15 1880m7 1880r15
+185i4 E650{short_integer} 185m46 185r46 542m10 542r18 1883m7 1883r15
+186i4 E658{short_integer} 186m46 186r46 1885m7 1885r15
+187i4 E661{short_integer} 187m46 187r46 535m10 535r18 1887m7 1887r15
+188i4 E656{short_integer} 188m46 188r46 524m7 524r15 1889m7 1889r15
+189i4 E654{short_integer} 189m46 189r46 515m10 515r18 1892m7 1892r15
+190i4 E481{short_integer} 190m46 190r46 1894m7 1894r15
+191i4 E546{short_integer} 191m46 191r46 504m7 504r15 1896m7 1896r15
+192i4 E454{short_integer} 192m46 192r46 495m10 495r18 1899m7 1899r15
+193i4 E448{short_integer} 193m46 193r46 490m7 490r15 1901m7 1901r15
+194i4 E623{short_integer} 194m46 194r46 1905m7 1905r15
+195i4 E625{short_integer} 195m46 195r46 483m7 483r15 1904m7 1904r15
+196i4 E672{short_integer} 196m46 196r46 476m7 476r15 1907m7 1907r15
+197i4 E446{short_integer} 197m46 197r46 469m7 469r15 1910m7 1910r15
+198i4 E615{short_integer} 198m46 198r46 1911m7 1911r15
+199i4 E639{short_integer} 199m46 199r46 462m7 462r15 1914m7 1914r15
+200i4 E444{short_integer} 200m46 200r46 455m7 455r15 1917m7 1917r15
+201i4 E497{short_integer} 201m46 201r46 448m7 448r15 1919m7 1919r15
+202i4 E495{short_integer} 202m46 202r46 441m7 441r15 1922m7 1922r15
+203i4 E630{short_integer} 203m46 203r46 434m7 434r15 1925m7 1925r15
+204i4 E499{short_integer} 204m46 204r46 427m7 427r15 1928m7 1928r15
+205i4 E461{short_integer} 205m46 205r46 420m7 420r15 1931m7 1931r15
+206i4 E617{short_integer} 206m46 206r46 413m7 413r15 1934m7 1934r15
+207i4 E621{short_integer} 207m46 207r46 406m7 406r15 1937m7 1937r15
+208i4 E637{short_integer} 208m46 208r46 399m7 399r15 1940m7 1940r15
+209i4 E509{short_integer} 209m46 209r46 1941m7 1941r15
+210i4 E501{short_integer} 210m46 210r46 392m7 392r15 1947m7 1947r15
+211i4 E492{short_integer} 211m46 211r46 1944m7 1944r15
+212i4 E505{short_integer} 212m46 212r46 1945m7 1945r15
+213i4 E613{short_integer} 213m46 213r46 385m7 385r15 1950m7 1950r15
+214i4 E619{short_integer} 214m46 214r46 378m7 378r15 1953m7 1953r15
+215i4 E628{short_integer} 215m46 215r46 371m7 371r15 1956m7 1956r15
+216i4 E544{short_integer} 216m46 216r46 364m7 364r15 1959m7 1959r15
+217i4 E611{short_integer} 217m46 217r46 1961m7 1961r15
+218i4 E690{short_integer} 218m46 218r46 1962m7 1962r15
+219i4 E670{short_integer} 219m46 219r46 1964m7 1964r15
+220i4 E609{short_integer} 220m46 220r46 1966m7 1966r15
+221i4 E607{short_integer} 221m46 221r46 361m10 361r18 1968m7 1968r15
+222i4 E530{short_integer} 222m46 222r46 354m10 354r18 1970m7 1970r15
+223i4 E513{short_integer} 223m46 223r46 1971m7 1971r15
+224i4 E542{short_integer} 224m46 224r46 343m7 343r15 1974m7 1974r15
+225i4 E558{short_integer} 225m46 225r46 1976m7 1976r15
+226i4 E556{short_integer} 226m46 226r46 1978m7 1978r15
+227i4 E548{short_integer} 227m46 227r46 336m7 336r15 1981m7 1981r15
+228i4 E511{short_integer} 228m46 228r46 322m7 322r15 1987m7 1987r15
+229i4 E538{short_integer} 229m46 229r46 323m7 323r15 1985m7 1985r15
+230i4 E562{short_integer} 230m46 230r46 1988m7 1988r15
+231i4 E490{short_integer} 231m46 231r46 1990m7 1990r15
+232i4 E131{short_integer} 232m46 232r46 313m10 313r18 1993m7 1993r15
+233i4 E711{short_integer} 233m46 233r46 1995m7 1995r15
+234i4 E703{short_integer} 234m46 234r46 302m7 302r15 1998m7 1998r15
+235i4 E717{short_integer} 235m46 235r46 293m10 293r18 2001m7 2001r15
+236i4 E715{short_integer} 236m46 236r46 2002m7 2002r15
+237i4 E719{short_integer} 237m46 237r46 275m7 275r15 2007m7 2007r15
+238i4 E721{short_integer} 238m46 238r46 276m7 276r15 2005m7 2005r15
+239i4 E710{short_integer} 239m46 239r46 2009m7 2009r15
+240i4 E708{short_integer} 240m46 240r46 268m7 268r15 2011m7 2011r15
+241i4 E706{short_integer} 241m46 241r46 265m10 265r18 2013m7 2013r15
+242i4 E006{short_integer} 242m46 242r46 254m7 254r15 2016m7 2016r15
+243i4 E002{short_integer} 243m46 243r46 2018m7 2018r15
+245a4 Sec_Default_Sized_Stacks(10|45R9) 1510m32 1510r32
+247a4 Local_Priority_Specific_Dispatching{string} 1498r9
+248a4 Local_Interrupt_States{string} 1501r27
+250b4 Is_Elaborated{boolean} 1401r14 1404m7 1457r10 1460m7
+252U14 finalize_library 252b14 1391l8 1391t24 1514r35
+256U20*F1 257b<ada,newworkers__finalize_spec>30 259s10
+262U20*F2 263b<ada,common__finalize_spec>30 266s10
+270U20*F3 271b<ada,storage__finalize_spec>30 273s10
+278U20*F4 279b<ada,polyorb__termination_manager__bootstrap__finalize_spec>30
+. 281s10
+284U20*F5 285b<ada,polyorb__termination_manager__finalize_spec>30 287s10
+290U20*F6 291b<ada,polyorb__dsa_p__storages__dsm__finalize_body>30 294s10
+297U20*F7 298b<ada,polyorb__dsa_p__storages__dsm__finalize_spec>30 300s10
+304U20*F8 305b<ada,polyorb__dsa_p__storages__finalize_spec>30 307s10
+310U20*F9 311b<ada,system__partition_interface__finalize_body>30 314s10
+317U20*F10 318b<ada,system__partition_interface__finalize_spec>30 320s10
+325U20*F11 326b<ada,polyorb__giop_p__transport_mechanisms__iiop__finalize_spec>30
+. 328s10
+331U20*F12 332b<ada,polyorb__binding_data__giop__iiop__finalize_spec>30 334s10
+338U20*F13 339b<ada,polyorb__transport__connected__sockets__finalize_spec>30
+. 341s10
+345U20*F14 346b<ada,polyorb__giop_p__tagged_components__alternate_iiop_address__finalize_spec>30
+. 348s10
+351U20*F15 352b<ada,polyorb__utils__sockets__finalize_body>30 355s10
+358U20*F16 359b<ada,polyorb__parameters__file__finalize_body>30 362s10
+366U20*F17 367b<ada,polyorb__protocols__giop__iiop__finalize_spec>30 369s10
+373U20*F18 374b<ada,polyorb__protocols__giop__giop_1_2__finalize_spec>30
+. 376s10
+380U20*F19 381b<ada,polyorb__protocols__giop__giop_1_1__finalize_spec>30
+. 383s10
+387U20*F20 388b<ada,polyorb__protocols__giop__giop_1_0__finalize_spec>30
+. 390s10
+394U20*F21 395b<ada,polyorb__protocols__giop__finalize_spec>30 397s10
+401U20*F22 402b<ada,polyorb__representations__cdr__giop_1_2__finalize_spec>30
+. 404s10
+408U20*F23 409b<ada,polyorb__representations__cdr__giop_1_1__finalize_spec>30
+. 411s10
+415U20*F24 416b<ada,polyorb__representations__cdr__giop_1_0__finalize_spec>30
+. 418s10
+422U20*F25 423b<ada,polyorb__qos__term_manager_info__finalize_spec>30 425s10
+429U20*F26 430b<ada,polyorb__giop_p__transport_mechanisms__finalize_spec>30
+. 432s10
+436U20*F27 437b<ada,polyorb__giop_p__tagged_components__code_sets__finalize_spec>30
+. 439s10
+443U20*F28 444b<ada,polyorb__giop_p__tagged_components__finalize_spec>30
+. 446s10
+450U20*F29 451b<ada,polyorb__qos__tagged_components__finalize_spec>30 453s10
+457U20*F30 458b<ada,polyorb__qos__exception_informations__finalize_spec>30
+. 460s10
+464U20*F31 465b<ada,polyorb__qos__code_sets__finalize_spec>30 467s10
+471U20*F32 472b<ada,polyorb__qos__service_contexts__finalize_spec>30 474s10
+478U20*F33 479b<ada,polyorb__poa__basic_poa__finalize_spec>30 481s10
+485U20*F34 486b<ada,polyorb__giop_p__code_sets__converters__finalize_spec>30
+. 488s10
+492U20*F35 493b<ada,polyorb__references__ior__finalize_body>30 496s10
+499U20*F36 500b<ada,polyorb__representations__cdr__finalize_spec>30 502s10
+506U20*F37 507b<ada,polyorb__transport__connected__finalize_spec>30 509s10
+512U20*F38 513b<ada,polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_body>30
+. 516s10
+519U20*F39 520b<ada,polyorb__tasking__profiles__full_tasking__threads__annotations__finalize_spec>30
+. 522s10
+526U20*F40 527b<ada,polyorb__tasking__threads__annotations__finalize_spec>30
+. 529s10
+532U20*F41 533b<ada,polyorb__tasking__profiles__full_tasking_atc__abortables__finalize_body>30
+. 536s10
+539U20*F42 540b<ada,polyorb__tasking__profiles__full_tasking__threads__finalize_body>30
+. 543s10
+546U20*F43 547b<ada,polyorb__tasking__profiles__full_tasking__threads__finalize_spec>30
+. 549s10
+553U20*F44 554b<ada,polyorb__tasking__profiles__full_tasking__mutexes__finalize_spec>30
+. 556s10
+560U20*F45 561b<ada,polyorb__tasking__profiles__full_tasking__condition_variables__finalize_spec>30
+. 563s10
+567U20*F46 568b<ada,polyorb__dsa_p__name_service__cos_naming__finalize_spec>30
+. 570s10
+573U20*F47 574b<ada,polyorb__services__naming__namingcontext__client__finalize_body>30
+. 577s10
+581U20*F48 582b<ada,polyorb__services__naming__namingcontext__helper__finalize_spec>30
+. 584s10
+588U20*F49 589b<ada,polyorb__services__naming__namingcontext__finalize_spec>30
+. 591s10
+595U20*F50 596b<ada,polyorb__services__naming__helper__finalize_spec>30 598s10
+602U20*F51 603b<ada,polyorb__obj_adapters__group_object_adapter__finalize_spec>30
+. 605s10
+609U20*F52 610b<ada,polyorb__servants__group_servants__finalize_spec>30 612s10
+615U20*F53 616b<ada,polyorb__references__corbaloc__finalize_body>30 619s10
+623U20*F54 624b<ada,polyorb__poa_config__root_poa__finalize_spec>30 626s10
+630U20*F55 631b<ada,polyorb__poa_policies__request_processing_policy__active_object_map_only__finalize_spec>30
+. 633s10
+637U20*F56 638b<ada,polyorb__poa_policies__implicit_activation_policy__activation__finalize_spec>30
+. 640s10
+644U20*F57 645b<ada,polyorb__poa_policies__servant_retention_policy__retain__finalize_spec>30
+. 647s10
+651U20*F58 652b<ada,polyorb__poa_policies__id_uniqueness_policy__unique__finalize_spec>30
+. 654s10
+658U20*F59 659b<ada,polyorb__poa_config__racws__finalize_spec>30 661s10
+665U20*F60 666b<ada,polyorb__poa_config__proxies__finalize_spec>30 668s10
+672U20*F61 673b<ada,polyorb__poa_policies__servant_retention_policy__non_retain__finalize_spec>30
+. 675s10
+679U20*F62 680b<ada,polyorb__poa_policies__request_processing_policy__use_servant_manager__finalize_spec>30
+. 682s10
+686U20*F63 687b<ada,polyorb__poa_policies__request_processing_policy__use_default_servant__finalize_spec>30
+. 689s10
+693U20*F64 694b<ada,polyorb__poa_policies__lifespan_policy__transient__finalize_spec>30
+. 696s10
+700U20*F65 701b<ada,polyorb__poa_policies__id_uniqueness_policy__multiple__finalize_spec>30
+. 703s10
+707U20*F66 708b<ada,polyorb__poa_policies__id_assignment_policy__user__finalize_spec>30
+. 710s10
+714U20*F67 715b<ada,polyorb__poa_policies__id_assignment_policy__system__finalize_spec>30
+. 717s10
+721U20*F68 722b<ada,polyorb__poa__finalize_spec>30 724s10
+727U20*F69 728b<ada,polyorb__poa_policies__servant_retention_policy__finalize_spec>30
+. 731s10
+734U20*F70 735b<ada,polyorb__poa_policies__request_processing_policy__finalize_spec>30
+. 738s10
+742U20*F71 743b<ada,polyorb__poa_policies__lifespan_policy__persistent__finalize_spec>30
+. 745s10
+748U20*F72 749b<ada,polyorb__poa_policies__lifespan_policy__finalize_spec>30
+. 752s10
+756U20*F73 757b<ada,polyorb__poa_policies__implicit_activation_policy__no_activation__finalize_spec>30
+. 759s10
+762U20*F74 763b<ada,polyorb__poa_policies__implicit_activation_policy__finalize_spec>30
+. 766s10
+769U20*F75 770b<ada,polyorb__poa_policies__id_uniqueness_policy__finalize_spec>30
+. 773s10
+776U20*F76 777b<ada,polyorb__poa_policies__id_assignment_policy__finalize_spec>30
+. 780s10
+784U20*F77 785b<ada,polyorb__poa_manager__basic_manager__finalize_spec>30
+. 787s10
+790U20*F78 791b<ada,polyorb__poa_manager__finalize_spec>30 794s10
+798U20*F79 799b<ada,polyorb__object_maps__user__finalize_spec>30 801s10
+805U20*F80 806b<ada,polyorb__object_maps__system__finalize_spec>30 808s10
+812U20*F81 813b<ada,polyorb__object_maps__finalize_spec>30 815s10
+819U20*F82 820b<ada,polyorb__poa_types__finalize_spec>30 822s10
+826U20*F83 827b<ada,polyorb__poa_policies__thread_policy__orb_ctrl__finalize_spec>30
+. 829s10
+833U20*F84 834b<ada,polyorb__poa_policies__thread_policy__finalize_spec>30
+. 836s10
+840U20*F85 841b<ada,polyorb__orb_controller__workers__finalize_spec>30 843s10
+847U20*F86 848b<ada,polyorb__orb__thread_pool__finalize_spec>30 850s10
+853U20*F87 854b<ada,polyorb__obj_adapter_qos__finalize_body>30 857s10
+861U20*F88 862b<ada,polyorb__filters__slicers__finalize_spec>30 864s10
+868U20*F89 869b<ada,polyorb__dsa_p__name_service__finalize_spec>30 871s10
+874U20*F90 875b<ada,polyorb__binding_data_qos__finalize_body>30 878s10
+882U20*F91 883b<ada,polyorb__binding_data__neighbour__finalize_spec>30 885s10
+888U20*F92 889b<ada,polyorb__orb__finalize_body>30 892s10
+896U20*F93 897b<ada,polyorb__transport__handlers__finalize_spec>30 899s10
+903U20*F94 904b<ada,polyorb__requests__finalize_body>30 907s10
+911U20*F95 912b<ada,polyorb__servants__finalize_body>30 915s10
+919U20*F96 920b<ada,polyorb__servants__iface__finalize_spec>30 923s10
+926U20*F97 927b<ada,polyorb__orb_controller__finalize_body>30 930s10
+933U20*F98 934b<ada,polyorb__orb__iface__finalize_spec>30 937s10
+941U20*F99 942b<ada,polyorb__orb__finalize_spec>30 944s10
+948U20*F100 949b<ada,polyorb__obj_adapters__finalize_spec>30 951s10
+954U20*F101 955b<ada,polyorb__servants__finalize_spec>30 957s10
+960U20*F102 961b<ada,polyorb__request_qos__finalize_body>30 964s10
+967U20*F103 968b<ada,polyorb__protocols__iface__finalize_spec>30 971s10
+974U20*F104 975b<ada,polyorb__protocols__finalize_spec>30 977s10
+980U20*F105 981b<ada,polyorb__requests__finalize_spec>30 983s10
+986U20*F106 987b<ada,polyorb__orb_controller__finalize_spec>30 989s10
+993U20*F107 994b<ada,polyorb__request_scheduler__finalize_spec>30 996s10
+999U20*F108 1000b<ada,polyorb__if_descriptors__finalize_spec>30 1003s10
+1006U20*F109 1007b<ada,polyorb__errors__helper__finalize_body>30 1010s10
+1013U20*F110 1014b<ada,polyorb__any__objref__finalize_body>30 1017s10
+1021U20*F111 1022b<ada,polyorb__references__finalize_spec>30 1024s10
+1029U20*F112 1030b<ada,polyorb__filters__iface__finalize_spec>30 1032s10
+1035U20*F113 1036b<ada,polyorb__binding_object_qos__finalize_body>30 1039s10
+1042U20*F114 1043b<ada,polyorb__binding_objects__finalize_spec>30 1045s10
+1049U20*F115 1050b<ada,polyorb__binding_data__local__finalize_spec>30 1052s10
+1055U20*F116 1056b<ada,polyorb__binding_data__finalize_spec>30 1058s10
+1061U20*F117 1062b<ada,polyorb__transport__finalize_spec>30 1064s10
+1067U20*F118 1068b<ada,polyorb__filters__finalize_spec>30 1070s10
+1074U20*F119 1075b<ada,polyorb__tasking__abortables__finalize_spec>30 1077s10
+1081U20*F120 1082b<ada,polyorb__asynch_ev__sockets__finalize_spec>30 1084s10
+1087U20*F121 1088b<ada,polyorb__services__naming__finalize_spec>30 1091s10
+1095U20*F122 1096b<ada,polyorb__qos__static_buffers__finalize_spec>30 1098s10
+1101U20*F123 1102b<ada,polyorb__qos__addressing_modes__finalize_spec>30 1105s10
+1109U20*F124 1110b<ada,polyorb__poa_config__finalize_spec>30 1112s10
+1115U20*F125 1116b<ada,polyorb__poa_policies__finalize_spec>30 1119s10
+1122U20*F126 1123b<ada,polyorb__parameters__environment__finalize_body>30
+. 1126s10
+1129U20*F127 1130b<ada,polyorb__parameters__command_line__finalize_body>30
+. 1133s10
+1136U20*F128 1137b<ada,polyorb__exceptions__finalize_body>30 1140s10
+1144U20*F129 1145b<ada,polyorb__dsa_p__streams__finalize_spec>30 1147s10
+1151U20*F130 1152b<ada,polyorb__any__nvlist__finalize_spec>30 1154s10
+1158U20*F131 1159b<ada,polyorb__any__exceptionlist__finalize_spec>30 1161s10
+1165U20*F132 1166b<ada,polyorb__tasking__condition_variables__finalize_spec>30
+. 1168s10
+1172U20*F133 1173b<ada,polyorb__tasking__mutexes__finalize_spec>30 1175s10
+1179U20*F134 1180b<ada,polyorb__representations__finalize_spec>30 1182s10
+1186U20*F135 1187b<ada,polyorb__errors__finalize_spec>30 1189s10
+1192U20*F136 1193b<ada,polyorb__any__finalize_body>30 1196s10
+1199U20*F137 1200b<ada,polyorb__any__finalize_spec>30 1202s10
+1206U20*F138 1207b<ada,polyorb__smart_pointers__finalize_spec>30 1209s10
+1213U20*F139 1214b<ada,polyorb__parameters__finalize_spec>30 1216s10
+1220U20*F140 1221b<ada,polyorb__components__finalize_spec>30 1223s10
+1227U20*F141 1228b<ada,polyorb__utils__hfunctions__hyper__finalize_spec>30
+. 1230s10
+1234U20*F142 1235b<ada,polyorb__asynch_ev__finalize_spec>30 1237s10
+1241U20*F143 1242b<ada,polyorb__jobs__finalize_spec>30 1244s10
+1248U20*F144 1249b<ada,polyorb__annotations__finalize_spec>30 1251s10
+1255U20*F145 1256b<ada,polyorb__qos__finalize_spec>30 1258s10
+1262U20*F146 1263b<ada,polyorb__types__finalize_spec>30 1265s10
+1269U20*F147 1270b<ada,polyorb__tasking__threads__finalize_spec>30 1272s10
+1276U20*F148 1277b<ada,system__tasking__protected_objects__entries__finalize_spec>30
+. 1279s10
+1283U20*F149 1284b<ada,system__rpc__finalize_spec>30 1286s10
+1290U20*F150 1291b<ada,ada__directories__finalize_spec>30 1293s10
+1297U20*F151 1298b<ada,system__regexp__finalize_spec>30 1300s10
+1303U20*F152 1304b<ada,gnat__sockets__finalize_body>30 1307s10
+1310U20*F153 1311b<ada,gnat__sockets__finalize_spec>30 1313s10
+1317U20*F154 1318b<ada,system__pool_size__finalize_spec>30 1320s10
+1324U20*F155 1325b<ada,system__pool_global__finalize_spec>30 1327s10
+1331U20*F156 1332b<ada,ada__text_io__finalize_spec>30 1334s10
+1338U20*F157 1339b<ada,ada__strings__wide_unbounded__finalize_spec>30 1341s10
+1345U20*F158 1346b<ada,ada__strings__wide_maps__finalize_spec>30 1348s10
+1352U20*F159 1353b<ada,ada__strings__unbounded__finalize_spec>30 1355s10
+1359U20*F160 1360b<ada,system__storage_pools__subpools__finalize_spec>30
+. 1362s10
+1366U20*F161 1367b<ada,system__finalization_masters__finalize_spec>30 1369s10
+1373U20*F162 1374b<ada,ada__streams__stream_io__finalize_spec>30 1376s10
+1379U20*F163 1380b<ada,system__file_io__finalize_body>30 1383s10
+1386U20*Reraise_Library_Exception_If_Any 1387b<ada,__gnat_reraise_library_exception_if_any>33
+. 1389s10
+1394U17*s_stalib_adafinal 1395b<ada,system__standard_library__adafinal>27
+. 1406s7
+1397U17*Runtime_Finalize 1398b<c,__gnat_runtime_finalize>25 1405s7
+1409P9 No_Param_Proc 1410r28 1449r34
+1413i7*Main_Priority{integer} 1414m25 1414r25 1461m7
+1415i7*Time_Slice_Value{integer} 1416m25 1416r25 1462m7
+1417e7*WC_Encoding{character} 1418m25 1418r25 1463m7
+1419e7*Locking_Policy{character} 1420m25 1420r25 1464m7
+1421e7*Queuing_Policy{character} 1422m25 1422r25 1465m7
+1423e7*Task_Dispatching_Policy{character} 1424m25 1424r25 1466m7
+1425m7*Priority_Specific_Dispatching{6|67M9} 1426m25 1426r25 1497m7
+1427i7*Num_Specific_Dispatching{integer} 1428m25 1428r25 1499m7
+1429i7*Main_CPU{integer} 1430m25 1430r25 1500m7
+1431m7*Interrupt_States{6|67M9} 1432m25 1432r25 1501m7
+1433i7*Num_Interrupt_States{integer} 1434m25 1434r25 1502m7
+1435i7*Unreserve_All_Interrupts{integer} 1436m25 1436r25 1503m7
+1437i7*Detect_Blocking{integer} 1438m25 1438r25 1504m7
+1439i7*Default_Stack_Size{integer} 1440m25 1440r25 1505m7
+1441i7*Default_Secondary_Stack_Size{7|58I9} 1442m25 1442r25 1508m7
+1443m7*Bind_Env_Addr{6|67M9} 1444m25 1444r25
+1446U17*Runtime_Initialize 1446>37 1447b<c,__gnat_runtime_initialize>25 1512s7
+1446i37 Install_Handler{integer}
+1449p7*Finalize_Library_Objects{1409P9} 1450m25 1450r25 1514m7
+1451i7*Binder_Sec_Stacks_Count{natural} 1452m27 1452r27 1509m7
+1453m7*Default_Sized_SS_Pool{6|67M9} 1454m27 1454r27 1510m7
+2027U17*Initialize 2027>29 2028b<c,__gnat_initialize>25 2042s7
+2027m29 Addr{6|67M9}
+2030U17*Finalize 2031b<c,__gnat_finalize>25 2045s7
+2032m7 Ensure_Reference{6|67M9} 2033r24
 X 6 system.ads
-37K9*System 4|3w6 4r6 5r6 9r16 10r16 34r14 35r14 5|7r6 243r57 243r90 1423r39
-. 1429r26 1439r38 1441r23 1451r31 1465r7 1506r39 2017r14 2018r14 2021r36
-. 2026r34 2036r19 6|200e11
-67M9*Address 4|9r23 10r23 34r21 35r21 5|1423r46 1429r33 1441r30 1451r38 2017r21
-. 2018r21 2021r43 2026r41
-69m4*Null_Address{67M9} 5|2036r26
+37K9*System 4|3w6 4r6 5r6 9r16 10r16 34r14 35r14 5|7r6 245r57 245r90 1425r39
+. 1431r26 1441r38 1443r23 1453r31 1467r7 1508r39 2023r14 2024r14 2027r36
+. 2032r34 2042r19 6|200e11
+67M9*Address 4|9r23 10r23 34r21 35r21 5|1425r46 1431r33 1443r30 1453r38 2023r21
+. 2024r21 2027r43 2032r41
+69m4*Null_Address{67M9} 5|2042r26
 X 7 s-parame.ads
-51K16*Parameters 4|4w13 5|243r97 1439r45 1506r46 7|185e22
-58I9*Size_Type<long_long_integer> 5|1439r56
-95i4*Runtime_Default_Sec_Stack_Size{58I9} 5|243r108 1506r57
+51K16*Parameters 4|4w13 5|245r97 1441r45 1508r46 7|185e22
+58I9*Size_Type<long_long_integer> 5|1441r56
+95i4*Runtime_Default_Sec_Stack_Size{58I9} 5|245r108 1508r57
 X 8 s-restri.ads
-45K16*Restrictions 5|7w13 1465m14 8|77e24
-52r4*Run_Time_Restrictions{9|321R9[49]} 5|1465m27
+45K16*Restrictions 5|7w13 1467m14 8|77e24
+52r4*Run_Time_Restrictions{9|321R9[49]} 5|1467m27
 X 9 s-rident.ads
 317A9*Restriction_Flags(boolean)<85E9[8|49]>
 318A9*Restriction_Values(natural)<85E9[8|49]>
 319A9*Parameter_Flags(boolean)<85E9[8|49]>
 321R9*Restrictions_Info
-322a7*Set{317A9[8|49]} 5|1466m10[8|49]
-328a7*Value{318A9[8|49]} 5|1479m10[8|49]
-335a7*Violated{317A9[8|49]} 5|1480m10[8|49]
-340a7*Count{318A9[8|49]} 5|1493m10[8|49]
-348a7*Unknown{319A9[8|49]} 5|1494m10[8|49]
+322a7*Set{317A9[8|49]} 5|1468m10[8|49]
+328a7*Value{318A9[8|49]} 5|1481m10[8|49]
+335a7*Violated{317A9[8|49]} 5|1482m10[8|49]
+340a7*Count{318A9[8|49]} 5|1495m10[8|49]
+348a7*Unknown{319A9[8|49]} 5|1496m10[8|49]
 X 10 s-secsta.ads
-37K16*Secondary_Stack 4|5w13 5|243r64 10|443e27
-45R9*SS_Stack 5|243r80 10|343e14
+37K16*Secondary_Stack 4|5w13 5|245r64 10|443e27
+45R9*SS_Stack 5|245r80 10|343e14
 
