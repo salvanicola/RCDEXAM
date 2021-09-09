@@ -1,11 +1,7 @@
 start "SERVER" cmd.exe /c "cd.. & po_cos_naming"
-timeout 5
+timeout 1
 start "FACTORY" cmd.exe /c "factory_partition"
-timeout 2
+timeout 1
 start "STORAGE" cmd.exe /c "storage_partition"
-timeout 2
-start "WORKER" cmd.exe /c "worker_partition"
-timeout 2
-start "ACCEPTOR" cmd.exe /c "acceptor_partition"
-timeout 2
+timeout 1
 start "CLIENT" cmd.exe /c "client_partition"

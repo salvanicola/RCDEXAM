@@ -10,6 +10,9 @@ package Common is
      abstract tagged limited private;
 
    type Acceptor is
+     abstract tagged limited private;
+
+   type Learner is
       abstract tagged limited private;
 
    type Any_Worker is
@@ -19,6 +22,10 @@ package Common is
    type Any_Acceptor is
       access all Acceptor'Class;
    pragma Asynchronous (Any_Acceptor);
+
+   type Any_Learner is
+      access all Learner'Class;
+   pragma Asynchronous (Any_Learner);
 
    procedure Assign
      (W : Any_Worker;
@@ -35,4 +42,5 @@ package Common is
 private
    type Worker is abstract tagged limited null record;
    type Acceptor is abstract tagged limited null record;
+   type Learner is abstract tagged limited null record;
 end Common;

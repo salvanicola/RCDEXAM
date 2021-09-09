@@ -8,7 +8,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U partition%b		partition.adb		22cfa9af OO PK
+U partition%b		partition.adb		c5070fe3 OO PK
 W factory%s		factory.adb		factory.ali  EA
 W polyorb%s		polyorb.ads		polyorb.ali
 W polyorb.dsa_p%s	polyorb-dsa_p.ads	polyorb-dsa_p.ali
@@ -47,13 +47,13 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D client.ads		20210830155914 41cf2c9d client%s
-D common.ads		20210907164716 697612b1 common%s
-D factory.ads		20210907144726 7fcea854 factory%s
+D common.ads		20210908163118 18bcdcb5 common%s
+D factory.ads		20210908163118 7fcea854 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
-D partition.ads		20210907170548 1d743dc2 partition%s
-D partition.adb		20210907170548 6a22b1d0 partition%b
+D partition.ads		20210909170918 1d743dc2 partition%s
+D partition.adb		20210909170918 6a22b1d0 partition%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -136,7 +136,7 @@ D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_f
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
 D start_factory.adb	20210903155916 19050b9d start_factory%b
-D storage.ads		20210906151936 fb29ea28 storage%s
+D storage.ads		20210909143732 1ce14c64 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -196,7 +196,7 @@ X 46 polyorb-initialization.ads
 X 53 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9)
-98V13 Link(47P9) 105|54i21
+98V13 Link(47P9[38|358]) 105|54i21[38|358]
 X 54 polyorb-orb.ads
 59K17*ORB 27|3w14 5r12 54|342e16
 X 84 polyorb-setup.ads
@@ -206,12 +206,12 @@ X 88 polyorb-task_info.ads
 264V13 Link(71P9) 105|54i21
 X 99 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[69|119])
+134P9 Node_Access(133R9[108|43])
 151V13 Link(134P9[32|74]) 105|54i21[32|74]
 X 109 start_factory.adb
 3U11*start_Factory 27|21w6 23r4 37s4
 X 110 storage.ads
-1K9*Storage 27|27w6 29r4 35r7 110|20e12
+1K9*Storage 27|27w6 29r4 35r7 110|22e12
 X 111 system.ads
 37K9*System 27|12r6 15r6 32r4 33r4 111|200e11
 X 114 s-dsaser.ads

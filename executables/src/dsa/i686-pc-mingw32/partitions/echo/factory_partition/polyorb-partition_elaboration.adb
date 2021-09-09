@@ -90,14 +90,6 @@ package body Polyorb.Partition_Elaboration is
          Value   => "client_partition");
       Set_Conf
         (Section => "dsa",
-         Key     => "newworkers'partition",
-         Value   => "worker_partition");
-      Set_Conf
-        (Section => "dsa",
-         Key     => "newacceptors'partition",
-         Value   => "acceptor_partition");
-      Set_Conf
-        (Section => "dsa",
          Key     => "storage'partition",
          Value   => "storage_partition");
       Polyorb.Dsa_P.Name_Service.Name_Ctx :=

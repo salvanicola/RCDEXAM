@@ -13,6 +13,16 @@ package body NewWorkers is
    gen : Generator;
    err : randRange;
 
+   type Index_A is range 0 .. 30;
+   type Acceptors_Array is array (Index_A) of Acc_Acceptor;
+
+   type Result is record
+      Positive : Boolean;
+      Value : Integer;
+      Count : Index_A := 0;
+      Handshakers : Acceptors_Array;
+   end record;
+
    procedure Insert_W (Me: in out NewWorker; W : in Any_Worker) is
    begin
       Me.Working_List.Append(W);
@@ -31,13 +41,23 @@ package body NewWorkers is
       New_Line(1);
    end Insert_A;
 
+   procedure Insert_L (Me: in out NewWorker; L: in Any_Learner) is
+   begin
+      Me.Learner_List.Append(L);
+      Put("Learner inserito");
+      New_Line(1);
+      Put("Attualmente sono presenti: " & Integer'Image(Integer(Me.Learner_List.Length)) & " learners.");
+      New_Line(1);
+   end Insert_L;
+
    function Get_W (Me: in out NewWorker; C : Integer) return Acc_Worker is
       count : Integer := 0;
    begin
       for E of Me.Working_List loop
-         if count = Integer(C) then
+         if count = C then
             return Acc_Worker(E);
          end if;
+         count := count + 1;
       end loop;
       return null;
    end Get_W;
@@ -46,30 +66,72 @@ package body NewWorkers is
       count : Integer := 0;
    begin
       for E of Me.Acceptor_List loop
-         if count = Integer(C) then
+         if count = C then
             return Acc_Acceptor(E);
          end if;
+         count := count + 1;
       end loop;
       return null;
    end Get_A;
 
-   procedure Assign (W : access NewWorker; Q : Integer; R : Integer; N : Common.Notify) is
-      T: Integer;
+   function Get_L (Me: in out NewWorker; C : Integer) return Acc_Learner is
+      count : Integer := 0;
    begin
-      reset(gen);
-      err := random(gen);
-      T := Integer(Ada.Strings.Hash(Integer'Image(Q * 3 + Integer(err))));
-      N(T);
-      if (NewAcceptors.Validate(Get_A(W.all, 0), Q, R, N)) then
-         Put("Provo ad inserire il valore " & Integer'Image(T) & " nel registro " & Integer'Image(R) & CR & LF);
-         Queue.Insert(T, R, 0, W.Name);
-         Put_Line("Inserimento avvenuto, nei registri sono presenti i valori: ");
-         Put_Line("0 - " & Integer'Image(Queue.Get(0)));
-         Put_Line("1 - " & Integer'Image(Queue.Get(1)));
-         Put_Line("2 - " & Integer'Image(Queue.Get(2)));
-         Put_Line("3 - " & Integer'Image(Queue.Get(3)));
-         Put_Line("4 - " & Integer'Image(Queue.Get(4)));
-         Put_Line("5 - " & Integer'Image(Queue.Get(5)));
+      for E of Me.Learner_List loop
+         if count = Integer(C) then
+            return Acc_Learner(E);
+         end if;
+         count := count + 1;
+      end loop;
+      return null;
+   end Get_L;
+
+   function PrepareRequest (W : access NewWorker; ID : Integer) return Result is
+      it : Integer := 0;
+      good : Integer := 0;
+      bad : Integer := 0;
+      Value : Integer;
+      Max_ID : Integer := 0;
+      Answer : Promise;
+      Res : Result;
+   begin
+      while it < Integer(W.Acceptor_List.Length) loop
+         Answer := NewAcceptors.Promising(Get_A(W.all, it), ID);
+         if Answer.Accepted then
+            good := good + 1;
+            Res.Handshakers(Res.Count) := Get_A(W.all, it);
+            Res.Count := Res.Count + 1;
+            if Answer.ID > Max_ID then
+               Value := Answer.Value;
+            end if;
+         else
+            bad := bad + 1;
+         end if;
+         it := it + 1;
+      end loop;
+      Res.Positive := (good >= Integer(Float(W.Acceptor_List.Length)/2.0));
+      return Res;
+   end PrepareRequest;
+
+   procedure Assign (W : access NewWorker; Q : Integer; ID: Integer; N : Common.Notify) is
+      T: Integer;
+      it : Index_A := 0;
+      Response : Result;
+   begin
+      Response := PrepareRequest(W, ID);
+      if Response.Positive then
+         while it < Response.Count loop
+            if (NewAcceptors.Validate(Response.Handshakers(it), ID, Response.Value)) then
+               reset(gen);
+               err := random(gen);
+               T := Integer(Ada.Strings.Hash(Integer'Image(Q * 3 + Integer(err))));
+               N(T);
+               NewAcceptors.Save(Response.Handshakers(it), T, ID);
+            end if;
+            it := it + 1;
+         end loop;
+      else
+         Put_Line("Non hanno risposto positivamente abbastanza Acceptor");
       end if;
    end Assign;
 end NewWorkers;

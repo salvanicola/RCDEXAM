@@ -1,11 +1,10 @@
 pragma Ada_2012;
 package body Storage is
    protected body Queue is
-      procedure Insert (Q : Integer; R : Integer; C : Integer; W: String) is
+      procedure Insert (Q : Integer; R : Integer) is
       begin
          Store(R) := Q;
-         delay 5.0;
-         Accesses(C) := W;
+         Max_ID := R;
       end Insert;
 
       procedure Remove (Q : in Integer; R : out Integer) is
@@ -17,6 +16,11 @@ package body Storage is
       begin
          return Store(R);
       end Get;
+
+      function Get_ID return Integer is
+      begin
+         return Max_ID;
+      end Get_ID;
 
       function Get_Access (R: Integer) return String is
       begin

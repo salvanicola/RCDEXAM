@@ -1,0 +1,9 @@
+newacceptors.ads:3:06: circular unit dependency
+newacceptors.ads:3:06: "Newacceptors (spec)" depends on "Newworkers (spec)"
+newacceptors.ads:3:06: "Newworkers (spec)" depends on "Newacceptors (spec)"
+newacceptors.adb:6:14: circular unit dependency
+newacceptors.adb:6:14: "Newacceptors (spec)" depends on "Newworkers (spec)"
+newacceptors.adb:6:14: "Newworkers (spec)" depends on "Newacceptors (spec)"
+newacceptors.adb:6:14: "Newacceptors (spec)" depends on "Newacceptors (body)"
+newacceptors.adb:6:14: "Newacceptors (body)" depends on "Newacceptors (spec)"
+newacceptors.adb:6:14: "Newacceptors (spec)" depends on "Newacceptors (spec)"
