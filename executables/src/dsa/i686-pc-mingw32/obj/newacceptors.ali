@@ -20,7 +20,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U newacceptors%b	newacceptors.adb	796b9f38 OO RA PK
+U newacceptors%b	newacceptors.adb	8d2209b3 OO RA PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
@@ -98,7 +98,7 @@ D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
 D newacceptors.ads	20210909163956 f77bd0b7 newacceptors%s
-D newacceptors.adb	20210909164156 fcbadee0 newacceptors%b
+D newacceptors.adb	20210910091024 08f3486b newacceptors%b
 D newlearners.ads	20210909144044 b946f8c5 newlearners%s
 D newworkers.ads	20210909134852 035dc1f6 newworkers%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
@@ -666,8 +666,8 @@ X 33 newacceptors.ads
 18K12*Acceptor_Vectors[8|73] 27r8 54r23 57r15
 22K12*Learner_Vectors[8|73] 28r8 55r22 58r15
 30V13*Promising{8R9} 31^7 32>7 34|70b13 89l8 89t17
-31p7 A(6R9) 34|70b24 74r10 77r23 79r10 80r10 85r23
-32i7 ID{integer} 34|70b48 74r21 79r22
+31p7 A(6R9) 34|70b24 74r10 79r10 80r10 85r23
+32i7 ID{integer} 34|70b48 74r21 77r23 79r22
 34V13*Validate{boolean} 35^7 36>7 37>7 34|91b13 106l8 106t16
 35p7 A(6R9) 34|91b23 94r10 95r14 95r31
 36i7 ID{integer} 34|91b47 94r21
@@ -686,7 +686,7 @@ X 33 newacceptors.ads
 46r24 Me{6R9} 34|25b24 27m7 27r7 30r65
 46p48 L{28|26P9} 34|25b48 27r30
 50a7 Name{string}
-51i7 Max_ID{integer} 34|74r12 77r25 79m12 85r25 94r12
+51i7 Max_ID{integer} 34|74r12 79m12 85r25 94r12
 52i7 Waiting{integer} 34|80m12 95r16 95r33
 53r7 Working_List{8|88R9[14]} 34|9m10 12r68 37r19
 54r7 Acceptor_List{8|88R9[18]} 34|18m10 21r68 49r19

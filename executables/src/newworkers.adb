@@ -109,6 +109,7 @@ package body NewWorkers is
          end if;
          it := it + 1;
       end loop;
+      Res.Value := Value;
       Res.Positive := (good >= Integer(Float(W.Acceptor_List.Length)/2.0));
       return Res;
    end PrepareRequest;

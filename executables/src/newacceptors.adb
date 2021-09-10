@@ -74,7 +74,7 @@ package body NewAcceptors is
       if A.Max_ID < ID then
          Put_Line("Promessa stipulata!");
          Answer.Accepted := True;
-         Answer.ID := A.Max_ID;
+         Answer.ID := ID;
          Answer.Value := Queue.Get(Queue.Get_ID);
          A.Max_ID := ID;
          A.Waiting := Answer.Value;
@@ -93,10 +93,10 @@ package body NewAcceptors is
    begin
       if A.Max_ID = ID then
          if (A.Waiting = V or A.Waiting = -1) then
-            Put_Line("Richiesta accettata! :D");
+            Put_Line("Richiesta accettata!");
             return True;
          else
-            Put_Line("Richiesta rifiutata! :(");
+            Put_Line("Richiesta rifiutata...");
             return False;
          end if;
       else

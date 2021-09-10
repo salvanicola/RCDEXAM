@@ -1443,7 +1443,7 @@ package ada_main is
    pragma Export (C, u00702, "clientS");
    u00703 : constant Version_32 := 16#cd2959fb#;
    pragma Export (C, u00703, "ada__numericsS");
-   u00704 : constant Version_32 := 16#796b9f38#;
+   u00704 : constant Version_32 := 16#8d2209b3#;
    pragma Export (C, u00704, "newacceptorsB");
    u00705 : constant Version_32 := 16#8d0d4fb9#;
    pragma Export (C, u00705, "newacceptorsS");
@@ -1451,7 +1451,7 @@ package ada_main is
    pragma Export (C, u00706, "newlearnersB");
    u00707 : constant Version_32 := 16#bd1b6814#;
    pragma Export (C, u00707, "newlearnersS");
-   u00708 : constant Version_32 := 16#6baf2e9b#;
+   u00708 : constant Version_32 := 16#3f40dec2#;
    pragma Export (C, u00708, "newworkersB");
    u00709 : constant Version_32 := 16#3716768a#;
    pragma Export (C, u00709, "newworkersS");

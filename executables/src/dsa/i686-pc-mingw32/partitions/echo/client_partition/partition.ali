@@ -49,8 +49,8 @@ D factory.ads		20210908163118 7fcea854 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
-D partition.ads		20210909170926 1d743dc2 partition%s
-D partition.adb		20210909170926 c6b55487 partition%b
+D partition.ads		20210910091048 1d743dc2 partition%s
+D partition.adb		20210910091048 c6b55487 partition%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
