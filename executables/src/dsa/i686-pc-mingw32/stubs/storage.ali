@@ -13,12 +13,12 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U storage%b		storage.adb		6143b18b NE OO PK
+U storage%b		storage.adb		26ec1f07 NE OO PK
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U storage%s		storage.ads		1ce14c64 EE OO PF SP PK
+U storage%s		storage.ads		5b4ee2e8 EE OO PF SP PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -143,7 +143,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210909143732 1ce14c64 storage%s
+D storage.ads		20210912151816 5b4ee2e8 storage%s
 D storage.adb		20210909143714 7da2fdef storage%b
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s

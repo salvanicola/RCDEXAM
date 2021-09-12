@@ -24,7 +24,7 @@ package body ada_main is
    E048 : Short_Integer; pragma Import (Ada, E048, "system__dwarf_lines_E");
    E022 : Short_Integer; pragma Import (Ada, E022, "system__soft_links__initialize_E");
    E040 : Short_Integer; pragma Import (Ada, E040, "system__traceback__symbolic_E");
-   E703 : Short_Integer; pragma Import (Ada, E703, "ada__numerics_E");
+   E704 : Short_Integer; pragma Import (Ada, E704, "ada__numerics_E");
    E100 : Short_Integer; pragma Import (Ada, E100, "ada__tags_E");
    E108 : Short_Integer; pragma Import (Ada, E108, "ada__streams_E");
    E130 : Short_Integer; pragma Import (Ada, E130, "gnat_E");
@@ -54,7 +54,7 @@ package body ada_main is
    E507 : Short_Integer; pragma Import (Ada, E507, "gnat__sockets_E");
    E512 : Short_Integer; pragma Import (Ada, E512, "gnat__sockets__thin_common_E");
    E510 : Short_Integer; pragma Import (Ada, E510, "gnat__sockets__thin_E");
-   E715 : Short_Integer; pragma Import (Ada, E715, "system__random_seed_E");
+   E710 : Short_Integer; pragma Import (Ada, E710, "system__random_seed_E");
    E525 : Short_Integer; pragma Import (Ada, E525, "system__regexp_E");
    E575 : Short_Integer; pragma Import (Ada, E575, "ada__directories_E");
    E377 : Short_Integer; pragma Import (Ada, E377, "system__rpc_E");
@@ -230,7 +230,7 @@ package body ada_main is
    E553 : Short_Integer; pragma Import (Ada, E553, "polyorb__utils__tcp_access_points_E");
    E481 : Short_Integer; pragma Import (Ada, E481, "polyorb__setup__access_points__iiop_E");
    E120 : Short_Integer; pragma Import (Ada, E120, "system__partition_interface_E");
-   E699 : Short_Integer; pragma Import (Ada, E699, "polyorb__dsa_p__partitions_E");
+   E712 : Short_Integer; pragma Import (Ada, E712, "polyorb__dsa_p__partitions_E");
    E695 : Short_Integer; pragma Import (Ada, E695, "polyorb__dsa_p__storages_E");
    E721 : Short_Integer; pragma Import (Ada, E721, "polyorb__dsa_p__storages__dsm_E");
    E719 : Short_Integer; pragma Import (Ada, E719, "polyorb__dsa_p__storages__config_E");
@@ -239,11 +239,11 @@ package body ada_main is
    E717 : Short_Integer; pragma Import (Ada, E717, "system__dsa_services_E");
    E688 : Short_Integer; pragma Import (Ada, E688, "storage_E");
    E686 : Short_Integer; pragma Import (Ada, E686, "common_E");
+   E701 : Short_Integer; pragma Import (Ada, E701, "newlearners_E");
+   E699 : Short_Integer; pragma Import (Ada, E699, "newacceptors_E");
+   E703 : Short_Integer; pragma Import (Ada, E703, "newworkers_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "factory_E");
-   E707 : Short_Integer; pragma Import (Ada, E707, "newlearners_E");
-   E705 : Short_Integer; pragma Import (Ada, E705, "newacceptors_E");
-   E709 : Short_Integer; pragma Import (Ada, E709, "newworkers_E");
-   E702 : Short_Integer; pragma Import (Ada, E702, "client_E");
+   E715 : Short_Integer; pragma Import (Ada, E715, "client_E");
    E002 : Short_Integer; pragma Import (Ada, E002, "partition_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
@@ -259,11 +259,11 @@ package body ada_main is
          procedure F1;
          pragma Import (Ada, F1, "client__finalize_body");
       begin
-         E702 := E702 - 1;
+         E715 := E715 - 1;
          F1;
       end;
-      E705 := E705 - 1;
-      E709 := E709 - 1;
+      E699 := E699 - 1;
+      E703 := E703 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "newworkers__finalize_spec");
@@ -276,7 +276,7 @@ package body ada_main is
       begin
          F3;
       end;
-      E707 := E707 - 1;
+      E701 := E701 - 1;
       declare
          procedure F4;
          pragma Import (Ada, F4, "newlearners__finalize_spec");
@@ -1569,7 +1569,7 @@ package body ada_main is
       E040 := E040 + 1;
       E009 := E009 + 1;
       Ada.Numerics'Elab_Spec;
-      E703 := E703 + 1;
+      E704 := E704 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
       E100 := E100 + 1;
@@ -1634,7 +1634,7 @@ package body ada_main is
       Gnat.Sockets'Elab_Body;
       E507 := E507 + 1;
       System.Random_Seed'Elab_Body;
-      E715 := E715 + 1;
+      E710 := E710 + 1;
       System.Regexp'Elab_Spec;
       E525 := E525 + 1;
       Ada.Directories'Elab_Spec;
@@ -2017,7 +2017,7 @@ package body ada_main is
       System.Partition_Interface'Elab_Body;
       E120 := E120 + 1;
       Polyorb.Dsa_P.Partitions'Elab_Body;
-      E699 := E699 + 1;
+      E712 := E712 + 1;
       POLYORB.DSA_P.STORAGES'ELAB_SPEC;
       POLYORB.DSA_P.STORAGES'ELAB_BODY;
       E695 := E695 + 1;
@@ -2036,19 +2036,20 @@ package body ada_main is
       E688 := E688 + 1;
       Common'Elab_Spec;
       E686 := E686 + 1;
-      Factory'Elab_Body;
-      E006 := E006 + 1;
       Newlearners'Elab_Spec;
       Newlearners'Elab_Body;
-      E707 := E707 + 1;
+      E701 := E701 + 1;
       Newacceptors'Elab_Spec;
       Newworkers'Elab_Spec;
       Newworkers'Elab_Body;
-      E709 := E709 + 1;
+      E703 := E703 + 1;
       Newacceptors'Elab_Body;
-      E705 := E705 + 1;
+      E699 := E699 + 1;
+      Factory'Elab_Spec;
+      Factory'Elab_Body;
+      E006 := E006 + 1;
       Client'Elab_Body;
-      E702 := E702 + 1;
+      E715 := E715 + 1;
       Partition'Elab_Body;
       E002 := E002 + 1;
    end adainit;
@@ -2087,10 +2088,10 @@ package body ada_main is
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\polyorb-dsa_p-storages-config.o
    --   E:/Cartella globale/Uni/Laurea Magistrale/SCD/Progetto/Testing/src/dsa/i686-pc-mingw32/stubs\storage.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\common.o
-   --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\factory.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\newlearners.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\newworkers.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\newacceptors.o
+   --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\factory.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\client.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\start_factory.o
    --   E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\factory_partition\partition.o

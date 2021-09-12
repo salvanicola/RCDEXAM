@@ -39,6 +39,12 @@ package Common is
       N : in Notify) return Boolean
       is abstract;
 
+   procedure Learn
+     (A : Any_Learner;
+      V : in Integer;
+      R : Integer
+     ) is abstract;
+
 private
    type Worker is abstract tagged limited null record;
    type Acceptor is abstract tagged limited null record;

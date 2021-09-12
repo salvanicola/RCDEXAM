@@ -1,9 +1,16 @@
 with Common, Storage; use Common, Storage;
 with Ada.Containers.Vectors;
+with NewLearners; use NewLearners;
 package NewAcceptors is
    pragma Remote_Types;
 
    type NewAcceptor is new Acceptor with private;
+
+   type Acc_Acceptor_A is
+     access all NewAcceptor'Class;
+
+   type Acc_Learner_A is
+     access all NewLearner'Class;
 
    type Promise is record
       Accepted : Boolean;
@@ -17,11 +24,11 @@ package NewAcceptors is
 
    package Acceptor_Vectors is new Ada.Containers.Vectors
      (Index_Type   => Natural,
-      Element_Type => Any_Acceptor);
+      Element_Type => Acc_Acceptor_A);
 
    package Learner_Vectors is new Ada.Containers.Vectors
      (Index_Type   => Natural,
-      Element_Type => Any_Learner);
+      Element_Type => Acc_Learner_A);
 
    use Worker_Vectors;
    use Acceptor_Vectors;
@@ -39,11 +46,11 @@ package NewAcceptors is
    procedure Save
      (A : access NewAcceptor; V : Integer; R : Integer);
 
-   procedure Insert_W (Me: in out NewAcceptor; W : in Any_Worker);
+   procedure Insert_W (Me: access NewAcceptor; W : in Any_Worker);
 
-   procedure Insert_A (Me: in out NewAcceptor; A: in Any_Acceptor);
+   procedure Insert_A (Me: access NewAcceptor; A: in Acc_Acceptor_A);
 
-   procedure Insert_L (Me: in out NewAcceptor; L: in Any_Learner);
+   procedure Insert_L (Me: access NewAcceptor; L: in Acc_Learner_A);
 
 private
    type NewAcceptor is new Acceptor with record

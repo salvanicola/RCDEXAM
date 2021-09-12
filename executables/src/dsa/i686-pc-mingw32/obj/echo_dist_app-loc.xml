@@ -1,91 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_file>
-    <file_marker column=" 19" line=" 3" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 42" line=" 10" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 100" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 30" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 100" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 11" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\start_client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\start_factory.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 28" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 124" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 40" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 124" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
+  <Project >
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
@@ -94,11 +9,15 @@
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 43" line=" 40" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 57" line=" 5" >
+    <file_marker column=" 25" line=" 104" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 5" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
@@ -106,90 +25,6 @@
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 18" line=" 10" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 76" line=" 70" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 72" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 89" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 55" line=" 108" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 70" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 38" line=" 32" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 100" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 39" line=" 32" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 100" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 78" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 25" line=" 79" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 78" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 31" line=" 28" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 41" line=" 78" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
@@ -197,78 +32,6 @@
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 45" line=" 18" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 28" line=" 19" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 7" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 32" line=" 50" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 54" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 46" line=" 49" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 74" line=" 54" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 62" line=" 49" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
@@ -284,7 +47,15 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
@@ -298,75 +69,19 @@
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 75" line=" 134" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 25" line=" 5" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 11" line=" 15" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 25" line=" 104" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
@@ -382,19 +97,11 @@
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 11" line=" 15" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 25" line=" 104" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
@@ -414,23 +121,11 @@
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 31" line=" 55" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 29" line=" 11" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 114" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 25" line=" 104" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
@@ -438,19 +133,7 @@
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker column=" 25" line=" 5" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
@@ -460,145 +143,9 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 112" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 33" line=" 17" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 102" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 34" line=" 17" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 112" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 34" line=" 17" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 102" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 20" line=" 16" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 102" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 22" line=" 22" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 102" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 50" line=" 17" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 122" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 128" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 40" line=" 121" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 10" line=" 123" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 7" line=" 118" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 128" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 60" line=" 124" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 19" line=" 118" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 59" line=" 91" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 28" line=" 50" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 61" line=" 91" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 36" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 29" line=" 124" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
     </file_marker>
@@ -608,55 +155,19 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 101" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 95" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\common.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
@@ -664,7 +175,27 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\common.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 46" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\common.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 104" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\common.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
@@ -684,15 +215,31 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 30" line=" 13" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 42" line=" 78" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\storage.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
@@ -704,63 +251,11 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\client.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
@@ -776,15 +271,267 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\common.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 2" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 2" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\start_factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 20" line=" 123" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 42" line=" 10" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 7" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 7" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 7" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 7" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 7" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 42" line=" 10" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 44" line=" 11" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 12" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 14" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 15" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 16" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 18" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 19" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 20" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 40" line=" 18" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 26" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 27" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 7" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 8" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 2" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 23" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 20" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 23" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 23" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 82" line=" 12" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
@@ -792,15 +539,267 @@
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
-      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
     </file_marker>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 15" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 12" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 5" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 12" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 5" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 104" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 55" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 104" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 10" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 8" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 104" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
       <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 104" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 14" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 45" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 43" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 104" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 67" line=" 53" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 12" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newworkers.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 3" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 54" line=" 53" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 48" line=" 21" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 20" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 105" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 53" line=" 106" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 113" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 65" line=" 106" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 75" line=" 105" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 113" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\factory.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newacceptors.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 31" line=" 11" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 13" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 13" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 6" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 20" line=" 13" >
+      <vfs_project>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\echo_dist_app.gpr</vfs_project>
+      <vfs_file>E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\newlearners.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>

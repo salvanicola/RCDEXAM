@@ -17,13 +17,13 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ada_main%b		b__partition.adb	48c56a3b OO PK IL
+U ada_main%b		b__partition.adb	36200a1f OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__partition.ads	c6bda131 EE NE OO PK IL
+U ada_main%s		b__partition.ads	8ec8b590 EE NE OO PK IL
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -31,8 +31,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20200228061810 76789da1 ada%s
 D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
-D b__partition.ads	20210910091048 28755d89 ada_main%s
-D b__partition.adb	20210910091048 dc3d50d5 ada_main%b
+D b__partition.ads	20210912161022 60004928 ada_main%s
+D b__partition.adb	20210912161022 eaad2450 ada_main%b
 D system.ads		20200228061810 32a08138 system%s
 D s-parame.ads		20200228061810 4752c4cb system.parameters%s
 D s-restri.ads		20200228061810 1b9d0672 system.restrictions%s
@@ -52,19 +52,19 @@ X 1 ada.ads
 X 2 a-except.ads
 48K13*Exceptions 335e19 5|8w10
 X 4 b__partition.ads
-6K9*ada_main 2231l5 2231e13 5|10b14 2123l5 2123t13
-8i4*gnat_argc{integer} 12m22 12r22 5|2071r10 2072m10
-9m4*gnat_argv{6|67M9} 13m22 13r22 5|2073m10
-10m4*gnat_envp{6|67M9} 14m22 14r22 5|2075m7
-16i4*gnat_exit_status{integer} 17m22 17r22 5|2081r15
+6K9*ada_main 2231l5 2231e13 5|10b14 2124l5 2124t13
+8i4*gnat_argc{integer} 12m22 12r22 5|2072r10 2073m10
+9m4*gnat_argv{6|67M9} 13m22 13r22 5|2074m10
+10m4*gnat_envp{6|67M9} 14m22 14r22 5|2076m7
+16i4*gnat_exit_status{integer} 17m22 17r22 5|2082r15
 19a4*GNAT_Version{string} 21r22
-23a4*Ada_Main_Program_Name{string} 24r22 5|2067r52
-26U14*adainit 27i<c,adainit>22 5|1437b14 2054l8 2054t15 2078s7
-29U14*adafinal 30i<c,adafinal>22 5|1418b14 1432l8 1432t16 2079s7
-32V13*main{integer} 33>7 34>7 35>7 37i<c,main>22 5|2056b13 2082t7
-33i7 argc{integer} 5|2057b7 2072r23
-34m7 argv{6|67M9} 5|2058b7 2073r23
-35m7 envp{6|67M9} 5|2059b7 2075r20
+23a4*Ada_Main_Program_Name{string} 24r22 5|2068r52
+26U14*adainit 27i<c,adainit>22 5|1437b14 2055l8 2055t15 2079s7
+29U14*adafinal 30i<c,adafinal>22 5|1418b14 1432l8 1432t16 2080s7
+32V13*main{integer} 33>7 34>7 35>7 37i<c,main>22 5|2057b13 2083t7
+33i7 argc{integer} 5|2058b7 2073r23
+34m7 argv{6|67M9} 5|2059b7 2074r23
+35m7 envp{6|67M9} 5|2060b7 2076r20
 39M9*Version_32 40r22 42r22 44r22 46r22 48r22 50r22 52r22 54r22 56r22 58r22
 . 60r22 62r22 64r22 66r22 68r22 70r22 72r22 74r22 76r22 78r22 80r22 82r22
 . 84r22 86r22 88r22 90r22 92r22 94r22 96r22 98r22 100r22 102r22 104r22 106r22
@@ -882,7 +882,7 @@ X 5 b__partition.adb
 24i4 E048{short_integer} 24m46 24r46 1562m7 1562r15
 25i4 E022{short_integer} 25m46 25r46 1566m7 1566r15
 26i4 E040{short_integer} 26m46 26r46 1569m7 1569r15
-27i4 E703{short_integer} 27m46 27r46 1572m7 1572r15
+27i4 E704{short_integer} 27m46 27r46 1572m7 1572r15
 28i4 E100{short_integer} 28m46 28r46 1575m7 1575r15
 29i4 E108{short_integer} 29m46 29r46 1577m7 1577r15
 30i4 E130{short_integer} 30m46 30r46 1579m7 1579r15
@@ -912,7 +912,7 @@ X 5 b__partition.adb
 54i4 E507{short_integer} 54m46 54r46 1331m10 1331r18 1635m7 1635r15
 55i4 E512{short_integer} 55m46 55r46 1631m7 1631r15
 56i4 E510{short_integer} 56m46 56r46 1633m7 1633r15
-57i4 E715{short_integer} 57m46 57r46 1637m7 1637r15
+57i4 E710{short_integer} 57m46 57r46 1637m7 1637r15
 58i4 E525{short_integer} 58m46 58r46 1320m7 1320r15 1639m7 1639r15
 59i4 E575{short_integer} 59m46 59r46 1313m7 1313r15 1642m7 1642r15
 60i4 E377{short_integer} 60m46 60r46 1306m7 1306r15 1644m7 1644r15
@@ -1088,7 +1088,7 @@ X 5 b__partition.adb
 230i4 E553{short_integer} 230m46 230r46 2013m7 2013r15
 231i4 E481{short_integer} 231m46 231r46 2015m7 2015r15
 232i4 E120{short_integer} 232m46 232r46 338m10 338r18 2018m7 2018r15
-233i4 E699{short_integer} 233m46 233r46 2020m7 2020r15
+233i4 E712{short_integer} 233m46 233r46 2020m7 2020r15
 234i4 E695{short_integer} 234m46 234r46 327m7 327r15 2023m7 2023r15
 235i4 E721{short_integer} 235m46 235r46 318m10 318r18 2026m7 2026r15
 236i4 E719{short_integer} 236m46 236r46 2027m7 2027r15
@@ -1097,12 +1097,12 @@ X 5 b__partition.adb
 239i4 E717{short_integer} 239m46 239r46 2034m7 2034r15
 240i4 E688{short_integer} 240m46 240r46 293m7 293r15 2036m7 2036r15
 241i4 E686{short_integer} 241m46 241r46 290m10 290r18 2038m7 2038r15
-242i4 E006{short_integer} 242m46 242r46 2040m7 2040r15
-243i4 E707{short_integer} 243m46 243r46 279m7 279r15 2043m7 2043r15
-244i4 E705{short_integer} 244m46 244r46 265m7 265r15 2049m7 2049r15
-245i4 E709{short_integer} 245m46 245r46 266m7 266r15 2047m7 2047r15
-246i4 E702{short_integer} 246m46 246r46 262m10 262r18 2051m7 2051r15
-247i4 E002{short_integer} 247m46 247r46 2053m7 2053r15
+242i4 E701{short_integer} 242m46 242r46 279m7 279r15 2041m7 2041r15
+243i4 E699{short_integer} 243m46 243r46 265m7 265r15 2047m7 2047r15
+244i4 E703{short_integer} 244m46 244r46 266m7 266r15 2045m7 2045r15
+245i4 E006{short_integer} 245m46 245r46 2050m7 2050r15
+246i4 E715{short_integer} 246m46 246r46 262m10 262r18 2052m7 2052r15
+247i4 E002{short_integer} 247m46 247r46 2054m7 2054r15
 249a4 Sec_Default_Sized_Stacks(10|45R9) 1535m32 1535r32
 251a4 Local_Priority_Specific_Dispatching{string} 1523r9
 252a4 Local_Interrupt_States{string} 1526r27
@@ -1357,17 +1357,17 @@ X 5 b__partition.adb
 1474p7*Finalize_Library_Objects{1434P9} 1475m25 1475r25 1539m7
 1476i7*Binder_Sec_Stacks_Count{natural} 1477m27 1477r27 1534m7
 1478m7*Default_Sized_SS_Pool{6|67M9} 1479m27 1479r27 1535m7
-2062U17*Initialize 2062>29 2063b<c,__gnat_initialize>25 2077s7
-2062m29 Addr{6|67M9}
-2065U17*Finalize 2066b<c,__gnat_finalize>25 2080s7
-2067m7 Ensure_Reference{6|67M9} 2068r24
+2063U17*Initialize 2063>29 2064b<c,__gnat_initialize>25 2078s7
+2063m29 Addr{6|67M9}
+2066U17*Finalize 2067b<c,__gnat_finalize>25 2081s7
+2068m7 Ensure_Reference{6|67M9} 2069r24
 X 6 system.ads
 37K9*System 4|3w6 4r6 5r6 9r16 10r16 34r14 35r14 5|7r6 249r57 249r90 1450r39
-. 1456r26 1466r38 1468r23 1478r31 1492r7 1533r39 2058r14 2059r14 2062r36
-. 2067r34 2077r19 6|200e11
-67M9*Address 4|9r23 10r23 34r21 35r21 5|1450r46 1456r33 1468r30 1478r38 2058r21
-. 2059r21 2062r43 2067r41
-69m4*Null_Address{67M9} 5|2077r26
+. 1456r26 1466r38 1468r23 1478r31 1492r7 1533r39 2059r14 2060r14 2063r36
+. 2068r34 2078r19 6|200e11
+67M9*Address 4|9r23 10r23 34r21 35r21 5|1450r46 1456r33 1468r30 1478r38 2059r21
+. 2060r21 2063r43 2068r41
+69m4*Null_Address{67M9} 5|2078r26
 X 7 s-parame.ads
 51K16*Parameters 4|4w13 5|249r97 1466r45 1533r46 7|185e22
 58I9*Size_Type<long_long_integer> 5|1466r56

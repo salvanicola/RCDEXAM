@@ -86,6 +86,10 @@ package body Polyorb.Partition_Elaboration is
          Value   => "client_partition");
       Set_Conf
         (Section => "dsa",
+         Key     => "storage'partition",
+         Value   => "storage_partition");
+      Set_Conf
+        (Section => "dsa",
          Key     => "newworkers'partition",
          Value   => "worker_partition");
       Set_Conf
@@ -94,8 +98,8 @@ package body Polyorb.Partition_Elaboration is
          Value   => "acceptor_partition");
       Set_Conf
         (Section => "dsa",
-         Key     => "storage'partition",
-         Value   => "storage_partition");
+         Key     => "newlearners'partition",
+         Value   => "learner_partition");
       Polyorb.Dsa_P.Name_Service.Name_Ctx :=
         new Polyorb.Dsa_P.Name_Service.Cos_Naming.Cos_Name_Server;
    end Configure;

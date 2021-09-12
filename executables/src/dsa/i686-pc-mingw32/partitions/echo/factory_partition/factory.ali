@@ -12,14 +12,17 @@ RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
 RV NO_NESTED_FINALIZATION
 RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U factory%b		factory.adb		1d646b0e OO PK
+U factory%b		factory.adb		667afee7 OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -32,19 +35,27 @@ Z system.partition_interface%s  s-parint.adb	s-parint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 Z system.version_control%s  s-vercon.adb	s-vercon.ali
 
-U factory%s		factory.ads		677274e1 EE NE OO RC PK
+U factory%s		factory.ads		700022ca EE OO RC PK
 W common%s		common.ads		common.ali
+W newacceptors%s	newacceptors.adb	newacceptors.ali
+W newlearners%s		newlearners.adb		newlearners.ali
+W newworkers%s		newworkers.adb		newworkers.ali
 
 E factoryS
 D ada.ads		20200228061810 76789da1 ada%s
 D a-charac.ads		20200228061810 2d3ec45b ada.characters%s
 D a-chlat1.ads		20200228061810 66457d31 ada.characters.latin_1%s
+D a-contai.ads		20200228061810 61e5e089 ada.containers%s
+D a-conhel.ads		20200228061810 20298884 ada.containers.helpers%s
+D a-convec.ads		20200228061810 7e2b0fdf ada.containers.vectors%s
 D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
 D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
+D a-iteint.ads		20200228061810 7c7305e9 ada.iterator_interfaces%s
 D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
 D a-string.ads		20200228061810 90ac6797 ada.strings%s
 D a-strmap.ads		20200228061810 e8bb714a ada.strings.maps%s
@@ -58,13 +69,16 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210908163118 18bcdcb5 common%s
-D factory.ads		20210908163118 7fcea854 factory%s
-D factory.adb		20210908163118 cc5e1637 factory%b
+D common.ads		20210912153434 7258948e common%s
+D factory.ads		20210912155220 4a93a5cc factory%s
+D factory.adb		20210912160232 821d8e46 factory%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
+D newacceptors.ads	20210912160048 8b76edc1 newacceptors%s
+D newlearners.ads	20210912155728 43de0477 newlearners%s
+D newworkers.ads	20210912150140 8063fa3e newworkers%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -145,7 +159,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210909143732 1ce14c64 storage%s
+D storage.ads		20210912151816 5b4ee2e8 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -186,51 +200,182 @@ D s-vercon.ads		20200228061810 b312eb8d system.version_control%s
 D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a e
-G c Z s b [notify factory 5 14 none]
-G c Z s s [_call factory__notifyP109b 5 4 none]
-G c Z s s [notifyPDF factory__notifyP109b 5 4 none]
-G c Z s s [notifyPIP factory__notifyP109b 5 4 none]
+G c Z s b [insert_w factory 14 14 none]
+G c Z s b [insert_a factory 15 14 none]
+G c Z s b [insert_l factory 16 14 none]
+G c Z s b [get_w factory 18 13 none]
+G c Z s b [get_a factory 19 13 none]
+G c Z s b [get_l factory 20 13 none]
+G c Z s b [get_numw factory 22 13 none]
+G c Z s b [get_numa factory 23 13 none]
+G c Z s b [get_numl factory 24 13 none]
+G c Z s b [update_w factory 26 14 none]
+G c Z s b [update_a factory 27 14 none]
+G c Z s b [notify factory 29 14 none]
+G c Z s s [Tworker_arrayBIP factory 10 4 none]
+G c Z s s [Tacceptor_arrayBIP factory 11 4 none]
+G c Z s s [Tlearner_arrayBIP factory 12 4 none]
+G c Z s s [_call factory__insert_wP102b 14 4 none]
+G c Z s s [insert_wPDF factory__insert_wP102b 14 4 none]
+G c Z s s [insert_wPIP factory__insert_wP102b 14 4 none]
+G c Z s s [_call factory__insert_aP190b 15 4 none]
+G c Z s s [insert_aPDF factory__insert_aP190b 15 4 none]
+G c Z s s [insert_aPIP factory__insert_aP190b 15 4 none]
+G c Z s s [_call factory__insert_lP278b 16 4 none]
+G c Z s s [insert_lPDF factory__insert_lP278b 16 4 none]
+G c Z s s [insert_lPIP factory__insert_lP278b 16 4 none]
+G c Z s s [_call factory__get_wP423b 18 4 none]
+G c Z s s [get_wPDF factory__get_wP423b 18 4 none]
+G c Z s s [get_wPIP factory__get_wP423b 18 4 none]
+G c Z s s [_call factory__get_aP569b 19 4 none]
+G c Z s s [get_aPDF factory__get_aP569b 19 4 none]
+G c Z s s [get_aPIP factory__get_aP569b 19 4 none]
+G c Z s s [_call factory__get_lP715b 20 4 none]
+G c Z s s [get_lPDF factory__get_lP715b 20 4 none]
+G c Z s s [get_lPIP factory__get_lP715b 20 4 none]
+G c Z s s [_call factory__get_numwP859b 22 4 none]
+G c Z s s [get_numwPDF factory__get_numwP859b 22 4 none]
+G c Z s s [get_numwPIP factory__get_numwP859b 22 4 none]
+G c Z s s [_call factory__get_numaP1003b 23 4 none]
+G c Z s s [get_numaPDF factory__get_numaP1003b 23 4 none]
+G c Z s s [get_numaPIP factory__get_numaP1003b 23 4 none]
+G c Z s s [_call factory__get_numlP1147b 24 4 none]
+G c Z s s [get_numlPDF factory__get_numlP1147b 24 4 none]
+G c Z s s [get_numlPIP factory__get_numlP1147b 24 4 none]
+G c Z s s [_call factory__update_wP1236b 26 4 none]
+G c Z s s [update_wPDF factory__update_wP1236b 26 4 none]
+G c Z s s [update_wPIP factory__update_wP1236b 26 4 none]
+G c Z s s [_call factory__update_aP1324b 27 4 none]
+G c Z s s [update_aPDF factory__update_aP1324b 27 4 none]
+G c Z s s [update_aPIP factory__update_aP1324b 27 4 none]
+G c Z s s [_call factory__notifyP1453b 29 4 none]
+G c Z s s [notifyPDF factory__notifyP1453b 29 4 none]
+G c Z s s [notifyPIP factory__notifyP1453b 29 4 none]
+G r c none [update_w factory 26 14 none] [insert_w newworkers 42 14 none]
+G r c none [update_w factory 26 14 none] [insert_a newworkers 44 14 none]
+G r c none [update_w factory 26 14 none] [insert_w newacceptors 49 14 none]
+G r c none [update_w factory 26 14 none] [insert_l newworkers 46 14 none]
+G r c none [update_a factory 27 14 none] [insert_w newacceptors 49 14 none]
+G r c none [update_a factory 27 14 none] [insert_a newworkers 44 14 none]
+G r c none [update_a factory 27 14 none] [insert_a newacceptors 51 14 none]
+G r c none [update_a factory 27 14 none] [insert_l newacceptors 53 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 22|1r6 1r23
-X 17 a-textio.ads
-57K13*Text_IO 727e16 22|1w10 1r27
-508U14*Put_Line 22|6s7
-X 20 common.ads
-2K9*Common 46e11 21|1w6 1r18
-X 21 factory.ads
-2K9*Factory 8l5 8e12 22|2b14 9l5 9t12
-5U4 procedure 5b4
-5U14*Notify 5>22 6r25 22|4b14 7l8 7t14
-5i22 Q{integer} 22|4b22 6r71
-X 23 interfac.ads
+16K9*Ada 20e8 26|1r6 1r23
+X 10 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[6|111]>
+X 21 a-textio.ads
+57K13*Text_IO 727e16 26|1w10 1r27
+264U14*New_Line 26|9s7 20s7 28s7
+465U14*Put 26|8s7 19s7 27s7
+508U14*Put_Line 26|66s7 94s7 122s7
+X 24 common.ads
+2K9*Common 52e11 25|1w6 1r18
+18P9*Any_Worker(9R9) 26|78r53 97r52
+X 25 factory.ads
+6K9*Factory 33E4 39l5 39e12 26|2b14 124l5 124t12
+9I9*Index<short_short_integer> 10r32 11r34 12r33 34r14 36r14 38r14 26|15r16
+. 32r15 32r24 38r15 38r24 44r15 44r24 67r16 75r16 83r16 95r16 103r16 111r16
+10A9*Worker_Array(33|11P9)<9I9> 33r19
+11A9*Acceptor_Array(33|14P9)<9I9> 35r20
+12A9*Learner_Array(33|17P9)<9I9> 37r19
+14U4 procedure 14b4
+14U14*Insert_W 14>24 26|4b14 10l8 10t16
+14p24 W{33|11P9} 26|4b24 6r32
+15U4 procedure 15b4
+15U14*Insert_A 15>24 26|12b14 21l8 21t16
+15p24 A{33|14P9} 26|12b24 14r33
+16U4 procedure 16b4
+16U14*Insert_L 16>24 26|23b14 29l8 29t16
+16p24 L{33|17P9} 26|23b24 25r32
+18V4 function{33|11P9} 18b4
+18V13*Get_W{33|11P9} 18>20 26|31b13 35l8 35t13
+18i20 C{integer} 26|31b20 32r30
+19V4 function{33|14P9} 19b4
+19V13*Get_A{33|14P9} 19>20 26|37b13 41l8 41t13
+19i20 C{integer} 26|37b20 38r30
+20V4 function{33|17P9} 20b4
+20V13*Get_L{33|17P9} 20>20 26|43b13 47l8 47t13
+20i20 C{integer} 26|43b20 44r30
+22V4 function{integer} 22b4
+22V13*Get_NumW{integer} 26|49b13 52l8 52t16
+23V4 function{integer} 23b4
+23V13*Get_NumA{integer} 26|54b13 57l8 57t16
+24V4 function{integer} 24b4
+24V13*Get_NumL{integer} 26|59b13 62l8 62t16
+26U4 procedure 26b4
+26U14*Update_W 26>24 26|64b14 90l8 90t16
+26p24 T{33|11P9} 26|64b24 69r33 70r50 77r33 78r64 85r33
+27U4 procedure 27b4
+27U14*Update_A 27>24 26|92b14 118l8 118t16
+27p24 T{33|14P9} 26|92b24 97r48 98r50 105r48 106r68 113r48
+29U4 procedure 29b4
+29U14*Notify 29>22 30r25 26|120b14 123l8 123t14
+29i22 Q{integer} 26|120b22 122r71
+33a4 Working_List{10A9} 26|6m7 34r14 68r13 69r36 70r33 96r13 97r63 98r33
+34i4 Index_W{9I9} 26|6r20 7m7 7r18 51r22
+35a4 Acceptor_List{11A9} 26|14m7 40r14 76r13 77r36 78r35 104r13 105r67 106r35
+36i4 Index_A{9I9} 26|14r21 18m7 18r18 56r22
+37a4 Learner_List{12A9} 26|25m7 46r14 84r13 85r37 112r13 113r66
+38i4 Index_L{9I9} 26|25r20 26m7 26r18 61r22
+X 26 factory.adb
+15i11 I{25|9I9}
+32i7 count{25|9I9} 34r27
+38i7 count{25|9I9} 40r28
+44i7 count{25|9I9} 46r27
+67i11 I{25|9I9} 68r26 69r49 70r46
+75i11 I{25|9I9} 76r27 77r50 78r49
+83i11 I{25|9I9} 84r26 85r50
+95i11 I{25|9I9} 96r26 97r76 98r46
+103i11 I{25|9I9} 104r27 105r81 106r49
+111i11 I{25|9I9} 112r26 113r79
+X 27 interfac.ads
 74M9*Unsigned_32
-121V13*Shift_Left{74M9} 104|37i18
-X 29 polyorb-any.ads
+121V13*Shift_Left{74M9} 111|37i18
+X 31 newacceptors.ads
+4K9*NewAcceptors 25|3w6 3r24 26|78r13 97r13 105r13 106r13 113r13 31|67e17
+9P9*Acc_Acceptor_A(7R9) 26|105r52 106r53
+12P9*Acc_Learner_A(32|6R9) 26|113r52
+49U14*Insert_W 26|78R26 97R26
+51U14*Insert_A 26|105R26 106R26
+53U14*Insert_L 26|113R26
+X 32 newlearners.ads
+3K9*NewLearners 25|4w6 4r23 32|25e16
+X 33 newworkers.ads
+6K9*NewWorkers 25|2w6 2r22 26|69r13 70r13 77r13 85r13 98r13 33|59e15
+11P9*Acc_Worker(9R9) 25|10r42 14r28 18r40 26r28 26|4r28 31r40 64r28
+14P9*Acc_Acceptor(31|7R9) 25|11r44 15r27 19r40 27r28 26|12r27 37r40 92r28
+. 97r35 105r35 113r35
+17P9*Acc_Learner(32|6R9) 25|12r43 16r27 20r40 26|23r27 43r40
+42U14*Insert_W 26|69R24 70R24
+44U14*Insert_A 26|77R24 98R24
+46U14*Insert_L 26|85R24
+X 36 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 97|41i19
-X 35 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 104|41i19
+X 42 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 103|54i21
-X 51 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 110|54i21
+X 58 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9)
-98V13 Link(47P9[37|358]) 103|54i21[37|358]
-X 86 polyorb-task_info.ads
+98V13 Link(47P9[44|358]) 110|54i21[44|358]
+X 93 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 103|54i21
-X 97 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 110|54i21
+X 104 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[31|74])
-151V13 Link(134P9[45|99]) 103|54i21[45|99]
-X 108 system.ads
+134P9 Node_Access(133R9[74|119])
+151V13 Link(134P9[52|99]) 110|54i21[52|99]
+X 115 system.ads
 67M9*Address
-X 119 s-memory.ads
-53V13*Alloc{108|67M9} 103i<c,__gnat_malloc>22
+X 126 s-memory.ads
+53V13*Alloc{115|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{108|67M9} 105i<c,__gnat_realloc>22
-X 130 s-stausa.ads
+76V13*Realloc{115|67M9} 105i<c,__gnat_realloc>22
+X 137 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 132 s-stalib.adb
+X 139 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 

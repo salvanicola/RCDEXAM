@@ -4,63 +4,57 @@ with Ada.Characters.Latin_1; use Ada.Characters.Latin_1;
 with NewWorkers; use NewWorkers;
 with NewLearners; use NewLearners;
 package body NewAcceptors is
-   procedure Insert_W (Me: in out NewAcceptor; W : in Any_Worker) is
+   procedure Insert_W (Me: access NewAcceptor; W : in Any_Worker) is
    begin
-      Me.Working_List.Append(W);
-      Put("Lavoratore inserito");
-      New_Line(1);
-      Put("Attualmente sono presenti: " & Integer'Image(Integer(Me.Working_List.Length)) & " lavoratori.");
-      New_Line(1);
+      Me.all.Working_List.Append(W);
+      Put_Line("Lavoratore inserito");
+      Put_Line("Attualmente sono presenti: " & Integer'Image(Integer(Me.all.Working_List.Length)) & " lavoratori.");
    end Insert_W;
 
-   procedure Insert_A (Me: in out NewAcceptor; A: in Any_Acceptor) is
+   procedure Insert_A (Me: access NewAcceptor; A: in Acc_Acceptor_A) is
    begin
-      Me.Acceptor_List.Append(A);
-      Put("Acceptor inserito");
-      New_Line(1);
-      Put("Attualmente sono presenti: " & Integer'Image(Integer(Me.Acceptor_List.Length)) & " acceptors.");
-      New_Line(1);
+      Me.all.Acceptor_List.Append(A);
+      Put_Line("Acceptor inserito");
+      Put_Line("Attualmente sono presenti: " & Integer'Image(Integer(Me.all.Acceptor_List.Length)) & " acceptors.");
    end Insert_A;
 
-   procedure Insert_L (Me: in out NewAcceptor; L: in Any_Learner) is
+   procedure Insert_L (Me: access NewAcceptor; L: in Acc_Learner_A) is
    begin
-      Me.Learner_List.Append(L);
-      Put("Learner inserito");
-      New_Line(1);
-      Put("Attualmente sono presenti: " & Integer'Image(Integer(Me.Learner_List.Length)) & " learners.");
-      New_Line(1);
+      Me.all.Learner_List.Append(L);
+      Put_Line("Learner inserito");
+      Put_Line("Attualmente sono presenti: " & Integer'Image(Integer(Me.all.Learner_List.Length)) & " learners.");
    end Insert_L;
 
-   function Get_W (Me: in out NewAcceptor; C : Integer) return Acc_Worker is
+   function Get_W (Me: in out NewAcceptor; C : Integer) return Any_Worker is
       count : Integer := 0;
    begin
       for E of Me.Working_List loop
          if count = Integer(C) then
-            return Acc_Worker(E);
+            return E;
          end if;
          count := count + 1;
       end loop;
       return null;
    end Get_W;
 
-   function Get_A (Me: in out NewAcceptor; C : Integer) return Acc_Acceptor is
+   function Get_A (Me: in out NewAcceptor; C : Integer) return Acc_Acceptor_A is
       count : Integer := 0;
    begin
       for E of Me.Acceptor_List loop
          if count = Integer(C) then
-            return Acc_Acceptor(E);
+            return E;
          end if;
          count := count + 1;
       end loop;
       return null;
    end Get_A;
 
-   function Get_L (Me: in out NewAcceptor; C : Integer) return Acc_Learner is
+   function Get_L (Me: in out NewAcceptor; C : Integer) return Acc_Learner_A is
       count : Integer := 0;
    begin
       for E of Me.Learner_List loop
          if count = Integer(C) then
-            return Acc_Learner(E);
+            return E;
          end if;
          count := count + 1;
       end loop;
@@ -107,7 +101,7 @@ package body NewAcceptors is
 
    procedure Save (A : access NewAcceptor; V : Integer; R : Integer)
    is begin
-      Learn(Get_L(A.all, 0), V, R);
+      NewLearners.Learn(Get_L(A.all, 0), V, R);
    end Save;
 
 end NewAcceptors;

@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#5921fd7f#;
+   u00001 : constant Version_32 := 16#2bd35e6b#;
    pragma Export (C, u00001, "partitionB");
    u00002 : constant Version_32 := 16#1d743dc2#;
    pragma Export (C, u00002, "partitionS");
@@ -45,7 +45,7 @@ package ada_main is
    pragma Export (C, u00003, "system__standard_libraryB");
    u00004 : constant Version_32 := 16#5741b5a5#;
    pragma Export (C, u00004, "system__standard_libraryS");
-   u00005 : constant Version_32 := 16#677274e1#;
+   u00005 : constant Version_32 := 16#700022ca#;
    pragma Export (C, u00005, "factoryS");
    u00006 : constant Version_32 := 16#f34ff985#;
    pragma Export (C, u00006, "ada__exceptionsB");
@@ -243,15 +243,15 @@ package ada_main is
    pragma Export (C, u00102, "system__string_hashB");
    u00103 : constant Version_32 := 16#143c59ac#;
    pragma Export (C, u00103, "system__string_hashS");
-   u00104 : constant Version_32 := 16#045d90d1#;
+   u00104 : constant Version_32 := 16#29167666#;
    pragma Export (C, u00104, "commonS");
    u00105 : constant Version_32 := 16#10558b11#;
    pragma Export (C, u00105, "ada__streamsB");
    u00106 : constant Version_32 := 16#67e31212#;
    pragma Export (C, u00106, "ada__streamsS");
-   u00107 : constant Version_32 := 16#6143b18b#;
+   u00107 : constant Version_32 := 16#26ec1f07#;
    pragma Export (C, u00107, "storageB");
-   u00108 : constant Version_32 := 16#1ce14c64#;
+   u00108 : constant Version_32 := 16#5b4ee2e8#;
    pragma Export (C, u00108, "storageS");
    u00109 : constant Version_32 := 16#3af67f9c#;
    pragma Export (C, u00109, "system__tasking__protected_objectsB");
@@ -1425,42 +1425,42 @@ package ada_main is
    pragma Export (C, u00693, "polyorb__dsa_p__streamsB");
    u00694 : constant Version_32 := 16#9daedd16#;
    pragma Export (C, u00694, "polyorb__dsa_p__streamsS");
-   u00695 : constant Version_32 := 16#2c2367d3#;
-   pragma Export (C, u00695, "system__version_controlB");
-   u00696 : constant Version_32 := 16#df7d18a7#;
-   pragma Export (C, u00696, "system__version_controlS");
-   u00697 : constant Version_32 := 16#346351d1#;
-   pragma Export (C, u00697, "start_clientB");
-   u00698 : constant Version_32 := 16#f13cc752#;
-   pragma Export (C, u00698, "clientB");
-   u00699 : constant Version_32 := 16#41cf2c9d#;
-   pragma Export (C, u00699, "clientS");
-   u00700 : constant Version_32 := 16#cd2959fb#;
-   pragma Export (C, u00700, "ada__numericsS");
-   u00701 : constant Version_32 := 16#8d2209b3#;
-   pragma Export (C, u00701, "newacceptorsB");
-   u00702 : constant Version_32 := 16#8d0d4fb9#;
-   pragma Export (C, u00702, "newacceptorsS");
-   u00703 : constant Version_32 := 16#2ffe88de#;
-   pragma Export (C, u00703, "newlearnersB");
-   u00704 : constant Version_32 := 16#bd1b6814#;
-   pragma Export (C, u00704, "newlearnersS");
-   u00705 : constant Version_32 := 16#3f40dec2#;
-   pragma Export (C, u00705, "newworkersB");
-   u00706 : constant Version_32 := 16#3716768a#;
-   pragma Export (C, u00706, "newworkersS");
-   u00707 : constant Version_32 := 16#75de1dee#;
-   pragma Export (C, u00707, "ada__strings__hashB");
-   u00708 : constant Version_32 := 16#3655ad4c#;
-   pragma Export (C, u00708, "ada__strings__hashS");
-   u00709 : constant Version_32 := 16#93bf75e3#;
-   pragma Export (C, u00709, "system__random_numbersB");
-   u00710 : constant Version_32 := 16#f1b831a2#;
-   pragma Export (C, u00710, "system__random_numbersS");
-   u00711 : constant Version_32 := 16#15692802#;
-   pragma Export (C, u00711, "system__random_seedB");
-   u00712 : constant Version_32 := 16#69b0a863#;
-   pragma Export (C, u00712, "system__random_seedS");
+   u00695 : constant Version_32 := 16#4cb06181#;
+   pragma Export (C, u00695, "newacceptorsB");
+   u00696 : constant Version_32 := 16#9f95900f#;
+   pragma Export (C, u00696, "newacceptorsS");
+   u00697 : constant Version_32 := 16#60bcc906#;
+   pragma Export (C, u00697, "newlearnersB");
+   u00698 : constant Version_32 := 16#14e37dce#;
+   pragma Export (C, u00698, "newlearnersS");
+   u00699 : constant Version_32 := 16#d77d5332#;
+   pragma Export (C, u00699, "newworkersB");
+   u00700 : constant Version_32 := 16#1ff66a31#;
+   pragma Export (C, u00700, "newworkersS");
+   u00701 : constant Version_32 := 16#cd2959fb#;
+   pragma Export (C, u00701, "ada__numericsS");
+   u00702 : constant Version_32 := 16#75de1dee#;
+   pragma Export (C, u00702, "ada__strings__hashB");
+   u00703 : constant Version_32 := 16#3655ad4c#;
+   pragma Export (C, u00703, "ada__strings__hashS");
+   u00704 : constant Version_32 := 16#93bf75e3#;
+   pragma Export (C, u00704, "system__random_numbersB");
+   u00705 : constant Version_32 := 16#f1b831a2#;
+   pragma Export (C, u00705, "system__random_numbersS");
+   u00706 : constant Version_32 := 16#15692802#;
+   pragma Export (C, u00706, "system__random_seedB");
+   u00707 : constant Version_32 := 16#69b0a863#;
+   pragma Export (C, u00707, "system__random_seedS");
+   u00708 : constant Version_32 := 16#2c2367d3#;
+   pragma Export (C, u00708, "system__version_controlB");
+   u00709 : constant Version_32 := 16#df7d18a7#;
+   pragma Export (C, u00709, "system__version_controlS");
+   u00710 : constant Version_32 := 16#346351d1#;
+   pragma Export (C, u00710, "start_clientB");
+   u00711 : constant Version_32 := 16#f1ff4d43#;
+   pragma Export (C, u00711, "clientB");
+   u00712 : constant Version_32 := 16#41cf2c9d#;
+   pragma Export (C, u00712, "clientS");
    u00713 : constant Version_32 := 16#e37d17a1#;
    pragma Export (C, u00713, "system__dsa_servicesB");
    u00714 : constant Version_32 := 16#ac516090#;
@@ -2208,13 +2208,13 @@ package ada_main is
    --  storage%s
    --  storage%b
    --  common%s
-   --  factory%s
    --  newlearners%s
    --  newlearners%b
    --  newacceptors%s
    --  newworkers%s
    --  newworkers%b
    --  newacceptors%b
+   --  factory%s
    --  client%s
    --  client%b
    --  start_client%b

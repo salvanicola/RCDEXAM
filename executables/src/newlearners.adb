@@ -4,17 +4,14 @@ package body NewLearners is
 
    procedure Learn (A : access NewLearner; V : Integer; R : Integer)
    is
-      I : Integer := 0;
    begin
       if Queue.Get(R) = 0 then
          Put_Line("Provo ad inserire il valore " & Integer'Image(V) & " nella memoria condivisa");
          Queue.Insert(V, R);
+         A.Used_reg.Append(R);
          Put_Line("Inserimento avvenuto, nei registri sono presenti i valori: ");
-         while I <= Queue.Get_ID loop
-            if Queue.Get(I) /= 0 then
-               Put_Line(Integer'Image(I) & " - " & Integer'Image(Queue.Get(I)));
-            end if;
-            I := I + 1;
+         for I in A.Used_reg.First_Index .. A.Used_reg.Last_Index loop
+            Put_Line(Integer'Image(A.Used_reg(I)) & " - " & Integer'Image(Queue.Get(A.Used_reg(I))));
          end loop;
       else
          Put_Line("Valore gia' memorizzato!");

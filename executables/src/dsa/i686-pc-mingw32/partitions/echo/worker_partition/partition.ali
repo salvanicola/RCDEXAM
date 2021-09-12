@@ -8,7 +8,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U partition%b		partition.adb		767c56ca OO PK
+U partition%b		partition.adb		60ef2a8f OO PK
 W newworkers%s		newworkers.adb		newworkers.ali  EA
 W polyorb%s		polyorb.ads		polyorb.ali
 W polyorb.initialization%s  polyorb-initialization.adb  polyorb-initialization.ali  EA
@@ -45,15 +45,15 @@ D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
 D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
-D common.ads		20210908141926 18bcdcb5 common%s
+D common.ads		20210908163118 18bcdcb5 common%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
-D newacceptors.ads	20210908144042 4ae081d5 newacceptors%s
-D newlearners.ads	20210908142644 a7b8eb29 newlearners%s
-D newworkers.ads	20210908142622 c53c1bf5 newworkers%s
-D partition.ads		20210908144252 1d743dc2 partition%s
-D partition.adb		20210908144252 82d69355 partition%b
+D newacceptors.ads	20210911152732 41bcb002 newacceptors%s
+D newlearners.ads	20210909144044 b946f8c5 newlearners%s
+D newworkers.ads	20210911152740 77cfc53a newworkers%s
+D partition.ads		20210911164650 1d743dc2 partition%s
+D partition.adb		20210911164650 82d69355 partition%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -134,7 +134,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210908142314 b881eeee storage%s
+D storage.ads		20210909143732 1ce14c64 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -177,7 +177,7 @@ X 23 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 108|37i18
 X 28 newworkers.ads
-5K9*NewWorkers 59e15 30|18w6 20r4
+6K9*NewWorkers 59e15 30|18w6 20r4
 X 29 partition.ads
 3K9*Partition 5l5 5e14 30|24b14 34l5 34t14
 X 31 polyorb.ads
@@ -210,7 +210,7 @@ X 101 polyorb-utils-chained_lists.ads
 134P9 Node_Access(133R9[71|119])
 151V13 Link(134P9[34|75]) 107|54i21[34|75]
 X 111 storage.ads
-1K9*Storage 30|21w6 23r4 29r7 111|20e12
+1K9*Storage 30|21w6 23r4 29r7 111|22e12
 X 112 system.ads
 37K9*System 30|12r6 15r6 26r4 27r4 112|200e11
 X 115 s-dsaser.ads

@@ -23,31 +23,25 @@ package body NewWorkers is
       Handshakers : Acceptors_Array;
    end record;
 
-   procedure Insert_W (Me: in out NewWorker; W : in Any_Worker) is
+   procedure Insert_W (Me: access NewWorker; W : in Acc_Worker) is
    begin
-      Me.Working_List.Append(W);
-      Put("Lavoratore inserito");
-      New_Line(1);
-      Put("Attualmente sono presenti: " & Integer'Image(Integer(Me.Working_List.Length)) & " lavoratori.");
-      New_Line(1);
+      Me.all.Working_List.Append(W);
+      Put_Line("Lavoratore inserito");
+      Put_Line("Attualmente sono presenti: " & Integer'Image(Integer(Me.all.Working_List.Length)) & " lavoratori.");
    end Insert_W;
 
-   procedure Insert_A (Me: in out NewWorker; A: in Any_Acceptor) is
+   procedure Insert_A (Me: access NewWorker; A: in Acc_Acceptor) is
    begin
-      Me.Acceptor_List.Append(A);
-      Put("Acceptor inserito");
-      New_Line(1);
-      Put("Attualmente sono presenti: " & Integer'Image(Integer(Me.Acceptor_List.Length)) & " acceptors.");
-      New_Line(1);
+      Me.all.Acceptor_List.Append(A);
+      Put_Line("Acceptor inserito");
+      Put_Line("Attualmente sono presenti: " & Integer'Image(Integer(Me.all.Acceptor_List.Length)) & " acceptors.");
    end Insert_A;
 
-   procedure Insert_L (Me: in out NewWorker; L: in Any_Learner) is
+   procedure Insert_L (Me: access NewWorker; L: in Acc_Learner) is
    begin
-      Me.Learner_List.Append(L);
-      Put("Learner inserito");
-      New_Line(1);
-      Put("Attualmente sono presenti: " & Integer'Image(Integer(Me.Learner_List.Length)) & " learners.");
-      New_Line(1);
+      Me.all.Learner_List.Append(L);
+      Put_Line("Learner inserito");
+      Put_Line("Attualmente sono presenti: " & Integer'Image(Integer(Me.Learner_List.Length)) & " learners.");
    end Insert_L;
 
    function Get_W (Me: in out NewWorker; C : Integer) return Acc_Worker is
@@ -55,7 +49,7 @@ package body NewWorkers is
    begin
       for E of Me.Working_List loop
          if count = C then
-            return Acc_Worker(E);
+            return E;
          end if;
          count := count + 1;
       end loop;
@@ -67,7 +61,7 @@ package body NewWorkers is
    begin
       for E of Me.Acceptor_List loop
          if count = C then
-            return Acc_Acceptor(E);
+            return E;
          end if;
          count := count + 1;
       end loop;
@@ -79,12 +73,13 @@ package body NewWorkers is
    begin
       for E of Me.Learner_List loop
          if count = Integer(C) then
-            return Acc_Learner(E);
+            return E;
          end if;
          count := count + 1;
       end loop;
       return null;
    end Get_L;
+
 
    function PrepareRequest (W : access NewWorker; ID : Integer) return Result is
       it : Integer := 0;
@@ -95,6 +90,8 @@ package body NewWorkers is
       Answer : Promise;
       Res : Result;
    begin
+      Put_Line("Invio prepare request...");
+      Put_Line("Verranno contattati " & Integer'Image(Integer(W.Acceptor_List.Length)) & " acceptors");
       while it < Integer(W.Acceptor_List.Length) loop
          Answer := NewAcceptors.Promising(Get_A(W.all, it), ID);
          if Answer.Accepted then

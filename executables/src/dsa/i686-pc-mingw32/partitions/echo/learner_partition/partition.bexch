@@ -1,0 +1,116 @@
+[GENERATED OBJECT FILE]
+b__partition.o
+[PROJECT FILES]
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\partition.gpr
+20210911164626 969ebe9d1da8672b637f9a5ce68ab45b
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_install_common
+               2a8acb442417429c3278f587eb3abc8c
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$gpr
+               9a54cfcdab72a33a6559972e9523f408
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$gnatcoll
+               1b621f7baf584f054b9c71977317f821
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_cos_time
+               ddea86dddc748a83b847de2eaa8b4fd9
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_idls_cos_time
+               0d537b3ec487c4a7ea2bfd2b7909eb17
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_cos_notification
+               6b692ae63d8c3b7bb03b107c9b46806a
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_idls_cos_notification
+               7538552fa24c7326f94e09135c436466
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_cos_naming
+               a294b01990ef7ca9b09812b0f5d74468
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_idls_cos_naming
+               793d3758076aedf73165c225e5e3d80d
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_cos_event
+               300940b44ecdd7b48091ce3496548333
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_idls_cos_event
+               4148a8702a6a1be0bc145cc1e96cc420
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_moma
+               07ea2f9e62c57c0524f0c691016ea4c3
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_dsa
+               e59e6cece82289b5466c709dd453cf75
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_corba_rtcorba
+               d37fa93ec47b78a0e66c9cb8f16b775b
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_cos_ir
+               7fe49bbf8c75bbe3e90639f78ae20bca
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_corba_portableinterceptor
+               b77d6cda990323af14e583d896dabb35
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_corba_messaging
+               155e3338f76daac7d1c487b985437e8d
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_corba_iop
+               bf091c389c7165640ba5cc7372397447
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_corba_dynamicany
+               e16b8c9578af56113770910582442ffd
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_corba
+               93f541366b380ecc7f9f7a1f4bdfde1d
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_srp
+               22402fd43c1f01df359f6d731f7f8941
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$xmlada_schema
+               d211963ee76e28816b3608ccb2216b74
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$xmlada_dom
+               728d3029c5025f7468d15588afa0c622
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$xmlada_input
+               26dea45db4cf62ad3cf68f539546547a
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$xmlada_sax
+               f6dfa711b8193e8f68457a6fca9773f2
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$xmlada_unicode
+               2df385d9f8e5037c6f98c93c86d2fb22
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$xmlada
+               8f44595641f080a192234317b4488909
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_web_common
+               6547a0fc475a90a5e7e8ec67369271f6
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_soap
+               045bb1b8c5a1895a22fe887c834fa878
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_giop_miop
+               a89ec3bb257dc724ec34cebfe764c1d7
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_giop_iiop
+               638a03cbd3801f83716c4cbd11e58492
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_giop_diop
+               ac033ed42dce59f50953cb20e2d903cf
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_giop
+               a8187e9d940d9285a5e06ccc6c791d75
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src
+               51dbc3ce276b276db3e201793cd040db
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$polyorb_src_setup
+               74838c9bfc00d581a79bf71cb1b0a6f6
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\pcs_project1.gpr
+20210911164616 1ca053422f3f6c8f27d90fb14bfc2e8a
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\v$pcs_project
+               f1a93cc9e3b9b27957630dd0247ec6dc
+[BOUND OBJECT FILES]
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\polyorb-partition_elaboration.o
+E:/Cartella globale/Uni/Laurea Magistrale/SCD/Progetto/Testing/src/dsa/i686-pc-mingw32/stubs\polyorb-dsa_p-partitions.o
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\polyorb-dsa_p-storages-config.o
+E:/Cartella globale/Uni/Laurea Magistrale/SCD/Progetto/Testing/src/dsa/i686-pc-mingw32/stubs\storage.o
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\common.o
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\newlearners.o
+E:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\partition.o
+[GENERATED SOURCE FILES]
+b__partition.ads
+b__partition.adb
+b__partition.ali
+[RESULTING OPTIONS]
+-LE:/Cartella globale/Uni/Laurea Magistrale/SCD/Progetto/Testing/src/dsa/i686-pc-mingw32/partitions/echo/learner_partition\
+-LE:/Cartella globale/Uni/Laurea Magistrale/SCD/Progetto/Testing/src/dsa/i686-pc-mingw32/stubs\
+-L.\
+-LE:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\partitions\echo\learner_partition\
+-LE:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\obj\
+-LE:\Cartella globale\Uni\Laurea Magistrale\SCD\Progetto\Testing\src\dsa\i686-pc-mingw32\
+-LF:\GNAT\2020\lib\polyorb\
+-LF:\GNAT\2020\lib\polyorb\static\
+-LF:\gnat\2020\lib\xmlada\xmlada_unicode.static\
+-LF:\gnat\2020\lib\xmlada\xmlada_sax.static\
+-LF:\gnat\2020\lib\xmlada\xmlada_input.static\
+-LF:\gnat\2020\lib\xmlada\xmlada_dom.static\
+-LF:\gnat\2020\lib\xmlada\xmlada_schema.static\
+-LF:\gnat\2020\lib\gnatcoll.static\
+-LF:\gnat\2020\lib\gpr\static\gpr\
+-LF:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+-static
+-static-libgcc
+F:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnarl.a
+F:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
+-lws2_32
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

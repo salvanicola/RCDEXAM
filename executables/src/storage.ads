@@ -1,8 +1,8 @@
 package Storage is
    pragma Shared_Passive;
 
-   type Storing is array (0..100) of Integer;
-   type Accessing is array (0..100) of String(1..4);
+   type Storing is array (0..1000) of Integer;
+   type Accessing is array (0..1000) of String(1..4);
 
    External_Synchronization : Storing;
 
