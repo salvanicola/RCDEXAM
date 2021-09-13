@@ -1,22 +1,26 @@
 package Storage is
    pragma Shared_Passive;
 
-   type Storing is array (0..1000) of Integer;
-   type Accessing is array (0..1000) of String(1..4);
+   type Prop_entry is record
+      Accepted : Boolean := False;
+      ID : Integer := -1;
+      Value : Integer := -1;
+   end record;
+
+   type Storing is array (0..100) of Prop_entry;
 
    External_Synchronization : Storing;
 
    protected Queue is
-      procedure Insert (Q : Integer; R : Integer);
+      procedure Insert (A : Boolean; Q : Integer; R : Integer);
       procedure Remove
         (Q : in Integer;
          R : out Integer);
-      function Get (R : Integer) return Integer;
-      function Get_ID return Integer;
-      function Get_Access (R : Integer) return String;
+      function Get (R : Integer) return Prop_entry;
+      function Get_Length return Integer;
+
    private
       Store : Storing;
-      Accesses : Accessing;
-      Max_ID : Integer;
+      Num_elem : Integer := 0;
    end Queue;
 end Storage;

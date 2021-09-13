@@ -23,7 +23,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U newworkers%b		newworkers.adb		d77d5332 OO PK
+U newworkers%b		newworkers.adb		5348ef63 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
@@ -49,7 +49,7 @@ Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U newworkers%s		newworkers.ads		1ff66a31 EE OO PF RT PK
+U newworkers%s		newworkers.ads		a3c39a4c EE OO PF RT PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.containers.generic_array_sort%s
@@ -115,10 +115,10 @@ D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D newacceptors.ads	20210912160048 8b76edc1 newacceptors%s
-D newlearners.ads	20210912155728 43de0477 newlearners%s
-D newworkers.ads	20210912150140 8063fa3e newworkers%s
-D newworkers.adb	20210912150628 8a411930 newworkers%b
+D newacceptors.ads	20210913153238 0420e5a9 newacceptors%s
+D newlearners.ads	20210913164418 3fa98050 newlearners%s
+D newworkers.ads	20210913151436 75fd47f6 newworkers%s
+D newworkers.adb	20210913163812 74bc10c1 newworkers%b
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -199,7 +199,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210912151816 5b4ee2e8 storage%s
+D storage.ads		20210913154102 e1c42312 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -626,12 +626,15 @@ G c Z s s [iteratorIP newworkers__learner_vectors 803 9 28_4]
 G c Z s s [free newworkers__learner_vectors 41 14 28_4]
 G c Z s s [append_slow_path newworkers__learner_vectors 44 14 28_4]
 G c Z s b [assign newworkers 36 14 none]
-G c Z s b [insert_w newworkers 42 14 none]
-G c Z s b [insert_a newworkers 44 14 none]
-G c Z s b [insert_l newworkers 46 14 none]
-G c Z s s [newworkerDF newworkers 49 9 none]
-G c Z s s [newworkerDI newworkers 49 9 none]
-G c Z s s [newworkerIP newworkers 49 9 none]
+G c Z s b [propose newworkers 42 14 none]
+G c Z s b [insert_w newworkers 44 14 none]
+G c Z s b [insert_a newworkers 46 14 none]
+G c Z s b [insert_l newworkers 48 14 none]
+G c Z s b [promote newworkers 50 14 none]
+G c Z s b [isleader newworkers 52 13 none]
+G c Z s s [newworkerDF newworkers 55 9 none]
+G c Z s s [newworkerDI newworkers 55 9 none]
+G c Z s s [newworkerIP newworkers 55 9 none]
 G c Z s s [S1sDF newworkers 11 9 none]
 G c Z s s [S1sIP newworkers 11 9 none]
 G c Z b b [random newworkers__rand_int 52 13 11_4]
@@ -647,15 +650,18 @@ G c Z b b [resultIP newworkers 19 9 none]
 G c Z b b [get_w newworkers 47 13 none]
 G c Z b b [get_a newworkers 59 13 none]
 G c Z b b [get_l newworkers 71 13 none]
-G c Z b b [preparerequest newworkers 84 13 none]
+G c Z b b [preparerequest newworkers 88 13 none]
 G r c none [assign newworkers 36 14 none] [promising newacceptors 37 13 none]
 G r c none [assign newworkers 36 14 none] [validate newacceptors 41 13 none]
 G r c none [assign newworkers 36 14 none] [save newacceptors 46 14 none]
-G r s worker [newworkerIP newworkers 49 9 none] [workerIP common 49 9 none]
-G r c none [preparerequest newworkers 84 13 none] [promising newacceptors 37 13 none]
+G r c none [propose newworkers 42 14 none] [promising newacceptors 37 13 none]
+G r c none [propose newworkers 42 14 none] [validate newacceptors 41 13 none]
+G r c none [propose newworkers 42 14 none] [save newacceptors 46 14 none]
+G r s worker [newworkerIP newworkers 55 9 none] [workerIP common 49 9 none]
+G r c none [preparerequest newworkers 88 13 none] [promising newacceptors 37 13 none]
 X 1 ada.ads
 16K9*Ada 20e8 39|2r6 20r34 24r36 28r35 40|2r6 2r23 3r6 3r34 4r6 5r6 11r28
-. 125r29
+. 123r20
 X 2 a-charac.ads
 16K13*Characters 18e19 40|3r10 3r38
 X 3 a-chlat1.ads
@@ -668,11 +674,13 @@ X 8 a-convec.ads
 61I9 Index_Type 39|21r7 25r7 29r7
 62+9 Element_Type 39|22r7 26r7 30r7
 73k24*Vectors 824e27 39|2w21 20r49 24r51 28r50
-78I12*Extended_Index{integer} 39|55r30[20] 56r32[24] 57r31[28]
-88R9*Vector<11|43R9> 39|52r37[20] 53r40[24] 54r38[28]
-165V13*Length{4|22I9} 40|30s90[39|20] 37s91[39|24] 44s86[39|28] 94s79[39|24]
-. 95s42[39|24] 110s62[39|24]
+78I12*Extended_Index{integer} 39|63r30[20] 64r32[24] 65r31[28]
+88R9*Vector<11|43R9> 39|60r37[20] 61r40[24] 62r38[28]
+165V13*Length{4|22I9} 40|30s90[39|20] 37s91[39|24] 44s86[39|28] 98s79[39|24]
+. 99s42[39|24] 114s62[39|24]
 431U14*Append 40|28s27[39|20] 35s28[39|24] 42s27[39|28]
+512V13*First_Index{integer} 40|127s34[39|20]
+522V13*Last_Index{78I12[39|20]} 40|127s64[39|20]
 X 13 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[8|111]>
@@ -681,88 +689,101 @@ X 14 a-numeri.ads
 X 15 a-nudira.ads
 44k22*Discrete_Random 81e33 40|5w19 11r41
 50R9*Generator<141|63R9> 40|13r10[11]
-52V13*Random{40|10I9} 40|124s23[11]
-61U14*Reset<141|100p14> 40|123s16[11]
+52V13*Random{40|10I9} 40|122s14[11]
+61U14*Reset<141|100p14> 40|121s7[11]
 X 16 a-nudira.adb
 53V16 Random[141|83]{40|10I9} 142|393b13[40|11]
 65V16 Random[141|83]{40|10I9} 142|393b13[40|11]
 X 19 a-string.ads
-16K13*Strings 35e16 40|4r10 125r33
+16K13*Strings 35e16 40|4r10 123r24
 X 20 a-strhas.ads
-20V22*Hash{4|19M9} 40|4w18 125s41
+20V22*Hash{4|19M9} 40|4w18 123s32
 X 29 a-textio.ads
 57K13*Text_IO 727e16 40|2w10 2r27
-508U14*Put_Line 40|29s7 30s7 36s7 37s7 43s7 44s7 93s7 94s7 132s10
+508U14*Put_Line 40|29s7 30s7 36s7 37s7 43s7 44s7 97s7 98s7 152s13 155s10
+. 162s7
 X 32 common.ads
-2K9*Common 52e11 39|1w6 1r27 40r11 40|114r74
-9H9*Worker 49e54 39|9r26 49r26
+2K9*Common 52e11 39|1w6 1r27 40r11 42r75 40|118r74 136r75
+9H9*Worker 49e54 39|9r26 55r26
 X 33 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
 121V13*Shift_Left{74M9} 118|37i18
 X 37 newacceptors.ads
-4K9*NewAcceptors 67e17 39|3w6 3r24 40|6w6 6r24 96r20 122r17 127r16
-7R9*NewAcceptor<32|12R9> 66e14 39|15r17
-15R9*Promise 19e14 40|90r16
-16b7*Accepted{boolean} 40|97r20
-17i7*ID{integer} 40|101r23
-18i7*Value{integer} 40|102r32
-37V13*Promising{15R9} 40|96R33
-41V13*Validate{boolean} 40|122R30
-46U14*Save 40|127R29
+4K9*NewAcceptors 68e17 39|3w6 3r24 40|6w6 6r24 100r20 145r20 147r19
+7R9*NewAcceptor<32|12R9> 67e14 39|15r17
+15R9*Promise 19e14 40|94r16
+16b7*Accepted{boolean} 40|101r20
+17i7*ID{integer} 40|105r23
+18i7*Value{integer} 40|106r32
+37V13*Promising{15R9} 40|100R33
+41V13*Validate{boolean} 40|145R33
+46U14*Save 40|147R32
 X 38 newlearners.ads
-3K9*NewLearners 25e16 39|4w6 4r23
-6R9*NewLearner<32|15R9> 24e14 39|18r17
+3K9*NewLearners 51e16 39|4w6 4r23
+6R9*NewLearner<32|15R9> 50e14 39|18r17
 X 39 newworkers.ads
-6K9*NewWorkers 49E9 59l5 59e15 40|7b14 135l5 135t15
-9R9*NewWorker<32|9R9> 12r17 36p14 37r18 42p14 42r35 44p14 44r35 46p14 46r35
-. 49c9 58e14 40|26r35 33r35 40r35 47r31 59r31 71r31 84r40 114r33
-11P9*Acc_Worker(9R9) 22r23 42r53 40|26r53 47r62
-14P9*Acc_Acceptor(37|7R9) 26r23 44r52 40|17r47 33r52 59r62
-17P9*Acc_Learner(38|6R9) 30r23 46r52 40|40r52 71r62
-20K12*Worker_Vectors[8|73] 32r8 52r22 55r15
-24K12*Acceptor_Vectors[8|73] 33r8 53r23 56r15
-28K12*Learner_Vectors[8|73] 34r8 54r22 57r15
-36U14*Assign 37^7 38>7 39>7 40>7 40|114b14 134l8 134t14
-37p7 W(9R9) 40|114b22 119r34
-38i7 Q{integer} 40|114b44 125r60
-39i7 ID{integer} 40|114b57 119r37 122r65 127r63
-40r7 N 40|114b70 126r16
-42U14*Insert_W 42^24 42>46 40|26b14 31l8 31t16
-42p24 Me(9R9) 40|26b24 28r7 30r70
-42p46 W{11P9} 40|26b46 28r34
-44U14*Insert_A 44^24 44>46 40|33b14 38l8 38t16
-44p24 Me(9R9) 40|33b24 35r7 37r70
-44p46 A{14P9} 40|33b46 35r35
-46U14*Insert_L 46^24 46>46 40|40b14 45l8 45t16
-46p24 Me(9R9) 40|40b24 42r7 44r70
-46p46 L{17P9} 40|40b46 42r34
-50a7 Name{string}
-51i7 count{integer}
-52r7 Working_List{8|88R9[20]} 40|28m14 30r77 50r19
-53r7 Acceptor_List{8|88R9[24]} 40|35m14 37r77 62r19 94r65 95r28 110r48
-54r7 Learner_List{8|88R9[28]} 40|42m14 44r73 74r19
-55i7 Idx_W{8|78I12[20]}
-56i7 Idx_A{8|78I12[24]}
-57i7 Idx_L{8|78I12[28]}
+6K9*NewWorkers 55E9 67l5 67e15 40|7b14 166l5 166t15
+9R9*NewWorker<32|9R9> 12r17 36p14 37r18 42p14 42r34 44p14 44r35 46p14 46r35
+. 48p14 48r35 50p14 50r34 52p13 52r35 55c9 66e14 40|26r35 33r35 40r35 47r31
+. 59r31 71r31 83r35 88r40 118r33 136r34 159r35
+11P9*Acc_Worker(9R9) 22r23 44r53 40|26r53 47r62
+14P9*Acc_Acceptor(37|7R9) 26r23 46r52 40|17r47 33r52 59r62
+17P9*Acc_Learner(38|6R9) 30r23 48r52 40|40r52 71r62
+20K12*Worker_Vectors[8|73] 32r8 60r22 63r15
+24K12*Acceptor_Vectors[8|73] 33r8 61r23 64r15
+28K12*Learner_Vectors[8|73] 34r8 62r22 65r15
+36U14*Assign 37^7 38>7 39>7 40>7 40|118b14 134l8 134t14
+37p7 W(9R9) 40|118b22 124r10 125r19 127r19 127r49 128r25 129r25
+38i7 Q{integer} 40|118b44 123r51
+39i7 ID{integer} 40|118b57 125r25 129r47
+40r7 N 40|118b70 125r29 129r51
+42U14*Propose 42^23 42>45 42>58 42>71 40|125s10 129R16 136b14 157l8 157t15
+42p23 W(9R9) 40|136b23 140r10 141r10 142r37
+42i45 T{integer} 40|136b45 146r21 147r63
+42i58 ID{integer} 40|136b58 140r21 141r22 142r40 145r68 147r66
+42r71 N 40|136b71 146r19
+44U14*Insert_W 44^24 44>46 40|26b14 31l8 31t16
+44p24 Me(9R9) 40|26b24 28r7 30r70
+44p46 W{11P9} 40|26b46 28r34
+46U14*Insert_A 46^24 46>46 40|33b14 38l8 38t16
+46p24 Me(9R9) 40|33b24 35r7 37r70
+46p46 A{14P9} 40|33b46 35r35
+48U14*Insert_L 48^24 48>46 40|40b14 45l8 45t16
+48p24 Me(9R9) 40|40b24 42r7 44r70
+48p46 L{17P9} 40|40b46 42r34
+50U14*Promote 50^23 40|159b14 163l8 163t15
+50p23 Me(9R9) 40|159b23 161r7
+52V13*isLeader{boolean} 52^23 40|83b13 86l8 86t16 128R16
+52p23 Me(9R9) 40|83b23 85r14
+56a7 Name{string}
+57b7 Leader{boolean} 40|85r17 124r12 161m10
+58i7 count{integer}
+59i7 Max_ID{integer} 40|140r12 141m12
+60r7 Working_List{8|88R9[20]} 40|28m14 30r77 50r19 127r21 127r51 128r27 129r27
+61r7 Acceptor_List{8|88R9[24]} 40|35m14 37r77 62r19 98r65 99r28 114r48
+62r7 Learner_List{8|88R9[28]} 40|42m14 44r73 74r19
+63i7 Idx_W{8|78I12[20]}
+64i7 Idx_A{8|78I12[24]}
+65i7 Idx_L{8|78I12[28]}
 X 40 newworkers.adb
 10I9 randRange<integer> 11r57 14r10
 11K12 Rand_Int[15|44] 12r8
-13r4 gen{15|50R9[11]} 123r22 124r30
-14i4 err{10I9} 124m16 125r76
-16I9 Index_A<short_short_integer> 17r35 22r15 116r12
+13r4 gen{15|50R9[11]} 121r13 122r21
+14i4 err{10I9} 122m7 123r67
+16I9 Index_A<short_short_integer> 17r35 22r15 137r12
 17A9 Acceptors_Array(39|14P9)<16I9> 23r21
-19R9 Result 24e14 84r72 91r13 117r18
-20b7*Positive{boolean} 110m11 120r19
-21i7*Value{integer} 109m11 122r78
-22i7*Count{16I9} 99r33 100m17 100r30 121r30
-23a7*Handshakers{17A9} 99m17 122r48 127r43
+19R9 Result 24e14 88r72 95r13 138r18
+20b7*Positive{boolean} 114m11 143r22
+21i7*Value{integer} 113m11 145r81
+22i7*Count{16I9} 103r33 104m17 104r30 144r33
+23a7*Handshakers{17A9} 103m17 145r51 147r46
 47V13 Get_W{39|11P9} 47b13 47=20 47>42 57l8 57t13
 47r20 Me{39|9R9} 50r16
 47i42 C{integer} 51r21
 48i7 count{integer} 51r13 54m10 54r19
 50p11 E{39|11P9} 52r20
-59V13 Get_A{39|14P9} 59b13 59=20 59>42 69l8 69t13 96s43 99s43
+59V13 Get_A{39|14P9} 59b13 59=20 59>42 69l8 69t13 100s43 103s43
 59r20 Me{39|9R9} 62r16
 59i42 C{integer} 63r21
 60i7 count{integer} 63r13 66m10 66r19
@@ -772,19 +793,20 @@ X 40 newworkers.adb
 71i42 C{integer} 75r29
 72i7 count{integer} 75r13 78m10 78r19
 74p11 E{39|17P9} 76r20
-84V13 PrepareRequest{19R9} 84b13 84^29 84>51 112l8 112t22 119s19
-84p29 W(39|9R9) 94r63 95r26 96r49 99r49 110r46
-84i51 ID{integer} 96r61
-85i7 it{integer} 95r13 96r56 99r56 107m10 107r16
-86i7 good{integer} 98m13 98r21 110r24
-87i7 bad{integer} 105m13 105r20
-88i7 Value{integer} 102m16 109r20
-89i7 Max_ID{integer} 101r28
-90r7 Answer{37|15R9} 96m10 97r13 101r16 102r25
-91r7 Res{19R9} 99m13 99r29 100m13 100r26 109m7 110m7 111r14
-115i7 T{integer} 125m16 126r18 127r60
-116i7 it{16I9} 121r16 122r60 127r55 129m13 129r19
-117r7 Response{19R9} 119m7 120r10 121r21 122r39 122r69 127r34
+88V13 PrepareRequest{19R9} 88b13 88^29 88>51 116l8 116t22 142s22
+88p29 W(39|9R9) 98r63 99r26 100r49 103r49 114r46
+88i51 ID{integer} 100r61
+89i7 it{integer} 99r13 100r56 103r56 111m10 111r16
+90i7 good{integer} 102m13 102r21 114r24
+91i7 bad{integer} 109m13 109r20
+92i7 Value{integer} 106m16 113r20
+93i7 Max_ID{integer} 105r28
+94r7 Answer{37|15R9} 100m10 101r13 105r16 106r25
+95r7 Res{19R9} 103m13 103r29 104m13 104r26 113m7 114m7 115r14
+119i7 T{integer} 123m7 125r22 129r44
+127i14 I{integer} 128r40 129r40
+137i7 it{16I9} 144r19 145r63 147r58 149m16 149r22
+138r7 Response{19R9} 142m10 143r13 144r24 145r42 145r72 147r37
 X 43 polyorb-any.ads
 179h12*Union_TC_Map
 251V28*"="=253:32{boolean} 111|41i19
@@ -794,16 +816,16 @@ X 49 polyorb-binding_objects.ads
 X 65 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9)
-98V13 Link(47P9[51|358]) 117|54i21[51|358]
+98V13 Link(47P9) 117|54i21
 X 100 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
 264V13 Link(71P9) 117|54i21
 X 111 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9)
+134P9 Node_Access(133R9[66|250])
 151V13 Link(134P9[59|99]) 117|54i21[59|99]
 X 121 storage.ads
-1K9*Storage 39|1w14 1r35 121|22e12
+1K9*Storage 39|1w14 1r35 121|26e12
 X 122 system.ads
 67M9*Address
 X 135 s-memory.ads

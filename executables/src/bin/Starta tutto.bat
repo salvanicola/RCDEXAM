@@ -5,3 +5,7 @@ timeout 1
 start "STORAGE" cmd.exe /c "storage_partition"
 timeout 1
 start "CLIENT" cmd.exe /c "client_partition"
+timeout 1
+start "CLIENT" cmd.exe /c "client_partition"
+timeout 1
+start "CLIENT" cmd.exe /c "client_partition"

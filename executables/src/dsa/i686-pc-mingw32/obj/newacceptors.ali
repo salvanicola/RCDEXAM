@@ -22,7 +22,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U newacceptors%b	newacceptors.adb	4cb06181 OO PK
+U newacceptors%b	newacceptors.adb	8434a481 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.characters%s	a-charac.ads		a-charac.ali
 W ada.characters.latin_1%s  a-chlat1.ads	a-chlat1.ali
@@ -30,8 +30,10 @@ Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
 W newlearners%s		newlearners.adb		newlearners.ali
 W newworkers%s		newworkers.adb		newworkers.ali
+W storage%s		storage.adb		storage.ali
 Z system%s		system.ads		system.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -43,7 +45,7 @@ Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U newacceptors%s	newacceptors.ads	9f95900f EE OO PF RT PK
+U newacceptors%s	newacceptors.ads	d63eddba EE OO PF RT PK
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.containers.generic_array_sort%s
@@ -104,10 +106,10 @@ D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D newacceptors.ads	20210912160048 8b76edc1 newacceptors%s
-D newacceptors.adb	20210912160100 cccada55 newacceptors%b
-D newlearners.ads	20210912155728 43de0477 newlearners%s
-D newworkers.ads	20210912150140 8063fa3e newworkers%s
+D newacceptors.ads	20210913153238 0420e5a9 newacceptors%s
+D newacceptors.adb	20210913160628 e3350dc0 newacceptors%b
+D newlearners.ads	20210913164418 3fa98050 newlearners%s
+D newworkers.ads	20210913151436 75fd47f6 newworkers%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -188,7 +190,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210912151816 5b4ee2e8 storage%s
+D storage.ads		20210913154102 e1c42312 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -620,16 +622,15 @@ G c Z s s [newacceptorDI newacceptors 56 9 none]
 G c Z s s [newacceptorIP newacceptors 56 9 none]
 G c Z s s [S1sDF newacceptors 9 9 none]
 G c Z s s [S1sIP newacceptors 9 9 none]
-G c Z s s [S13sDF newacceptors 12 9 none]
-G c Z s s [S13sIP newacceptors 12 9 none]
 G c Z s s [promiseIP newacceptors 15 9 none]
-G c Z b b [get_w newacceptors 28 13 none]
-G c Z b b [get_a newacceptors 40 13 none]
-G c Z b b [get_l newacceptors 52 13 none]
-G r p none [promising newacceptors 37 13 none] [get_id storage__queue 15 16 none]
-G r p none [promising newacceptors 37 13 none] [get storage__queue 14 16 none]
-G r c none [save newacceptors 46 14 none] [learn newlearners 14 14 none]
+G c Z b b [get_w newacceptors 29 13 none]
+G c Z b b [get_a newacceptors 41 13 none]
+G c Z b b [get_l newacceptors 53 13 none]
+G r p none [promising newacceptors 37 13 none] [insert storage__queue 15 17 none]
+G r c none [save newacceptors 46 14 none] [isleader newlearners 41 13 none]
+G r c none [save newacceptors 46 14 none] [learn newlearners 29 14 none]
 G r s acceptor [newacceptorIP newacceptors 56 9 none] [acceptorIP common 50 9 none]
+G r s mem_entry [newacceptorIP newacceptors 56 9 none] [mem_entryIP newlearners 11 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 33|2r6 21r34 25r36 29r35 34|2r6 2r23 3r6 3r34
 X 2 a-charac.ads
@@ -643,90 +644,98 @@ X 8 a-convec.ads
 61I9 Index_Type 33|22r7 26r7 30r7
 62+9 Element_Type 33|23r7 27r7 31r7
 73k24*Vectors 824e27 33|2w21 21r49 25r51 29r50
-78I12*Extended_Index{integer} 33|63r30[21] 64r32[25] 65r31[29]
-88R9*Vector<11|43R9> 33|60r37[21] 61r40[25] 62r38[29]
-165V13*Length{4|22I9} 34|11s90[33|21] 18s91[33|25] 25s90[33|29]
-431U14*Append 34|9s27[33|21] 16s28[33|25] 23s27[33|29]
+78I12*Extended_Index{integer} 33|64r30[21] 65r32[25] 66r31[29]
+88R9*Vector<11|43R9> 33|61r37[21] 62r40[25] 63r38[29]
+165V13*Length{4|22I9} 34|12s90[33|21] 19s91[33|25] 26s90[33|29]
+431U14*Append 34|10s27[33|21] 17s28[33|25] 24s27[33|29]
+512V13*First_Index{integer} 34|108s31[33|29]
+522V13*Last_Index{78I12[33|29]} 34|108s61[33|29]
 X 13 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[8|111]>
 X 25 a-textio.ads
 57K13*Text_IO 727e16 34|2w10 2r27
-508U14*Put_Line 34|10s7 11s7 17s7 18s7 24s7 25s7 69s10 77s10 90s13 93s13
-. 97s10
+508U14*Put_Line 34|11s7 12s7 18s7 19s7 25s7 26s7 70s10 79s10 94s13 97s13
+. 101s10
 X 28 common.ads
 2K9*Common 52e11 33|1w6 1r27
 12H9*Acceptor 50e56 33|7r28 56r28
-18P9*Any_Worker(9R9) 33|23r23 49r55 34|7r55 28r64
+18P9*Any_Worker(9R9) 33|23r23 49r55 34|8r55 29r64
 X 29 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 114|37i18
 X 33 newacceptors.ads
-4K9*NewAcceptors 56E9 67l5 67e17 34|6b14 107l5 107t17
+4K9*NewAcceptors 56E9 68l5 68e17 34|7b14 116l5 116t17
 7R9*NewAcceptor<28|12R9> 10r17 37p13 38r18 41p13 42r18 46p14 47r18 49p14
-. 49r35 51p14 51r35 53p14 53r35 56c9 66e14 34|7r35 14r35 21r35 28r31 40r31
-. 52r31 64r35 85r34 102r31
-9P9*Acc_Acceptor_A(7R9) 27r23 51r54 34|14r54 40r64
-12P9*Acc_Learner_A(35|6R9) 31r23 53r54 34|21r54 52r64
-15R9*Promise 19e14 39r31 34|64r69 66r16
-16b7*Accepted{boolean} 34|70m17 78m17
-17i7*ID{integer} 34|71m17 79m17
-18i7*Value{integer} 34|72m17 74r30 80m17
-21K12*Worker_Vectors[8|73] 33r8 60r22 63r15
-25K12*Acceptor_Vectors[8|73] 34r8 61r23 64r15
-29K12*Learner_Vectors[8|73] 35r8 62r22 65r15
-37V13*Promising{15R9} 38^7 39>7 34|64b13 83l8 83t17
-38p7 A(7R9) 34|64b24 68r10 73r10 74r10 79r23
-39i7 ID{integer} 34|64b48 68r21 71r23 73r22
-41V13*Validate{boolean} 42^7 43>7 44>7 34|85b13 100l8 100t16
-42p7 A(7R9) 34|85b23 88r10 89r14 89r31
-43i7 ID{integer} 34|85b47 88r21
-44i7 V{integer} 34|85b61 89r26
-46U14*Save 47^7 47>31 47>44 34|102b14 105l8 105t12
-47p7 A(7R9) 34|102b20 104r31
-47i31 V{integer} 34|102b44 104r42
-47i44 R{integer} 34|102b57 104r45
-49U14*Insert_W 49^24 49>48 34|7b14 12l8 12t16
-49p24 Me(7R9) 34|7b24 9r7 11r70
-49p48 W{28|18P9} 34|7b48 9r34
-51U14*Insert_A 51^24 51>48 34|14b14 19l8 19t16
-51p24 Me(7R9) 34|14b24 16r7 18r70
-51p48 A{9P9} 34|14b48 16r35
-53U14*Insert_L 53^24 53>48 34|21b14 26l8 26t16
-53p24 Me(7R9) 34|21b24 23r7 25r70
-53p48 L{12P9} 34|21b48 23r34
+. 49r35 51p14 51r35 53p14 53r35 56c9 67e14 34|8r35 15r35 22r35 29r31 41r31
+. 53r31 65r35 87r34 106r31
+9P9*Acc_Acceptor_A(7R9) 27r23 51r54 34|15r54 41r64
+12P9*Acc_Learner_A(35|6R9) 31r23 53r54 34|22r54 53r64
+15R9*Promise 19e14 39r31 34|65r69 67r16
+16b7*Accepted{boolean} 34|71m17 80m17
+17i7*ID{integer} 34|72m17 81m17
+18i7*Value{integer} 34|73m17 75r30 82m17
+21K12*Worker_Vectors[8|73] 33r8 61r22 64r15
+25K12*Acceptor_Vectors[8|73] 34r8 62r23 65r15
+29K12*Learner_Vectors[8|73] 35r8 63r22 66r15
+37V13*Promising{15R9} 38^7 39>7 34|65b13 85l8 85t17
+38p7 A(7R9) 34|65b24 69r10 73r26 74r10 75r10 76r29 81r23 82r26
+39i7 ID{integer} 34|65b48 69r21 72r23 74r22 76r52
+41V13*Validate{boolean} 42^7 43>7 44>7 34|87b13 104l8 104t16
+42p7 A(7R9) 34|87b23 90r10 91r14 91r31 92r13 93r13
+43i7 ID{integer} 34|87b47 90r21 92r35
+44i7 V{integer} 34|87b61 91r26 93r38
+46U14*Save 47^7 47>31 47>44 34|106b14 114l8 114t12
+47p7 A(7R9) 34|106b20 108r16 108r46 109r22 110r31
+47i31 V{integer} 34|106b44 110r50
+47i44 R{integer} 34|106b57 110r53
+49U14*Insert_W 49^24 49>48 34|8b14 13l8 13t16
+49p24 Me(7R9) 34|8b24 10r7 12r70
+49p48 W{28|18P9} 34|8b48 10r34
+51U14*Insert_A 51^24 51>48 34|15b14 20l8 20t16
+51p24 Me(7R9) 34|15b24 17r7 19r70
+51p48 A{9P9} 34|15b48 17r35
+53U14*Insert_L 53^24 53>48 34|22b14 27l8 27t16
+53p24 Me(7R9) 34|22b24 24r7 26r70
+53p48 L{12P9} 34|22b48 24r34
 57a7 Name{string}
-58i7 Max_ID{integer} 34|68r12 73m12 79r25 88r12
-59i7 Waiting{integer} 34|74m12 89r16 89r33
-60r7 Working_List{8|88R9[21]} 34|9m14 11r77 31r19
-61r7 Acceptor_List{8|88R9[25]} 34|16m14 18r77 43r19
-62r7 Learner_List{8|88R9[29]} 34|23m14 25r77 55r19
-63i7 Idx_W{8|78I12[21]}
-64i7 Idx_A{8|78I12[25]}
-65i7 Idx_L{8|78I12[29]}
+58i7 Max_ID{integer} 34|69r12 74m12 81r25 90r12
+59i7 Waiting{integer} 34|75m12 91r16 91r33
+60r7 Last_accepted{35|11R9} 34|73r28 76m31 82r28 92m15 93m15
+61r7 Working_List{8|88R9[21]} 34|10m14 12r77 32r19
+62r7 Acceptor_List{8|88R9[25]} 34|17m14 19r77 44r19
+63r7 Learner_List{8|88R9[29]} 34|24m14 26r77 56r19 108r18 108r48 109r24 110r33
+64i7 Idx_W{8|78I12[21]}
+65i7 Idx_A{8|78I12[25]}
+66i7 Idx_L{8|78I12[29]}
 X 34 newacceptors.adb
-28V13 Get_W{28|18P9} 28b13 28=20 28>44 38l8 38t13
-28r20 Me{33|7R9} 31r16
-28i44 C{integer} 32r29
-29i7 count{integer} 32r13 35m10 35r19
-31p11 E{28|18P9} 33r20
-40V13 Get_A{33|9P9} 40b13 40=20 40>44 50l8 50t13
-40r20 Me{33|7R9} 43r16
-40i44 C{integer} 44r29
-41i7 count{integer} 44r13 47m10 47r19
-43p11 E{33|9P9} 45r20
-52V13 Get_L{33|12P9} 52b13 52=20 52>44 62l8 62t13 104s25
-52r20 Me{33|7R9} 55r16
-52i44 C{integer} 56r29
-53i7 count{integer} 56r13 59m10 59r19
-55p11 E{33|12P9} 57r20
-66r7 Answer{33|15R9} 70m10 71m10 72m10 74r23 75r17 78m10 79m10 80m10 81r17
+29V13 Get_W{28|18P9} 29b13 29=20 29>44 39l8 39t13
+29r20 Me{33|7R9} 32r16
+29i44 C{integer} 33r29
+30i7 count{integer} 33r13 36m10 36r19
+32p11 E{28|18P9} 34r20
+41V13 Get_A{33|9P9} 41b13 41=20 41>44 51l8 51t13
+41r20 Me{33|7R9} 44r16
+41i44 C{integer} 45r29
+42i7 count{integer} 45r13 48m10 48r19
+44p11 E{33|9P9} 46r20
+53V13 Get_L{33|12P9} 53b13 53=20 53>44 63l8 63t13
+53r20 Me{33|7R9} 56r16
+53i44 C{integer} 57r29
+54i7 count{integer} 57r13 60m10 60r19
+56p11 E{33|12P9} 58r20
+67r7 Answer{33|15R9} 71m10 72m10 73m10 75r23 77r17 80m10 81m10 82m10 83r17
+108i11 I{integer} 109r37 110r46
 X 35 newlearners.ads
-3K9*NewLearners 33|3w6 3r23 34|5w6 5r23 104r7 35|25e16
-6R9*NewLearner<28|15R9> 33|13r17 35|24e14
-14U14*Learn 34|104R19
+3K9*NewLearners 33|3w6 3r23 34|5w6 5r23 110r13 35|51e16
+6R9*NewLearner<28|15R9> 33|13r17 35|50e14
+11R9*Mem_entry 33|60r23 35|14e14
+12i7*ID{integer} 34|92m29
+13i7*Value{integer} 34|73r42 76m45 82r42 93m29
+29U14*Learn 34|110R25
+41V13*isLeader{boolean} 34|109R13
 X 36 newworkers.ads
-6K9*NewWorkers 34|4w6 4r22 36|59e15
+6K9*NewWorkers 34|4w6 4r22 36|67e15
 X 39 polyorb-any.ads
 179h12*Union_TC_Map
 251V28*"="=253:32{boolean} 107|41i19
@@ -742,13 +751,12 @@ X 96 polyorb-task_info.ads
 264V13 Link(71P9) 113|54i21
 X 107 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9)
+134P9 Node_Access(133R9[41|74])
 151V13 Link(134P9[55|99]) 113|54i21[55|99]
 X 117 storage.ads
-1K9*Storage 33|1w14 1r35 117|22e12
-9w14*Queue 34|72r26 72r36 80r26 80r36
-14V16 Get{integer} 34|72s32 80s32
-15V16 Get_ID{integer} 34|72s42 80s42
+1K9*Storage 33|1w14 1r35 34|6w6 6r19 117|26e12
+14w14*Queue 34|76r10
+15U17 Insert 34|76s16
 X 118 system.ads
 67M9*Address
 X 130 s-memory.ads

@@ -39,16 +39,24 @@ package NewWorkers is
       ID: Integer;
       N : Common.Notify);
 
+   procedure Propose (W : access NewWorker; T : Integer; ID: Integer; N : Common.Notify);
+
    procedure Insert_W (Me: access NewWorker; W : in Acc_Worker);
 
    procedure Insert_A (Me: access NewWorker; A: in Acc_Acceptor);
 
    procedure Insert_L (Me: access NewWorker; L: in Acc_Learner);
 
+   procedure Promote (Me: access NewWorker);
+
+   function isLeader (Me : access NewWorker) return Boolean;
+
 private
    type NewWorker is new Worker with record
       Name : String(1..4) := "Bezz";
+      Leader : Boolean := False;
       count : Integer := 0;
+      Max_ID : Integer := -1;
       Working_List : Worker_Vectors.Vector;
       Acceptor_List : Acceptor_Vectors.Vector;
       Learner_List : Learner_Vectors.Vector;

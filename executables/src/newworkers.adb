@@ -80,6 +80,10 @@ package body NewWorkers is
       return null;
    end Get_L;
 
+   function isLeader (Me : access NewWorker) return Boolean is
+   begin
+      return Me.Leader;
+   end isLeader;
 
    function PrepareRequest (W : access NewWorker; ID : Integer) return Result is
       it : Integer := 0;
@@ -113,23 +117,50 @@ package body NewWorkers is
 
    procedure Assign (W : access NewWorker; Q : Integer; ID: Integer; N : Common.Notify) is
       T: Integer;
+   begin
+      reset(gen);
+      err := random(gen);
+      T := Integer(Ada.Strings.Hash(Integer'Image(Q * 3 + Integer(err))));
+      if W.Leader then
+         Propose (W, T, ID, N);
+      else
+         for I in W.Working_List.First_Index .. W.Working_List.Last_Index loop
+            if isLeader(W.Working_List(I)) then
+               Propose (W.Working_List(I), T, ID, N);
+               exit;
+            end if;
+         end loop;
+      end if;
+   end Assign;
+
+   procedure Propose (W : access NewWorker; T : Integer; ID: Integer; N : Common.Notify) is
       it : Index_A := 0;
       Response : Result;
    begin
-      Response := PrepareRequest(W, ID);
-      if Response.Positive then
-         while it < Response.Count loop
-            if (NewAcceptors.Validate(Response.Handshakers(it), ID, Response.Value)) then
-               reset(gen);
-               err := random(gen);
-               T := Integer(Ada.Strings.Hash(Integer'Image(Q * 3 + Integer(err))));
-               N(T);
-               NewAcceptors.Save(Response.Handshakers(it), T, ID);
-            end if;
-            it := it + 1;
-         end loop;
+      if W.Max_ID < ID then
+         W.Max_ID := ID;
+         Response := PrepareRequest(W, ID);
+         if Response.Positive then
+            while it < Response.Count loop
+               if (NewAcceptors.Validate(Response.Handshakers(it), ID, Response.Value)) then
+                  N(T);
+                  NewAcceptors.Save(Response.Handshakers(it), T, ID);
+               end if;
+               it := it + 1;
+            end loop;
+         else
+            Put_Line("Non hanno risposto positivamente abbastanza Acceptor");
+         end if;
       else
-         Put_Line("Non hanno risposto positivamente abbastanza Acceptor");
+         Put_Line("Non invio una richiesta con ID minore di una gia' inviata!");
       end if;
-   end Assign;
+   end Propose;
+
+   procedure Promote (Me : access NewWorker) is
+   begin
+      Me.Leader := True;
+      Put_Line ("Sono stato promosso a leader, adesso comando io!");
+   end Promote;
+
+
 end NewWorkers;

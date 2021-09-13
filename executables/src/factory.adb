@@ -117,8 +117,33 @@ package body Factory is
       end loop;
    end Update_A;
 
+   procedure Update_L (T : Acc_Learner) is
+   begin
+      Put_Line ("Inizio aggiornamento Learner...");
+      for I in Index loop
+         if Learner_List(I) /= null then
+            NewLearners.Insert_L(Acc_Learner(T), Acc_Learner_L(Learner_List(I)));
+            NewLearners.Insert_L(Acc_Learner(Learner_List(I)), Acc_Learner_L(T));
+            NewLearners.Update_Reg(T);
+         else
+            exit;
+         end if;
+      end loop;
+   end Update_L;
+
+   procedure Promote_W (W : Acc_Worker) is
+   begin
+      NewWorkers.Promote(W);
+   end Promote_W;
+
+   procedure Promote_L (L : Acc_Learner) is
+   begin
+      NewLearners.Promote(L);
+   end Promote_L;
+
    procedure Notify (Q : Integer) is
    begin
       Put_Line("Lavoro completato, il risultato e': " & Integer'Image(Q));
    end Notify;
+
 end Factory;

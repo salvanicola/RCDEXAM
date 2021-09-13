@@ -57,6 +57,7 @@ private
       Name : String(1..4) := "Frah";
       Max_ID : Integer := -1;
       Waiting : Integer := -1;
+      Last_accepted : Mem_entry;
       Working_List : Worker_Vectors.Vector;
       Acceptor_List : Acceptor_Vectors.Vector;
       Learner_List : Learner_Vectors.Vector;

@@ -13,14 +13,14 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U factory%b		factory.adb		667afee7 NE OO PK
+U factory%b		factory.adb		d51e5d96 NE OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 
-U factory%s		factory.ads		700022ca EE OO RC PK
+U factory%s		factory.ads		6617efa5 EE OO RC PK
 W common%s		common.ads		common.ali
 W newacceptors%s	newacceptors.adb	newacceptors.ali
 W newlearners%s		newlearners.adb		newlearners.ali
@@ -50,15 +50,15 @@ D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D common.ads		20210912153434 7258948e common%s
-D factory.ads		20210912155220 4a93a5cc factory%s
-D factory.adb		20210912160232 821d8e46 factory%b
+D factory.ads		20210913163834 5a3b5924 factory%s
+D factory.adb		20210913164504 21d1d1df factory%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D newacceptors.ads	20210912160048 8b76edc1 newacceptors%s
-D newlearners.ads	20210912155728 43de0477 newlearners%s
-D newworkers.ads	20210912150140 8063fa3e newworkers%s
+D newacceptors.ads	20210913153238 0420e5a9 newacceptors%s
+D newlearners.ads	20210913164418 3fa98050 newlearners%s
+D newworkers.ads	20210913151436 75fd47f6 newworkers%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -139,7 +139,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210912151816 5b4ee2e8 storage%s
+D storage.ads		20210913154102 e1c42312 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -187,18 +187,25 @@ G c Z s b [get_numa factory 23 13 none]
 G c Z s b [get_numl factory 24 13 none]
 G c Z s b [update_w factory 26 14 none]
 G c Z s b [update_a factory 27 14 none]
-G c Z s b [notify factory 29 14 none]
+G c Z s b [update_l factory 28 14 none]
+G c Z s b [promote_w factory 30 14 none]
+G c Z s b [promote_l factory 31 14 none]
+G c Z s b [notify factory 33 14 none]
 G c Z s s [Tworker_arrayBIP factory 10 4 none]
 G c Z s s [Tacceptor_arrayBIP factory 11 4 none]
 G c Z s s [Tlearner_arrayBIP factory 12 4 none]
-G r c none [update_w factory 26 14 none] [insert_w newworkers 42 14 none]
-G r c none [update_w factory 26 14 none] [insert_a newworkers 44 14 none]
+G r c none [update_w factory 26 14 none] [insert_w newworkers 44 14 none]
+G r c none [update_w factory 26 14 none] [insert_a newworkers 46 14 none]
 G r c none [update_w factory 26 14 none] [insert_w newacceptors 49 14 none]
-G r c none [update_w factory 26 14 none] [insert_l newworkers 46 14 none]
+G r c none [update_w factory 26 14 none] [insert_l newworkers 48 14 none]
 G r c none [update_a factory 27 14 none] [insert_w newacceptors 49 14 none]
-G r c none [update_a factory 27 14 none] [insert_a newworkers 44 14 none]
+G r c none [update_a factory 27 14 none] [insert_a newworkers 46 14 none]
 G r c none [update_a factory 27 14 none] [insert_a newacceptors 51 14 none]
 G r c none [update_a factory 27 14 none] [insert_l newacceptors 53 14 none]
+G r c none [update_l factory 28 14 none] [insert_l newlearners 27 14 none]
+G r c none [update_l factory 28 14 none] [update_reg newlearners 35 14 none]
+G r c none [promote_w factory 30 14 none] [promote newworkers 50 14 none]
+G r c none [promote_l factory 31 14 none] [promote newlearners 39 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 26|1r6 1r23
 X 10 a-iteint.ads
@@ -208,17 +215,18 @@ X 21 a-textio.ads
 57K13*Text_IO 727e16 26|1w10 1r27
 264U14*New_Line 26|9s7 20s7 28s7
 465U14*Put 26|8s7 19s7 27s7
-508U14*Put_Line 26|66s7 94s7 122s7
+508U14*Put_Line 26|66s7 94s7 122s7 146s7
 X 24 common.ads
 2K9*Common 52e11 25|1w6 1r18
 18P9*Any_Worker(9R9) 26|78r53 97r52
 X 25 factory.ads
-6K9*Factory 33E4 39l5 39e12 26|2b14 124l5 124t12
-9I9*Index<short_short_integer> 10r32 11r34 12r33 34r14 36r14 38r14 26|15r16
+6K9*Factory 37E4 43l5 43e12 26|2b14 149l5 149t12
+9I9*Index<short_short_integer> 10r32 11r34 12r33 38r14 40r14 42r14 26|15r16
 . 32r15 32r24 38r15 38r24 44r15 44r24 67r16 75r16 83r16 95r16 103r16 111r16
-10A9*Worker_Array(33|11P9)<9I9> 33r19
-11A9*Acceptor_Array(33|14P9)<9I9> 35r20
-12A9*Learner_Array(33|17P9)<9I9> 37r19
+. 123r16
+10A9*Worker_Array(33|11P9)<9I9> 37r19
+11A9*Acceptor_Array(33|14P9)<9I9> 39r20
+12A9*Learner_Array(33|17P9)<9I9> 41r19
 14U14*Insert_W 14>24 26|4b14 10l8 10t16
 14p24 W{33|11P9} 26|4b24 6r32
 15U14*Insert_A 15>24 26|12b14 21l8 21t16
@@ -238,14 +246,21 @@ X 25 factory.ads
 26p24 T{33|11P9} 26|64b24 69r33 70r50 77r33 78r64 85r33
 27U14*Update_A 27>24 26|92b14 118l8 118t16
 27p24 T{33|14P9} 26|92b24 97r48 98r50 105r48 106r68 113r48
-29U14*Notify 29>22 30r25 26|120b14 123l8 123t14
-29i22 Q{integer} 26|120b22 122r71
-33a4 Working_List{10A9} 26|6m7 34r14 68r13 69r36 70r33 96r13 97r63 98r33
-34i4 Index_W{9I9} 26|6r20 7m7 7r18 51r22
-35a4 Acceptor_List{11A9} 26|14m7 40r14 76r13 77r36 78r35 104r13 105r67 106r35
-36i4 Index_A{9I9} 26|14r21 18m7 18r18 56r22
-37a4 Learner_List{12A9} 26|25m7 46r14 84r13 85r37 112r13 113r66
-38i4 Index_L{9I9} 26|25r20 26m7 26r18 61r22
+28U14*Update_L 28>24 26|120b14 132l8 132t16
+28p24 T{33|17P9} 26|120b24 125r46 126r78 127r36
+30U14*Promote_W 30>25 26|134b14 137l8 137t17
+30p25 W{33|11P9} 26|134b25 136r26
+31U14*Promote_L 31>25 26|139b14 142l8 142t17
+31p25 L{33|17P9} 26|139b25 141r27
+33U14*Notify 33>22 34r25 26|144b14 147l8 147t14
+33i22 Q{integer} 26|144b22 146r71
+37a4 Working_List{10A9} 26|6m7 34r14 68r13 69r36 70r33 96r13 97r63 98r33
+38i4 Index_W{9I9} 26|6r20 7m7 7r18 51r22
+39a4 Acceptor_List{11A9} 26|14m7 40r14 76r13 77r36 78r35 104r13 105r67 106r35
+40i4 Index_A{9I9} 26|14r21 18m7 18r18 56r22
+41a4 Learner_List{12A9} 26|25m7 46r14 84r13 85r37 112r13 113r66 124r13 125r64
+. 126r46
+42i4 Index_L{9I9} 26|25r20 26m7 26r18 61r22
 X 26 factory.adb
 15i11 I{25|9I9}
 32i7 count{25|9I9} 34r27
@@ -257,27 +272,35 @@ X 26 factory.adb
 95i11 I{25|9I9} 96r26 97r76 98r46
 103i11 I{25|9I9} 104r27 105r81 106r49
 111i11 I{25|9I9} 112r26 113r79
+123i11 I{25|9I9} 124r26 125r77 126r59
 X 27 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 111|37i18
 X 31 newacceptors.ads
-4K9*NewAcceptors 25|3w6 3r24 26|78r13 97r13 105r13 106r13 113r13 31|67e17
+4K9*NewAcceptors 25|3w6 3r24 26|78r13 97r13 105r13 106r13 113r13 31|68e17
 9P9*Acc_Acceptor_A(7R9) 26|105r52 106r53
 12P9*Acc_Learner_A(32|6R9) 26|113r52
 49U14*Insert_W 26|78R26 97R26
 51U14*Insert_A 26|105R26 106R26
 53U14*Insert_L 26|113R26
 X 32 newlearners.ads
-3K9*NewLearners 25|4w6 4r23 32|25e16
+3K9*NewLearners 25|4w6 4r23 26|125r13 126r13 127r13 141r7 32|51e16
+8P9*Acc_Learner_L(6R9) 26|125r50 126r64
+27U14*Insert_L 26|125R25 126R25
+35U14*Update_Reg 26|127R25
+39U14*Promote 26|141R19
 X 33 newworkers.ads
-6K9*NewWorkers 25|2w6 2r22 26|69r13 70r13 77r13 85r13 98r13 33|59e15
-11P9*Acc_Worker(9R9) 25|10r42 14r28 18r40 26r28 26|4r28 31r40 64r28
+6K9*NewWorkers 25|2w6 2r22 26|69r13 70r13 77r13 85r13 98r13 136r7 33|67e15
+11P9*Acc_Worker(9R9) 25|10r42 14r28 18r40 26r28 30r29 26|4r28 31r40 64r28
+. 134r29
 14P9*Acc_Acceptor(31|7R9) 25|11r44 15r27 19r40 27r28 26|12r27 37r40 92r28
 . 97r35 105r35 113r35
-17P9*Acc_Learner(32|6R9) 25|12r43 16r27 20r40 26|23r27 43r40
-42U14*Insert_W 26|69R24 70R24
-44U14*Insert_A 26|77R24 98R24
-46U14*Insert_L 26|85R24
+17P9*Acc_Learner(32|6R9) 25|12r43 16r27 20r40 28r28 31r29 26|23r27 43r40
+. 120r28 125r34 126r34 139r29
+44U14*Insert_W 26|69R24 70R24
+46U14*Insert_A 26|77R24 98R24
+48U14*Insert_L 26|85R24
+50U14*Promote 26|136R18
 X 36 polyorb-any.ads
 179h12*Union_TC_Map
 251V28*"="=253:32{boolean} 104|41i19
@@ -286,14 +309,14 @@ X 42 polyorb-binding_objects.ads
 56V13*Link(52P9) 110|54i21
 X 58 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
-47P9*Chunk_Access(46R9[44|358])
+47P9*Chunk_Access(46R9)
 98V13 Link(47P9[44|358]) 110|54i21[44|358]
 X 93 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
 264V13 Link(71P9) 110|54i21
 X 104 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[113|43])
+134P9 Node_Access(133R9[97|80])
 151V13 Link(134P9[52|99]) 110|54i21[52|99]
 X 136 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22

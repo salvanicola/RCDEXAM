@@ -25,6 +25,10 @@ package Factory is
 
    procedure Update_W (T : Acc_Worker);
    procedure Update_A (T : Acc_Acceptor);
+   procedure Update_L (T : Acc_Learner);
+
+   procedure Promote_W (W : Acc_Worker);
+   procedure Promote_L (L : Acc_Learner);
 
    procedure Notify (Q : Integer);
    pragma Asynchronous (Notify);

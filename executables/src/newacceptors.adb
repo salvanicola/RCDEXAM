@@ -3,6 +3,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Characters.Latin_1; use Ada.Characters.Latin_1;
 with NewWorkers; use NewWorkers;
 with NewLearners; use NewLearners;
+with Storage; use Storage;
 package body NewAcceptors is
    procedure Insert_W (Me: access NewAcceptor; W : in Any_Worker) is
    begin
@@ -69,15 +70,16 @@ package body NewAcceptors is
          Put_Line("Promessa stipulata!");
          Answer.Accepted := True;
          Answer.ID := ID;
-         Answer.Value := Queue.Get(Queue.Get_ID);
+         Answer.Value := A.Last_accepted.Value;
          A.Max_ID := ID;
          A.Waiting := Answer.Value;
+         Queue.Insert(True, A.Last_accepted.Value, ID);
          return Answer;
       else
          Put_Line("Promessa rifiutata...");
          Answer.Accepted := False;
          Answer.ID := A.Max_ID;
-         Answer.Value := Queue.Get(Queue.Get_ID);
+         Answer.Value := A.Last_accepted.Value;
          return Answer;
       end if;
    end Promising;
@@ -87,6 +89,8 @@ package body NewAcceptors is
    begin
       if A.Max_ID = ID then
          if (A.Waiting = V or A.Waiting = -1) then
+            A.Last_accepted.ID := ID;
+            A.Last_accepted.Value := V;
             Put_Line("Richiesta accettata!");
             return True;
          else
@@ -101,7 +105,12 @@ package body NewAcceptors is
 
    procedure Save (A : access NewAcceptor; V : Integer; R : Integer)
    is begin
-      NewLearners.Learn(Get_L(A.all, 0), V, R);
+      for I in A.Learner_List.First_Index .. A.Learner_List.Last_Index loop
+         if isLeader(A.Learner_List(I)) then
+            NewLearners.Learn(A.Learner_List(I), V, R);
+            exit;
+         end if;
+      end loop;
    end Save;
 
 end NewAcceptors;
