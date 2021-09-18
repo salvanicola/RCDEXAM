@@ -5,43 +5,32 @@ A -march=x86-64
 P SS ZX
 
 RN
-RV NO_DELAY
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
-RV NO_FIXED_POINT
 RV NO_IO
-RV NO_RELATIVE_DELAY
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U client%b		client.adb		814f15c9 OO PF RA PK
+U client%b		client.adb		ba0eaabd OO PF RA PK
 W ada%s			ada.ads			ada.ali
-Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W common%s		common.ads		common.ali
 W factory%s		factory.adb		factory.ali
-W newacceptors%s	newacceptors.adb	newacceptors.ali
-W newlearners%s		newlearners.adb		newlearners.ali
-W newworkers%s		newworkers.adb		newworkers.ali
-W system%s		system.ads		system.ali
+W newprocesses%s	newprocesses.adb	newprocesses.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
-Z system.partition_interface%s  s-parint.adb	s-parint.ali
-Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 U client%s		client.ads		41cf2c9d EE NE OO PK
 
 D ada.ads		20200228061810 76789da1 ada%s
-D a-calend.ads		20200228061810 474d9720 ada.calendar%s
-D a-caldel.ads		20200228061810 9f20b83d ada.calendar.delays%s
 D a-charac.ads		20200228061810 2d3ec45b ada.characters%s
 D a-chlat1.ads		20200228061810 66457d31 ada.characters.latin_1%s
 D a-contai.ads		20200228061810 61e5e089 ada.containers%s
@@ -68,16 +57,14 @@ D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D client.ads		20210830155914 41cf2c9d client%s
-D client.adb		20210913165008 23bf48e1 client%b
-D common.ads		20210912153434 7258948e common%s
-D factory.ads		20210913163834 5a3b5924 factory%s
+D client.adb		20210918154308 cb998743 client%b
+D common.ads		20210918100702 e50390a0 common%s
+D factory.ads		20210918150814 372e1de6 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D newacceptors.ads	20210913153238 0420e5a9 newacceptors%s
-D newlearners.ads	20210913164418 3fa98050 newlearners%s
-D newworkers.ads	20210913151436 75fd47f6 newworkers%s
+D newprocesses.ads	20210918154044 150586bb newprocesses%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -158,7 +145,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210913154102 e1c42312 storage%s
+D storage.ads		20210918151116 5739079e storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -170,7 +157,6 @@ D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
 D s-finmas.ads		20200228061810 7811a767 system.finalization_masters%s
 D s-finroo.ads		20200228061810 4ff27390 system.finalization_root%s
 D s-imgint.ads		20200228061810 02dbe0c2 system.img_int%s
-D s-imguns.ads		20200228061810 9ff43cf7 system.img_uns%s
 D s-memory.ads		20200228061810 597d6634 system.memory%s
 D s-multip.ads		20200228061810 38ac9f73 system.multiprocessors%s
 D s-osinte.ads		20200228061810 97504df8 system.os_interface%s
@@ -178,8 +164,6 @@ D s-parame.ads		20200228061810 4752c4cb system.parameters%s
 D s-parint.ads		20210826161802 aaa3b5a0 system.partition_interface%s
 D s-pooglo.ads		20200228061810 ede33ef8 system.pool_global%s
 D s-rannum.ads		20200228061810 99ade2f2 system.random_numbers%s
-D s-rannum.adb		20200427050434 5f999925 system.random_numbers%b
-D s-ransee.ads		20200228061810 01a57b33 system.random_seed%s
 D s-rpc.ads		20200228061810 601dde9c system.rpc%s
 D s-secsta.ads		20200327060540 9b3ab94b system.secondary_stack%s
 D s-shasto.ads		20210826161802 0c5bce1a system.shared_storage%s
@@ -198,127 +182,104 @@ D s-taskin.ads		20200228061810 88fba9ad system.tasking%s
 D s-taprob.ads		20200228061810 acd6094d system.tasking.protected_objects%s
 D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
-D s-valuns.ads		20200228061810 35067db9 system.val_uns%s
 D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a e
-G c b b b [b client 9 1 none]
+G c b b b [b client 8 1 none]
 G c Z s b [start client 2 14 none]
-G c Z b b [random client__rand_int 52 13 15_4]
-G c Z b b [random client__rand_int 54 13 15_4]
-G c Z b b [reset client__rand_int 60 14 15_4]
-G c Z b b [reset client__rand_int 61 14 15_4]
-G c Z b b [save client__rand_int 67 14 15_4]
-G c Z b b [reset client__rand_int 68 14 15_4]
-G c Z b b [image client__rand_int 72 13 15_4]
-G c Z b b [value client__rand_int 73 13 15_4]
-G r s newworker [b client 9 1 none] [newworkerIP newworkers 55 9 none]
-G r l newworker [b client 9 1 none] [newworkerDI newworkers 55 9 none]
-G r k newworker [b client 9 1 none] [newworkerDF newworkers 55 9 none]
-G r s newacceptor [b client 9 1 none] [newacceptorIP newacceptors 56 9 none]
-G r l newacceptor [b client 9 1 none] [newacceptorDI newacceptors 56 9 none]
-G r k newacceptor [b client 9 1 none] [newacceptorDF newacceptors 56 9 none]
-G r s newlearner [b client 9 1 none] [newlearnerIP newlearners 44 9 none]
-G r l newlearner [b client 9 1 none] [newlearnerDI newlearners 44 9 none]
-G r k newlearner [b client 9 1 none] [newlearnerDF newlearners 44 9 none]
-G r c none [start client 2 14 none] [get_numl factory 24 13 none]
-G r c none [start client 2 14 none] [promote_l factory 31 14 none]
-G r c none [start client 2 14 none] [update_l factory 28 14 none]
-G r c none [start client 2 14 none] [insert_l factory 16 14 none]
-G r c none [start client 2 14 none] [update_a factory 27 14 none]
-G r c none [start client 2 14 none] [insert_a factory 15 14 none]
-G r c none [start client 2 14 none] [get_numw factory 22 13 none]
-G r c none [start client 2 14 none] [promote newworkers 50 14 none]
-G r c none [start client 2 14 none] [update_w factory 26 14 none]
-G r c none [start client 2 14 none] [insert_w factory 14 14 none]
-G r c none [start client 2 14 none] [assign newworkers 36 14 none]
+G r s newworker [b client 8 1 none] [newworkerIP newprocesses 133 9 none]
+G r l newworker [b client 8 1 none] [newworkerDI newprocesses 133 9 none]
+G r k newworker [b client 8 1 none] [newworkerDF newprocesses 133 9 none]
+G r s newacceptor [b client 8 1 none] [newacceptorIP newprocesses 148 9 none]
+G r l newacceptor [b client 8 1 none] [newacceptorDI newprocesses 148 9 none]
+G r k newacceptor [b client 8 1 none] [newacceptorDF newprocesses 148 9 none]
+G r s newlearner [b client 8 1 none] [newlearnerIP newprocesses 123 9 none]
+G r l newlearner [b client 8 1 none] [newlearnerDI newprocesses 123 9 none]
+G r k newlearner [b client 8 1 none] [newlearnerDF newprocesses 123 9 none]
+G r c none [start client 2 14 none] [get_numl factory 22 13 none]
+G r c none [start client 2 14 none] [promote_l factory 35 14 none]
+G r c none [start client 2 14 none] [update_l factory 32 14 none]
+G r c none [start client 2 14 none] [insert_l factory 14 14 none]
+G r c none [start client 2 14 none] [update_a factory 31 14 none]
+G r c none [start client 2 14 none] [insert_a factory 13 14 none]
+G r c none [start client 2 14 none] [get_numw factory 20 13 none]
+G r c none [start client 2 14 none] [promote_w factory 34 14 none]
+G r c none [start client 2 14 none] [update_w factory 30 14 none]
+G r c none [start client 2 14 none] [insert_w factory 12 14 none]
+G r c none [start client 2 14 none] [get_workerid newprocesses 80 13 none]
+G r c none [start client 2 14 none] [get_acceptorid newprocesses 99 13 none]
+G r c none [start client 2 14 none] [get_learnerid newprocesses 111 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 30|2r6 2r23 7r6 15r28
-X 12 a-iteint.ads
+16K9*Ada 20e8 28|2r6 2r23 6r6
+X 10 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[8|111]>
-X 13 a-numeri.ads
-16K13*Numerics 32e17 30|7r10 15r32
-X 14 a-nudira.ads
-44k22*Discrete_Random 81e33 30|7w19 15r41
-50R9*Generator<139|63R9> 30|17r10[15]
-52V13 Random{30|14I9} 30|39s24[15]
-61U14 Reset<139|100p14> 30|38s10[15]
-X 15 a-nudira.adb
-53V16 Random[139|83]{30|14I9} 140|393b13[30|15]
-65V16 Random[139|83]{30|14I9} 140|393b13[30|15]
-X 26 a-textio.ads
-57K13*Text_IO 727e16 30|2w10 2r27
-264U14*New_Line 30|23s7
-508U14*Put_Line 30|36s7 40s10
-X 29 client.ads
-1K9*Client 3l5 3e11 30|9b14 46l5 46t11
-2U14*Start 30|21b14 45l8 45t13
-X 30 client.adb
-10r4 W1{39|9R9} 32m18 32r18 34m16 34r16 35m16 35r16 41m17 41r17
-11r4 A1{37|7R9} 29m16 29r16 30m16 30r16
-12r4 L1{38|6R9} 25m20 25r20 27m16 27r16 28m16 28r16
-14I9 randRange<integer> 15r57
-15K12 Rand_Int[14|44] 16r8
-17r4 gen{14|50R9[15]} 38r16 39r31
-18i4 ID{integer} 39m10 40r70 41r40
-19i4 mult{integer} 39r39 42m10 42r18
-X 32 factory.ads
-6K9*Factory 30|4w6 4r19 32|43e12
-14U14*Insert_W 30|35s7
-15U14*Insert_A 30|30s7
-16U14*Insert_L 30|28s7
-22V13*Get_NumW{integer} 30|31s10
-24V13*Get_NumL{integer} 30|24s10
-26U14*Update_W 30|34s7
-27U14*Update_A 30|29s7
-28U14*Update_L 30|27s7
-31U14*Promote_L 30|25s10
-33U14*Notify 30|41r45
-X 33 interfac.ads
+32h9 Reversible_Iterator<24R9[6|111]>
+X 11 a-numeri.ads
+16K13*Numerics 32e17 28|6r10
+X 12 a-nudira.ads
+44k22*Discrete_Random 81e33 28|6w19
+X 24 a-textio.ads
+57K13*Text_IO 727e16 28|2w10 2r27
+264U14*New_Line 28|15s7
+508U14*Put_Line 28|28s7 29s7 30s7 31s7
+X 27 client.ads
+1K9*Client 3l5 3e11 28|8b14 33l5 33t11
+2U14*Start 28|13b14 32l8 32t13
+X 28 client.adb
+9r4 W1{35|8R9} 24m28 24r28 26m16 26r16 27m16 27r16 29m75 29r75
+10r4 A1{35|9R9} 21m16 21r16 22m16 22r16 30m79 30r79
+11r4 L1{35|7R9} 17m28 17r28 19m16 19r16 20m16 20r16 31m77 31r77
+X 29 common.ads
+2K9*Common 28|5w6 5r18 29|42e11
+X 30 factory.ads
+4K9*Factory 28|3w6 3r19 17r10 24r10 30|58e12
+12U14*Insert_W 28|27s7
+13U14*Insert_A 28|22s7
+14U14*Insert_L 28|20s7
+20V13*Get_NumW{integer} 28|23s10
+22V13*Get_NumL{integer} 28|16s10
+30U14*Update_W 28|26s7
+31U14*Update_A 28|21s7
+32U14*Update_L 28|19s7
+34U14*Promote_W 28|24s18
+35U14*Promote_L 28|17s18
+X 31 interfac.ads
 74M9*Unsigned_32
-77M9*Unsigned_64
-121V13*Shift_Left{74M9} 117|37i18
-X 37 newacceptors.ads
-4K9*NewAcceptors 30|5w6 5r24 37|68e17
-7R9*NewAcceptor<31|12R9> 30|11r17 37|67e14
-X 38 newlearners.ads
-3K9*NewLearners 30|6w6 6r23 38|51e16
-6R9*NewLearner<31|15R9> 30|12r17 38|50e14
-X 39 newworkers.ads
-6K9*NewWorkers 30|3w6 3r22 39|67e15
-9R9*NewWorker<31|9R9> 30|10r17 39|66e14
-36U14*Assign 30|41s10
-50U14*Promote 30|32s10
-X 42 polyorb-any.ads
+121V13*Shift_Left{74M9} 113|37i18
+X 35 newprocesses.ads
+3K9*NewProcesses 28|4w6 4r24 35|161e17
+7R9*NewLearner<29|11R9> 28|11r17 35|131e14
+8R9*NewWorker<29|5R9> 28|9r17 35|146e14
+9R9*NewAcceptor<29|8R9> 28|10r17 35|160e14
+80V13*Get_WorkerID{integer} 28|29s62
+99V13*Get_AcceptorID{integer} 28|30s64
+111V13*Get_LearnerID{integer} 28|31s63
+X 38 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 110|41i19
-X 48 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 106|41i19
+X 44 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 116|54i21
-X 64 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 112|54i21
+X 60 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
 47P9*Chunk_Access(46R9)
-98V13 Link(47P9[50|358]) 116|54i21[50|358]
-X 99 polyorb-task_info.ads
+98V13 Link(47P9[46|358]) 112|54i21[46|358]
+X 95 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 116|54i21
-X 110 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 112|54i21
+X 106 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9)
-151V13 Link(134P9[58|99]) 116|54i21[58|99]
-X 121 system.ads
+134P9 Node_Access(133R9[115|43])
+151V13 Link(134P9[54|99]) 112|54i21[54|99]
+X 117 system.ads
 67M9*Address
-X 133 s-memory.ads
-53V13*Alloc{121|67M9} 103i<c,__gnat_malloc>22
+X 128 s-memory.ads
+53V13*Alloc{117|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{121|67M9} 105i<c,__gnat_realloc>22
-X 139 s-rannum.ads
-75V13*Random{33|74M9} 140|221i21
-76V13*Random{33|77M9} 140|221i21
-X 147 s-stausa.ads
+76V13*Realloc{117|67M9} 105i<c,__gnat_realloc>22
+X 140 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
-X 149 s-stalib.adb
+X 142 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 

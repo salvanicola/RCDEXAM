@@ -1,7 +1,7 @@
 pragma Ada_2012;
 package body Storage is
    protected body Queue is
-      procedure Insert (A : Boolean; Q : Integer; R : Integer) is
+      procedure Insert (A : Boolean; Q : Long_Long_Integer; R : Integer) is
          Rec : Prop_entry;
          Reset : Storing;
       begin
@@ -16,7 +16,7 @@ package body Storage is
          Num_elem := Num_elem + 1;
       end Insert;
 
-      procedure Remove (Q : in Integer; R : out Integer) is
+      procedure Remove (R : Integer) is
          Reset : Prop_entry;
       begin
          Store(R) := Reset;
@@ -31,6 +31,7 @@ package body Storage is
       begin
          return Num_elem;
       end Get_Length;
+
    end Queue;
 
 end Storage;

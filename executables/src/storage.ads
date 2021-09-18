@@ -4,7 +4,7 @@ package Storage is
    type Prop_entry is record
       Accepted : Boolean := False;
       ID : Integer := -1;
-      Value : Integer := -1;
+      Value : Long_Long_Integer := -1;
    end record;
 
    type Storing is array (0..100) of Prop_entry;
@@ -12,10 +12,9 @@ package Storage is
    External_Synchronization : Storing;
 
    protected Queue is
-      procedure Insert (A : Boolean; Q : Integer; R : Integer);
+      procedure Insert (A : Boolean; Q : Long_Long_Integer; R : Integer);
       procedure Remove
-        (Q : in Integer;
-         R : out Integer);
+        (R : Integer);
       function Get (R : Integer) return Prop_entry;
       function Get_Length return Integer;
 

@@ -2,10 +2,6 @@ with Storage; use Storage;
 package Common is
    pragma Remote_Types;
 
-   type Notify is
-      access procedure (Q : Integer);
-   pragma Asynchronous (Notify);
-
    type Worker is
      abstract tagged limited private;
 
@@ -27,23 +23,17 @@ package Common is
       access all Learner'Class;
    pragma Asynchronous (Any_Learner);
 
-   procedure Assign
-     (W : Any_Worker;
-      Q : in Integer;
-      N : in Notify) is abstract;
+   type Notify is
+      access procedure (Q : Long_Long_Integer);
+   pragma Asynchronous (Notify);
 
-   function Validate
-     (W : Any_Acceptor;
-      V : in Integer;
-      ID : in Integer;
-      N : in Notify) return Boolean
-      is abstract;
+   type Promise is record
+      Accepted : Boolean;
+      ID : Integer := -1;
+      Value : Long_Long_Integer := -1;
+      Sent : Boolean := False;
+   end record;
 
-   procedure Learn
-     (A : Any_Learner;
-      V : in Integer;
-      R : Integer
-     ) is abstract;
 
 private
    type Worker is abstract tagged limited null record;

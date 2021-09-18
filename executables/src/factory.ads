@@ -1,7 +1,5 @@
 with Common; use Common;
-with NewWorkers; use NewWorkers;
-with NewAcceptors; use NewAcceptors;
-with NewLearners; use NewLearners;
+with NewProcesses; use NewProcesses;
 
 package Factory is
    pragma Remote_Call_Interface;
@@ -23,6 +21,12 @@ package Factory is
    function Get_NumA return Integer;
    function Get_NumL return Integer;
 
+   function Get_Final return Boolean;
+   procedure Reset_Final;
+   procedure Refresh;
+   procedure BuildBlock;
+   procedure Update_Last;
+
    procedure Update_W (T : Acc_Worker);
    procedure Update_A (T : Acc_Acceptor);
    procedure Update_L (T : Acc_Learner);
@@ -30,8 +34,19 @@ package Factory is
    procedure Promote_W (W : Acc_Worker);
    procedure Promote_L (L : Acc_Learner);
 
-   procedure Notify (Q : Integer);
+   procedure Notify (Q : Long_Long_Integer);
    pragma Asynchronous (Notify);
+
+   procedure Save_Request (L_ID : Integer; V : Long_Long_Integer; R : Integer);
+   pragma Asynchronous (Save_Request);
+   procedure Validate_Request (A_ID : Integer; ID : Integer; V : Long_Long_Integer);
+   pragma Asynchronous (Validate_Request);
+   procedure Promise_Request (A_ID : Integer; W_ID: Integer; ID : Integer; V : Long_Long_Integer);
+   pragma Asynchronous (Promise_Request);
+   procedure Response_Request (W_ID : Integer; A_ID : Integer; P : Promise);
+   pragma Asynchronous (Response_Request);
+
+   procedure Start;
 
 private
    Working_List : Worker_Array;

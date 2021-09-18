@@ -11,7 +11,7 @@ RV NO_FIXED_POINT
 RV NO_RELATIVE_DELAY
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U start_factory%b	start_factory.adb	02f17e24 NE OO SU
+U start_factory%b	start_factory.adb	c885200d NE OO SU
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W client%s		client.adb		client.ali
 W factory%s		factory.adb		factory.ali
@@ -40,14 +40,12 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D client.ads		20210830155914 41cf2c9d client%s
-D common.ads		20210912153434 7258948e common%s
-D factory.ads		20210913163834 5a3b5924 factory%s
+D common.ads		20210918100702 e50390a0 common%s
+D factory.ads		20210918150814 372e1de6 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
-D newacceptors.ads	20210913153238 0420e5a9 newacceptors%s
-D newlearners.ads	20210913164418 3fa98050 newlearners%s
-D newworkers.ads	20210913151436 75fd47f6 newworkers%s
+D newprocesses.ads	20210918154044 150586bb newprocesses%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -128,8 +126,8 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D start_factory.adb	20210903155916 19050b9d start_factory%b
-D storage.ads		20210913154102 e1c42312 storage%s
+D start_factory.adb	20210918102116 be641176 start_factory%b
+D storage.ads		20210918151116 5739079e storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -162,36 +160,48 @@ D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a e
 G c Z b b [start_factory standard 3 11 none]
+G r c none [start_factory standard 3 11 none] [start factory 49 14 none]
+G r c none [start_factory standard 3 11 none] [get_final factory 24 13 none]
+G r c none [start_factory standard 3 11 none] [buildblock factory 27 14 none]
+G r c none [start_factory standard 3 11 none] [update_last factory 28 14 none]
+G r c none [start_factory standard 3 11 none] [reset_final factory 25 14 none]
+G r c none [start_factory standard 3 11 none] [refresh factory 26 14 none]
 X 11 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[8|111]>
 X 24 client.ads
-1K9*Client 3e11 113|1w6
+1K9*Client 3e11 111|1w6
 X 26 factory.ads
-6K9*Factory 43e12 113|2w6
+4K9*Factory 58e12 111|2w6 6r7 7r13 10r7 11r7 12r7 13r7
+24V13*Get_Final{boolean} 111|7s21
+25U14*Reset_Final 111|12s15
+26U14*Refresh 111|13s15
+27U14*BuildBlock 111|10s15
+28U14*Update_Last 111|11s15
+49U14*Start 111|6s15
 X 27 interfac.ads
 74M9*Unsigned_32
-121V13*Shift_Left{74M9} 110|37i18
-X 35 polyorb-any.ads
+121V13*Shift_Left{74M9} 108|37i18
+X 33 polyorb-any.ads
 179h12*Union_TC_Map
-251V28*"="=253:32{boolean} 103|41i19
-X 41 polyorb-binding_objects.ads
+251V28*"="=253:32{boolean} 101|41i19
+X 39 polyorb-binding_objects.ads
 52P9*Binding_Object_Access(50R9)
-56V13*Link(52P9) 109|54i21
-X 57 polyorb-opaque-chunk_pools.ads
+56V13*Link(52P9) 107|54i21
+X 55 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
-47P9*Chunk_Access(46R9)
-98V13 Link(47P9[43|358]) 109|54i21[43|358]
-X 92 polyorb-task_info.ads
+47P9*Chunk_Access(46R9[41|358])
+98V13 Link(47P9[41|358]) 107|54i21[41|358]
+X 90 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)
-264V13 Link(71P9) 109|54i21
-X 103 polyorb-utils-chained_lists.ads
+264V13 Link(71P9) 107|54i21
+X 101 polyorb-utils-chained_lists.ads
 133R9 Node
 134P9 Node_Access(133R9)
-151V13 Link(134P9[76|153]) 109|54i21[76|153]
-X 113 start_factory.adb
-3U11*start_Factory 3b11 8t4
-X 132 s-stausa.ads
+151V13 Link(134P9[74|153]) 107|54i21[74|153]
+X 111 start_factory.adb
+3U11*start_Factory 3b11 16t4
+X 130 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
 
