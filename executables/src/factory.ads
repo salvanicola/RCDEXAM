@@ -37,13 +37,13 @@ package Factory is
    procedure Notify (Q : Long_Long_Integer);
    pragma Asynchronous (Notify);
 
-   procedure Save_Request (L_ID : Integer; V : Long_Long_Integer; R : Integer);
+   procedure Save_Request (L_ID : Integer; V : Long_Long_Integer; R : Integer; B : Boolean);
    pragma Asynchronous (Save_Request);
    procedure Validate_Request (A_ID : Integer; ID : Integer; V : Long_Long_Integer);
    pragma Asynchronous (Validate_Request);
    procedure Promise_Request (A_ID : Integer; W_ID: Integer; ID : Integer; V : Long_Long_Integer);
    pragma Asynchronous (Promise_Request);
-   procedure Response_Request (W_ID : Integer; A_ID : Integer; P : Promise);
+   procedure Response_Request (W_ID : Integer; A_ID : Integer; ID : Integer; P : Promise);
    pragma Asynchronous (Response_Request);
 
    procedure Start;

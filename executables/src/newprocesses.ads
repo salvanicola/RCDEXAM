@@ -26,13 +26,14 @@ package NewProcesses is
       Value : Long_Long_Integer := -1;
    end record;
    type Request is record
-      Positive : Integer;
-      Negative : Integer;
-      Value : Long_Long_Integer;
-      ID : Integer;
+      Positive : Integer := 0;
+      Negative : Integer := 0;
+      Value : Long_Long_Integer := -1;
+      ID : Integer := -1;
       Count : Index_A := 0;
       Handshakers : Acceptors_Array;
-      Sent : Boolean;
+      Max_ID : Integer := -1;
+      Sent : Boolean := False;
    end record;
    
    package Result_Vectors is new Ada.Containers.Vectors
@@ -50,12 +51,16 @@ package NewProcesses is
    package Block_Vectors is new Ada.Containers.Vectors
      (Index_Type   => Natural,
       Element_Type => Long_Long_Integer);
+   package Request_Vectors is new Ada.Containers.Vectors
+     (Index_Type   => Natural,
+      Element_Type => Request);
    
    use Worker_Vectors;
    use Acceptor_Vectors;
    use Learner_Vectors;
    use Result_Vectors;
    use Block_Vectors;
+   use Request_Vectors;
    
    type Promise_Request is
       access procedure (A_ID : Integer; W_ID: Integer; ID : Integer; V : Long_Long_Integer);
@@ -64,10 +69,10 @@ package NewProcesses is
       access procedure (A_ID : Integer; ID : Integer; V : Long_Long_Integer);
    pragma Asynchronous (Validate_Request);
    type Response_Request is
-      access procedure (W_ID : Integer; A_ID : Integer; P : Promise);
+      access procedure (W_ID : Integer; A_ID : Integer; ID : Integer; P : Promise);
    pragma Asynchronous (Response_Request);
    type Save_Request is
-      access procedure (L_ID : Integer; V : Long_Long_Integer; R : Integer);
+      access procedure (L_ID : Integer; V : Long_Long_Integer; R : Integer; B : Boolean);
    pragma Asynchronous (Save_Request);
    
    
@@ -76,18 +81,27 @@ package NewProcesses is
    procedure Insert_A_in_W (Me: access NewWorker; A: Acc_Acceptor);
    function Get_W_from_W (Me: access NewWorker; C : Integer) return Acc_Worker;
    function Get_A_from_W (Me: access NewWorker; C : Integer) return Acc_Acceptor;
-   function Get_Request (Me : access NewWorker) return Request;
+   function Get_Request (Me : access NewWorker; ID : Integer) return Request;
+   function Get_A_by_ID (Me : access NewWorker; A_ID : Integer) return Acc_Acceptor;
    function Get_WorkerID (Me : access NewWorker) return Integer;
    procedure Set_WorkerID (Me: access NewWorker; ID : Integer);
-   procedure Set_Request (Me : access NewWorker; R : Request);
+   procedure Set_Request_Value (Me : access NewWorker; ID : Integer; V : Long_Long_Integer);
+   procedure Set_Request_ID (Me : access NewWorker; ID : Integer; ID_2 : Integer);
+   procedure Set_Request_Max_ID (Me : access NewWorker; ID : Integer; ID_2 : Integer);
+   procedure Add_Request_Count (Me : access NewWorker; ID : Integer);
+   procedure Add_Request_Positive (Me : access NewWorker; ID : Integer);
+   procedure Add_Request_Negative (Me : access NewWorker; ID : Integer);
+   procedure Add_Request_Handshaker (Me : access NewWorker; ID : Integer; A : Acc_Acceptor);   
+   procedure Remove_Request (Me : access NewWorker; ID : Integer);
    procedure Assign (W : access NewWorker; Q : Long_Long_Integer; ID: Integer; N : Common.Notify; P : Promise_Request; V : Validate_Request);
-   procedure Respond (Me: access NewWorker; A: Acc_Acceptor; P : Promise);
+   procedure Respond (Me: access NewWorker; A: Acc_Acceptor; ID : Integer; P : Promise);
    function PrepareRequest (W : access NewWorker; ID : Integer; V : Long_Long_Integer; P : Promise_Request) return Boolean;
    procedure Propose (W : access NewWorker; T : Long_Long_Integer; ID: Integer; P : Promise_Request; V : Validate_Request);
    procedure Promote_W (Me : access NewWorker);
    function isLeader_W (Me : access NewWorker) return Boolean;
    procedure Restart_W (Me : access NewWorker);
-   --  
+
+   
    --  -- ACCEPTOR --
    procedure Insert_A_in_A (Me: access NewAcceptor; A: Acc_Acceptor);
    procedure Insert_L_in_A (Me: access NewAcceptor; L: Acc_Learner);
@@ -110,7 +124,7 @@ package NewProcesses is
    procedure Insert_L_in_L (Me: access NewLearner; L: Acc_Learner);
    function Get_LearnerID (Me : access NewLearner) return Integer;
    procedure Set_LearnerID (Me: access NewLearner; ID : Integer);
-   procedure Learn (L : access NewLearner; V : Long_Long_Integer; R : Integer);
+   procedure Learn (L : access NewLearner; V : Long_Long_Integer; R : Integer; B : Boolean);
    procedure Update_Reg (Me : access NewLearner);
    procedure Add_block (Me: access NewLearner);
    procedure Restart_L (Me: access NewLearner);
@@ -142,7 +156,8 @@ private
       Idx_A : Acceptor_Vectors.Extended_Index;
       Idx_L : Learner_Vectors.Extended_Index;
       Last_proposed : Long_Long_Integer := -1;
-      Handled_Request : Request;
+      Handled_Requests : Request_Vectors.Vector;
+      Idx_H : Request_Vectors.Extended_Index;
    end record;
 
    type NewAcceptor is new Acceptor with record
@@ -151,7 +166,6 @@ private
       Max_ID : Integer := -1;
       Waiting : Long_Long_Integer := -1;
       Last_accepted : Mem_entry;
-      Working_List : Worker_Vectors.Vector;
       Acceptor_List : Acceptor_Vectors.Vector;
       Learner_List : Learner_Vectors.Vector;
       Idx_W : Worker_Vectors.Extended_Index;

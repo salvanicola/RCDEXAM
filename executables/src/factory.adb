@@ -5,13 +5,17 @@ with Ada.Containers.Vectors;
 
 package body Factory is
 
-   type randRange is new Integer range 0..10;
+   type randRange is new Integer range 1..10;
    package Rand_Int is new ada.numerics.discrete_random(randRange);
    use Rand_Int;
    gen : Generator;
    Last : Long_Long_Integer := 0;
    Countdown : Integer := 0;
    Finalized : Boolean := False;
+
+   type index_ID is range 0..100;
+   type start_ID is new Integer with Default_Value => -1;
+   type ID_array is array (index_ID) of start_ID;
 
    procedure Insert_W (W : Acc_Worker) is
    begin
@@ -188,9 +192,9 @@ package body Factory is
       end loop;
    end BuildBlock;
 
-   procedure Save_Request (L_ID : Integer; V : Long_Long_Integer; R : Integer) is
+   procedure Save_Request (L_ID : Integer; V : Long_Long_Integer; R : Integer; B : Boolean) is
    begin
-      Learn (Learner_List(Index(L_ID)), V, R);
+      Learn (Learner_List(Index(L_ID)), V, R, B);
    end Save_Request;
 
    procedure Validate_Request (A_ID : Integer; ID : Integer; V : Long_Long_Integer) is
@@ -198,9 +202,9 @@ package body Factory is
       Validate(Acceptor_List(Index(A_ID)), ID, V, Save_Request'Access);
    end Validate_Request;
 
-   procedure Response_Request (W_ID : Integer; A_ID : Integer; P : Promise) is
+   procedure Response_Request (W_ID : Integer; A_ID : Integer; ID : Integer; P : Promise) is
    begin
-      Respond(Working_List(Index(W_ID)), Acceptor_List(Index(A_ID)), P);
+      Respond(Working_List(Index(W_ID)), Acceptor_List(Index(A_ID)), ID, P);
    end Response_Request;
 
    procedure Promise_Request (A_ID : Integer; W_ID: Integer; ID : Integer; V : Long_Long_Integer) is
@@ -208,20 +212,44 @@ package body Factory is
       Promising(Acceptor_List(Index(A_ID)), Working_List(Index(W_ID)), ID, V, Response_Request'Access);
    end Promise_Request;
 
+   function Free_ID (usedID : ID_array) return Integer is
+      ID : Integer;
+   begin
+      ID := Integer(random(gen));
+      for I in index_ID loop
+         if usedID(I) /= 0 then
+            if usedID(I) = start_ID(ID) then
+               return Free_ID (usedID);
+            end if;
+         else
+            return ID;
+         end if;
+      end loop;
+      return ID;
+   end Free_ID;
+
    procedure Start is
       Val : Long_Long_Integer := 0;
       ID : Integer;
+      usedID : ID_array;
+      countID : index_ID := 0;
+      check : Boolean := True;
+      snapshot : Worker_Array;
    begin
       reset(gen);
       if Last = 0 then
          Val := Long_Long_Integer(random(gen));
       else
-         Val := Last;
+         Val := Last + Long_Long_Integer(random(gen));
       end if;
-      Put_Line("Richiedo il calcolo dell'hash di: " & Long_Long_Integer'Image(Val));
+      snapshot := Working_List;
       for I in Index loop
-         if Working_List(I) /= null then
-            ID := Integer(random(gen));
+         if snapshot(I) /= null then
+            ID := Free_ID(usedID);
+            usedID(countID) := start_ID(ID);
+            countID := countID + 1;
+            Put_Line("L'ID scelto per la proposta è: " & Integer'Image(ID));
+            Put_Line("Richiedo il calcolo dell'hash di: " & Long_Long_Integer'Image(Val) & " al Worker di ID: " & Index'Image(I));
             Assign(Working_List(I), Val, ID, Notify'Access, Promise_Request'Access, Validate_Request'Access);
          else
             if I = 0 then
