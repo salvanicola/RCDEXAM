@@ -1,2 +1,4 @@
 ./**/dsa/
 ./**/bin/
+executables/src/dsa/i686-pc-mingw32/*
+executables/src/bin/*

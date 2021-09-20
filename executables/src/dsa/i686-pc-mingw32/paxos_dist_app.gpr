@@ -1,6 +1,0 @@
-with "pcs_project";
-project paxos_dist_app is
-   for Object_Dir use "obj";
-   for Source_Dirs use (".",
-     "../..");
-end paxos_dist_app;
