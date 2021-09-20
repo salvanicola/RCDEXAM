@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#c80750a5#;
+   u00001 : constant Version_32 := 16#eb77ed0a#;
    pragma Export (C, u00001, "partitionB");
    u00002 : constant Version_32 := 16#1d743dc2#;
    pragma Export (C, u00002, "partitionS");
@@ -737,9 +737,9 @@ package ada_main is
    pragma Export (C, u00349, "polyorb__tasking__idle_tasks_managersB");
    u00350 : constant Version_32 := 16#d6156c50#;
    pragma Export (C, u00350, "polyorb__tasking__idle_tasks_managersS");
-   u00351 : constant Version_32 := 16#3f9c19ca#;
+   u00351 : constant Version_32 := 16#28d7ac32#;
    pragma Export (C, u00351, "storageB");
-   u00352 : constant Version_32 := 16#5739079e#;
+   u00352 : constant Version_32 := 16#7449ba31#;
    pragma Export (C, u00352, "storageS");
    u00353 : constant Version_32 := 16#a9a84467#;
    pragma Export (C, u00353, "system__partition_interfaceB");

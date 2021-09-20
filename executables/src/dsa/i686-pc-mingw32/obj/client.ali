@@ -14,7 +14,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
-U client%b		client.adb		ba0eaabd OO PF RA PK
+U client%b		client.adb		1a0aa810 OO PF RA PK
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
@@ -59,12 +59,12 @@ D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D client.ads		20210830155914 41cf2c9d client%s
 D client.adb		20210918154308 cb998743 client%b
 D common.ads		20210918100702 e50390a0 common%s
-D factory.ads		20210918150814 372e1de6 factory%s
+D factory.ads		20210920111540 55c40c94 factory%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D newprocesses.ads	20210918154044 150586bb newprocesses%s
+D newprocesses.ads	20210920111556 d7eb9564 newprocesses%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -145,7 +145,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210918151116 5739079e storage%s
+D storage.ads		20210919140942 7449ba31 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -187,15 +187,15 @@ D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a e
 G c b b b [b client 8 1 none]
 G c Z s b [start client 2 14 none]
-G r s newworker [b client 8 1 none] [newworkerIP newprocesses 133 9 none]
-G r l newworker [b client 8 1 none] [newworkerDI newprocesses 133 9 none]
-G r k newworker [b client 8 1 none] [newworkerDF newprocesses 133 9 none]
-G r s newacceptor [b client 8 1 none] [newacceptorIP newprocesses 148 9 none]
-G r l newacceptor [b client 8 1 none] [newacceptorDI newprocesses 148 9 none]
-G r k newacceptor [b client 8 1 none] [newacceptorDF newprocesses 148 9 none]
-G r s newlearner [b client 8 1 none] [newlearnerIP newprocesses 123 9 none]
-G r l newlearner [b client 8 1 none] [newlearnerDI newprocesses 123 9 none]
-G r k newlearner [b client 8 1 none] [newlearnerDF newprocesses 123 9 none]
+G r s newworker [b client 8 1 none] [newworkerIP newprocesses 147 9 none]
+G r l newworker [b client 8 1 none] [newworkerDI newprocesses 147 9 none]
+G r k newworker [b client 8 1 none] [newworkerDF newprocesses 147 9 none]
+G r s newacceptor [b client 8 1 none] [newacceptorIP newprocesses 163 9 none]
+G r l newacceptor [b client 8 1 none] [newacceptorDI newprocesses 163 9 none]
+G r k newacceptor [b client 8 1 none] [newacceptorDF newprocesses 163 9 none]
+G r s newlearner [b client 8 1 none] [newlearnerIP newprocesses 137 9 none]
+G r l newlearner [b client 8 1 none] [newlearnerDI newprocesses 137 9 none]
+G r k newlearner [b client 8 1 none] [newlearnerDF newprocesses 137 9 none]
 G r c none [start client 2 14 none] [get_numl factory 22 13 none]
 G r c none [start client 2 14 none] [promote_l factory 35 14 none]
 G r c none [start client 2 14 none] [update_l factory 32 14 none]
@@ -206,9 +206,9 @@ G r c none [start client 2 14 none] [get_numw factory 20 13 none]
 G r c none [start client 2 14 none] [promote_w factory 34 14 none]
 G r c none [start client 2 14 none] [update_w factory 30 14 none]
 G r c none [start client 2 14 none] [insert_w factory 12 14 none]
-G r c none [start client 2 14 none] [get_workerid newprocesses 80 13 none]
-G r c none [start client 2 14 none] [get_acceptorid newprocesses 99 13 none]
-G r c none [start client 2 14 none] [get_learnerid newprocesses 111 13 none]
+G r c none [start client 2 14 none] [get_workerid newprocesses 86 13 none]
+G r c none [start client 2 14 none] [get_acceptorid newprocesses 113 13 none]
+G r c none [start client 2 14 none] [get_learnerid newprocesses 125 13 none]
 X 1 ada.ads
 16K9*Ada 20e8 28|2r6 2r23 6r6
 X 10 a-iteint.ads
@@ -247,13 +247,13 @@ X 31 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 113|37i18
 X 35 newprocesses.ads
-3K9*NewProcesses 28|4w6 4r24 35|161e17
-7R9*NewLearner<29|11R9> 28|11r17 35|131e14
-8R9*NewWorker<29|5R9> 28|9r17 35|146e14
-9R9*NewAcceptor<29|8R9> 28|10r17 35|160e14
-80V13*Get_WorkerID{integer} 28|29s62
-99V13*Get_AcceptorID{integer} 28|30s64
-111V13*Get_LearnerID{integer} 28|31s63
+3K9*NewProcesses 28|4w6 4r24 35|175e17
+7R9*NewLearner<29|11R9> 28|11r17 35|145e14
+8R9*NewWorker<29|5R9> 28|9r17 35|161e14
+9R9*NewAcceptor<29|8R9> 28|10r17 35|174e14
+86V13*Get_WorkerID{integer} 28|29s62
+113V13*Get_AcceptorID{integer} 28|30s64
+125V13*Get_LearnerID{integer} 28|31s63
 X 38 polyorb-any.ads
 179h12*Union_TC_Map
 251V28*"="=253:32{boolean} 106|41i19

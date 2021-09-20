@@ -19,7 +19,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U factory%s		factory.ads		c7280bfd EE OO RC PK
+U factory%s		factory.ads		672c0950 EE OO RC PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W common%s		common.ads		common.ali
@@ -60,14 +60,14 @@ D a-tgdico.ads		20200228061810 5bab295e ada.tags.generic_dispatching_constructor
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D common.ads		20210918100702 e50390a0 common%s
-D factory.ads		20210918150814 372e1de6 factory%s
+D factory.ads		20210920111540 55c40c94 factory%s
 D gnat.ads		20200228061810 b5988c27 gnat%s
 D g-htable.ads		20200228061810 4b643b8d gnat.htable%s
 D g-regpat.ads		20200228061810 b85d88ef gnat.regpat%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
-D newprocesses.ads	20210918154044 150586bb newprocesses%s
+D newprocesses.ads	20210920111556 d7eb9564 newprocesses%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -157,7 +157,7 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210918151116 5739079e storage%s
+D storage.ads		20210919140942 7449ba31 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -204,10 +204,10 @@ D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a Z
 X 12 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[9|111]>
+32h9 Reversible_Iterator<24R9[7|70]>
 X 26 common.ads
 2K9*Common 42e11 27|1w6 1r18
-30R9*Promise 35e14 27|46r68
+30R9*Promise 35e14 27|46r82
 X 27 factory.ads
 4K9*Factory 52E4 58l5 58e12
 7I9*Index<short_short_integer> 8r32 9r34 10r33 53r14 55r14 57r14
@@ -246,10 +246,11 @@ X 27 factory.ads
 35p25 L{34|17P9}
 37U14*Notify 37>22 38r25
 37i22 Q{long_long_integer}
-40U14*Save_Request 40>28 40>44 40>67 41r25
+40U14*Save_Request 40>28 40>44 40>67 40>80 41r25
 40i28 L_ID{integer}
 40i44 V{long_long_integer}
 40i67 R{integer}
+40b80 B{boolean}
 42U14*Validate_Request 42>32 42>48 42>62 43r25
 42i32 A_ID{integer}
 42i48 ID{integer}
@@ -259,10 +260,11 @@ X 27 factory.ads
 44i47 W_ID{integer}
 44i62 ID{integer}
 44i76 V{long_long_integer}
-46U14*Response_Request 46>32 46>48 46>64 47r25
+46U14*Response_Request 46>32 46>48 46>64 46>78 47r25
 46i32 W_ID{integer}
 46i48 A_ID{integer}
-46r64 P{26|30R9}
+46i64 ID{integer}
+46r78 P{26|30R9}
 49U14*Start
 52a4 Working_List{8A9}
 53i4 Index_W{7I9}
@@ -274,7 +276,7 @@ X 31 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 121|37i18
 X 34 newprocesses.ads
-3K9*NewProcesses 27|2w6 2r24 34|161e17
+3K9*NewProcesses 27|2w6 2r24 34|175e17
 11P9*Acc_Worker(8R9) 27|8r42 12r28 16r40 30r28 34r29
 14P9*Acc_Acceptor(9R9) 27|9r44 13r27 17r40 31r28
 17P9*Acc_Learner(7R9) 27|10r43 14r27 18r40 32r28 35r29
@@ -286,7 +288,7 @@ X 43 polyorb-binding_objects.ads
 56V13*Link(52P9) 120|54i21
 X 61 polyorb-opaque-chunk_pools.ads
 46R9*Chunk
-47P9*Chunk_Access(46R9[45|358])
+47P9*Chunk_Access(46R9)
 98V13 Link(47P9[45|358]) 120|54i21[45|358]
 X 103 polyorb-task_info.ads
 71P9*Task_Info_Access(70R9)

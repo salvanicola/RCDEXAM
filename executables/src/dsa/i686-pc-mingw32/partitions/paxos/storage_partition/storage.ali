@@ -6,6 +6,7 @@ A -march=x86-64
 P SS ZX
 
 RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_LONG_LONG_INTEGERS
 RV NO_PROTECTED_TYPES
 RV NO_DEFAULT_INITIALIZATION
@@ -13,7 +14,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U storage%b		storage.adb		3f9c19ca OO PK
+U storage%b		storage.adb		28d7ac32 OO PK
 Z system.partition_interface%s  s-parint.adb	s-parint.ali
 Z system.rpc%s		s-rpc.adb		s-rpc.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -21,7 +22,7 @@ Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
 Z system.version_control%s  s-vercon.adb	s-vercon.ali
 
-U storage%s		storage.ads		5739079e EE OO PF SP PK
+U storage%s		storage.ads		7449ba31 EE OO PF SP PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -146,8 +147,8 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210918151116 5739079e storage%s
-D storage.adb		20210918151116 68a51e54 storage%b
+D storage.ads		20210919140942 7449ba31 storage%s
+D storage.adb		20210919141200 5c9e1603 storage%b
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
@@ -189,24 +190,21 @@ D s-vercon.ads		20200228061810 b312eb8d system.version_control%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a e
 G c Z s s [prop_entryIP storage 4 9 none]
-G c Z s s [TstoringBIP storage 10 4 none]
-G c Z s s [read storage__external_synchronizationG 170 17 12_4]
-G c Z s s [write storage__external_synchronizationG 177 17 12_4]
-G c Z s b [insert storage__queue 15 17 none]
-G c Z s b [remove storage__queue 16 17 none]
-G c Z s b [get storage__queue 18 16 none]
-G c Z s b [get_length storage__queue 19 16 none]
-G c Z s b [queue__insertN storage 15 7 none]
-G c Z s b [queue__insertP storage 15 7 none]
-G c Z s b [queue__removeN storage 16 7 none]
-G c Z s b [queue__removeP storage 16 7 none]
-G c Z s b [queue__getN storage 18 7 none]
-G c Z s b [queue__getP storage 18 7 none]
-G c Z s b [queue__get_lengthN storage 19 7 none]
-G c Z s b [queue__get_lengthP storage 19 7 none]
-G c Z s s [queueTVIP storage 14 4 none]
-G c Z s s [read storage__queueG 170 17 14_4]
-G c Z s s [write storage__queueG 177 17 14_4]
+G c Z s s [TstoringBIP storage 13 4 none]
+G c Z s s [read storage__external_synchronizationG 170 17 15_4]
+G c Z s s [write storage__external_synchronizationG 177 17 15_4]
+G c Z s b [insert storage__queue 18 17 none]
+G c Z s b [remove storage__queue 19 17 none]
+G c Z s b [get storage__queue 21 16 none]
+G c Z s b [queue__insertN storage 18 7 none]
+G c Z s b [queue__insertP storage 18 7 none]
+G c Z s b [queue__removeN storage 19 7 none]
+G c Z s b [queue__removeP storage 19 7 none]
+G c Z s b [queue__getN storage 21 7 none]
+G c Z s b [queue__getP storage 21 7 none]
+G c Z s s [queueTVIP storage 17 4 none]
+G c Z s s [read storage__queueG 170 17 17_4]
+G c Z s s [write storage__queueG 177 17 17_4]
 X 21 interfac.ads
 74M9*Unsigned_32
 121V13*Shift_Left{74M9} 105|37i18
@@ -225,32 +223,39 @@ X 87 polyorb-task_info.ads
 264V13 Link(71P9) 104|54i21
 X 98 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[71|153])
+134P9 Node_Access(133R9)
 151V13 Link(134P9[60|47]) 104|54i21[60|47]
 X 108 storage.ads
-1K9*Storage 25l5 25e12 109|2b14 37l5 37t12
-4R9*Prop_entry 8e14 10r38 18r41 109|5r16 20r18 25r40
-5b7*Accepted{boolean} 109|12m14
-6i7*ID{integer} 109|13m14
-7i7*Value{long_long_integer} 109|14m14
-10A9*Storing(4R9)<integer> 12r31 22r15 109|6r18
-12a4*External_Synchronization{10A9}
-14w14*Queue 109|3b19 35l8 35t13
-15U17 Insert 15>25 15>38 15>61 109|4b17 17l11 17t17
-15b25 A{boolean} 109|4b25 12r26
-15i38 Q{long_long_integer} 109|4b38 14r23
-15i61 R{integer} 109|4b61 13r20
-16U17 Remove 17>10 109|19b17 23l11 23t17
-17i10 R{integer} 109|19b25 22r16
-18V16 Get{4R9} 18>21 109|25b16 28l11 28t14
-18i21 R{integer} 109|25b21 27r23
-19V16 Get_Length{integer} 109|30b16 33l11 33t21
-22a7 Store{10A9} 109|10r13 15r10 22r10 27r17
-23i7 Num_elem{integer} 109|8r13 9r13 15r16 16r10 16r22 32r17
+1K9*Storage 26l5 26e12 109|2b14 36l5 36t12
+4R9*Prop_entry 10e14 13r39 21r57 109|5r16 17r18 22r57 23r17 24r16
+5b7*Accepted{boolean} 109|8m14
+6i7*Worker_ID{integer} 109|9m14
+7i7*Acceptor_ID{integer} 109|10m14 27r46
+8i7*ID{integer} 109|11m14 27r25
+9i7*Value{long_long_integer} 109|12m14
+12I9*Index_S<short_short_integer> 13r27 109|13r16 19r16 26r19
+13A9*Storing(4R9)<12I9> 15r31 24r15 109|6r18
+15a4*External_Synchronization{13A9}
+17w14*Queue 109|3b19 34l8 34t13
+18U17 Insert 18>25 18>38 18>54 18>70 18>93 109|4b17 14l11 14t17
+18b25 A{boolean} 109|4b25 8r26
+18i38 W_ID{integer} 109|4b38 9r27
+18i54 A_ID{integer} 109|4b54 10r29
+18i70 V{long_long_integer} 109|4b70 12r23
+18i93 ID{integer} 109|4b93 11r20 13r24
+19U17 Remove 20>10 109|16b17 20l11 20t17
+20i10 ID{integer} 109|16b25 19r24
+21V16 Get{4R9} 21>21 21>34 109|22b16 32l11 32t14
+21i21 ID{integer} 109|22b21 27r30
+21i34 A_ID{integer} 109|22b34 27r60
+24a7 Store{13A9} 109|13r10 19r10 27r16 27r37 28r23
 X 109 storage.adb
-5r10 Rec{108|4R9} 12m10 13m10 14m10 15r29
-6a10 Reset{108|10A9} 10r22
-20r10 Reset{108|4R9} 22r22
+5r10 Rec{108|4R9} 8m10 9m10 10m10 11m10 12m10 13r32
+6a10 Reset{108|13A9}
+17r10 Reset{108|4R9} 19r32
+23r10 none{108|4R9} 31r17
+24r10 ext{108|4R9}
+26i14 I{108|12I9} 27r22 27r43 28r29
 X 110 system.ads
 67M9*Address
 X 119 s-memory.ads

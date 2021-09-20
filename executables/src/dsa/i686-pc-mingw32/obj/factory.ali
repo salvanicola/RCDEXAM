@@ -22,7 +22,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 
-U factory%b		factory.adb		4b0925c2 OO PK
+U factory%b		factory.adb		dcf296c5 OO PK
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
@@ -32,16 +32,19 @@ W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
 W newprocesses%s	newprocesses.adb	newprocesses.ali
 W system%s		system.ads		system.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.img_lli%s	s-imglli.adb		s-imglli.ali
 Z system.partition_interface%s  s-parint.adb	s-parint.ali
 Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 
-U factory%s		factory.ads		c7280bfd EE OO RC PK
+U factory%s		factory.ads		672c0950 EE OO RC PK
 W common%s		common.ads		common.ali
 W newprocesses%s	newprocesses.adb	newprocesses.ali
 
@@ -76,13 +79,13 @@ D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20200228061810 eff36322 ada.unchecked_deallocation%s
 D common.ads		20210918100702 e50390a0 common%s
-D factory.ads		20210918150814 372e1de6 factory%s
-D factory.adb		20210918154512 e079bbde factory%b
+D factory.ads		20210920111540 55c40c94 factory%s
+D factory.adb		20210920111540 d7860a74 factory%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D newprocesses.ads	20210918154044 150586bb newprocesses%s
+D newprocesses.ads	20210920111556 d7eb9564 newprocesses%s
 D polyorb.ads		20210826161802 1b2dc832 polyorb%s
 D polyorb-annotations.ads  20210826161802 177ede12 polyorb.annotations%s
 D polyorb-any.ads	20210826161802 373b9abe polyorb.any%s
@@ -163,17 +166,19 @@ D polyorb-utils-ilists.ads  20210826161802 4edfdf34 polyorb.utils.ilists%s
 D polyorb-utils-simple_flags.ads  20210826161802 3140190a polyorb.utils.simple_flags%s
 D polyorb-utils-strings.ads  20210826161802 dae37d40 polyorb.utils.strings%s
 D polyorb-utils-strings-lists.ads  20210826161802 1db72ab4 polyorb.utils.strings.lists%s
-D storage.ads		20210918151116 5739079e storage%s
+D storage.ads		20210919140942 7449ba31 storage%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200228061810 b45c2d8d system.atomic_counters%s
 D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
+D s-conca4.ads		20200228061810 7e642b20 system.concat_4%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
 D s-dsatyp.ads		20210826161802 23c1e58e system.dsa_types%s
 D s-exctab.ads		20200228061810 54135002 system.exception_table%s
 D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
 D s-finmas.ads		20200228061810 7811a767 system.finalization_masters%s
 D s-finroo.ads		20200228061810 4ff27390 system.finalization_root%s
+D s-imgint.ads		20200228061810 02dbe0c2 system.img_int%s
 D s-imglli.ads		20200228061810 114f55d1 system.img_lli%s
 D s-imguns.ads		20200228061810 9ff43cf7 system.img_uns%s
 D s-multip.ads		20200228061810 38ac9f73 system.multiprocessors%s
@@ -241,29 +246,31 @@ G c Z b b [save factory__rand_int 67 14 9_4]
 G c Z b b [reset factory__rand_int 68 14 9_4]
 G c Z b b [image factory__rand_int 72 13 9_4]
 G c Z b b [value factory__rand_int 73 13 9_4]
-G r c none [insert_w factory 12 14 none] [set_workerid newprocesses 81 14 none]
-G r c none [insert_a factory 13 14 none] [set_acceptorid newprocesses 103 14 none]
-G r c none [insert_l factory 14 14 none] [set_learnerid newprocesses 112 14 none]
-G r c none [refresh factory 26 14 none] [restart_w newprocesses 89 14 none]
-G r c none [refresh factory 26 14 none] [restart_a newprocesses 107 14 none]
-G r c none [refresh factory 26 14 none] [restart_l newprocesses 116 14 none]
-G r c none [buildblock factory 27 14 none] [add_block newprocesses 115 14 none]
-G r c none [update_last factory 28 14 none] [isleader_l newprocesses 119 13 none]
-G r c none [update_last factory 28 14 none] [getblockchain newprocesses 118 13 none]
-G r c none [update_w factory 30 14 none] [insert_w_in_w newprocesses 75 14 none]
-G r c none [update_w factory 30 14 none] [insert_a_in_w newprocesses 76 14 none]
-G r c none [update_a factory 31 14 none] [insert_a_in_w newprocesses 76 14 none]
-G r c none [update_a factory 31 14 none] [insert_a_in_a newprocesses 92 14 none]
-G r c none [update_a factory 31 14 none] [insert_l_in_a newprocesses 93 14 none]
-G r c none [update_l factory 32 14 none] [insert_l_in_l newprocesses 110 14 none]
-G r c none [update_l factory 32 14 none] [update_reg newprocesses 114 14 none]
-G r c none [promote_w factory 34 14 none] [promote_w newprocesses 87 14 none]
-G r c none [promote_l factory 35 14 none] [promote_l newprocesses 120 14 none]
-G r c none [save_request factory 40 14 none] [learn newprocesses 113 14 none]
-G r c none [validate_request factory 42 14 none] [validate newprocesses 105 14 none]
-G r c none [promise_request factory 44 14 none] [promising newprocesses 104 14 none]
-G r c none [response_request factory 46 14 none] [respond newprocesses 84 14 none]
-G r c none [start factory 49 14 none] [assign newprocesses 83 14 none]
+G c Z b b [Tid_arrayBIP factory 18 4 none]
+G c Z b b [free_id factory 215 13 none]
+G r c none [insert_w factory 12 14 none] [set_workerid newprocesses 87 14 none]
+G r c none [insert_a factory 13 14 none] [set_acceptorid newprocesses 117 14 none]
+G r c none [insert_l factory 14 14 none] [set_learnerid newprocesses 126 14 none]
+G r c none [refresh factory 26 14 none] [restart_w newprocesses 102 14 none]
+G r c none [refresh factory 26 14 none] [restart_a newprocesses 121 14 none]
+G r c none [refresh factory 26 14 none] [restart_l newprocesses 130 14 none]
+G r c none [buildblock factory 27 14 none] [add_block newprocesses 129 14 none]
+G r c none [update_last factory 28 14 none] [isleader_l newprocesses 133 13 none]
+G r c none [update_last factory 28 14 none] [getblockchain newprocesses 132 13 none]
+G r c none [update_w factory 30 14 none] [insert_w_in_w newprocesses 80 14 none]
+G r c none [update_w factory 30 14 none] [insert_a_in_w newprocesses 81 14 none]
+G r c none [update_a factory 31 14 none] [insert_a_in_w newprocesses 81 14 none]
+G r c none [update_a factory 31 14 none] [insert_a_in_a newprocesses 106 14 none]
+G r c none [update_a factory 31 14 none] [insert_l_in_a newprocesses 107 14 none]
+G r c none [update_l factory 32 14 none] [insert_l_in_l newprocesses 124 14 none]
+G r c none [update_l factory 32 14 none] [update_reg newprocesses 128 14 none]
+G r c none [promote_w factory 34 14 none] [promote_w newprocesses 100 14 none]
+G r c none [promote_l factory 35 14 none] [promote_l newprocesses 134 14 none]
+G r c none [save_request factory 40 14 none] [learn newprocesses 127 14 none]
+G r c none [validate_request factory 42 14 none] [validate newprocesses 119 14 none]
+G r c none [promise_request factory 44 14 none] [promising newprocesses 118 14 none]
+G r c none [response_request factory 46 14 none] [respond newprocesses 97 14 none]
+G r c none [start factory 49 14 none] [assign newprocesses 96 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 33|1r6 1r23 2r6 4r6 9r28
 X 6 a-contai.ads
@@ -272,7 +279,7 @@ X 9 a-convec.ads
 73k24*Vectors 824e27 33|4w21
 78I12*Extended_Index{integer}
 88R9*Vector<12|43R9>
-522V13*Last_Index{78I12[38|50]} 33|243s58[38|50]
+522V13*Last_Index{78I12[38|51]} 33|271s58[38|51]
 X 14 a-iteint.ads
 24h9 Forward_Iterator
 32h9 Reversible_Iterator<24R9[9|111]>
@@ -280,144 +287,158 @@ X 15 a-numeri.ads
 16K13*Numerics 32e17 33|2r10 9r32
 X 16 a-nudira.ads
 44k22*Discrete_Random 81e33 33|2w19 9r41
-50R9*Generator<137|63R9> 33|11r10[9]
-52V13 Random{33|8I9} 33|217s35[9] 224s27[9]
-61U14 Reset<137|100p14> 33|215s7[9]
+50R9*Generator<139|63R9> 33|11r10[9]
+52V13 Random{33|8I9} 33|218s21[9] 241s35[9] 243s42[9]
+61U14 Reset<139|100p14> 33|239s7[9]
 X 17 a-nudira.adb
-53V16 Random[137|83]{33|8I9} 138|393b13[33|9]
-65V16 Random[137|83]{33|8I9} 138|393b13[33|9]
+53V16 Random[139|83]{33|8I9} 140|393b13[33|9]
+65V16 Random[139|83]{33|8I9} 140|393b13[33|9]
 X 28 a-textio.ads
 57K13*Text_IO 727e16 33|1w10 1r27
-264U14*New_Line 33|21s7 30s7 38s7
-508U14*Put_Line 33|76s7 96s7 123s7 152s7 221s7 228s16
+264U14*New_Line 33|25s7 34s7 42s7
+508U14*Put_Line 33|80s7 100s7 127s7 156s7 251s13 252s13 256s16
 X 31 common.ads
 2K9*Common 42e11 32|1w6 1r18
-30R9*Promise 35e14 32|46r68 33|201r68
+30R9*Promise 35e14 32|46r82 33|205r82
 X 32 factory.ads
-4K9*Factory 52E4 58l5 58e12 33|6b14 262l5 262t12
-7I9*Index<short_short_integer> 8r32 9r34 10r33 53r14 55r14 57r14 33|42r15
-. 42r24 48r15 48r24 54r15 54r24 77r16 85r16 97r16 104r16 112r16 124r16 193r27
-. 198r30 203r28 203r56 208r31 208r58 222r16
-8A9*Worker_Array(38|11P9)<7I9> 52r19
+4K9*Factory 52E4 58l5 58e12 33|6b14 290l5 290t12
+7I9*Index<short_short_integer> 8r32 9r34 10r33 53r14 55r14 57r14 33|46r15
+. 46r24 52r15 52r24 58r15 58r24 81r16 89r16 101r16 108r16 116r16 128r16 197r27
+. 202r30 207r28 207r56 212r31 212r58 246r16 252r115
+8A9*Worker_Array(38|11P9)<7I9> 52r19 33|237r18
 9A9*Acceptor_Array(38|14P9)<7I9> 54r20
 10A9*Learner_Array(38|17P9)<7I9> 56r19
-12U14*Insert_W 12>24 33|16b14 22l8 22t16
-12p24 W{38|11P9} 33|16b24 18r20 19r32
-13U14*Insert_A 13>24 33|24b14 31l8 31t16
-13p24 A{38|14P9} 33|24b24 26r22 27r33
-14U14*Insert_L 14>24 33|33b14 39l8 39t16
-14p24 L{38|17P9} 33|33b24 35r21 36r32
-16V13*Get_W{38|11P9} 16>20 33|41b13 45l8 45t13
-16i20 C{integer} 33|41b20 42r30
-17V13*Get_A{38|14P9} 17>20 33|47b13 51l8 51t13
-17i20 C{integer} 33|47b20 48r30
-18V13*Get_L{38|17P9} 18>20 33|53b13 57l8 57t13
-18i20 C{integer} 33|53b20 54r30
-20V13*Get_NumW{integer} 33|59b13 62l8 62t16
-21V13*Get_NumA{integer} 33|64b13 67l8 67t16
-22V13*Get_NumL{integer} 33|69b13 72l8 72t16
-24V13*Get_Final{boolean} 33|251b13 254l8 254t17
-25U14*Reset_Final 33|256b14 259l8 259t19
-26U14*Refresh 33|155b14 178l8 178t15
-27U14*BuildBlock 33|180b14 189l8 189t18
-28U14*Update_Last 33|238b14 249l8 249t19
-30U14*Update_W 30>24 33|74b14 92l8 92t16
-30p24 T{38|11P9} 33|74b24 79r27 80r44 87r27
-31U14*Update_A 31>24 33|94b14 119l8 119t16
-31p24 T{38|14P9} 33|94b24 99r44 106r27 107r45 114r27
-32U14*Update_L 32>24 33|121b14 133l8 133t16
-32p24 T{38|17P9} 33|121b24 126r27 127r44 128r24
-34U14*Promote_W 34>25 33|135b14 138l8 138t17
-34p25 W{38|11P9} 33|135b25 137r30
-35U14*Promote_L 35>25 33|140b14 143l8 143t17
-35p25 L{38|17P9} 33|140b25 142r30
-37U14*Notify 37>22 38r25 33|145b14 153l8 153t14 225r46
-37i22 Q{long_long_integer} 33|145b22 152r81
-40U14*Save_Request 40>28 40>44 40>67 41r25 33|191b14 194l8 194t20 198r51
-40i28 L_ID{integer} 33|191b28 193r33
-40i44 V{long_long_integer} 33|191b44 193r41
-40i67 R{integer} 33|191b67 193r44
-42U14*Validate_Request 42>32 42>48 42>62 43r25 33|196b14 199l8 199t24 225r85
-42i32 A_ID{integer} 33|196b32 198r36
-42i48 ID{integer} 33|196b48 198r44
-42i62 V{long_long_integer} 33|196b62 198r48
-44U14*Promise_Request 44>31 44>47 44>62 44>76 45r25 33|206b14 209l8 209t23
-. 225r61
-44i31 A_ID{integer} 33|206b31 208r37
-44i47 W_ID{integer} 33|206b47 208r64
-44i62 ID{integer} 33|206b62 208r72
-44i76 V{long_long_integer} 33|206b76 208r76
-46U14*Response_Request 46>32 46>48 46>64 47r25 33|201b14 204l8 204t24 208r79
-46i32 W_ID{integer} 33|201b32 203r34
-46i48 A_ID{integer} 33|201b48 203r62
-46r64 P{31|30R9} 33|201b64 203r70
-49U14*Start 33|211b14 230s16 236l8 236t13
-52a4 Working_List{8A9} 33|19m7 44r14 78r13 79r30 80r27 98r13 99r27 157r16
-. 203r15 208r45 223r13 225r20
-53i4 Index_W{7I9} 33|18r31 19r20 20m7 20r18 61r22 148r30
-54a4 Acceptor_List{9A9} 33|27m7 50r14 86r13 87r30 105r13 106r30 107r27 164r16
-. 198r16 203r42 208r17
-55i4 Index_A{7I9} 33|26r33 27r21 29m7 29r18 66r22
-56a4 Learner_List{10A9} 33|36m7 56r14 113r13 114r30 125r13 126r30 127r27
-. 171r16 182r16 193r14 240r16
-57i4 Index_L{7I9} 33|35r32 36r20 37m7 37r18 71r22
+12U14*Insert_W 12>24 33|20b14 26l8 26t16
+12p24 W{38|11P9} 33|20b24 22r20 23r32
+13U14*Insert_A 13>24 33|28b14 35l8 35t16
+13p24 A{38|14P9} 33|28b24 30r22 31r33
+14U14*Insert_L 14>24 33|37b14 43l8 43t16
+14p24 L{38|17P9} 33|37b24 39r21 40r32
+16V13*Get_W{38|11P9} 16>20 33|45b13 49l8 49t13
+16i20 C{integer} 33|45b20 46r30
+17V13*Get_A{38|14P9} 17>20 33|51b13 55l8 55t13
+17i20 C{integer} 33|51b20 52r30
+18V13*Get_L{38|17P9} 18>20 33|57b13 61l8 61t13
+18i20 C{integer} 33|57b20 58r30
+20V13*Get_NumW{integer} 33|63b13 66l8 66t16
+21V13*Get_NumA{integer} 33|68b13 71l8 71t16
+22V13*Get_NumL{integer} 33|73b13 76l8 76t16
+24V13*Get_Final{boolean} 33|279b13 282l8 282t17
+25U14*Reset_Final 33|284b14 287l8 287t19
+26U14*Refresh 33|159b14 182l8 182t15
+27U14*BuildBlock 33|184b14 193l8 193t18
+28U14*Update_Last 33|266b14 277l8 277t19
+30U14*Update_W 30>24 33|78b14 96l8 96t16
+30p24 T{38|11P9} 33|78b24 83r27 84r44 91r27
+31U14*Update_A 31>24 33|98b14 123l8 123t16
+31p24 T{38|14P9} 33|98b24 103r44 110r27 111r45 118r27
+32U14*Update_L 32>24 33|125b14 137l8 137t16
+32p24 T{38|17P9} 33|125b24 130r27 131r44 132r24
+34U14*Promote_W 34>25 33|139b14 142l8 142t17
+34p25 W{38|11P9} 33|139b25 141r30
+35U14*Promote_L 35>25 33|144b14 147l8 147t17
+35p25 L{38|17P9} 33|144b25 146r30
+37U14*Notify 37>22 38r25 33|149b14 157l8 157t14 253r46
+37i22 Q{long_long_integer} 33|149b22 156r81
+40U14*Save_Request 40>28 40>44 40>67 40>80 41r25 33|195b14 198l8 198t20 202r51
+40i28 L_ID{integer} 33|195b28 197r33
+40i44 V{long_long_integer} 33|195b44 197r41
+40i67 R{integer} 33|195b67 197r44
+40b80 B{boolean} 33|195b80 197r47
+42U14*Validate_Request 42>32 42>48 42>62 43r25 33|200b14 203l8 203t24 253r85
+42i32 A_ID{integer} 33|200b32 202r36
+42i48 ID{integer} 33|200b48 202r44
+42i62 V{long_long_integer} 33|200b62 202r48
+44U14*Promise_Request 44>31 44>47 44>62 44>76 45r25 33|210b14 213l8 213t23
+. 253r61
+44i31 A_ID{integer} 33|210b31 212r37
+44i47 W_ID{integer} 33|210b47 212r64
+44i62 ID{integer} 33|210b62 212r72
+44i76 V{long_long_integer} 33|210b76 212r76
+46U14*Response_Request 46>32 46>48 46>64 46>78 47r25 33|205b14 208l8 208t24
+. 212r79
+46i32 W_ID{integer} 33|205b32 207r34
+46i48 A_ID{integer} 33|205b48 207r62
+46i64 ID{integer} 33|205b64 207r70
+46r78 P{31|30R9} 33|205b78 207r74
+49U14*Start 33|231b14 258s16 264l8 264t13
+52a4 Working_List{8A9} 33|23m7 48r14 82r13 83r30 84r27 102r13 103r27 161r16
+. 207r15 212r45 245r19 253r20
+53i4 Index_W{7I9} 33|22r31 23r20 24m7 24r18 65r22 152r30
+54a4 Acceptor_List{9A9} 33|31m7 54r14 90r13 91r30 109r13 110r30 111r27 168r16
+. 202r16 207r42 212r17
+55i4 Index_A{7I9} 33|30r33 31r21 33m7 33r18 70r22
+56a4 Learner_List{10A9} 33|40m7 60r14 117r13 118r30 129r13 130r30 131r27
+. 175r16 186r16 197r14 268r16
+57i4 Index_L{7I9} 33|39r32 40r20 41m7 41r18 75r22
 X 33 factory.adb
 8I9 randRange<integer> 9r57
 9K12 Rand_Int[16|44] 10r8
-11r4 gen{16|50R9[9]} 215r13 217r42 224r34
-12i4 Last{long_long_integer} 216r10 219r17 243m16
-13i4 Countdown{integer} 147m7 147r20 148r10 150m10
-14b4 Finalized{boolean} 149m10 253r14 258m7
-42i7 count{32|7I9} 44r27
-48i7 count{32|7I9} 50r28
-54i7 count{32|7I9} 56r27
-77i11 I{32|7I9} 78r26 79r43 80r40
-85i11 I{32|7I9} 86r27 87r44
-97i11 I{32|7I9} 98r26 99r40
-104i11 I{32|7I9} 105r27 106r44 107r41
-112i11 I{32|7I9} 113r26 114r43
-124i11 I{32|7I9} 125r26 126r43 127r40
-157p11 W=157:16{38|11P9} 158r13 159r23
-164p11 A=164:16{38|14P9} 165r13 166r23
-171p11 L=171:16{38|17P9} 172r13 173r23
-182p11 I=182:16{38|17P9} 183r13 184r23
-212i7 Val{long_long_integer} 217m10 219m10 221r79 225r37
-213i7 ID{integer} 224m13 225r42
-222i11 I{32|7I9} 223r26 225r33 227r16
-240p11 I=240:16{38|17P9} 241r13 242r27 243r38 243r55
+11r4 gen{16|50R9[9]} 218r28 239r13 241r42 243r49
+12i4 Last{long_long_integer} 240r10 243r17 271m16
+13i4 Countdown{integer} 151m7 151r20 152r10 154m10
+14b4 Finalized{boolean} 153m10 281r14 286m7
+16I9 index_ID<short_short_integer> 18r28 219r16 235r17
+17I9 start_ID<integer> 18r41 221r28 249r32
+18A9 ID_array(17I9)<16I9> 215r31 234r16
+46i7 count{32|7I9} 48r27
+52i7 count{32|7I9} 54r28
+58i7 count{32|7I9} 60r27
+81i11 I{32|7I9} 82r26 83r43 84r40
+89i11 I{32|7I9} 90r27 91r44
+101i11 I{32|7I9} 102r26 103r40
+108i11 I{32|7I9} 109r27 110r44 111r41
+116i11 I{32|7I9} 117r26 118r43
+128i11 I{32|7I9} 129r26 130r43 131r40
+161p11 W=161:16{38|11P9} 162r13 163r23
+168p11 A=168:16{38|14P9} 169r13 170r23
+175p11 L=175:16{38|17P9} 176r13 177r23
+186p11 I=186:16{38|17P9} 187r13 188r23
+215V13 Free_ID{integer} 215b13 215>22 222s23 229l8 229t15 248s19
+215a22 usedID{18A9} 220r13 221r16 222r32
+216i7 ID{integer} 218m7 221r37 225r20 228r14
+219i11 I{16I9} 220r20 221r23
+232i7 Val{long_long_integer} 241m10 243m10 252r85 253r37
+233i7 ID{integer} 248m13 249r41 251r72 253r42
+234a7 usedID{18A9} 248r27 249m13
+235i7 countID{16I9} 249r20 250m13 250r24
+236b7 check{boolean}
+237a7 snapshot{32|8A9} 245m7 247r13
+246i11 I{32|7I9} 247r22 252r127 253r33 255r16
+268p11 I=268:16{38|17P9} 269r13 270r27 271r38 271r55
 X 34 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
 121V13*Shift_Left{74M9} 116|37i18
 X 38 newprocesses.ads
-3K9*NewProcesses 32|2w6 2r24 33|3w6 3r24 137r7 142r7 38|161e17
-11P9*Acc_Worker(8R9) 32|8r42 12r28 16r40 30r28 34r29 33|16r28 41r40 74r28
-. 135r29
-14P9*Acc_Acceptor(9R9) 32|9r44 13r27 17r40 31r28 33|24r27 47r40 94r28
-17P9*Acc_Learner(7R9) 32|10r43 14r27 18r40 32r28 35r29 33|33r27 53r40 121r28
-. 140r29
-75U14*Insert_W_in_W 33|79R13 80R13
-76U14*Insert_A_in_W 33|87R13 99R13
-81U14*Set_WorkerID 33|18R7
-83U14*Assign 33|225R13
-84U14*Respond 33|203R7
-87U14*Promote_W 33|137R20
-89U14*Restart_W 33|159R13
-92U14*Insert_A_in_A 33|106R13 107R13
-93U14*Insert_L_in_A 33|114R13
-103U14*Set_AcceptorID 33|26R7
-104U14*Promising 33|208R7
-105U14*Validate 33|198R7
-107U14*Restart_A 33|166R13
-110U14*Insert_L_in_L 33|126R13 127R13
-112U14*Set_LearnerID 33|35R7
-113U14*Learn 33|193R7
-114U14*Update_Reg 33|128R13
-115U14*Add_block 33|184R13
-116U14*Restart_L 33|173R13
-118V13*getBlockchain{9|88R9[50]} 33|243R24 243R41
-119V13*isLeader_L{boolean} 33|242R16
-120U14*Promote_L 33|142R20
+3K9*NewProcesses 32|2w6 2r24 33|3w6 3r24 141r7 146r7 38|175e17
+11P9*Acc_Worker(8R9) 32|8r42 12r28 16r40 30r28 34r29 33|20r28 45r40 78r28
+. 139r29
+14P9*Acc_Acceptor(9R9) 32|9r44 13r27 17r40 31r28 33|28r27 51r40 98r28
+17P9*Acc_Learner(7R9) 32|10r43 14r27 18r40 32r28 35r29 33|37r27 57r40 125r28
+. 144r29
+80U14*Insert_W_in_W 33|83R13 84R13
+81U14*Insert_A_in_W 33|91R13 103R13
+87U14*Set_WorkerID 33|22R7
+96U14*Assign 33|253R13
+97U14*Respond 33|207R7
+100U14*Promote_W 33|141R20
+102U14*Restart_W 33|163R13
+106U14*Insert_A_in_A 33|110R13 111R13
+107U14*Insert_L_in_A 33|118R13
+117U14*Set_AcceptorID 33|30R7
+118U14*Promising 33|212R7
+119U14*Validate 33|202R7
+121U14*Restart_A 33|170R13
+124U14*Insert_L_in_L 33|130R13 131R13
+126U14*Set_LearnerID 33|39R7
+127U14*Learn 33|197R7
+128U14*Update_Reg 33|132R13
+129U14*Add_block 33|188R13
+130U14*Restart_L 33|177R13
+132V13*getBlockchain{9|88R9[51]} 33|271R24 271R41
+133V13*isLeader_L{boolean} 33|270R16
+134U14*Promote_L 33|146R20
 X 41 polyorb-any.ads
 179h12*Union_TC_Map
 251V28*"="=253:32{boolean} 109|41i19
@@ -433,12 +454,12 @@ X 98 polyorb-task_info.ads
 264V13 Link(71P9) 115|54i21
 X 109 polyorb-utils-chained_lists.ads
 133R9 Node
-134P9 Node_Access(133R9[40|78])
+134P9 Node_Access(133R9[118|43])
 151V13 Link(134P9[57|99]) 115|54i21[57|99]
-X 137 s-rannum.ads
-75V13*Random{34|74M9} 138|221i21
-76V13*Random{34|77M9} 138|221i21
-X 145 s-stausa.ads
+X 139 s-rannum.ads
+75V13*Random{34|74M9} 140|221i21
+76V13*Random{34|77M9} 140|221i21
+X 147 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
 
