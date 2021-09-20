@@ -1,0 +1,4 @@
+project Partition extends all "/home/nicola/RCDEXAM/executables/src/dsa/x86_64-unknown-linux-gnu/paxos_dist_app.gpr" is
+   for Object_Dir use ".";
+   --  Pseudo-partition project for RCI calling stubs
+end Partition;
