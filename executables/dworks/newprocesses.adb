@@ -161,7 +161,7 @@ package body NewProcesses is
          W1.Buffer.Append(Character(S(I)));
       end loop;
       R(Get_WorkerID(W1), Get_WorkerID(W2));
-   end Create_and_Sende_and_Send;
+   end Create_and_Send;
    
    procedure Confirm_Permission (W1 : access NewWorker; W2 : Acc_Worker; S : Send_Permission) is
    begin
