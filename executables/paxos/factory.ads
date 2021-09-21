@@ -34,7 +34,7 @@ package Factory is
    procedure Promote_W (W : Acc_Worker);
    procedure Promote_L (L : Acc_Learner);
 
-   procedure Notify (Q : Long_Long_Integer);
+   procedure Notify (Q : Long_Long_Integer; S : Integer);
    pragma Asynchronous (Notify);
 
    procedure Save_Request (L_ID : Integer; V : Long_Long_Integer; R : Integer; B : Boolean);

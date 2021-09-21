@@ -2,16 +2,19 @@ with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Numerics.Discrete_Random;
 with NewProcesses; use NewProcesses;
 with Ada.Containers.Vectors;
+with Storage; use Storage;
 
 package body Factory is
 
-   type randRange is new Integer range 1..10;
+   type randRange is new Integer range 1..9;
    package Rand_Int is new ada.numerics.discrete_random(randRange);
    use Rand_Int;
    gen : Generator;
    Last : Long_Long_Integer := 0;
    Countdown : Integer := 0;
+   Called : Integer := 0;
    Finalized : Boolean := False;
+   Routine_Num : Integer := 0;
 
    type index_ID is range 0..100;
    type start_ID is new Integer with Default_Value => -1;
@@ -29,7 +32,6 @@ package body Factory is
    begin
       Set_AcceptorID(A, Integer(Index_A));
       Acceptor_List(Index_A) := A;
-
       Index_A := Index_A + 1;
       New_Line(1);
    end Insert_A;
@@ -146,14 +148,25 @@ package body Factory is
       NewProcesses.Promote_L(L);
    end Promote_L;
 
-   procedure Notify (Q : Long_Long_Integer) is
+   procedure Notify (Q : Long_Long_Integer; S : Integer) is
    begin
-      Countdown := Countdown + 1;
-      if Countdown = Integer(Index_W) then
-         Finalized := True;
-         Countdown := 0;
+      if S = 1 then
+         Countdown := Countdown + 1;
+         if Countdown = Called then
+            Finalized := True;
+            Called := 0;
+            Countdown := 0;
+         end if;
+         Put_Line("Lavoro completato! Il risultato e': " & Long_Long_Integer'Image(Q));
+      else
+         Countdown := Countdown + 1;
+         if Countdown = Called then
+            Finalized := True;
+            Called := 0;
+            Countdown := 0;
+         end if;
+         Put_Line("Rifiutato, il Worker non era pronto...");
       end if;
-      Put_Line("Lavoro completato, il risultato e': " & Long_Long_Integer'Image(Q));
    end Notify;
 
    procedure Refresh is
@@ -179,6 +192,7 @@ package body Factory is
             exit;
          end if;
       end loop;
+      Queue.Reset;
    end Refresh;
 
    procedure BuildBlock is
@@ -215,7 +229,7 @@ package body Factory is
    function Free_ID (usedID : ID_array) return Integer is
       ID : Integer;
    begin
-      ID := Integer(random(gen));
+      ID := Integer(random(gen)) + (10 * Routine_Num);
       for I in index_ID loop
          if usedID(I) /= 0 then
             if usedID(I) = start_ID(ID) then
@@ -248,8 +262,9 @@ package body Factory is
             ID := Free_ID(usedID);
             usedID(countID) := start_ID(ID);
             countID := countID + 1;
-            Put_Line("L'ID scelto per la proposta è: " & Integer'Image(ID));
+            Put_Line("L'ID scelto per la proposta e': " & Integer'Image(ID));
             Put_Line("Richiedo il calcolo dell'hash di: " & Long_Long_Integer'Image(Val) & " al Worker di ID: " & Index'Image(I));
+            Called := Called + 1;
             Assign(Working_List(I), Val, ID, Notify'Access, Promise_Request'Access, Validate_Request'Access);
          else
             if I = 0 then
@@ -284,6 +299,7 @@ package body Factory is
    procedure Reset_Final is
    begin
       Finalized := False;
+      Routine_Num := Routine_Num + 1;
    end Reset_Final;
 
 

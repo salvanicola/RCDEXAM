@@ -4,7 +4,13 @@ with Ada.Numerics.Discrete_Random;
 with Storage; use Storage;
 
 package body NewProcesses is 
-           
+       
+   -- -- GENERAL --
+   type randRange is new Integer range 0..10;
+   package Rand_Int is new ada.numerics.discrete_random(randRange);
+   use Rand_Int;
+   gen : Generator;
+   
    --  -- WORKER --
    procedure Insert_W_in_W (Me: access NewWorker; W : Acc_Worker) is
    begin
@@ -68,6 +74,11 @@ package body NewProcesses is
       return Me.Worker_ID;
    end Get_WorkerID;
    
+   function Get_Status_W (Me : access NewWorker) return Integer is
+   begin
+      return Me.Status;
+   end Get_Status_W;
+   
    procedure Set_WorkerID (Me: access NewWorker; ID : Integer) is
    begin
       Me.Worker_ID := ID;
@@ -102,6 +113,11 @@ package body NewProcesses is
          end if;
       end loop;
    end Set_Request_Max_ID;
+   
+   procedure Set_Status_W (Me: access NewWorker; S: Integer) is
+   begin
+      Me.Status := S;
+   end Set_Status_W;
    
    procedure Add_Request_Count (Me : access NewWorker; ID : Integer) is
    begin
@@ -155,27 +171,32 @@ package body NewProcesses is
       
    procedure Assign (W : access NewWorker; Q : Long_Long_Integer; ID: Integer; N : Common.Notify; P : Promise_Request; V : Validate_Request) is
       T: Long_Long_Integer;
-      Found : Boolean := False;
    begin
-      T := Long_Long_Integer(Ada.Strings.Hash(Long_Long_Integer'Image(Q)));
-      for I in W.Working_List.First_Index .. W.Working_List.Last_Index loop
-         if isLeader_W(W.Working_List(I)) then
-            Propose (W.Working_List(I), T, ID, P, V);
-            Found := True;
-            exit;
+      if W.Status = 1 then
+         reset(gen);
+         T := Long_Long_Integer(Ada.Strings.Hash(Long_Long_Integer'Image(Q))) + Long_Long_Integer(random(gen) * 10);
+         if isLeader_W(W) then
+            Propose (W, T, ID, P, V, N);
+         else
+            for I in W.Working_List.First_Index .. W.Working_List.Last_Index loop
+               if W.Working_List(I) /= null then
+                  if isLeader_W(W.Working_List(I)) then
+                     Propose (W.Working_List(I), T, ID, P, V, N);
+                     exit;
+                  end if;
+               else
+                  exit;
+               end if;
+            end loop;
          end if;
-      end loop;
-      if Found = False then
-         Propose (W, T, ID, P, V);
+      else
+         N(T, 0);
       end if;
-      N(T);
    end Assign;
    
    procedure Respond (Me: access NewWorker; A: Acc_Acceptor; ID : Integer; P : Promise) is
    begin
-      -- DA GESTIRE IL CASO IN CUI 2 RISPOSTE IN ROUTINE DIVERSE ABBIANO LO STESSO ID --
       if P.Accepted then
-         Put_Line ("Ricevuta una risposta positiva con ID: " & Integer'Image(ID));
          Add_Request_Handshaker(Me, ID, A);
          Add_Request_Positive(Me, ID);
          if P.ID >= Get_Request(Me, ID).Max_ID then
@@ -183,12 +204,45 @@ package body NewProcesses is
             Set_Request_Value(Me, ID, P.Value);
          end if;
       else
-         Put_Line ("Ricevuta una risposta negativa con ID: " & Integer'Image(ID));
          Add_Request_Negative(Me, ID);
       end if;
       Add_Request_Count(Me, ID);
-      Queue.Remove(ID);
+      --  Queue.Remove(ID, Get_AcceptorID(A));
    end Respond;
+   
+   function Quorum_selection (W : access NewWorker; C: Integer) return Quorum_Vectors.Vector is
+      type called_range is new Integer range 0..(Integer(W.Acceptor_List.Length) - 1);
+      package Rand_Acc is new ada.numerics.discrete_random(called_range);
+      use Rand_Acc;
+      CA : Rand_Acc.Generator;
+      present : Boolean;
+      I : Integer := 0;
+      quorum : Quorum_Vectors.Vector;
+      A_ID : Integer;
+   begin
+      Put_Line("Verranno scelti " & Integer'Image(C) & " acceptors");
+      while I < C loop
+         reset(CA);
+         present := False;
+         A_ID := Integer(random(CA));
+         if Integer(quorum.Length) = 0 then
+            I := I + 1;
+            quorum.Append(A_ID);
+         else
+            for E in quorum.First_Index..quorum.Last_Index loop
+               if quorum(E) = A_ID then
+                  present := True;
+                  exit;
+               end if;
+            end loop;
+            if present = False then
+               I := I + 1;
+               quorum.Append(A_ID);
+            end if;
+         end if;
+      end loop;
+      return quorum;
+   end Quorum_selection;
    
    function PrepareRequest (W : access NewWorker; ID : Integer; V : Long_Long_Integer; P : Promise_Request) return Boolean is
       it : Integer := 0;
@@ -197,24 +251,26 @@ package body NewProcesses is
       response : Promise;
       req : Request;
       check : Boolean := False;
+      called_A : Quorum_Vectors.Vector;
    begin
       Put_Line("Invio prepare request con ID: " & Integer'Image(ID));
-      Put_Line("Verranno contattati " & Integer'Image(Integer(W.Acceptor_List.Length)) & " acceptors");
-      contacts := Integer(W.Acceptor_List.Length);
+      contacts := Integer(W.Acceptor_List.Length) / 2 + 1;
       req.ID := ID;
       W.Handled_Requests.Append(req);
+      called_A := Quorum_selection(W, contacts);
       while it < contacts loop
-         P(Get_AcceptorID(Get_A_from_W(W, it)), Get_WorkerID(W), ID, V);
+         Put_Line("Acceptor - " & Integer'Image(called_A(it)) & " per la richiesta di ID: " & Integer'Image(ID));
+         P(called_A(it), Get_WorkerID(W), ID, V);
          it := it + 1;
       end loop;
       while Integer(Get_Request(W, ID).Count) /= contacts loop
          if timeout = 10 then
             Put_Line("Ho atteso troppo, vado a prendere il valore dallo storage...");
-            for I in W.Acceptor_List.First_Index .. W.Acceptor_List.Last_Index loop
+            for Y in called_A.First_Index .. called_A.Last_Index loop
                Put_Line("Inizio il controllo sugli acceptor...");
-               for E in 0..Get_Request(W, ID).Positive loop
-                  if Get_Request(W, ID).Handshakers(Index_A(E)) /= null then
-                     if Get_AcceptorID(W.Acceptor_List(I)) = Get_AcceptorID(Get_Request(W, ID).Handshakers(Index_A(E))) then
+               for K in 0..Get_Request(W, ID).Positive loop
+                  if Get_Request(W, ID).Handshakers(Index_A(K)) /= null then
+                     if called_A(Y) = Get_AcceptorID(Get_Request(W, ID).Handshakers(Index_A(K))) then
                         check := True;
                         exit;
                      end if;
@@ -222,11 +278,15 @@ package body NewProcesses is
                end loop;
                if check = False then
                   Put_Line("Procedo a prendere il valore...");
-                  response.Accepted := Queue.Get(ID, Get_AcceptorID(W.Acceptor_List(I))).Accepted;
+                  response.Accepted := Queue.Get(ID, called_A(Y)).Accepted;
                   response.ID := ID;
-                  response.Value := Queue.Get(ID, Get_AcceptorID(W.Acceptor_List(I))).Value;
-                  response.Sent := True;
-                  Respond (W, Get_A_by_ID(W, Queue.Get(ID, Get_AcceptorID(W.Acceptor_List(I))).Acceptor_ID), ID, response);
+                  response.Value := Queue.Get(ID, called_A(Y)).Value;
+                  if response.Value /= -1 then
+                     Put_Line("Valore ottenuto!");
+                  else
+                     Put_Line("Valore non trovato in Storage...");
+                  end if;
+                  Respond (W, Get_A_by_ID(W, Queue.Get(ID, called_A(Y)).Acceptor_ID), ID, response);
                   check := False;
                end if;
             end loop;
@@ -238,34 +298,36 @@ package body NewProcesses is
       return Get_Request(W, ID).Positive > Get_Request(W, ID).Negative;
    end PrepareRequest;
    
-   procedure Propose (W : access NewWorker; T : Long_Long_Integer; ID: Integer; P : Promise_Request; V : Validate_Request) is
-      it : Index_A := 0;
-      result : Boolean;
+   procedure Propose (W : access NewWorker; T : Long_Long_Integer; ID: Integer; P : Promise_Request; V : Validate_Request; N : Common.Notify) is
+      it : Integer := 0;
+      result : Boolean := True;
    begin
       if W.Max_ID < ID then
          if W.Last_proposed = T or W.Last_proposed = -1 then
             result := PrepareRequest(W, ID, T, P);
-            Put_Line("Le proposte pronte sono: ");                
-            for I in W.Handled_Requests.First_Index .. W.Handled_Requests.Last_Index loop
-               Put_Line(Integer'Image(W.Handled_Requests(I).ID) & " - " & Long_Long_Integer'Image(W.Handled_Requests(I).Value));
-            end loop;
+            Put_Line("La proposta con ID: " & Integer'Image(ID) & " ha ottenuto tutte le risposte.");                
             if result then
                W.Last_proposed := Get_Request(W, ID).Value;
                W.Max_ID := ID;
-               while it < Get_Request(W, ID).Count loop
-                  V(Get_AcceptorID(Get_Request(W, ID).Handshakers(it)), ID, Get_Request(W, ID).Value);
-                  Remove_Request(W, ID);
+               while it < Get_Request(W, ID).Positive loop
+                  Put_Line("La proposta con ID: " & Integer'Image(ID) & " viene inviata all'acceptor: " & Integer'Image(Get_AcceptorID(Get_Request(W, ID).Handshakers(Index_A(it)))));
+                  V(Get_AcceptorID(Get_Request(W, ID).Handshakers(Index_A(it))), ID, Get_Request(W, ID).Value);
                   it := it + 1;
                end loop;
+               N(T, 1);
+               Remove_Request(W, ID);
             else
                Put_Line("Non hanno risposto positivamente abbastanza Acceptor");
+               N(T, 1);
                Remove_Request(W, ID);
             end if;
          else
             Put_Line("Non invio una richiesta con valore non coerente!");
+            N(T, 1);
          end if;
       else
          Put_Line("Non invio una richiesta con ID minore di una gia' inviata!");
+         N(T, 1);
       end if;
    end Propose;
    
@@ -281,16 +343,14 @@ package body NewProcesses is
    end isLeader_W;
    
    procedure Restart_W (Me : access NewWorker) is
+      reset : Request_Vectors.Vector;
    begin
+      Me.Handled_Requests := reset;
       Me.Max_ID := -1;
       Me.Last_proposed := -1;
    end Restart_W;
    
    --  -- ACCEPTOR --
-   type randRange is new Integer range 0..0;
-   package Rand_Int is new ada.numerics.discrete_random(randRange);
-   use Rand_Int;
-   gen : Generator;
    
    procedure Insert_A_in_A (Me: access NewAcceptor; A: Acc_Acceptor) is
    begin
@@ -348,6 +408,11 @@ package body NewProcesses is
       return Me.Acceptor_ID;
    end Get_AcceptorID;
    
+   function Get_Status_A (Me : access NewAcceptor) return Integer is
+   begin
+      return Me.Status;
+   end Get_Status_A;
+   
    procedure Set_MaxID (Me: access NewAcceptor; ID : Integer) is
    begin
       Me.Max_ID := ID;
@@ -360,7 +425,7 @@ package body NewProcesses is
    
    procedure Set_Waiting (Me: access NewAcceptor; W : Long_Long_Integer) is
    begin
-      Me.Waiting := W;
+      Me.Waiting := W;         
    end Set_Waiting;
    
    procedure Set_AcceptorID (Me: access NewAcceptor; ID : Integer) is
@@ -368,71 +433,80 @@ package body NewProcesses is
       Me.Acceptor_ID := ID;
    end Set_AcceptorID;
    
+   procedure Set_Status_A (Me: access NewAcceptor; S: Integer) is
+   begin
+      Me.Status := S;
+   end Set_Status_A;
+   
    procedure Promising (A : access NewAcceptor; W: Acc_Worker; ID : Integer; V : Long_Long_Integer; R : Response_Request) 
    is
       Answer : Promise;
       Failure : Integer;
    begin
-      reset(gen);
-      Failure := Integer(random(gen));
-      if Get_MaxID(A) < ID and (Get_LastAccepted(A).Value = V or Get_LastAccepted(A).Value = -1) then
-         Put_Line("Promessa stipulata!");
-         Answer.Accepted := True;
-         if Get_LastAccepted(A).ID = -1 then
-            Answer.Value := V;
-            Answer.ID := ID;
+      if A.Status = 1 then 
+         reset(gen);
+         Failure := Integer(random(gen));
+         if Get_MaxID(A) < ID and (Get_LastAccepted(A).Value = V or Get_LastAccepted(A).Value = -1) then
+            Answer.Accepted := True;
+            if Get_LastAccepted(A).ID = -1 then
+               Answer.Value := V;
+               Answer.ID := ID;
+            else
+               Answer.Value := Get_LastAccepted(A).Value;
+               Answer.ID := Get_LastAccepted(A).ID;
+            end if;
+            Set_MaxID(A, ID);
+            Set_LastAccepted_V(A, V);
+            Set_Waiting(A, Answer.Value);
+            Queue.Insert(True, Get_WorkerID(W), A.Acceptor_ID, Answer.Value, ID);
+            if Failure = 1 then
+               Put_Line("ERRORE: RITARDO DI 10 SECONDI");
+               delay 10.0;
+            end if;
+            R(Get_WorkerID(W), Get_AcceptorID(A), ID, Answer);
          else
+            Answer.Accepted := False;
+            Answer.ID := Get_MaxID(A);
             Answer.Value := Get_LastAccepted(A).Value;
-            Answer.ID := Get_LastAccepted(A).ID;
+            Queue.Insert(False, Get_WorkerID(W), A.Acceptor_ID, Answer.Value, ID);
+            if Failure = 1 then
+               Put_Line("ERRORE: RITARDO DI 10 SECONDI");
+               delay 10.0;
+            end if;
+            R(Get_WorkerID(W), Get_AcceptorID(A), ID, Answer);
          end if;
-         Set_MaxID(A, ID);
-         Set_LastAccepted_V(A, V);
-         Set_Waiting(A, Answer.Value);
-         Queue.Insert(True, Get_WorkerID(W), A.Acceptor_ID, Answer.Value, ID);
-         if Failure = 1 then
-            Put_Line("ERRORE: RITARDO DI 10 SECONDI");
-            delay 10.0;
-         end if;
-         Answer.Sent := True;
-         R(Get_WorkerID(W), Get_AcceptorID(A), ID, Answer);
       else
-         Put_Line("Promessa rifiutata...");
-         Answer.Accepted := False;
-         Answer.ID := Get_MaxID(A);
-         Answer.Value := Get_LastAccepted(A).Value;
-         Queue.Insert(False, Get_WorkerID(W), A.Acceptor_ID, Get_LastAccepted(A).Value, ID);
-         if Failure = 1 then
-            Put_Line("ERRORE: RITARDO DI 10 SECONDI");
-            delay 10.0;
-         end if;
-         Answer.Sent := True;
-         R(Get_WorkerID(W), Get_AcceptorID(A), ID, Answer);
+         Put_Line("Acceptor non pronto, ancora in fase di accensione...");
       end if;
    end Promising;
    
    procedure Validate (A : access NewAcceptor; ID : Integer; V : Long_Long_Integer; S : Save_Request)
    is
    begin
-      if A.Max_ID <= ID then
-         if (A.Waiting = V or A.Waiting = -1) then
-            Put_Line("Richiesta accettata!");
-            Save(A, V, ID, S);
+      if A.Status = 1 then
+         if A.Max_ID <= ID then
+            if (A.Waiting = V or A.Waiting = -1) then
+               Put_Line("Richiesta accettata!");
+               Save(A, V, ID, S);
+            else
+               Put_Line("Richiesta rifiutata...");
+            end if;
          else
             Put_Line("Richiesta rifiutata...");
          end if;
-      else
-         Put_Line("Richiesta rifiutata...");
       end if;
    end Validate;
    
    procedure Save (A : access NewAcceptor; V : Long_Long_Integer; R : Integer; S : Save_Request)
    is begin
-      for I in A.Learner_List.First_Index .. A.Learner_List.Last_Index loop
-         if isLeader_L(A.Learner_List(I)) then
-            S(Get_LearnerID(Get_L_from_A(A, I)), V, R, True);
-            exit;
-         end if;
-      end loop;
+      if A.Status = 1 then
+         for I in A.Learner_List.First_Index .. A.Learner_List.Last_Index loop
+            if isLeader_L(A.Learner_List(I)) then
+               S(Get_LearnerID(Get_L_from_A(A, I)), V, R, True);
+               exit;
+            end if;
+         end loop;
+      end if;
    end Save;
    
    procedure Restart_A (Me: access NewAcceptor) is
@@ -466,24 +540,39 @@ package body NewProcesses is
       return Me.Learner_ID;
    end Get_LearnerID;
    
+   function Get_Status_L (Me : access NewLearner) return Integer is
+   begin
+      return Me.Status;
+   end Get_Status_L;
+   
    procedure Set_LearnerID (Me: access NewLearner; ID : Integer) is
    begin
       Me.Learner_ID := ID;
    end Set_LearnerID;
    
+   procedure Set_Status_L (Me: access NewLearner; S: Integer) is
+   begin
+      Me.Status := S;
+   end Set_Status_L;
    
    procedure Learn (L : access NewLearner; V : Long_Long_Integer; R : Integer; B : Boolean)
    is
       Res : Mem_entry;
    begin
-      Put_Line("Memorizzo il valore: " & Long_Long_Integer'Image(V));
-      Res.Value := V;
-      Res.ID := R;
-      L.Memory.Append(Res);
-      if B then
-         for I in L.Learner_List.First_Index .. L.Learner_List.Last_Index loop
-            Learn (L.Learner_List(I), V, R, False);
-         end loop;
+      if L.Status = 1 then
+         Put_Line("Memorizzo il valore: " & Long_Long_Integer'Image(V));
+         Res.Value := V;
+         Res.ID := R;
+         L.Memory.Append(Res);
+         if B then
+            for I in L.Learner_List.First_Index .. L.Learner_List.Last_Index loop
+               if L.Learner_List(I) /= null then
+                  Learn (L.Learner_List(I), V, R, False);
+               else
+                  exit;
+               end if;
+            end loop;
+         end if;
       end if;
    end Learn;
    
