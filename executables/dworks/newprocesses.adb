@@ -155,14 +155,13 @@ package body NewProcesses is
       T : Not_a_String.Vector;
       S : String := Long_Long_Integer'Image(Long_Long_Integer(Ada.Strings.Hash(Integer'Image(Integer(random(gen) * 10)))));
    begin
-      Put_Line("Ehhhh siamo qua: " & S & " e' lungo: " & Integer'Image(Integer(S'Length)));
       reset(gen);
       for I in 2..Integer(S'Length) loop
          Put_Line("Stampo: " & S(I));
          W1.Buffer.Append(Character(S(I)));
       end loop;
-      --  R(Get_WorkerID(W1), Get_WorkerID(W2));
-   end Create_and_Send;
+      R(Get_WorkerID(W1), Get_WorkerID(W2));
+   end Create_and_Sende_and_Send;
    
    procedure Confirm_Permission (W1 : access NewWorker; W2 : Acc_Worker; S : Send_Permission) is
    begin

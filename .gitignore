@@ -6,6 +6,7 @@
 *.bat
 
 **/dsa/
+**/bin/
 executables/obj/
 
 polyorb.conf
@@ -13,3 +14,4 @@ default.gpr
 /executables/dworks/.\#client.adb\#
 /executables/dworks/Starta tutto.lnk
 /executables/paxos/Starta tutto.lnk
+/executables/dworks/gpsauto.cgpr
