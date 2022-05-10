@@ -7,9 +7,12 @@ scrape_configs:
   - job_name: "prometheus"
     static_configs:
       - targets: ["localhost:9090"]
-  - job_name: "orderer"
+  - job_name: "orderer1"
     static_configs:
-      - targets: ["orderer.example.com:9443"]
+      - targets: ["orderer1.example.com:9443"]
+  - job_name: "orderer2"
+    static_configs:
+      - targets: ["orderer2.example.com:9446"]
   - job_name: "peer0_org1"
     static_configs:
       - targets: ["peer0.org1.example.com:9444"]
