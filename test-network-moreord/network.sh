@@ -111,6 +111,16 @@ function checkPrereqs() {
   fi
 }
 
+function createOrgsAndSign() {
+
+  checkPrereqs
+
+  # generate artifacts if they don't exist
+  if [ ! -d "organizations/peerOrganizations" ]; then
+    createOrgs
+  fi
+}
+
 # Before you can bring up a network, each organization needs to generate the crypto
 # material that will define that organization on the network. Because Hyperledger
 # Fabric is a permissioned blockchain, each node and user on the network needs to
@@ -180,39 +190,6 @@ function createOrgs() {
     fi
 
   fi
-
-  # Create crypto material using Fabric CA
-#   if [ "$CRYPTO" == "Certificate Authorities" ]; then
-#     infoln "Generating certificates using Fabric CA"
-#     ${CONTAINER_CLI_COMPOSE} -f compose/$COMPOSE_FILE_CA -f compose/$CONTAINER_CLI/${CONTAINER_CLI}-$COMPOSE_FILE_CA up -d 2>&1
-
-#     . organizations/fabric-ca/registerEnroll.sh
-
-#     while :
-#     do
-#       if [ ! -f "organizations/fabric-ca/org1/tls-cert.pem" ]; then
-#         sleep 1
-#       else
-#         break
-#       fi
-#     done
-
-#     infoln "Creating Org1 Identities"
-
-#     createOrg1
-
-#     infoln "Creating Org2 Identities"
-
-#     createOrg2
-
-#     infoln "Creating Orderer Org Identities"
-
-#     createOrderer
-
-#   fi
-
-#   infoln "Generating CCP files for Org1 and Org2"
-#   ./organizations/ccp-generate.sh
 }
 
 # Once you create the organization crypto material, you need to create the
@@ -329,7 +306,7 @@ function networkDown() {
 #   COMPOSE_ORG3_FILES="${COMPOSE_ORG3_BASE_FILES} ${COMPOSE_ORG3_COUCH_FILES} ${COMPOSE_ORG3_CA_FILES}"
 
   if [ "${CONTAINER_CLI}" == "docker" ]; then
-    DOCKER_SOCK=$DOCKER_SOCK ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} ${COMPOSE_ORG3_FILES} down --volumes --remove-orphans
+    DOCKER_SOCK=$DOCKER_SOCK ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} down --volumes --remove-orphans
   elif [ "${CONTAINER_CLI}" == "podman" ]; then
     ${CONTAINER_CLI_COMPOSE} ${COMPOSE_FILES} ${COMPOSE_ORG3_FILES} down --volumes
   else
@@ -350,6 +327,8 @@ function networkDown() {
     # ${CONTAINER_CLI} kill $(${CONTAINER_CLI} ps -q --filter name=ccaas) || true
     # remove orderer block and other channel configuration transactions and certs
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf system-genesis-block/*.block organizations/ordererOrganizations'
+	# ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/peerOrganizations'
+	rm -r "${PWD}"/organizations/peerOrganizations
     ## remove fabric ca artifacts
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org1/msp organizations/fabric-ca/org1/tls-cert.pem organizations/fabric-ca/org1/ca-cert.pem organizations/fabric-ca/org1/IssuerPublicKey organizations/fabric-ca/org1/IssuerRevocationPublicKey organizations/fabric-ca/org1/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org2/msp organizations/fabric-ca/org2/tls-cert.pem organizations/fabric-ca/org2/ca-cert.pem organizations/fabric-ca/org2/IssuerPublicKey organizations/fabric-ca/org2/IssuerRevocationPublicKey organizations/fabric-ca/org2/fabric-ca-server.db'
@@ -511,7 +490,10 @@ else
 fi
 
 # Determine mode of operation and printing out what we asked for
-if [ "$MODE" == "up" ]; then
+if [ "$MODE" == "sign" ]; then
+  infoln "Create organizations and certificates"
+	createOrgsAndSign
+elif [ "$MODE" == "up" ]; then
   infoln "Starting nodes with CLI timeout of '${MAX_RETRY}' tries and CLI delay of '${CLI_DELAY}' seconds and using database '${DATABASE}' ${CRYPTO_MODE}"
   networkUp
 elif [ "$MODE" == "createChannel" ]; then

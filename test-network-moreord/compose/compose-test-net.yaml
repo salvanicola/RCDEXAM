@@ -62,8 +62,6 @@ services:
   orderer1.example.com:
     container_name: orderer1.example.com
     image: hyperledger/fabric-orderer:latest
-    labels:
-      service: hyperledger-fabric
     environment:
       - FABRIC_LOGGING_SPEC=INFO
       - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
@@ -85,19 +83,20 @@ services:
       - ORDERER_ADMIN_TLS_PRIVATEKEY=/var/hyperledger/orderer/tls/server.key
       - ORDERER_ADMIN_TLS_ROOTCAS=[/var/hyperledger/orderer/tls/ca.crt]
       - ORDERER_ADMIN_TLS_CLIENTROOTCAS=[/var/hyperledger/orderer/tls/ca.crt]
-      - ORDERER_ADMIN_LISTENADDRESS=0.0.0.0:7053
-      - ORDERER_OPERATIONS_LISTENADDRESS=orderer1.example.com:9446
+      - ORDERER_ADMIN_LISTENADDRESS=0.0.0.0:6054
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer1.example.com:6055
       - ORDERER_METRICS_PROVIDER=prometheus
-    working_dir: /root
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric
     command: orderer
     volumes:
-        - ../organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/msp:/var/hyperledger/orderer/msp
-        - ../organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/:/var/hyperledger/orderer/tls
-        - orderer1.example.com:/var/hyperledger/production/orderer
+      # - ../channel-artifacts/latest_config.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ../organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/msp:/var/hyperledger/orderer/msp
+      - ../organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer1.example.com:/var/hyperledger/production/orderer
     ports:
-      - 7070:7070
-      - 7071:7071
-      - 9442:9442
+      - 12050:7050
+      - 6054:6054
+      - 6055:6055
     networks:
       - test
 
