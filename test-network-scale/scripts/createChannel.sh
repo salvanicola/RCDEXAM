@@ -46,6 +46,30 @@ createChannel() {
 		{ set +x; } 2>/dev/null
 		let rc=$res
 		COUNTER=$(expr $COUNTER + 1)
+		sleep $DELAY
+		set -x
+		osnadmin channel join --channelID $CHANNEL_NAME --config-block ./channel-artifacts/${CHANNEL_NAME}.block -o localhost:6053 --ca-file "$ORDERER_CA" --client-cert "$ORDERER_ADMIN_TLS_SIGN_CERT" --client-key "$ORDERER_ADMIN_TLS_PRIVATE_KEY" >&log.txt
+		res=$?
+		{ set +x; } 2>/dev/null
+		let rc=$res
+				sleep $DELAY
+		set -x
+		osnadmin channel join --channelID $CHANNEL_NAME --config-block ./channel-artifacts/${CHANNEL_NAME}.block -o localhost:5053 --ca-file "$ORDERER_CA" --client-cert "$ORDERER_ADMIN_TLS_SIGN_CERT" --client-key "$ORDERER_ADMIN_TLS_PRIVATE_KEY" >&log.txt
+		res=$?
+		{ set +x; } 2>/dev/null
+		let rc=$res
+				sleep $DELAY
+		set -x
+		osnadmin channel join --channelID $CHANNEL_NAME --config-block ./channel-artifacts/${CHANNEL_NAME}.block -o localhost:4053 --ca-file "$ORDERER_CA" --client-cert "$ORDERER_ADMIN_TLS_SIGN_CERT" --client-key "$ORDERER_ADMIN_TLS_PRIVATE_KEY" >&log.txt
+		res=$?
+		{ set +x; } 2>/dev/null
+		let rc=$res
+				sleep $DELAY
+		set -x
+		osnadmin channel join --channelID $CHANNEL_NAME --config-block ./channel-artifacts/${CHANNEL_NAME}.block -o localhost:3053 --ca-file "$ORDERER_CA" --client-cert "$ORDERER_ADMIN_TLS_SIGN_CERT" --client-key "$ORDERER_ADMIN_TLS_PRIVATE_KEY" >&log.txt
+		res=$?
+		{ set +x; } 2>/dev/null
+		let rc=$res
 	done
 	cat log.txt
 	verifyResult $res "Channel creation failed"
