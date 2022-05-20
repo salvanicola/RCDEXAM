@@ -17,7 +17,10 @@ OrdererOrgs:
     # "Specs" - See PeerOrgs for complete description
     # ---------------------------------------------------------------------------
     Specs:
-      - Hostname: orderer
+      - Hostname: orderer0
+        SANS:
+          - localhost
+      - Hostname: orderer1
         SANS:
           - localhost
       - Hostname: orderer2
@@ -32,6 +35,18 @@ OrdererOrgs:
       - Hostname: orderer5
         SANS:
           - localhost
+      - Hostname: orderer6
+        SANS:
+          - localhost
+      - Hostname: orderer7
+        SANS:
+          - localhost
+      - Hostname: orderer8
+        SANS:
+          - localhost
+      - Hostname: orderer9
+        SANS:
+          - localhost                                        
          
   - Name: Orderer1
     Domain: example1.com
@@ -40,7 +55,7 @@ OrdererOrgs:
     # "Specs" - See PeerOrgs for complete description
     # ---------------------------------------------------------------------------
     Specs:
-      - Hostname: orderer
+      - Hostname: orderer1
       - Hostname: orderer2
       - Hostname: orderer3
         SANS:

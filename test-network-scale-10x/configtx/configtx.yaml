@@ -42,11 +42,16 @@ Organizations:
                 Rule: "OR('OrdererMSP.admin')"
 
         OrdererEndpoints:
-            - orderer.example.com:7050
+            - orderer0.example.com:8050
+            - orderer1.example.com:7050
             - orderer2.example.com:6050
             - orderer3.example.com:5050
             - orderer4.example.com:4050
             - orderer5.example.com:3050
+            - orderer6.example.com:2050
+            - orderer7.example.com:1050
+            - orderer8.example.com:0050
+            - orderer9.example.com:0025
 
     - &Org1
         # DefaultOrg defines the organization which is used in the sampleconfig
@@ -212,18 +217,26 @@ Orderer: &OrdererDefaults
     # as TLS validation.  The preferred way to specify orderer addresses is now
     # to include the OrdererEndpoints item in your org definition
     Addresses:
-        - orderer.example.com:7050
+        - orderer0.example.com:8050
+        - orderer1.example.com:7050
         - orderer2.example.com:6050
         - orderer3.example.com:5050
         - orderer4.example.com:4050
         - orderer5.example.com:3050
-
+        - orderer6.example.com:2050
+        - orderer7.example.com:1050
+        - orderer8.example.com:0050
+        - orderer9.example.com:0025
     EtcdRaft:
         Consenters:
-        - Host: orderer.example.com
+        - Host: orderer0.example.com
+          Port: 8050
+          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer0.example.com/tls/server.crt
+          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer0.example.com/tls/server.crt
+        - Host: orderer1.example.com
           Port: 7050
-          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
-          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
+          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/server.crt
+          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/server.crt
         - Host: orderer2.example.com
           Port: 6050
           ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
@@ -240,6 +253,22 @@ Orderer: &OrdererDefaults
           Port: 3050
           ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
           ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
+        - Host: orderer6.example.com
+          Port: 2050
+          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer6.example.com/tls/server.crt
+          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer6.example.com/tls/server.crt
+        - Host: orderer7.example.com
+          Port: 1050
+          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer7.example.com/tls/server.crt
+          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer7.example.com/tls/server.crt
+        - Host: orderer8.example.com
+          Port: 0050
+          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer8.example.com/tls/server.crt
+          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer8.example.com/tls/server.crt
+        - Host: orderer9.example.com
+          Port: 0025
+          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer9.example.com/tls/server.crt
+          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer9.example.com/tls/server.crt
 
     # Batch Timeout: The amount of time to wait before creating a batch
     BatchTimeout: 2s
