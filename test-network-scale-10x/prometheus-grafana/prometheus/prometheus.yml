@@ -27,19 +27,19 @@ scrape_configs:
       - targets: ["orderer5.example.com:5443"]
   - job_name: "orderer6"
     static_configs:
-      - targets: ["orderer6.example.com:5443"]
+      - targets: ["orderer6.example.com:4443"]
   - job_name: "orderer7"
     static_configs:
-      - targets: ["orderer7.example.com:5443"]
+      - targets: ["orderer7.example.com:3443"]
   - job_name: "orderer8"
     static_configs:
-      - targets: ["orderer8.example.com:5443"] 
+      - targets: ["orderer8.example.com:2443"] 
   - job_name: "orderer9"
     static_configs:
-      - targets: ["orderer9.example.com:5443"]           
+      - targets: ["orderer9.example.com:2418"]           
   - job_name: "peer0_org1"
     static_configs:
-      - targets: ["peer0.org1.example.com:9444"]
+      - targets: ["peer0.org1.example.com:0443"]
   - job_name: "peer0_org2"
     static_configs:
       - targets: ["peer0.org2.example.com:9445"]

@@ -41,6 +41,7 @@ createChannel() {
 	local rc=1
 	local COUNTER=1
 
+	# add channel ports
 	ports=(8053, 7053, 6053, 5053, 4053, 3053, 2053, 1053, 0053, 0028)
 
 	while [ $rc -ne 0 -a $COUNTER -lt $MAX_RETRY ] ; do
