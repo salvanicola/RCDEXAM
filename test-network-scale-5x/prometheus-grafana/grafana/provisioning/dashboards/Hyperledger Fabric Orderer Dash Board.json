@@ -108,7 +108,7 @@
           "format": "table",
           "interval": "",
           "legendFormat": "Egress queue capacity",
-          "refId": "A"
+          "refId": "Queue_Capacity"
         },
         {
           "exemplar": true,
@@ -117,7 +117,7 @@
           "hide": false,
           "interval": "",
           "legendFormat": "Egress queue length",
-          "refId": "B"
+          "refId": "Queue_Length"
         },
         {
           "exemplar": true,
@@ -126,7 +126,7 @@
           "hide": false,
           "interval": "",
           "legendFormat": "Egress queue workers",
-          "refId": "C"
+          "refId": "Queue_Workers"
         },
         {
           "exemplar": true,
@@ -135,7 +135,7 @@
           "hide": false,
           "interval": "",
           "legendFormat": "Stream count",
-          "refId": "D"
+          "refId": "Egress_Streams"
         },
         {
           "exemplar": true,
@@ -144,7 +144,7 @@
           "hide": false,
           "interval": "",
           "legendFormat": "TLS Connection count",
-          "refId": "E"
+          "refId": "TLS_Connections"
         },
         {
           "exemplar": true,
@@ -153,7 +153,7 @@
           "hide": false,
           "interval": "",
           "legendFormat": "Ingress Stream count",
-          "refId": "Streams"
+          "refId": "Ingress_Streams"
         }
       ],
       "title": "Egress queue",
@@ -706,6 +706,7 @@
       },
       "fieldConfig": {
         "defaults": {
+		  "noValue" : "None",
           "color": {
             "mode": "thresholds"
           },
@@ -752,11 +753,11 @@
           "exemplar": true,
           "expr": "cluster_comm_msg_dropped_count",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "Messages dropped",
           "refId": "A"
         }
       ],
-      "title": "cluster_comm_msg_dropped_count",
+      "title": "Cluster messages dropped",
       "type": "gauge"
     },
     {
@@ -803,11 +804,11 @@
           "exemplar": true,
           "expr": "broadcast_processed_count",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{job}}",
           "refId": "A"
         }
       ],
-      "title": "broadcast_processed_count",
+      "title": "Broadcasts processed",
       "type": "gauge"
     },
     {
@@ -848,7 +849,7 @@
           "refId": "A"
         }
       ],
-      "title": "cluster_comm_msg_send_time\t",
+      "title": "Cluster communication message send time",
       "tooltip": {
         "show": true,
         "showHistogram": false
@@ -898,11 +899,11 @@
           "exemplar": true,
           "expr": "histogram_quantile(0.95, sum(rate(broadcast_enqueue_duration_bucket[30s])) by (le))",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{job}}",
           "refId": "A"
         }
       ],
-      "title": "broadcast_enqueue_duration",
+      "title": "Broadcast enqueue duration",
       "tooltip": {
         "show": true,
         "showHistogram": false
@@ -957,7 +958,7 @@
           "refId": "A"
         }
       ],
-      "title": "blockcutter_block_fill_duration",
+      "title": "Blockcutter block fill duration",
       "tooltip": {
         "show": true,
         "showHistogram": false
@@ -1012,7 +1013,7 @@
           "refId": "A"
         }
       ],
-      "title": "broadcast_validate_duration",
+      "title": "Broadcast validate duration",
       "tooltip": {
         "show": true,
         "showHistogram": false
@@ -1067,7 +1068,7 @@
           "refId": "A"
         }
       ],
-      "title": "ledger_blockstorage_commit_time",
+      "title": "Ledger block-storage commit time",
       "tooltip": {
         "show": true,
         "showHistogram": false
