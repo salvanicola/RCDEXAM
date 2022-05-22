@@ -54,112 +54,6 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 24,
-        "x": 0,
-        "y": 1
-      },
-      "id": 18,
-      "options": {
-        "displayMode": "gradient",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showUnfilled": true,
-        "text": {}
-      },
-      "pluginVersion": "8.3.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_queue_capacity",
-          "format": "table",
-          "interval": "",
-          "legendFormat": "Egress queue capacity",
-          "refId": "Queue_Capacity"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_queue_length",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Egress queue length",
-          "refId": "Queue_Length"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_queue_workers",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Egress queue workers",
-          "refId": "Queue_Workers"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_stream_count",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Stream count",
-          "refId": "Egress_Streams"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_tls_connection_count",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "TLS Connection count",
-          "refId": "TLS_Connections"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_ingress_stream_count",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Ingress Stream count",
-          "refId": "Ingress_Streams"
-        }
-      ],
-      "title": "Egress queue",
-      "type": "bargauge"
-    },
-    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -606,6 +500,128 @@
       "title": "Is Leader node",
       "type": "gauge"
     },
+	{
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 20
+      },
+      "id": 24,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "consensus_etcdraft_leader_changes{channel=\"$channel\", job=~\"$job\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{job}}",
+          "refId": "F"
+        }
+      ],
+      "title": "Experimented leader changes",
+      "type": "gauge"
+    },
+	{
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 20
+      },
+      "id": 24,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "consensus_etcdraft_snapshot_block_number{channel=\"$channel\", job=~\"$job\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{job}}",
+          "refId": "I"
+        }
+      ],
+      "title": "Raft snapshot block",
+      "type": "gauge"
+    },
     {
       "datasource": {
         "type": "prometheus",
@@ -665,14 +681,6 @@
         },
         {
           "exemplar": true,
-          "expr": "consensus_etcdraft_leader_changes{channel=\"$channel\", job=~\"$job\"}",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Number of leader changes - {{job}}",
-          "refId": "F"
-        },
-        {
-          "exemplar": true,
           "expr": "consensus_etcdraft_normal_proposals_received{channel=\"$channel\", job=~\"$job\"}",
           "hide": false,
           "interval": "",
@@ -686,14 +694,6 @@
           "interval": "",
           "legendFormat": "Raft proposal failures - {{job}}",
           "refId": "H"
-        },
-        {
-          "exemplar": true,
-          "expr": "consensus_etcdraft_snapshot_block_number{channel=\"$channel\", job=~\"$job\"}",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Raft snapshot block - {{job}}",
-          "refId": "I"
         }
       ],
       "title": "Raft consensus data",
@@ -804,7 +804,7 @@
           "exemplar": true,
           "expr": "broadcast_processed_count",
           "interval": "",
-          "legendFormat": "{{job}}",
+          "legendFormat": "{{type}} by {{job}}",
           "refId": "A"
         }
       ],
@@ -852,9 +852,9 @@
       "title": "Cluster communication message send time",
       "tooltip": {
         "show": true,
-        "showHistogram": false
+        "showHistogram": true
       },
-      "type": "heatmap",
+      "type": "histogram",
       "xAxis": {
         "show": true
       },

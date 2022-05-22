@@ -178,7 +178,25 @@ function createOrgs() {
     if [ $res -ne 0 ]; then
       fatalln "Failed to generate certificates..."
     fi
+	
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer3.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer5.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer.example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer2.example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer3.example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/config.yaml
 
+	
   fi
 
   # Create crypto material using Fabric CA
@@ -346,6 +364,7 @@ function networkDown() {
     # remove orderer block and other channel configuration transactions and certs
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf system-genesis-block/*.block organizations/ordererOrganizations '
 	rm -r organizations/peerOrganizations
+	rm -r organizations/ordererOrganizations
     ## remove fabric ca artifacts
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org1/msp organizations/fabric-ca/org1/tls-cert.pem organizations/fabric-ca/org1/ca-cert.pem organizations/fabric-ca/org1/IssuerPublicKey organizations/fabric-ca/org1/IssuerRevocationPublicKey organizations/fabric-ca/org1/fabric-ca-server.db'
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf organizations/fabric-ca/org2/msp organizations/fabric-ca/org2/tls-cert.pem organizations/fabric-ca/org2/ca-cert.pem organizations/fabric-ca/org2/IssuerPublicKey organizations/fabric-ca/org2/IssuerRevocationPublicKey organizations/fabric-ca/org2/fabric-ca-server.db'
