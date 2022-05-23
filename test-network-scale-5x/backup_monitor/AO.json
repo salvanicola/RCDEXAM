@@ -21,23 +21,8 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "iteration": 1653122211021,
-  "links": [
-    {
-      "icon": "external link",
-      "tags": [],
-      "title": "Project",
-      "type": "link",
-      "url": "https://github.com/SamYuan1990/HLF_GrafanaDashBoard"
-    },
-    {
-      "icon": "external link",
-      "tags": [],
-      "title": "LICENSE",
-      "type": "link",
-      "url": "https://github.com/SamYuan1990/HLF_GrafanaDashBoard/blob/main/LICENSE"
-    }
-  ],
+  "iteration": 1653314815968,
+  "links": [],
   "liveNow": false,
   "panels": [
     {
@@ -54,112 +39,6 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 24,
-        "x": 0,
-        "y": 1
-      },
-      "id": 18,
-      "options": {
-        "displayMode": "gradient",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showUnfilled": true,
-        "text": {}
-      },
-      "pluginVersion": "8.3.4",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_queue_capacity",
-          "format": "table",
-          "interval": "",
-          "legendFormat": "Egress queue capacity",
-          "refId": "Queue_Capacity"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_queue_length",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Egress queue length",
-          "refId": "Queue_Length"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_queue_workers",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Egress queue workers",
-          "refId": "Queue_Workers"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_stream_count",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Stream count",
-          "refId": "Egress_Streams"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_egress_tls_connection_count",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "TLS Connection count",
-          "refId": "TLS_Connections"
-        },
-        {
-          "exemplar": true,
-          "expr": "cluster_comm_ingress_stream_count",
-          "format": "table",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Ingress Stream count",
-          "refId": "Ingress_Streams"
-        }
-      ],
-      "title": "Egress queue",
-      "type": "bargauge"
-    },
-    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -174,7 +53,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 5
+        "y": 1
       },
       "hiddenSeries": false,
       "id": 26,
@@ -264,7 +143,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 5
+        "y": 1
       },
       "hiddenSeries": false,
       "id": 28,
@@ -394,7 +273,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 9
       },
       "id": 24,
       "options": {
@@ -454,7 +333,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 9
       },
       "id": 24,
       "options": {
@@ -515,7 +394,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 16
       },
       "id": 24,
       "options": {
@@ -576,7 +455,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 16
       },
       "id": 24,
       "options": {
@@ -634,10 +513,132 @@
         "overrides": []
       },
       "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 23
+      },
+      "id": 24,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "consensus_etcdraft_leader_changes{channel=\"$channel\", job=~\"$job\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{job}}",
+          "refId": "F"
+        }
+      ],
+      "title": "Experimented leader changes",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 23
+      },
+      "id": 24,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "consensus_etcdraft_snapshot_block_number{channel=\"$channel\", job=~\"$job\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{job}}",
+          "refId": "I"
+        }
+      ],
+      "title": "Raft snapshot block",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 27
+        "y": 30
       },
       "id": 24,
       "options": {
@@ -665,14 +666,6 @@
         },
         {
           "exemplar": true,
-          "expr": "consensus_etcdraft_leader_changes{channel=\"$channel\", job=~\"$job\"}",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Number of leader changes - {{job}}",
-          "refId": "F"
-        },
-        {
-          "exemplar": true,
           "expr": "consensus_etcdraft_normal_proposals_received{channel=\"$channel\", job=~\"$job\"}",
           "hide": false,
           "interval": "",
@@ -686,14 +679,6 @@
           "interval": "",
           "legendFormat": "Raft proposal failures - {{job}}",
           "refId": "H"
-        },
-        {
-          "exemplar": true,
-          "expr": "consensus_etcdraft_snapshot_block_number{channel=\"$channel\", job=~\"$job\"}",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "Raft snapshot block - {{job}}",
-          "refId": "I"
         }
       ],
       "title": "Raft consensus data",
@@ -706,11 +691,11 @@
       },
       "fieldConfig": {
         "defaults": {
-		  "noValue" : "None",
           "color": {
             "mode": "thresholds"
           },
           "mappings": [],
+          "noValue": "None",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -731,7 +716,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 36
+        "y": 39
       },
       "id": 20,
       "options": {
@@ -782,7 +767,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 36
+        "y": 39
       },
       "id": 14,
       "options": {
@@ -804,11 +789,72 @@
           "exemplar": true,
           "expr": "broadcast_processed_count",
           "interval": "",
-          "legendFormat": "{{job}}",
+          "legendFormat": "{{type}} by {{job}}",
           "refId": "A"
         }
       ],
       "title": "Broadcasts processed",
+      "type": "gauge"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 47
+      },
+      "id": 12,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^0\\.005 ms$/",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "exemplar": true,
+          "expr": "broadcast_enqueue_duration_bucket",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{le}} ms",
+          "refId": "A"
+        }
+      ],
+      "title": "Broadcast enqueue duration",
       "type": "gauge"
     },
     {
@@ -825,11 +871,43 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 44
+        "y": 54
       },
       "heatmap": {},
       "hideZeroBuckets": false,
@@ -837,6 +915,14 @@
       "id": 22,
       "legend": {
         "show": false
+      },
+      "options": {
+        "bucketOffset": 0,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        }
       },
       "pluginVersion": "7.4.3",
       "reverseYBuckets": false,
@@ -852,9 +938,9 @@
       "title": "Cluster communication message send time",
       "tooltip": {
         "show": true,
-        "showHistogram": false
+        "showHistogram": true
       },
-      "type": "heatmap",
+      "type": "histogram",
       "xAxis": {
         "show": true
       },
@@ -883,116 +969,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 44
-      },
-      "heatmap": {},
-      "hideZeroBuckets": false,
-      "highlightCards": true,
-      "id": 12,
-      "legend": {
-        "show": true
-      },
-      "pluginVersion": "7.4.3",
-      "reverseYBuckets": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "histogram_quantile(0.95, sum(rate(broadcast_enqueue_duration_bucket[30s])) by (le))",
-          "interval": "",
-          "legendFormat": "{{job}}",
-          "refId": "A"
-        }
-      ],
-      "title": "Broadcast enqueue duration",
-      "tooltip": {
-        "show": true,
-        "showHistogram": false
-      },
-      "type": "heatmap",
-      "xAxis": {
-        "show": true
-      },
-      "yAxis": {
-        "format": "short",
-        "logBase": 1,
-        "show": true
-      },
-      "yBucketBound": "auto"
-    },
-    {
-      "cards": {},
-      "color": {
-        "cardColor": "#b4ff00",
-        "colorScale": "sqrt",
-        "colorScheme": "interpolateSpectral",
-        "exponent": 0.5,
-        "mode": "spectrum"
-      },
-      "dataFormat": "tsbuckets",
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 52
-      },
-      "heatmap": {},
-      "hideZeroBuckets": false,
-      "highlightCards": true,
-      "id": 10,
-      "legend": {
-        "show": true
-      },
-      "pluginVersion": "7.4.3",
-      "reverseYBuckets": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "blockcutter_block_fill_duration_bucket",
-          "format": "heatmap",
-          "interval": "",
-          "legendFormat": "{{le}}",
-          "refId": "A"
-        }
-      ],
-      "title": "Blockcutter block fill duration",
-      "tooltip": {
-        "show": true,
-        "showHistogram": false
-      },
-      "type": "heatmap",
-      "xAxis": {
-        "show": true
-      },
-      "yAxis": {
-        "format": "short",
-        "logBase": 1,
-        "show": true
-      },
-      "yBucketBound": "auto"
-    },
-    {
-      "cards": {},
-      "color": {
-        "cardColor": "#b4ff00",
-        "colorScale": "sqrt",
-        "colorScheme": "interpolateSpectral",
-        "exponent": 0.5,
-        "mode": "spectrum"
-      },
-      "dataFormat": "tsbuckets",
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
-        "y": 52
+        "y": 54
       },
       "heatmap": {},
       "hideZeroBuckets": false,
@@ -1045,9 +1022,64 @@
       },
       "gridPos": {
         "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 62
+      },
+      "heatmap": {},
+      "hideZeroBuckets": false,
+      "highlightCards": true,
+      "id": 10,
+      "legend": {
+        "show": true
+      },
+      "pluginVersion": "7.4.3",
+      "reverseYBuckets": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "blockcutter_block_fill_duration_bucket",
+          "format": "heatmap",
+          "interval": "",
+          "legendFormat": "{{le}}",
+          "refId": "A"
+        }
+      ],
+      "title": "Blockcutter block fill duration",
+      "tooltip": {
+        "show": true,
+        "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+        "show": true
+      },
+      "yAxis": {
+        "format": "short",
+        "logBase": 1,
+        "show": true
+      },
+      "yBucketBound": "auto"
+    },
+    {
+      "cards": {},
+      "color": {
+        "cardColor": "#b4ff00",
+        "colorScale": "sqrt",
+        "colorScheme": "interpolateSpectral",
+        "exponent": 0.5,
+        "mode": "spectrum"
+      },
+      "dataFormat": "tsbuckets",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "gridPos": {
+        "h": 8,
         "w": 24,
         "x": 0,
-        "y": 60
+        "y": 70
       },
       "heatmap": {},
       "hideZeroBuckets": false,
@@ -1085,7 +1117,7 @@
       "yBucketBound": "auto"
     }
   ],
-  "refresh": "5s",
+  "refresh": false,
   "schemaVersion": 34,
   "style": "dark",
   "tags": [],
@@ -1149,13 +1181,13 @@
     ]
   },
   "time": {
-    "from": "now-5m",
-    "to": "now"
+    "from": "2022-05-23T13:52:41.041Z",
+    "to": "2022-05-23T13:53:28.941Z"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Hyperledger Fabric Orderer Dash Board",
   "uid": "TIx8QQsMk",
-  "version": 3,
+  "version": 34,
   "weekStart": ""
 }
