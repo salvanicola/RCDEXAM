@@ -30,25 +30,6 @@ fetchChannelConfig() {
   { set +x; } 2>/dev/null
 }
 
-fetchChannelConfig2() {
-  ORG=$1
-  CHANNEL=$2
-  OUTPUT=$3
-
-  setGlobals $ORG
-
-  infoln "Fetching the most recent configuration block for the channel"
-  set -x
-  peer channel fetch config config_block.pb -o orderer2.example.com:6050 --ordererTLSHostnameOverride orderer2.example.com -c $CHANNEL --tls --cafile "$ORDERER_CA"
-  { set +x; } 2>/dev/null
-
-  infoln "Decoding config block to JSON and isolating config to ${OUTPUT}"
-  set -x
-  configtxlator proto_decode --input config_block.pb --type common.Block --output config_block.json
-  jq .data.data[0].payload.data.config config_block.json >"${OUTPUT}"
-  { set +x; } 2>/dev/null
-}
-
 # createConfigUpdate <channel_id> <original_config.json> <modified_config.json> <output.pb>
 # Takes an original and modified config, and produces the config update tx
 # which transitions between the two

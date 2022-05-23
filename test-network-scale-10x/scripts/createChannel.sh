@@ -28,7 +28,7 @@ createChannelGenesisBlock() {
 	fi
 	set -x
 	configtxgen -profile TwoOrgsApplicationGenesis -outputBlock ./channel-artifacts/${CHANNEL_NAME}.block -channelID $CHANNEL_NAME
-	res=$?
+	echo res=$?
 	{ set +x; } 2>/dev/null
   verifyResult $res "Failed to generate channel configuration transaction..."
 }
@@ -42,7 +42,7 @@ createChannel() {
 	local COUNTER=1
 
 	# add channel ports
-	ports=(8053, 7053, 6053, 5053, 4053, 3053, 2053, 1053, 0053, 0028)
+	ports=(8053 7053 6053 5053 4053 3053 2053 1053 0053 0028)
 
 	while [ $rc -ne 0 -a $COUNTER -lt $MAX_RETRY ] ; do
 		for port in ${ports[@]} ; do
