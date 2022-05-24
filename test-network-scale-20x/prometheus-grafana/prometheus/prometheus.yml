@@ -1,0 +1,82 @@
+global:
+  scrape_interval: 1s
+  external_labels:
+    monitor: 'devopsage-monitor'
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "orderer0"
+    static_configs:
+      - targets: ["orderer0.example.com:10443"]
+  - job_name: "orderer1"
+    static_configs:
+      - targets: ["orderer1.example.com:9443"]
+  - job_name: "orderer2"
+    static_configs:
+      - targets: ["orderer2.example.com:8443"]
+  - job_name: "orderer3"
+    static_configs:
+      - targets: ["orderer3.example.com:7443"]
+  - job_name: "orderer4"
+    static_configs:
+      - targets: ["orderer4.example.com:6443"]
+  - job_name: "orderer5"
+    static_configs:
+      - targets: ["orderer5.example.com:5443"]
+  - job_name: "orderer6"
+    static_configs:
+      - targets: ["orderer6.example.com:4443"]
+  - job_name: "orderer7"
+    static_configs:
+      - targets: ["orderer7.example.com:3443"]
+  - job_name: "orderer8"
+    static_configs:
+      - targets: ["orderer8.example.com:2443"] 
+  - job_name: "orderer9"
+    static_configs:
+      - targets: ["orderer9.example.com:2418"] 
+  - job_name: "orderer10"
+    static_configs:
+      - targets: ["orderer10.example.com:2468"]
+  - job_name: "orderer11"
+    static_configs:
+      - targets: ["orderer11.example.com:2518"]
+  - job_name: "orderer12"
+    static_configs:
+      - targets: ["orderer12.example.com:2568"]
+  - job_name: "orderer13"
+    static_configs:
+      - targets: ["orderer13.example.com:3568"]
+  - job_name: "orderer14"
+    static_configs:
+      - targets: ["orderer14.example.com:4568"]
+  - job_name: "orderer15"
+    static_configs:
+      - targets: ["orderer15.example.com:5568"]
+  - job_name: "orderer16"
+    static_configs:
+      - targets: ["orderer16.example.com:6568"]
+  - job_name: "orderer17"
+    static_configs:
+      - targets: ["orderer17.example.com:7568"]
+  - job_name: "orderer18"
+    static_configs:
+      - targets: ["orderer18.example.com:8568"] 
+  - job_name: "orderer19"
+    static_configs:
+      - targets: ["orderer19.example.com:9568"]          
+  - job_name: "peer0_org1"
+    static_configs:
+      - targets: ["peer0.org1.example.com:0443"]
+  - job_name: "peer0_org2"
+    static_configs:
+      - targets: ["peer0.org2.example.com:9445"]
+  - job_name: cadvisor
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['cadvisor:8080']
+  - job_name: node
+    static_configs:
+      - targets: ['node-exporter:9100']
