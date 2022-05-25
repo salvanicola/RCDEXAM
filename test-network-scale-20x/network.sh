@@ -178,7 +178,39 @@ function createOrgs() {
     if [ $res -ne 0 ]; then
       fatalln "Failed to generate certificates..."
     fi
-
+	
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer0.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer3.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer5.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer6.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer7.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer8.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer9.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer10.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer11.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer12.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer13.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer14.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer15.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer16.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer17.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer18.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer19.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer.example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer2.example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer3.example1.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/config.yaml
+	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/config.yaml
+	
   fi
 
   # Create crypto material using Fabric CA
