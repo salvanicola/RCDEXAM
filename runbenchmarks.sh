@@ -3,6 +3,7 @@
 export CHAINCODE=false
 export RUN=false
 export CRASH=false
+export NETWORK=0
 
 function printHelp(){
 	echo "Aiuto!"
@@ -40,17 +41,27 @@ while [[ $# -ge 1 ]] ; do
   shift
 done
 
-cd ./test-network-scale-${NETWORK}x 
+if [ "$NETWORK" == "0" ]
+then
+	echo "You must specify the -n option"
+	printHelp
+	exit 1
+else
+	cd ./test-network-scale-${NETWORK}x 
+fi
+
 if $RUN == true
 then
 	echo "Running network with $NETWORK nodes"
 	./network.sh up createChannel
 fi
+
 if $CHAINCODE == true
 then
 	echo "Installing test chaincode on network ${NETWORK}"
 	./network.sh deployCC -ccn fabcar -ccp ../caliper-benchmarks/src/fabric/samples/fabcar/go -ccl go
 fi
+
 if $CRASH == true
 then
 	echo "Starting faulty benchmark tests on network ${NETWORK}"
@@ -66,5 +77,5 @@ sed -i '' 's/test-network-scale-20x/test-network-scale-'${NETWORK}'x/' ../calipe
 cd ../caliper-benchmarks
 npx caliper launch manager --caliper-workspace ./ --caliper-networkconfig networks/fabric/test-network.yaml --caliper-benchconfig benchmarks/samples/fabric/fabcar/config.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled
 
-cp report.html ../report-$1-network.html
+cp report.html ../report-${NETWORK}-network.html
 
