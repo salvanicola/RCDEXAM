@@ -179,24 +179,24 @@ function createOrgs() {
       fatalln "Failed to generate certificates..."
     fi
 	
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer3.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer5.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer.example1.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer2.example1.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer3.example1.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/config.yaml
-	sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/config.yaml
-
-	
+	if [ $OSTYPE == "msys" ]; then
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer3.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer5.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer.example1.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer2.example1.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer3.example1.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/User1@org2.example.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/config.yaml
+	fi
   fi
 
   # Create crypto material using Fabric CA

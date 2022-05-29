@@ -23,25 +23,3 @@ test:
         module: benchmarks/samples/fabric/fabcar/changeCarOwner.js
         arguments:
           assets: 500
-    - label: Query all cars.
-      txDuration: 30
-      rateControl:
-          type: fixed-load
-          opts:
-            transactionLoad: 5
-      workload:
-        module: benchmarks/samples/fabric/fabcar/queryAllCars.js
-        arguments:
-          assets: 500
-          startKey: '1'
-          endKey: '50'
-    - label: Query a car.
-      txDuration: 30
-      rateControl:
-          type: fixed-load
-          opts:
-            transactionLoad: 5
-      workload:
-        module: benchmarks/samples/fabric/fabcar/queryCar.js
-        arguments:
-          assets: 500
