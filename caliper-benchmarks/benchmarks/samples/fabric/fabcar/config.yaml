@@ -15,7 +15,7 @@ test:
       workload:
         module: benchmarks/samples/fabric/fabcar/createCar.js
     - label: Change car owner.
-      txDuration: 30
+      txNumber: 15000
       rateControl:
           type: linear-rate
           opts:
