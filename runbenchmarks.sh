@@ -47,7 +47,6 @@ done
 
 function runTest()
 {
-	$NETWORK=$1
 	if [ "$NETWORK" == "0" ]
 	then
 		echo "You must specify the -n option"
@@ -71,6 +70,7 @@ function runTest()
 
 	if $CRASH == true
 	then
+		trap "kill 0" EXIT
 		echo "Starting faulty benchmark tests on network ${NETWORK}"
 		./ordererRandomCrash.sh &
 	else
@@ -101,7 +101,7 @@ function runAllTests()
 		RUN=true
 		CHAINCODE=true
 		CRASH=false
-		runTest $net
+		runTest
 		# keep cold networks before next test
 		sleep 150
 		echo "++++++++++++++++ RUN TEST WITH NETWORK ${net} WITH FAULT +++++++++++++++++"
@@ -109,15 +109,23 @@ function runAllTests()
 		RUN=false
 		CHAINCODE=false
 		CRASH=true
-		runTest $net
+		runTest
 		# kill the network
 		cd ..
 		./test-network-scale-${NETWORK}x/network.sh down
+		# restart docker
+		if [ $OSTYPE == "msys" ]; then
+			echo "schifo windows"
+		else
+			osascript -e 'quit app "Docker"'
+			open -a Docker
+		fi
+		sleep 150
 	done
 }
 
 if $ALL == true; then
 	runAllTests
 else
-	runTest $NETWORK
+	runTest
 fi
