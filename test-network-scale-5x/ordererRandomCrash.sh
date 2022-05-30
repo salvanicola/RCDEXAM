@@ -20,9 +20,12 @@ function killOrderer()
 
 }
 
-trap -- '' SIGINT SIGTERM
+COUNT=0
+trap "😎less goo" SIGINT SIGTERM
 while [ 1 ]; 
 	sleep $(($RANDOM % 10))
+	((COUNT++))
+	echo $COUNT > crashes.txt
 	do killOrderer &
 	test $? -gt 128 && break
 	wait

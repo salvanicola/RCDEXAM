@@ -66,6 +66,7 @@ function runTest()
 	then
 		echo "Running network with $NETWORK nodes"
 		./network.sh up createChannel
+		./prometheus.sh up
 	fi
 
 	if $CHAINCODE == true
@@ -132,10 +133,11 @@ function runAllTests()
 		CRASH=true
 		runTest
 		# kill the network
+		./test-network-scale-${NETWORK}x/prometheus.sh down
 		./test-network-scale-${NETWORK}x/network.sh down
 		# restart docker
 		if [ $OSTYPE == "msys" ]; then
-			echo "insert windows command to restart docker"
+			net stop "Docker Desktop Service" && net start "Docker Desktop Service"
 		else
 			osascript -e 'quit app "Docker"'
 			open -a Docker
