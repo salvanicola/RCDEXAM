@@ -41,6 +41,7 @@ while [[ $# -ge 1 ]] ; do
     ;;
   --all )
 	ALL=true
+	shift
     ;;
   * )
     errorln "Unknown flag: $key"
