@@ -41,6 +41,7 @@ while [[ $# -ge 1 ]] ; do
     ;;
   --all )
 	ALL=true
+	shift
     ;;
   * )
     errorln "Unknown flag: $key"
@@ -134,7 +135,7 @@ function runAllTests()
 		./test-network-scale-${NETWORK}x/network.sh down
 		# restart docker
 		if [ $OSTYPE == "msys" ]; then
-			echo "insert windows command to restart docker"
+			net stop "Docker Desktop Service" && net start "Docker Desktop Service"
 		else
 			osascript -e 'quit app "Docker"'
 			open -a Docker
