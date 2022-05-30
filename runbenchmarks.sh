@@ -66,6 +66,7 @@ function runTest()
 	then
 		echo "Running network with $NETWORK nodes"
 		./network.sh up createChannel
+		./prometheus.sh up
 	fi
 
 	if $CHAINCODE == true
@@ -132,6 +133,7 @@ function runAllTests()
 		CRASH=true
 		runTest
 		# kill the network
+		./test-network-scale-${NETWORK}x/prometheus.sh down
 		./test-network-scale-${NETWORK}x/network.sh down
 		# restart docker
 		if [ $OSTYPE == "msys" ]; then
