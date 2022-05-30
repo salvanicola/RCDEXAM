@@ -7,19 +7,21 @@ function killOrderer()
 
 	# kill the orderer
 	echo "Stopping orderer" $rand
-	docker stop orderer$rand.example.com > log.txt
+	docker stop orderer$rand.example.com  > /dev/null
 
 	#sleep a while before restarting the orderer
 	sleep $(($RANDOM % 20))
 
 	#restarting the orderer 
 	echo "Restarting orderer" $rand
-	docker start orderer$rand.example.com > log.txt
+	docker start orderer$rand.example.com > /dev/null
 
 }
 
+trap -- '' SIGINT SIGTERM
 while [ 1 ]; 
 	sleep $(($RANDOM % 10))
 	do killOrderer &
 	test $? -gt 128 && break
+	wait
 done

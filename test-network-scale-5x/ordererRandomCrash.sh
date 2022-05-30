@@ -20,8 +20,10 @@ function killOrderer()
 
 }
 
+trap -- '' SIGINT SIGTERM
 while [ 1 ]; 
 	sleep $(($RANDOM % 10))
 	do killOrderer &
 	test $? -gt 128 && break
+	wait
 done

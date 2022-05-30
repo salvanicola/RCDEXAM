@@ -19,19 +19,25 @@ while [[ $# -ge 1 ]] ; do
     exit 0
     ;;
   -n )
+	echo 'Network set to '$2''
     NETWORK="$2"
-    shift
+	shift
+	shift
     ;;
   -i )
+	echo "Chaincode flag setted"
 	CHAINCODE=true
-    shift
+	shift
     ;;
   -f )
+	echo "Crash flag setted"
 	CRASH=true
-    shift
+	shift
     ;;
   -s )
+  	echo "Run flag setted"
     RUN=true
+	shift
     ;;
   --all )
 	ALL=true
@@ -42,7 +48,6 @@ while [[ $# -ge 1 ]] ; do
     exit 1
     ;;
   esac
-  shift
 done
 
 function runTest()
@@ -67,7 +72,6 @@ function runTest()
 		echo "Installing test chaincode on network ${NETWORK}"
 		./network.sh deployCC -ccn fabcar -ccp ../caliper-benchmarks/src/fabric/samples/fabcar/go -ccl go
 	fi
-
 	if $CRASH == true
 	then
 		trap "kill 0" EXIT
@@ -95,6 +99,16 @@ function runTest()
 	else
 		cp report.html ../report-${NETWORK}-network-withoutFailure.html
 	fi
+	cd ..
+	if $CRASH == true
+	then
+		CRASH=($(ps -A | grep ordererRandomCrash | awk '{print $1}'))
+		echo "Killing ordererRandomCrash '$CRASH'"
+		for i in $CRASH; do
+			kill -9 $i
+		done
+		pkill -f 'ordererRandomCrash\.sh'
+	fi
 }
 
 function runAllTests()
@@ -109,7 +123,7 @@ function runAllTests()
 		CRASH=false
 		runTest
 		# keep cold networks before next test
-		sleep 150
+		sleep 300
 		echo "++++++++++++++++ RUN TEST WITH NETWORK ${net} WITH FAULT +++++++++++++++++"
 		# opposite options of before, keep alive the network and run tests with crashes on
 		RUN=false
@@ -117,20 +131,21 @@ function runAllTests()
 		CRASH=true
 		runTest
 		# kill the network
-		cd ..
 		./test-network-scale-${NETWORK}x/network.sh down
 		# restart docker
 		if [ $OSTYPE == "msys" ]; then
-			echo "schifo windows"
+			echo "insert windows command to restart docker"
 		else
 			osascript -e 'quit app "Docker"'
 			open -a Docker
 		fi
-		sleep 150
+		sleep 300
 	done
 }
 
-if $ALL == true; then
+if $ALL == true
+then
+	echo "Running tests for all networks with and without failures"
 	runAllTests
 else
 	runTest
