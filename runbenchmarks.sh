@@ -167,7 +167,7 @@ function scaleTest()
 		mv results/report-${NETWORK}-network-withoutFailure.html results/report-${NETWORK}-network-$$((i*10))tps.html
 		CHAINCODE=false
 		RUN=false
-		sleep 120
+		sleep 60
 	done
 }
 
