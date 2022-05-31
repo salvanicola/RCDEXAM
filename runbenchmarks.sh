@@ -5,6 +5,7 @@ export RUN=false
 export CRASH=false
 export NETWORK=0
 export ALL=false
+export SCALE=false
 
 function printHelp(){
 	echo "Aiuto!"
@@ -34,13 +35,17 @@ while [[ $# -ge 1 ]] ; do
 	CRASH=true
 	shift
     ;;
-  -s )
+  -r )
   	echo "Run flag setted"
     RUN=true
 	shift
     ;;
   --all )
 	ALL=true
+	break
+    ;;
+  --scale )
+	SCALE=true
 	shift
     ;;
   * )
@@ -64,6 +69,11 @@ function runTest()
 
 	if $RUN == true
 	then
+		if [ "$(docker ps | grep orderer)" != "" ]
+		then
+			./network.sh down
+			sleep 60
+		fi
 		echo "Running network with $NETWORK nodes"
 		./network.sh up createChannel
 		./prometheus.sh up
@@ -83,23 +93,24 @@ function runTest()
 		echo "Starting non-faulty benchmark tests on network ${NETWORK}"
 	fi
 
-	if [ $OSTYPE == "msys" ]; then
-		sed -i 's/test-network-scale-5x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
-		sed -i 's/test-network-scale-10x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
-		sed -i 's/test-network-scale-20x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
+	sed -i 's/test-network-scale-5x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
+	sed -i 's/test-network-scale-10x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
+	sed -i 's/test-network-scale-20x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
+
+	if [ "$(docker ps | grep orderer)" == "" ]
+	then
+		echo "No network running, please set -r flag"
+		exit 1
 	else
-		sed -i '' 's/test-network-scale-5x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
-		sed -i '' 's/test-network-scale-10x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
-		sed -i '' 's/test-network-scale-20x/test-network-scale-'${NETWORK}'x/' ../caliper-benchmarks/networks/fabric/test-network.yaml
+		cd ../caliper-benchmarks
+		npx caliper launch manager --caliper-workspace ./ --caliper-networkconfig networks/fabric/test-network.yaml --caliper-benchconfig benchmarks/samples/fabric/fabcar/config.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled
 	fi
 
-	cd ../caliper-benchmarks
-	npx caliper launch manager --caliper-workspace ./ --caliper-networkconfig networks/fabric/test-network.yaml --caliper-benchconfig benchmarks/samples/fabric/fabcar/config.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled
-
+	mkdir -p ../results
 	if $CRASH == true; then
-		cp report.html ../report-${NETWORK}-network-withFailure.html
+		cp report.html ../results/report-${NETWORK}-network-withFailure.html
 	else
-		cp report.html ../report-${NETWORK}-network-withoutFailure.html
+		cp report.html ../results/report-${NETWORK}-network-withoutFailure.html
 	fi
 	cd ..
 	if $CRASH == true
@@ -135,6 +146,7 @@ function runAllTests()
 		# kill the network
 		./test-network-scale-${NETWORK}x/prometheus.sh down
 		./test-network-scale-${NETWORK}x/network.sh down
+		sleep 60
 		# restart docker
 		if [ $OSTYPE == "msys" ]; then
 			net stop "Docker Desktop Service" && net start "Docker Desktop Service"
@@ -146,10 +158,43 @@ function runAllTests()
 	done
 }
 
+function scaleTest()
+{
+	for i in {1..10}
+	do
+		changeTps $((i*10))
+		runTest
+		mv results/report-${NETWORK}-network-withoutFailure.html results/report-${NETWORK}-network-$$((i*10))tps.html
+		CHAINCODE=false
+		RUN=false
+		sleep 120
+	done
+}
+
+function changeTps()
+{
+	if [ $# -eq 0 ]
+  	then
+    	echo "No arguments supplied"
+	else
+		sed -i 's/startingTps:\s[[:digit:]]*$/startingTps: '$1'/' ./caliper-benchmarks/benchmarks/samples/fabric/fabcar/config.yaml
+		sed -i 's/finishingTps:\s[[:digit:]]*$/finishingTps: '$1'/' ./caliper-benchmarks/benchmarks/samples/fabric/fabcar/config.yaml
+	fi
+}
+
 if $ALL == true
 then
 	echo "Running tests for all networks with and without failures"
 	runAllTests
+elif $SCALE == true
+then
+	if [ "$NETWORK" == "0" ]
+	then
+		echo "Set the network to execute"
+		printHelp
+		exit 1
+	fi
+	scaleTest
 else
 	runTest
 fi
