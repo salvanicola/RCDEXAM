@@ -4,6 +4,13 @@ The specific real world scenario of interest is the Hyperledger Fabric blockchai
 
 ## Testing environments
 The testing environments consist of three Fabric test networks with respectively: 5, 10 and 20 ordering nodes. These networks are based on the fabric-samples provided by Hyperledger Fabric, which we updated in order to support a larger number of orderers, directly on startup of the single networks. It is required to have Docker installed on the local PC, to be able to create the container that allow the running of the nodes.
+To run one of the networks, simply navigate to the specific network directory and launch the command:
+<br />
+<br />
+`./network.sh up createChannel`
+<br />
+<br />
+This also creates a channel used by the network to communicate between organizations and automaticaly joins the nodes to it.
 
 ## Profiler - Prometheus & Grafana
 In order to provide additional information about the processing of the network, we make use of the Prometheus metrics service and of the Grafana grafic interface.
@@ -31,7 +38,7 @@ To run these tests, you can run the following command from the main directory:
 Followed by the options:
 <br />
 <br />
-`-n #`: which (by substituting # with either 5, 10 or 20) selects the specific network on which to run the tests.
+`-n #`: which (by substituting # with either 5, 10 or 20) selects the specific network on which to run the tests. This also automatically starts the Profiler.
 <br />
 `-r`: which starts (or restarts) the selected network.
 <br />
