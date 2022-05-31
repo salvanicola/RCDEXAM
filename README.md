@@ -47,3 +47,4 @@ Followed by the options:
 `-f`: which indicates to run tests with a background script which periodically crashes network nodes (to generate insability).
 <br />
 <br />
+*Warning*: running the Caliper benchmarks requires following the Caliper setup guide for Fabric networks.
