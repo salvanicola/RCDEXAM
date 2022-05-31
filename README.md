@@ -19,3 +19,24 @@ Before turning off one of the networks, you should close the Profiler instance u
 `./prometheus.sh down`
 <br />
 <br />
+
+## Testing tool - Caliper
+We use the Caliper benchmarking tool, in order to generate and perform scale tests on out testing environments.
+To run these tests, you can run the following command from the main directory:
+<br />
+<br />
+`./runbenchmarks.sh`
+<br />
+<br />
+Followed by the options:
+<br />
+<br />
+`-n #`: which (by substituting # with either 5, 10 or 20) selects the specific network on which to run the tests.
+<br />
+`-r`: which starts (or restarts) the selected network.
+<br />
+`-i`: which installs the chaincode used for the testing (fabcar).
+<br />
+`-f`: which indicates to run tests with a background script which periodically crashes network nodes (to generate insability).
+<br />
+<br />
