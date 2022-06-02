@@ -71,6 +71,7 @@ function runTest()
 	then
 		if [ "$(docker ps | grep orderer)" != "" ]
 		then
+			./prometheus.sh down
 			./network.sh down
 			sleep 60
 		fi

@@ -192,7 +192,7 @@ function createOrgs() {
 		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer7.example.com/msp/config.yaml
 		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer8.example.com/msp/config.yaml
 		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example.com/orderers/orderer9.example.com/msp/config.yaml
-		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer.example1.com/msp/config.yaml
+		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer1.example1.com/msp/config.yaml
 		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer2.example1.com/msp/config.yaml
 		sed -i 's/\\/\//' ./organizations/ordererOrganizations/example1.com/orderers/orderer3.example1.com/msp/config.yaml
 		sed -i 's/\\/\//' ./organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/config.yaml
