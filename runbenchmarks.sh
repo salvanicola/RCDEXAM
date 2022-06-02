@@ -71,6 +71,7 @@ function runTest()
 	then
 		if [ "$(docker ps | grep orderer)" != "" ]
 		then
+			./prometheus.sh down
 			./network.sh down
 			sleep 60
 		fi
@@ -160,11 +161,11 @@ function runAllTests()
 
 function scaleTest()
 {
-	for i in {1..10}
+	for i in {1..15}
 	do
 		changeTps $((i*10))
 		runTest
-		mv results/report-${NETWORK}-network-withoutFailure.html results/report-${NETWORK}-network-$$((i*10))tps.html
+		mv results/report-${NETWORK}-network-withoutFailure.html results/report-${NETWORK}-network-$((i*10))tps.html
 		CHAINCODE=false
 		RUN=false
 		sleep 60

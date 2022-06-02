@@ -25,3 +25,21 @@ test:
         module: benchmarks/samples/fabric/fabcar/changeCarOwner.js
         arguments:
           assets: 500
+monitors:
+    resource:
+    - module: docker
+      options:
+        interval: 4
+        containers: ['all']
+    - module: prometheus
+      options:
+        url: "http://localhost:9090"
+        metrics:
+          include: [dev-.*, couch, peer, orderer]
+          queries:
+          - name: Max Memory (MB)
+            query: sum(container_memory_rss{name=~".+"}) by (name)
+            step: 10
+            label: name
+            statistic: max
+            multiplier: 0.000001
