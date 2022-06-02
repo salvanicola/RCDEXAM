@@ -6,21 +6,21 @@ test:
     - label: Create a car.
       # 5000 transactions should create around 1000 cars per worker but not guaranteed
       # so need to set asset limits to less than 1000 for the other tests
-      txNumber: 1000
+      txNumber: 15000
       rateControl:
           type: linear-rate
           opts:
-            startingTps: 30
-            finishingTps: 30
+            startingTps: 20
+            finishingTps: 20
       workload:
         module: benchmarks/samples/fabric/fabcar/createCar.js
     - label: Change car owner.
-      txNumber: 1000
+      txNumber: 15000
       rateControl:
           type: linear-rate
           opts:
-            startingTps: 30
-            finishingTps: 30
+            startingTps: 20
+            finishingTps: 20
       workload:
         module: benchmarks/samples/fabric/fabcar/changeCarOwner.js
         arguments:
