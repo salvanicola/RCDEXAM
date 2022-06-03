@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ $PWD != "$(dirname "$0")" ]
+then
+	cd "$(dirname "$0")"
+fi
 cd prometheus-grafana/
 
 if [ $1 == "up" ]; then

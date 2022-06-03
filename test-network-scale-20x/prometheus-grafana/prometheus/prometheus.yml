@@ -69,7 +69,7 @@ scrape_configs:
       - targets: ["orderer19.example.com:9568"]          
   - job_name: "peer0_org1"
     static_configs:
-      - targets: ["peer0.org1.example.com:0443"]
+      - targets: ["peer0.org1.example.com:9444"]
   - job_name: "peer0_org2"
     static_configs:
       - targets: ["peer0.org2.example.com:9445"]
