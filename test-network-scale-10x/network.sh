@@ -285,6 +285,8 @@ function networkUp() {
   if [ $? -ne 0 ]; then
     fatalln "Unable to start network"
   fi
+
+  ./prometheus.sh up
 }
 
 # call the script to create the channel, join the peers of org1 and org2,

@@ -15,4 +15,6 @@ if [ $1 == "up" ]; then
 elif [ $1 == "down" ]; then
 	echo "Stopping profiling service"
 	docker-compose down
+	docker volume rm prometheus-grafana_grafana_storage
+	docker volume rm prometheus-grafana_prometheus_data
 fi
